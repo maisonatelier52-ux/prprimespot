@@ -1,0 +1,66 @@
+.reply-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    color: #222;
+}
+
+.reply-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.reply-divider {
+    width: 80px;
+    height: 3px;
+    background-color: #d84f74;
+    margin: 15px auto;
+}
+
+.reply-intro {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.updated-date {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 40px;
+}
+
+.reply-section {
+    margin-bottom: 35px;
+}
+
+.reply-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.reply-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.reply-section ul {
+    margin-left: 25px;
+    list-style: disc;
+    margin-bottom: 15px;
+}
+
+.contact-email {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #222;
+    font-weight: 500;
+}

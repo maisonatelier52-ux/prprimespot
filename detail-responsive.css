@@ -1,0 +1,90 @@
+@media (max-width: 767px) {
+ .detail-top {
+    padding: 30px 10px;
+  }
+
+  .detail-top-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 30px;
+    padding: 20px 0px;
+  }
+
+  .detail-top-section-l {
+    width: 100%;
+    position: static; 
+  }
+
+  .detail-top-section-r {
+    width: 100%;
+  }
+
+  .detail-img-wrapper {
+    position: static;
+    margin-top: 0;    
+    height: auto;   
+  }
+
+  .detail-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  /* detail-body */
+.detail-body{
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+.detail-body-l{
+    width: 100%;
+}
+.detail-body-r{
+    width: 100%;
+}
+.detail-para{
+    padding: 20px 10px;
+}
+.detail-head {
+    padding: 10px 10px;
+    margin: 0;
+}
+.four-grid-img-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+}
+.four-grid-img-wraper{
+  width: 100%;            /* Or a fixed width like 300px */
+  height: 100%;           /* Or a fixed height like 200px */
+}
+.person-grid{
+    padding: 30px 10px;
+}
+.newsletter-box {
+  margin: 20px;
+}
+.detail-bottom-section{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+}
+.detail-bottom-grid{
+    width: 100%;
+}
+.listen-section {
+  padding: 20px 20px;
+}
+.testimonial-section{
+  padding: 30px 10px;
+}
+.main-body-content.b{
+  width: 100%;
+}
+}
+@media (min-width: 768px) and (max-width: 991.98px){}

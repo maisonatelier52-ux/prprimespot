@@ -1,0 +1,46 @@
+.subscribe-content{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+ table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #e0e0e0;
+    }
+
+td{
+     font-family: "Merriweather", serif;
+}
+
+    th {
+      background-color: #01040f;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .btn-select {
+      background-color: #131F49;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 20px 20px;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .btn-select:hover {
+      background-color: #131F49;
+    }
+
+    .price {
+      font-weight: bold;
+    }

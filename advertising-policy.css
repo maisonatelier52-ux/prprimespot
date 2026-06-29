@@ -1,0 +1,118 @@
+body {
+    background: #faf6f7;
+    font-family: "Inter", sans-serif;
+}
+
+.ads-policy-container {
+    max-width: 950px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+.ads-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ads-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.ads-divider {
+    width: 60px;
+    height: 2px;
+    background: #d84f74;
+    margin: 0 auto 25px;
+}
+
+.ads-intro {
+    max-width: 760px;
+    margin: auto;
+    color: #555;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.updated-date {
+    margin-top: 20px;
+    color: #777;
+    font-size: 14px;
+}
+
+.ads-section {
+    padding: 35px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.ads-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.ads-section p {
+    color: #444;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.ads-section ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.ads-section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+.contact-email {
+    margin-top: 15px;
+    color: #d84f74;
+    font-weight: 600;
+}
+
+.ads-footer {
+    text-align: center;
+    padding: 50px 0 20px;
+}
+
+.ads-footer p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+/* Tablet */
+@media(max-width:768px){
+    .ads-header h1{
+        font-size:38px;
+    }
+    .ads-section h2{
+        font-size:24px;
+    }
+    .ads-section p, .ads-section ul li{
+        font-size:15px;
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+    .ads-policy-container{
+        padding:0 18px;
+    }
+    .ads-header h1{
+        font-size:30px;
+    }
+    .ads-section h2{
+        font-size:22px;
+    }
+}

@@ -1,0 +1,78 @@
+.ownership-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.7;
+}
+
+.ownership-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ownership-divider {
+    width: 60px;
+    height: 2px;
+    background-color: #d84f74;
+    margin: 15px auto 20px;
+}
+
+.ownership-intro {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.updated-date {
+    font-size: 14px;
+    text-align: center;
+    color: #888;
+}
+
+.ownership-section {
+    margin-bottom: 40px;
+}
+
+.ownership-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.ownership-section p {
+    margin-bottom: 12px;
+}
+
+.ownership-section ul {
+    margin-left: 20px;
+    list-style-type: disc;
+    margin-bottom: 12px;
+}
+
+.contact-email {
+    font-weight: 500;
+    color: #d84f74;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .ownership-container {
+        padding: 30px 15px;
+    }
+
+    .ownership-header h1 {
+        font-size: 28px;
+    }
+
+    .ownership-section h2 {
+        font-size: 20px;
+    }
+}

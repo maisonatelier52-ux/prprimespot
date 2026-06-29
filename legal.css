@@ -1,0 +1,137 @@
+.legal-container{
+    max-width:900px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.legal-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.legal-header h1{
+    font-family:'Playfair Display', serif;
+    font-size:52px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:10px;
+}
+
+.legal-line{
+    width:70px;
+    height:2px;
+    background:#111;
+    margin:0 auto 25px;
+}
+
+.legal-intro{
+    max-width:700px;
+    margin:auto;
+    color:#555;
+    font-size:17px;
+    line-height:1.8;
+    font-family:'Inter', sans-serif;
+}
+
+.legal-section{
+    margin-bottom:55px;
+}
+
+.legal-section h2{
+    font-family:'Playfair Display', serif;
+    font-size:34px;
+    font-weight:600;
+    color:#111;
+    margin-bottom:20px;
+    padding-bottom:12px;
+    border-bottom:1px solid #d9d9d9;
+}
+
+.legal-section p{
+    font-family:'Inter', sans-serif;
+    font-size:17px;
+    line-height:1.9;
+    color:#444;
+    margin-bottom:20px;
+}
+
+.legal-section ul{
+    padding-left:22px;
+}
+
+.legal-section ul li{
+    font-family:'Inter', sans-serif;
+    font-size:17px;
+    line-height:1.9;
+    color:#444;
+    margin-bottom:12px;
+}
+
+.legal-contact-box{
+    background:#f5f5f5;
+    border:1px solid #e2e2e2;
+    border-radius:16px;
+    padding:35px;
+    margin-top:70px;
+}
+
+.legal-contact-box h2{
+    font-family:'Playfair Display', serif;
+    font-size:38px;
+    margin-bottom:30px;
+    color:#111;
+}
+
+.contact-item{
+    margin-bottom:28px;
+}
+
+.contact-item:last-child{
+    margin-bottom:0;
+}
+
+.contact-item span{
+    display:block;
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#777;
+    margin-bottom:8px;
+    font-family:'Inter', sans-serif;
+}
+
+.contact-item a{
+    text-decoration:none;
+    color:#111;
+    font-size:20px;
+    font-weight:600;
+    font-family:'Inter', sans-serif;
+}
+
+.contact-item a:hover{
+    color:#d84f74;
+}
+
+@media(max-width:768px){
+
+    .legal-container{
+        margin:40px auto;
+    }
+
+    .legal-header h1{
+        font-size:42px;
+    }
+
+    .legal-section h2{
+        font-size:28px;
+    }
+
+    .legal-contact-box{
+        padding:25px;
+    }
+
+    .contact-item a{
+        font-size:17px;
+    }
+
+}

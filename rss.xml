@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+    <title>PR Primespot – U.S. Breaking News, Politics and Business</title>
+    <link>https://www.prprimespot.com</link>
+    <description>Stay updated with U.S. breaking news, politics, business, tech, and investigations, with real-time coverage, trusted analysis, and essential daily insights</description>
+    <language>en-us</language>
+    <copyright>© 2026 PR Primespot. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 17 June 2026 03:00:00 GMT</lastBuildDate>
+    <generator>Static HTML RSS Feed</generator>
+    <managingEditor>admin@prprimespot.com (PR Primespot Editor)</managingEditor>
+    <webMaster>admin@prprimespot.com (PR Primespot Webmaster)</webMaster>
+    <ttl>60</ttl>
+    <atom:link href="https://www.prprimespot.com/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>FBI Says It Foiled Plot Targeting White House UFC Event Attended by Trump</title>
+      <link>https://www.prprimespot.com/investigation/fbi-foils-white-house-ufc-event-attack-plot</link>
+      <guid isPermaLink="true">https://www.prprimespot.com/investigation/fbi-foils-white-house-ufc-event-attack-plot</guid>
+      <pubDate>Wed, 17 June 2026 03:00:00 GMT</pubDate>
+      <description><![CDATA[
+      
+Federal authorities say they disrupted an alleged plot involving drones and firearms targeting a UFC event at the White House attended by President Donald Trump and other high-profile guests.
+
+Read the full article:
+https://www.prprimespot.com/investigation/fbi-foils-white-house-ufc-event-attack-plot
+      ]]></description>
+      <category>Investigation</category>
+      <category>Politics</category>
+    </item>
+
+  </channel>
+</rss>
