@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-06-17</lastmod>
+<lastmod>2026-06-29</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -325,6 +325,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/investigation/fbi-foils-white-house-ufc-event-attack-plot</loc>
+<lastmod>2026-06-17</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!-- Politics -->
 <url>
 <loc>https://www.prprimespot.com/politics/trump-to-republicans-win-midterms-or-i-will-get-impeached</loc>
@@ -588,7 +594,7 @@
 <loc>https://www.prprimespot.com/authors/james-thornton</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-06-15</lastmod>
+<lastmod>2026-06-29</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/morgan-blake</loc>
