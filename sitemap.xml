@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-06-29</lastmod>
+<lastmod>2026-06-30</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -267,6 +267,12 @@
 <url>
 <loc>https://www.prprimespot.com/business/iran-peace-deal-boosts-stocks-oil-prices-slide-globally</loc>
 <lastmod>2026-06-15</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.prprimespot.com/business/stock-market-today-monday-june-29-2026</loc>
+<lastmod>2026-06-29</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -630,7 +636,7 @@
 <loc>https://www.prprimespot.com/authors/harper-ellis</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-05-05</lastmod>
+<lastmod>2026-06-30</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/noah-grayson</loc>
