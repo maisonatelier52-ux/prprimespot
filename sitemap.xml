@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-06-30</lastmod>
+<lastmod>2026-07-01</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -552,6 +552,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/investment/rocket-lab-iridium-acquisition-8-billion-deal-2026</loc>
+<lastmod>2026-06-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!-- Daily News -->
 <url>
 <loc>https://www.prprimespot.com/dailynews/40-dead-115-hurt-in-swiss-alpine-bar-fire-on-new-year-nye-party</loc>
@@ -618,7 +624,7 @@
 <loc>https://www.prprimespot.com/authors/casey-quinn</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-06-16</lastmod>
+<lastmod>2026-07-01</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/kara-stanton</loc>
