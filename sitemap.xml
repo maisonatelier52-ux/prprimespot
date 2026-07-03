@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-02</lastmod>
+<lastmod>2026-07-03</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -404,6 +404,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/politics/mitch-mcconnell-unconscious-cardiac-arrest-dc-home-2026</loc>
+<lastmod>2026-07-02</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!-- Technology -->
 <url>
 <loc>https://www.prprimespot.com/technology/apple-foldable-iphone-flip-book-style-2026</loc>
@@ -654,6 +660,6 @@
 <loc>https://www.prprimespot.com/authors/noah-grayson</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-06-08</lastmod>
+<lastmod>2026-07-03</lastmod>
 </url>
 </urlset>
