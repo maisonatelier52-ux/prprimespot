@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-03</lastmod>
+<lastmod>2026-07-07</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -613,6 +613,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/dailynews/air-force-major-arrested-capitol-trump-impeachment-2026</loc>
+<lastmod>2026-07-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!--  Authors  -->
 <url>
 <loc>https://www.prprimespot.com/authors/james-thornton</loc>
@@ -648,7 +654,7 @@
 <loc>https://www.prprimespot.com/authors/reid-ashton</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-06-09</lastmod>
+<lastmod>2026-07-07</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/harper-ellis</loc>
