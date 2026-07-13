@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-10</lastmod>
+<lastmod>2026-07-13</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -416,6 +416,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/politics/illinois-semiautomatic-weapons-ban-upheld-federal-appeals-court-2026</loc>
+<lastmod>2026-07-10</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!-- Technology -->
 <url>
 <loc>https://www.prprimespot.com/technology/apple-foldable-iphone-flip-book-style-2026</loc>
@@ -648,7 +654,7 @@
 <loc>https://www.prprimespot.com/authors/morgan-blake</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-06-17</lastmod>
+<lastmod>2026-07-13</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/olivia-bennett</loc>
