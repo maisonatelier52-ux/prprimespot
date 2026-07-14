@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-13</lastmod>
+<lastmod>2026-07-14</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -343,6 +343,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/investigation/doj-grand-jury-investigation-uaw-president-shawn-fain</loc>
+<lastmod>2026-07-13</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!-- Politics -->
 <url>
 <loc>https://www.prprimespot.com/politics/trump-to-republicans-win-midterms-or-i-will-get-impeached</loc>
@@ -648,7 +654,7 @@
 <loc>https://www.prprimespot.com/authors/james-thornton</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-07-08</lastmod>
+<lastmod>2026-07-14</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/morgan-blake</loc>
