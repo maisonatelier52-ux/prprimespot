@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-14</lastmod>
+<lastmod>2026-07-15</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -255,6 +255,12 @@
 <url>
 <loc>https://www.prprimespot.com/business/fiat-topolino-ev-launch-us-price-2026</loc>
 <lastmod>2026-07-08</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.prprimespot.com/business/major-us-banks-kick-off-q2-earnings-season</loc>
+<lastmod>2026-07-14</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -564,7 +570,7 @@
 <loc>https://www.prprimespot.com/authors/casey-quinn</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-07-01</lastmod>
+<lastmod>2026-07-15</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/kara-stanton</loc>
