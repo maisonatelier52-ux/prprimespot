@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-15</lastmod>
+<lastmod>2026-07-16</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -363,6 +363,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/technology/nvidia-begins-shipping-h200-ai-chips-to-china</loc>
+<lastmod>2026-07-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!-- Finance -->
 <url>
 <loc>https://www.prprimespot.com/finance/us-mortgage-rates-rise-iran-conflict</loc>
@@ -510,7 +516,7 @@
 <loc>https://www.prprimespot.com/authors/harper-ellis</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-06-30</lastmod>
+<lastmod>2026-07-16</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/noah-grayson</loc>
