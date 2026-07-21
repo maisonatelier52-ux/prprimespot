@@ -156,12 +156,11 @@ a {
   width: auto;
 }
 
-.auto-date {
-    font-size: 16px;
-    color: #2c032e;
-    margin: 0;
-    text-align: center;
-    /* font-style: italic; */
+.date {
+  margin: 0;
+  font-size: 15px;
+  color: #8E8E8E;
+  text-align: center;
 }
 
 
