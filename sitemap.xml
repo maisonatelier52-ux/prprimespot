@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-21</lastmod>
+<lastmod>2026-07-22</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -477,7 +477,13 @@
 </url>
 <url>
 <loc>https://www.prprimespot.com/dailynews/air-force-major-arrested-capitol-trump-impeachment-2026</loc>
-<lastmod>2026-06-03</lastmod>
+<lastmod>2026-07-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.prprimespot.com/dailynews/trump-50-percent-tariffs-canada-autos-alcohol-cheese-trade-war-2026</loc>
+<lastmod>2026-07-21</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -486,7 +492,7 @@
 <loc>https://www.prprimespot.com/authors/james-thornton</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-07-20</lastmod>
+<lastmod>2026-07-22</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/morgan-blake</loc>

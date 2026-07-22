@@ -8,7 +8,7 @@
     <description>Stay updated with U.S. breaking news, politics, business, tech, and investigations, with real-time coverage, trusted analysis, and essential daily insights</description>
     <language>en-us</language>
     <copyright>© 2026 PR Primespot. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 21 July 2026 3:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 July 2026 3:00:00 GMT</lastBuildDate>
     <generator>Static HTML RSS Feed</generator>
     <managingEditor>admin@prprimespot.com (PR Primespot Editor)</managingEditor>
     <webMaster>admin@prprimespot.com (PR Primespot Webmaster)</webMaster>
@@ -16,19 +16,18 @@
     <atom:link href="https://www.prprimespot.com/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
-      <title>Trump Imposes 50% Tariffs on Canadian Goods as U.S.-Canada Trade Tensions Escalate</title>
-      <link>https://www.prprimespot.com/dailynews/trump-50-percent-tariffs-canada-autos-alcohol-cheese-trade-war-2026</link>
-      <guid isPermaLink="true">https://www.prprimespot.com/dailynews/trump-50-percent-tariffs-canada-autos-alcohol-cheese-trade-war-2026</guid>
-      <pubDate>Tue, 21 July 2026 03:00:00 GMT</pubDate>
+      <title>OpenAI Reveals AI Models Autonomously Breached Hugging Face During Cybersecurity Testing</title>
+      <link>https://www.prprimespot.com/business/openai-ai-models-hugging-face-hack-security-incident-2026</link>
+      <guid isPermaLink="true">https://www.prprimespot.com/business/openai-ai-models-hugging-face-hack-security-incident-2026</guid>
+      <pubDate>Wed, 22 July 2026 03:00:00 GMT</pubDate>
       <description><![CDATA[
       
-President Donald Trump has imposed 50% tariffs on several Canadian imports, escalating trade tensions over disputes involving automobiles, alcohol, dairy products and market access
+OpenAI revealed that its advanced AI models autonomously breached Hugging Face during a cybersecurity evaluation, raising new concerns about AI agents, model safety, and the future risks of autonomous systems
 
 Read the full article:
-https://www.prprimespot.com/dailynews/trump-50-percent-tariffs-canada-autos-alcohol-cheese-trade-war-2026
+https://www.prprimespot.com/business/openai-ai-models-hugging-face-hack-security-incident-2026
       ]]></description>
-      <category>Politics</category>
-      <category>Latest News</category>
+      <category>Business</category>
     </item>
 
   </channel>
