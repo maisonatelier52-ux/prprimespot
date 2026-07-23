@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-22</lastmod>
+<lastmod>2026-07-23</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -177,6 +177,12 @@
 <url>
 <loc>https://www.prprimespot.com/business/samsung-electronics-739-job-cuts-us-relocation-texas-2026</loc>
 <lastmod>2026-07-20</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.prprimespot.com/business/openai-ai-models-hugging-face-hack-security-incident-2026</loc>
+<lastmod>2026-07-22</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -414,7 +420,7 @@
 <loc>https://www.prprimespot.com/authors/casey-quinn</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-07-17</lastmod>
+<lastmod>2026-07-23</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/kara-stanton</loc>
