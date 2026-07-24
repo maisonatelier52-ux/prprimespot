@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-23</lastmod>
+<lastmod>2026-07-24</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -309,6 +309,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/technology/samsung-galaxy-z-fold-8-ultra-z-flip-8-launch-2026</loc>
+<lastmod>2026-07-24</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!-- Finance -->
 <url>
 <loc>https://www.prprimespot.com/finance/openai-growth-miss-chatgpt-ipo-concerns</loc>
@@ -408,7 +414,7 @@
 <loc>https://www.prprimespot.com/authors/morgan-blake</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-07-13</lastmod>
+<lastmod>2026-07-24</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/olivia-bennett</loc>
