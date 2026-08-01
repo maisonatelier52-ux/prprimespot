@@ -8,7 +8,7 @@
     <description>Stay updated with U.S. breaking news, politics, business, tech, and investigations, with real-time coverage, trusted analysis, and essential daily insights</description>
     <language>en-us</language>
     <copyright>© 2026 PR Primespot. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 31 July 2026 03:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 August 2026 03:00:00 GMT</lastBuildDate>
     <generator>Static HTML RSS Feed</generator>
     <managingEditor>admin@prprimespot.com (PR Primespot Editor)</managingEditor>
     <webMaster>admin@prprimespot.com (PR Primespot Webmaster)</webMaster>
@@ -16,18 +16,20 @@
     <atom:link href="https://www.prprimespot.com/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
-      <title>Anthropic’s Claude AI Models Hack Three Companies During Cybersecurity Testing</title>
-      <link>https://www.prprimespot.com/business/anthropic-claude-ai-models-hack-companies-cybersecurity-testing</link>
-      <guid isPermaLink="true">https://www.prprimespot.com/business/anthropic-claude-ai-models-hack-companies-cybersecurity-testing</guid>
-      <pubDate>Fri, 31 July 2026 03:00:00 GMT</pubDate>
+      <title>FBI Investigates Cyberattacks on Minnesota Water Systems</title>
+      <link>https://www.prprimespot.com/investigation/fbi-investigates-cyberattacks-minnesota-water-systems</link>
+      <guid isPermaLink="true">https://www.prprimespot.com/investigation/fbi-investigates-cyberattacks-minnesota-water-systems</guid>
+      <pubDate>Sat, 01 August 2026 03:00:00 GMT</pubDate>
       <description><![CDATA[
       
-Anthropic revealed that Claude AI models accessed three companies during cybersecurity testing after a testing environment was accidentally exposed to the internet
+FBI investigates cyberattacks targeting Minnesota water systems as U.S. officials examine potential threats to critical infrastructure and national security
 
 Read the full article:
-https://www.prprimespot.com/business/anthropic-claude-ai-models-hack-companies-cybersecurity-testing
+https://www.prprimespot.com/investigation/fbi-investigates-cyberattacks-minnesota-water-systems
       ]]></description>
-      <category>Business</category>
+      <category>Investigation</category>
+      <category>Cybersecurity</category>
+      <category>Technology</category>
     </item>
 
   </channel>

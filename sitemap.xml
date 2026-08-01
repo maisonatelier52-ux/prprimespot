@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-07-31</lastmod>
+<lastmod>2026-08-01</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -194,6 +194,12 @@
 </url>
 <url>
 <loc>https://www.prprimespot.com/business/fed-holds-rates-steady-three-officials-push-hike-july-2026</loc>
+<lastmod>2026-07-30</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.prprimespot.com/business/anthropic-claude-ai-models-hack-companies-cybersecurity-testing</loc>
 <lastmod>2026-07-31</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
@@ -444,7 +450,7 @@
 <loc>https://www.prprimespot.com/authors/morgan-blake</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-07-24</lastmod>
+<lastmod>2026-08-01</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/olivia-bennett</loc>
