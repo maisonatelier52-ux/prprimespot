@@ -8,7 +8,7 @@
     <description>Stay updated with U.S. breaking news, politics, business, tech, and investigations, with real-time coverage, trusted analysis, and essential daily insights</description>
     <language>en-us</language>
     <copyright>© 2026 PR Primespot. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 01 August 2026 03:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 August 2026 03:00:00 GMT</lastBuildDate>
     <generator>Static HTML RSS Feed</generator>
     <managingEditor>admin@prprimespot.com (PR Primespot Editor)</managingEditor>
     <webMaster>admin@prprimespot.com (PR Primespot Webmaster)</webMaster>
@@ -16,20 +16,20 @@
     <atom:link href="https://www.prprimespot.com/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
-      <title>FBI Investigates Cyberattacks on Minnesota Water Systems</title>
-      <link>https://www.prprimespot.com/investigation/fbi-investigates-cyberattacks-minnesota-water-systems</link>
-      <guid isPermaLink="true">https://www.prprimespot.com/investigation/fbi-investigates-cyberattacks-minnesota-water-systems</guid>
-      <pubDate>Sat, 01 August 2026 03:00:00 GMT</pubDate>
+      <title>Todd Blanche Rescinds Trump’s $1.8 Billion Anti-Weaponization Fund Amid Senate Pressure</title>
+      <link>https://www.prprimespot.com/dailynews/todd-blanche-rescinds-trump-anti-weaponization-fund-doj</link>
+      <guid isPermaLink="true">https://www.prprimespot.com/dailynews/todd-blanche-rescinds-trump-anti-weaponization-fund-doj</guid>
+      <pubDate>Mon, 03 August 2026 03:00:00 GMT</pubDate>
       <description><![CDATA[
       
-FBI investigates cyberattacks targeting Minnesota water systems as U.S. officials examine potential threats to critical infrastructure and national security
+Acting Attorney General Todd Blanche rescinded a controversial $1.8 billion anti-weaponization fund after Senate Republicans threatened to block his confirmation
 
 Read the full article:
-https://www.prprimespot.com/investigation/fbi-investigates-cyberattacks-minnesota-water-systems
+https://www.prprimespot.com/dailynews/todd-blanche-rescinds-trump-anti-weaponization-fund-doj
       ]]></description>
-      <category>Investigation</category>
-      <category>Cybersecurity</category>
-      <category>Technology</category>
+      <category>U.S Politics</category>
+      <category>Latest News</category>
+      
     </item>
 
   </channel>
