@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-08-13</lastmod>
+<lastmod>2026-08-14</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -207,6 +207,12 @@
 <url>
 <loc>https://www.prprimespot.com/business/trump-solar-panel-tariffs-polysilicon-industry-china-2026</loc>
 <lastmod>2026-08-07</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.prprimespot.com/business/mark-zuckerberg-meta-superintelligent-ai-manifesto-open-source-future</loc>
+<lastmod>2026-08-14</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -522,7 +528,7 @@
 <loc>https://www.prprimespot.com/authors/harper-ellis</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-07-16</lastmod>
+<lastmod>2026-08-14</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/noah-grayson</loc>
