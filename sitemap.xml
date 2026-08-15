@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-08-14</lastmod>
+<lastmod>2026-08-15</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -450,6 +450,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/investment/nvidia-stock-bulls-earnings-expectations-august-2026</loc>
+<lastmod>2026-08-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!-- Daily News -->
 <url>
 <loc>https://www.prprimespot.com/dailynews/united-airlines-plane-crash-newark-turnpike</loc>
@@ -492,7 +498,7 @@
 <loc>https://www.prprimespot.com/authors/james-thornton</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-08-13</lastmod>
+<lastmod>2026-08-15</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/morgan-blake</loc>
