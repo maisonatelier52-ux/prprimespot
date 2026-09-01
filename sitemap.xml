@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-08-31</lastmod>
+<lastmod>2026-09-01</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -230,7 +230,13 @@
 </url>
 <url>
 <loc>https://www.prprimespot.com/business/us-canada-trade-war-50-percent-tariffs</loc>
-<lastmod>2026-08-25</lastmod>
+<lastmod>2026-08-24</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.prprimespot.com/business/aon-usi-insurance-kkr-17-billion-acquisition-2026</loc>
+<lastmod>2026-08-31</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -594,6 +600,6 @@
 <loc>https://www.prprimespot.com/authors/noah-grayson</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-08-18</lastmod>
+<lastmod>2026-09-01</lastmod>
 </url>
 </urlset>
