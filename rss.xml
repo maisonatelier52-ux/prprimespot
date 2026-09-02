@@ -8,7 +8,7 @@
     <description>Stay updated with U.S. breaking news, politics, business, tech, and investigations, with real-time coverage, trusted analysis, and essential daily insights</description>
     <language>en-us</language>
     <copyright>© 2026 PR Primespot. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 01 September 2026 03:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 02 September 2026 05:00:00 GMT</lastBuildDate>
     <generator>Static HTML RSS Feed</generator>
     <managingEditor>admin@prprimespot.com (PR Primespot Editor)</managingEditor>
     <webMaster>admin@prprimespot.com (PR Primespot Webmaster)</webMaster>
@@ -16,17 +16,20 @@
     <atom:link href="https://www.prprimespot.com/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
-      <title>Grand Canyon Flash Flood Kills Two and Leaves Visitors Missing as Rescue Efforts Continue</title>
-      <link>https://www.prprimespot.com/dailynews/grand-canyon-flash-flood-bright-angel-arizona-2026</link>
-      <guid isPermaLink="true">https://www.prprimespot.com/dailynews/grand-canyon-flash-flood-bright-angel-arizona-2026</guid>
-      <pubDate>Tue, 01 September 2026 03:00:00 GMT</pubDate>
+      <title>Ed Markey Defeats Seth Moulton in Massachusetts Senate Primary After Generational Change Battle</title>
+      <link>https://www.prprimespot.com/politics/ed-markey-defeats-seth-moulton-massachusetts-senate-primary-2026</link>
+      <guid isPermaLink="true">https://www.prprimespot.com/politics/ed-markey-defeats-seth-moulton-massachusetts-senate-primary-2026</guid>
+      <pubDate>Wed, 02 September 2026 05:00:00 GMT</pubDate>
       <description><![CDATA[
       
-A powerful flash flood in Arizona’s Grand Canyon has killed two people, left others missing and damaged critical park infrastructure as rescue teams continue operations
+Senator Ed Markey defeated Representative Seth Moulton in the Massachusetts Democratic Senate primary, securing the nomination for a third term after a campaign centered on age, experience and party direction.
 
 Read the full article:
-https://www.prprimespot.com/dailynews/grand-canyon-flash-flood-bright-angel-arizona-2026
+https://www.prprimespot.com/politics/ed-markey-defeats-seth-moulton-massachusetts-senate-primary-2026
       ]]></description>
+      <category>US Politics</category>
+      <category>Elections</category>
+      <category>Democratic Party</category>
       <category>U.S. News</category>
       
     </item>
