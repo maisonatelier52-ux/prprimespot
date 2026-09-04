@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-09-03</lastmod>
+<lastmod>2026-09-04</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -237,6 +237,12 @@
 <url>
 <loc>https://www.prprimespot.com/business/aon-usi-insurance-kkr-17-billion-acquisition-2026</loc>
 <lastmod>2026-08-31</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.prprimespot.com/business/broadcom-ai-chip-forecast-q3-earnings-2026</loc>
+<lastmod>2026-08-04</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -588,7 +594,7 @@
 <loc>https://www.prprimespot.com/authors/casey-quinn</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-08-25</lastmod>
+<lastmod>2026-09-04</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/kara-stanton</loc>
