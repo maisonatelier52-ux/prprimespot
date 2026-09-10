@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.prprimespot.com</loc>
-<lastmod>2026-09-09</lastmod>
+<lastmod>2026-09-10</lastmod>
 <changefreq>daily</changefreq>
 <priority>1.0</priority>
 </url>
@@ -307,6 +307,12 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.prprimespot.com/investigation/trump-russia-probe-investigation-grand-jury-subpoenas-2026</loc>
+<lastmod>2026-09-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 <!-- Politics -->
 <url>
 <loc>https://www.prprimespot.com/politics/rededicate-250-national-mall-prayer-rally</loc>
@@ -594,7 +600,7 @@
 <loc>https://www.prprimespot.com/authors/james-thornton</loc>
 <priority>0.5</priority>
 <changefreq>daily</changefreq>
-<lastmod>2026-09-03</lastmod>
+<lastmod>2026-09-10</lastmod>
 </url>
 <url>
 <loc>https://www.prprimespot.com/authors/morgan-blake</loc>
