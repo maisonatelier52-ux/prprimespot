@@ -12,12 +12,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* No prefers-color-scheme override: every component hardcodes the light
+   newspaper palette (paper #FAFAF7 / ink #1A1A1A), so flipping only these
+   two body-level variables left dark body background showing through the
+   gaps between sections. Reinstate this block only alongside a real
+   dark-mode pass across components/. */
 
 body {
   background: var(--background);
