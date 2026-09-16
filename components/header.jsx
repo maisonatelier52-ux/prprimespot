@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import articlesData from "../public/data/article.json";
+import { SITE_NAME, SITE_SOCIAL_LINKS } from "@/lib/site";
 
 /**
  * Header — masthead layout
@@ -248,14 +249,16 @@ export default function Header() {
             </div>
             {/* md and up: social icons */}
             <div className="hidden md:flex items-center gap-2 sm:gap-2.5">
+              {/* No real app / Facebook page yet for PR Primespot — these
+                  still point at "#". Swap or remove once those exist. */}
               <SocialIconButton label="App"><MobileIcon /></SocialIconButton>
               <SocialIconButton label="Facebook"><FacebookIcon /></SocialIconButton>
-              <SocialIconButton label="Twitter"><TwitterIcon /></SocialIconButton>
+              <SocialIconButton label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIconButton>
             </div>
           </div>
 
           {/* center — masthead */}
-          <Link href="/" className="group flex justify-center select-none min-w-0" aria-label="Global Times — home">
+          <Link href="/" className="group flex justify-center select-none min-w-0" aria-label={`${SITE_NAME} — home`}>
             <div className="flex flex-col items-center w-full max-w-[220px] sm:max-w-none transition-transform duration-300 ease-out group-hover:scale-[1.03]">
               <div className="h-[2.5px] sm:h-[5px] w-full bg-[#E8B23D]" />
               <span className="font-serif leading-[0.95] text-center text-[#D01418] text-lg xs:text-xl sm:text-3xl md:text-4xl font-bold tracking-tight py-3 whitespace-nowrap">
@@ -263,7 +266,7 @@ export default function Header() {
               </span>
               <div className="h-[2.5px] sm:h-[5px] w-full bg-[#E8B23D]" />
               <span className="mt-1 text-center text-[7px] sm:text-[10px] tracking-[0.12em] sm:tracking-[0.2em] text-[#8A8A8A] font-sans leading-tight">
-                DISCOVER CHINA, DISCOVER THE WORLD
+                U.S. BREAKING NEWS, POLITICS &amp; BUSINESS
               </span>
             </div>
           </Link>
@@ -453,7 +456,7 @@ export default function Header() {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label="Subscribe to Global Times"
+          aria-label={`Subscribe to ${SITE_NAME}`}
           onKeyDown={(e) => e.key === "Escape" && closeSubscribe()}
           className={`relative w-full max-w-sm bg-white rounded-md shadow-2xl px-6 py-7 transition-all duration-300 ${
             subscribeOpen ? "translate-y-0 scale-100" : "translate-y-4 scale-95"
@@ -470,7 +473,7 @@ export default function Header() {
 
           <div className="h-[3px] w-10 bg-[#E8B23D] mb-4" />
           <h2 className="font-serif text-xl font-bold text-[#1A1A1A] mb-1">
-            Subscribe to Global Times
+            Subscribe to {SITE_NAME}
           </h2>
 
           {subscribed ? (

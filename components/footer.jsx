@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SITE_NAME, SITE_SOCIAL_LINKS } from "@/lib/site";
 
 /**
  * Footer — companion to Header.jsx (white bg, matches header palette)
@@ -103,7 +104,7 @@ export default function Footer() {
         {/* masthead */}
         <div className="flex flex-col items-center text-center pt-10 pb-8 border-b border-[#E5E5E5]">
           <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#D01418]">PR PRIMESPOT</span>
-          <span className="mt-2 text-[10px] tracking-[0.18em] text-[#8A8A8A] font-sans">DISCOVER CHINA, DISCOVER THE WORLD</span>
+          <span className="mt-2 text-[10px] tracking-[0.18em] text-[#8A8A8A] font-sans">U.S. BREAKING NEWS, POLITICS &amp; BUSINESS</span>
         </div>
 
         {/* link grid */}
@@ -134,9 +135,13 @@ export default function Footer() {
 
           <FooterColumn title="Follow Us">
             <div className="flex items-center gap-3">
+              {/* Facebook and YouTube have no live PR Primespot page yet —
+                  still "#". The real accounts also include Substack and
+                  Medium (see SITE_SOCIAL_LINKS in lib/site.js); add icons
+                  for those here once you want them in the footer. */}
               <SocialIcon label="Facebook"><FacebookIcon /></SocialIcon>
-              <SocialIcon label="Twitter"><TwitterIcon /></SocialIcon>
-              <SocialIcon label="Instagram"><InstagramIcon /></SocialIcon>
+              <SocialIcon label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIcon>
+              <SocialIcon label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIcon>
               <SocialIcon label="YouTube"><YoutubeIcon /></SocialIcon>
             </div>
           </FooterColumn>
@@ -172,7 +177,7 @@ export default function Footer() {
         {/* bottom bar */}
         <div className="flex flex-col gap-4 border-t border-[#E5E5E5] py-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-sans text-xs text-[#8A8A8A] order-2 sm:order-1">
-            © {new Date().getFullYear()} Global Times. All rights reserved.
+            © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
 
           <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 order-1 sm:order-2">
@@ -181,7 +186,6 @@ export default function Footer() {
                 {label}
               </a>
             ))}
-            <a href="#" className="font-sans text-xs text-[#8A8A8A] hover:text-[#D01418] transition-colors">中文</a>
           </nav>
         </div>
       </div>

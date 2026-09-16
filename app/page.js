@@ -19,9 +19,9 @@ import {
 // ⚠️  Drop a real 1200x630 image at /public/og-image.jpg (used
 //     for Open Graph + Twitter card previews).
 // ─────────────────────────────────────────────────────────────
-const PAGE_TITLE = `${SITE_NAME} – U.S. Breaking News, Politics & Business`;
+const PAGE_TITLE = `${SITE_NAME} – Business, Finance, World & U.S. Politics`;
 const PAGE_DESCRIPTION =
-  "Stay updated with U.S. breaking news, politics, business, tech, and investigations, with real-time coverage, trusted analysis, and essential daily insights.";
+  "Stay updated with U.S. breaking news, business, finance, world affairs, politics, and sports, with real-time coverage, trusted analysis, and essential daily insights.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -34,13 +34,11 @@ export const metadata = {
     SITE_NAME,
     "U.S. news",
     "breaking news",
-    "politics",
     "business news",
     "finance news",
-    "technology news",
-    "investigations",
-    "health news",
-    "investment news",
+    "world news",
+    "politics",
+    "sports news",
   ],
   applicationName: SITE_NAME,
   authors: [{ name: `${SITE_NAME} Editorial Team` }],
