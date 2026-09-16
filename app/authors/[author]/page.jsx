@@ -30,9 +30,15 @@ import authorsData from "../../../public/data/author.json";
  * SEO: generateMetadata() covers title, description, canonical URL, OG
  * (type "profile"), Twitter card, robots. JSON-LD covers Person,
  * BreadcrumbList, ItemList (author's articles), Organization — all sourced
- * from authorsData + articlesData. The visible breadcrumb (Home / Authors /
- * Name) and the JSON-LD BreadcrumbList are kept in sync — Google requires
- * the two to match for breadcrumb rich results to be eligible.
+ * from authorsData + articlesData. The visible breadcrumb (Home / Name) and
+ * the JSON-LD BreadcrumbList are kept in sync — Google requires the two to
+ * match for breadcrumb rich results to be eligible. This project has no
+ * /authors index route, so the breadcrumb goes straight from Home to the
+ * author's name rather than linking through a page that doesn't exist.
+ *
+ * getArticlesByAuthor() scans every category in articlesData, not just the
+ * author's home `category` field — so a byline outside their usual desk
+ * still shows up here and in the ItemList JSON-LD below.
  *
  * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE, and
  * SITE_LOGO_PATH all come from lib/site.js (https://www.prprimespot.com).
@@ -60,23 +66,28 @@ function getAuthorBySlug(authorSlug) {
   return info ? { slug: authorSlug.toLowerCase(), ...info } : null;
 }
 
-// Uses the author's own `category` field (from authors.json) to go straight
-// to that category's article list, instead of scanning every category.
+// Scans every category, not just the author's home `category` field from
+// author.json. An author's home category is just their primary desk — if
+// they ever get a byline outside it (a business writer covering a finance
+// story, say), that post still needs to show up here and in the ItemList
+// JSON-LD below. Filtering to a single category would silently drop it.
 // Swap this for: const res = await fetch(`${API_URL}/articles?author=${authorSlug}`)
-function getArticlesByAuthor(authorSlug, category) {
+function getArticlesByAuthor(authorSlug) {
   const slug = authorSlug?.toLowerCase();
-  const posts = articlesData[category] || [];
 
-  return posts
-    .filter((post) => post.authorSlug === slug)
-    .map((post) => ({
-      category,
-      slug: post.slug,
-      headline: post.headline,
-      excerpt: post.dek,
-      heroImage: post.heroImage,
-      publishedAt: post.publishedAt,
-    }))
+  return Object.entries(articlesData)
+    .flatMap(([category, posts]) =>
+      posts
+        .filter((post) => post.authorSlug === slug)
+        .map((post) => ({
+          category,
+          slug: post.slug,
+          headline: post.headline,
+          excerpt: post.dek,
+          heroImage: post.heroImage,
+          publishedAt: post.publishedAt,
+        }))
+    )
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 }
 
@@ -256,7 +267,7 @@ export default async function AuthorPage({ params }) {
     notFound();
   }
 
-  const articles = getArticlesByAuthor(author, authorData.category);
+  const articles = getArticlesByAuthor(author);
 
   // ---------------------------------------------------------------------
   // JSON-LD — Person + BreadcrumbList + ItemList (author's articles) +
@@ -267,7 +278,6 @@ export default async function AuthorPage({ params }) {
   // breadcrumb rich results.
   // ---------------------------------------------------------------------
   const url = `${SITE_URL}/authors/${authorData.slug}`;
-  const authorsIndexUrl = `${SITE_URL}/authors`;
   const imageUrl = getAbsoluteUrl(authorData.avatarImage || FALLBACK_AVATAR);
 
   const jsonLd = {
@@ -302,8 +312,7 @@ export default async function AuthorPage({ params }) {
         "@id": `${url}#breadcrumb`,
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: "Authors", item: authorsIndexUrl },
-          { "@type": "ListItem", position: 3, name: authorData.name, item: url },
+          { "@type": "ListItem", position: 2, name: authorData.name, item: url },
         ],
       },
       {
@@ -344,8 +353,6 @@ export default async function AuthorPage({ params }) {
         {/* Breadcrumb — matches the BreadcrumbList JSON-LD above node-for-node */}
         <nav className="flex flex-wrap items-center gap-1.5 font-sans text-xs text-[#8A8A8A] mb-6">
           <Link href="/" className="hover:text-[#D01418] transition-colors">Home</Link>
-          <span>/</span>
-          <Link href="/authors" className="hover:text-[#D01418] transition-colors">Authors</Link>
           <span>/</span>
           <span className="text-[#1A1A1A]">{authorData.name}</span>
         </nav>
