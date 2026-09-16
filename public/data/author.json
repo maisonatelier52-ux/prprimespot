@@ -1,0 +1,56 @@
+{
+  "james-carter": {
+    "slug": "james-carter",
+    "category": "business",
+    "name": "James Carter",
+    "role": "Business Writer",
+    "bio": "James Carter writes about companies, trade policy, manufacturing, and corporate strategy. His posts link to the public records and source material used for their central claims.",
+    "avatarImage": "/images/nvidia-q2-earnings-2026-smashes-estimates-108-billion-revenue-guidance.webp",
+    "social": {}
+  },
+  "elena-vasquez": {
+    "slug": "elena-vasquez",
+    "category": "finance",
+    "name": "Elena Vasquez",
+    "role": "Finance Writer",
+    "bio": "Elena Vasquez writes about markets, interest rates, household finance, and economic data. Her posts separate observed figures from forecasts and interpretation.",
+    "avatarImage": "/images/sp500-record-high-dow-tops-54000-cooling-inflation-august-2026.webp",
+    "social": {}
+  },
+  "raj-patel": {
+    "slug": "raj-patel",
+    "category": "world",
+    "name": "Raj Patel",
+    "role": "World & Technology Writer",
+    "bio": "Raj Patel writes about international affairs, science, technology, and cross-border industry. His posts identify official claims and distinguish them from independently established facts.",
+    "avatarImage": "/images/ai-decodes-complete-herculaneum-scroll-vesuvius-challenge-2000-years.webp",
+    "social": {}
+  },
+  "sarah-kim": {
+    "slug": "sarah-kim",
+    "category": "us",
+    "name": "Sarah Kim",
+    "role": "U.S. Health & Science Writer",
+    "bio": "Sarah Kim writes about U.S. public health, medical research, science policy, education, and federal institutions. Her posts link to primary studies and regulator guidance where available.",
+    "avatarImage": "/images/acs-colorectal-cancer-screening-guidelines-2026-new-blood-test-option.webp",
+    "social": {}
+  },
+  "maria-santos": {
+    "slug": "maria-santos",
+    "category": "politics",
+    "name": "Maria Santos",
+    "role": "Politics Writer",
+    "bio": "Maria Santos writes about elections, courts, Congress, and public institutions. Her analysis labels projections and source attribution so readers can separate evidence from interpretation.",
+    "avatarImage": "/images/national-redistricting-battle-2026-midterms-house-control.webp",
+    "social": {}
+  },
+  "daniel-osei": {
+    "slug": "daniel-osei",
+    "category": "sports",
+    "name": "Daniel Osei",
+    "role": "Sports Writer",
+    "bio": "Daniel Osei writes about major leagues, national teams, athlete performance, and the business of sport. Results and records are checked against league or governing-body data when available.",
+    "avatarImage": "/images/nba-foundation-six-years-grassroots-basketball-all-star-2026-homecourt-hoops.webp",
+    "social": {}
+  }
+}
