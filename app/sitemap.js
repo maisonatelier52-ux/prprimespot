@@ -9,6 +9,23 @@ function newestDate(posts) {
   }, null);
 }
 
+// Static, non-article pages. Content pages (About, Contact) get a
+// slightly higher priority than pure legal/policy boilerplate, since
+// they're more likely to be useful search-landing pages.
+const STATIC_PAGES = [
+  { path: "/about", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/source-methodology", changeFrequency: "yearly", priority: 0.4 },
+  { path: "/ownership-and-funding", changeFrequency: "yearly", priority: 0.4 },
+  { path: "/legal", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/terms-and-conditions", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/advertising-policy", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/editorial-policy", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/corrections-policy", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/right-of-reply-policy", changeFrequency: "yearly", priority: 0.3 },
+];
+
 export default function sitemap() {
   const allArticles = Object.entries(articlesData).flatMap(([category, posts]) =>
     posts.map((post) => ({ ...post, category }))
@@ -38,6 +55,12 @@ export default function sitemap() {
     priority: 0.5,
   }));
 
+  const staticPages = STATIC_PAGES.map(({ path, changeFrequency, priority }) => ({
+    url: `${SITE_URL}${path}`,
+    changeFrequency,
+    priority,
+  }));
+
   return [
     {
       url: SITE_URL,
@@ -45,16 +68,7 @@ export default function sitemap() {
       changeFrequency: "daily",
       priority: 1,
     },
-    {
-      url: `${SITE_URL}/about`,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: `${SITE_URL}/privacy-policy`,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
+    ...staticPages,
     ...categories,
     ...articles,
     ...authors,
