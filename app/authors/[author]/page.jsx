@@ -409,9 +409,7 @@ export default async function AuthorPage({ params }) {
 
         {/* Posts by this author */}
         <div className="flex items-baseline justify-between mb-6">
-          <h2 className="font-sans text-lg font-extrabold uppercase tracking-wide text-[#1A1A1A]">
-            Posts
-          </h2>
+          <h2 className="font-sans text-lg font-extrabold uppercase tracking-wide text-[#1A1A1A]">Posts</h2>
           <span className="font-sans text-sm text-[#8A8A8A]">
             {articles.length} {articles.length === 1 ? "post" : "posts"}
           </span>

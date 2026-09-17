@@ -291,12 +291,12 @@ function ArrowBadge() {
 function AuthorCard({ article }) {
   const { author, authorSlug, authorRole, authorImage, authorBio, authorSocial } = article;
   return (
-    <div className="mt-10 flex gap-4 rounded-lg border border-[#E5E5E5] p-5">
+    <div className="mt-10 flex gap-5 rounded-lg border border-[#E5E5E5] p-6">
       <ArticleImage
         imageUrl={authorImage}
         alt={author}
-        className="w-16 h-16 sm:w-20 sm:h-20 rounded-full shrink-0"
-        sizes="80px"
+        className="w-20 h-20 sm:w-28 sm:h-28 rounded-full shrink-0"
+        sizes="112px"
       />
       <div className="min-w-0">
         <p className="font-sans text-xs uppercase tracking-wide text-[#A0A0A0] mb-0.5">About the Author</p>
@@ -490,28 +490,44 @@ export default async function ArticlePage({ params }) {
 
             {/* Byline + share row */}
             <div className="mt-6 flex flex-wrap items-center justify-between gap-4 py-4 border-y border-[#E5E5E5]">
-              <div className="font-sans text-sm text-[#595959]">
-                <span className="font-medium text-[#1A1A1A]">
-                  By{" "}
-                  {article.authorSlug ? (
-                    <a
-                      href={`/authors/${article.authorSlug}`}
-                      className="hover:text-[#D01418] transition-colors"
-                    >
-                      {article.author}
-                    </a>
-                  ) : (
-                    article.author
-                  )}
-                </span>
-                {publishedLabel && (
-                  <span className="block sm:inline sm:before:content-['_·_'] mt-1 sm:mt-0">
-                    {publishedLabel}
+              <div className="flex items-center gap-3">
+                {article.authorImage && (
+                  <a
+                    href={article.authorSlug ? `/authors/${article.authorSlug}` : undefined}
+                    aria-label={article.author}
+                    className="shrink-0"
+                  >
+                    <ArticleImage
+                      imageUrl={article.authorImage}
+                      alt={article.author}
+                      className="w-10 h-10 rounded-full"
+                      sizes="40px"
+                    />
+                  </a>
+                )}
+                <div className="font-sans text-sm text-[#595959]">
+                  <span className="font-medium text-[#1A1A1A]">
+                    By{" "}
+                    {article.authorSlug ? (
+                      <a
+                        href={`/authors/${article.authorSlug}`}
+                        className="hover:text-[#D01418] transition-colors"
+                      >
+                        {article.author}
+                      </a>
+                    ) : (
+                      article.author
+                    )}
                   </span>
-                )}
-                {updatedLabel && (
-                  <span className="block text-xs text-[#A0A0A0] mt-1">Updated {updatedLabel}</span>
-                )}
+                  {publishedLabel && (
+                    <span className="block sm:inline sm:before:content-['_·_'] mt-1 sm:mt-0">
+                      {publishedLabel}
+                    </span>
+                  )}
+                  {updatedLabel && (
+                    <span className="block text-xs text-[#A0A0A0] mt-1">Updated {updatedLabel}</span>
+                  )}
+                </div>
               </div>
 
               <div className="flex items-center gap-2">

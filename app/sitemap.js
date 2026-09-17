@@ -45,6 +45,16 @@ export default function sitemap() {
       changeFrequency: "daily",
       priority: 1,
     },
+    {
+      url: `${SITE_URL}/about`,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${SITE_URL}/privacy-policy`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
     ...categories,
     ...articles,
     ...authors,

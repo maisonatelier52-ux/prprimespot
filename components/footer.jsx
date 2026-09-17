@@ -26,9 +26,22 @@ const SECTIONS = [
   { label: "Sports", href: "/sports" },
 ];
 
-const COMPANY_LINKS = ["About Us", "Careers", "Contact", "Advertise With Us", "Editorial Standards"];
+const COMPANY_LINKS = [
+  { label: "About Us", href: "/about" },
+  { label: "Terms and Conditions", href: "/terms-and-conditions" },
+  { label: "Contact", href: "/contact" },
+  { label: "Legal", href: "/legal" },
+  { label: "Ownership and Funding", href: "/ownership-and-funding" },
+  { label: "Source Methodology", href: "/source-methodology" },
+];
 
-const LEGAL_LINKS = ["Privacy Policy", "Terms of Service", "Cookie Policy", "Sitemap"];
+const LEGAL_LINKS = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Advertising Policy", href: "/advertising-policy" },
+  { label: "Editorial Policy", href: "/editorial-policy" },
+  { label: "Corrections Policy", href: "/corrections-policy" },
+  { label: "Right of Reply Policy", href: "/right-of-reply-policy" },
+];
 
 function FacebookIcon() {
   return (
@@ -123,9 +136,9 @@ export default function Footer() {
 
           <FooterColumn title="Company">
             <ul className="space-y-2.5 font-sans text-sm text-[#595959]">
-              {COMPANY_LINKS.map((label) => (
+              {COMPANY_LINKS.map(({ label, href }) => (
                 <li key={label}>
-                  <a href="#" className="hover:text-[#D01418] transition-colors">
+                  <a href={href} className="hover:text-[#D01418] transition-colors">
                     {label}
                   </a>
                 </li>
@@ -181,8 +194,8 @@ export default function Footer() {
           </p>
 
           <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 order-1 sm:order-2">
-            {LEGAL_LINKS.map((label) => (
-              <a key={label} href="#" className="font-sans text-xs text-[#8A8A8A] hover:text-[#D01418] transition-colors">
+            {LEGAL_LINKS.map(({ label, href }) => (
+              <a key={label} href={href} className="font-sans text-xs text-[#8A8A8A] hover:text-[#D01418] transition-colors">
                 {label}
               </a>
             ))}
