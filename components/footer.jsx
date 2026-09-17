@@ -43,10 +43,10 @@ const LEGAL_LINKS = [
   { label: "Right of Reply Policy", href: "/right-of-reply-policy" },
 ];
 
-function FacebookIcon() {
+function SubstackIcon() {
   return (
     <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M13.5 21v-8.1h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.5 3.1 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.2H7.1v3.2h2.7V21h3.7z" />
+      <path d="M4 3h16v3.2H4V3zm0 5.4h16V12H4V8.4zm0 5.4h16v1.9L12 21l-8-5.3v-1.9z" />
     </svg>
   );
 }
@@ -69,11 +69,12 @@ function InstagramIcon() {
   );
 }
 
-function YoutubeIcon() {
+function MediumIcon() {
   return (
-    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <rect x="2" y="5.5" width="20" height="13" rx="3.5" stroke="currentColor" strokeWidth="1.6" />
-      <path d="M10.5 9.3v5.4l5-2.7-5-2.7z" fill="currentColor" />
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <circle cx="6.2" cy="12" r="4.2" />
+      <ellipse cx="14.5" cy="12" rx="2.6" ry="4.2" />
+      <ellipse cx="20.2" cy="12" rx="1.1" ry="4" />
     </svg>
   );
 }
@@ -148,14 +149,12 @@ export default function Footer() {
 
           <FooterColumn title="Follow Us">
             <div className="flex items-center gap-3">
-              {/* Facebook and YouTube have no live PR Primespot page yet —
-                  still "#". The real accounts also include Substack and
-                  Medium (see SITE_SOCIAL_LINKS in lib/site.js); add icons
-                  for those here once you want them in the footer. */}
-              <SocialIcon label="Facebook"><FacebookIcon /></SocialIcon>
-              <SocialIcon label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIcon>
+              {/* The site's four real channels — see SITE_SOCIAL_LINKS in
+                  lib/site.js. */}
               <SocialIcon label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIcon>
-              <SocialIcon label="YouTube"><YoutubeIcon /></SocialIcon>
+              <SocialIcon label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIcon>
+              <SocialIcon label="Substack" href={SITE_SOCIAL_LINKS.substack}><SubstackIcon /></SocialIcon>
+              <SocialIcon label="Medium" href={SITE_SOCIAL_LINKS.medium}><MediumIcon /></SocialIcon>
             </div>
           </FooterColumn>
 

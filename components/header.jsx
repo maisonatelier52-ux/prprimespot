@@ -121,19 +121,30 @@ function SocialIconButton({ label, children, href = "#" }) {
   );
 }
 
-function MobileIcon() {
+function InstagramIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="sm:w-5 sm:h-5">
-      <rect x="6" y="2" width="12" height="20" rx="2" stroke="currentColor" strokeWidth="1.6" />
-      <line x1="10.5" y1="18.3" x2="13.5" y2="18.3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="sm:w-[18px] sm:h-[18px]">
+      <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
     </svg>
   );
 }
 
-function FacebookIcon() {
+function SubstackIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="sm:w-[18px] sm:h-[18px]">
-      <path d="M13.5 21v-8.1h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.5 3.1 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.2H7.1v3.2h2.7V21h3.7z" />
+      <path d="M4 3h16v3.2H4V3zm0 5.4h16V12H4V8.4zm0 5.4h16v1.9L12 21l-8-5.3v-1.9z" />
+    </svg>
+  );
+}
+
+function MediumIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="sm:w-[18px] sm:h-[18px]">
+      <circle cx="6.2" cy="12" r="4.2" />
+      <ellipse cx="14.5" cy="12" rx="2.6" ry="4.2" />
+      <ellipse cx="20.2" cy="12" rx="1.1" ry="4" />
     </svg>
   );
 }
@@ -247,13 +258,14 @@ export default function Header() {
                 {searchOpen ? <CloseIcon /> : <SearchIcon />}
               </IconButton>
             </div>
-            {/* md and up: social icons */}
+            {/* md and up: social icons — Instagram, Twitter, Substack, Medium,
+                the site's actual four channels (see SITE_SOCIAL_LINKS in
+                lib/site.js) */}
             <div className="hidden md:flex items-center gap-2 sm:gap-2.5">
-              {/* No real app / Facebook page yet for PR Primespot — these
-                  still point at "#". Swap or remove once those exist. */}
-              <SocialIconButton label="App"><MobileIcon /></SocialIconButton>
-              <SocialIconButton label="Facebook"><FacebookIcon /></SocialIconButton>
+              <SocialIconButton label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIconButton>
               <SocialIconButton label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIconButton>
+              <SocialIconButton label="Substack" href={SITE_SOCIAL_LINKS.substack}><SubstackIcon /></SocialIconButton>
+              <SocialIconButton label="Medium" href={SITE_SOCIAL_LINKS.medium}><MediumIcon /></SocialIconButton>
             </div>
           </div>
 
