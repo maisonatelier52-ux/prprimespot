@@ -11,39 +11,6 @@ import {
 import authorsData from "../../public/data/author.json";
 import articlesData from "../../public/data/article.json";
 
-/**
- * app/about/page.jsx — About page
- *
- * Route: /about
- *
- * Static page (no dynamic segment, no generateStaticParams needed) — content
- * lives directly in this file except for the writer roster, which is pulled
- * from public/data/author.json so it never drifts out of sync with the real
- * byline list.
- *
- * Layout:
- *   Breadcrumb -> masthead/mission header -> "What we cover" (category
- *   chips) -> "How we work" (editorial approach) -> "Our writers" (roster
- *   grid, links out to each author's own page)
- *
- * SEO: generateMetadata() covers title, description, canonical URL, OG,
- * Twitter card, robots. JSON-LD covers AboutPage, BreadcrumbList,
- * Organization — all sourced from lib/site.js + author.json.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE, and
- * SITE_LOGO_PATH all come from lib/site.js (https://www.prprimespot.com).
- * Nothing in this file hardcodes the domain — update lib/site.js if the
- * domain, name, or handle ever changes.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   cream         #F7F5EF
- *   rule          #E5E5E5
- */
-
 const FALLBACK_AVATAR = "/default-avatar.jpg";
 
 const CATEGORY_LABELS = {
@@ -57,13 +24,8 @@ const CATEGORY_LABELS = {
 
 const PAGE_TITLE = "About Us";
 
-// Meta description — kept under ~160 characters so Google doesn't truncate
-// it in search results, and so OG/Twitter card previews stay readable.
 const PAGE_DESCRIPTION = `${SITE_NAME} covers business, finance, world affairs, U.S. news, politics, and sports, with every post linked back to its primary sources.`;
 
-// On-page intro — no length constraint here, since this is read in the
-// browser, not clipped in a search snippet. Each entry renders as its own
-// paragraph under the header.
 const PAGE_INTRO = [
   `${SITE_NAME} is a source-linked current-affairs publication covering business, finance, world affairs, U.S. news, politics, and sports. We exist to give readers a fast, accurate account of what's happening, with a clear path back to the primary records, data, and statements each story is built on.`,
   "We were built around a simple idea: a news story should be easy to verify, not just easy to read. That means citing the report, the transcript, the filing, or the dataset behind a claim, and being upfront about what's confirmed, what's projected, and what's still developing.",
@@ -220,8 +182,7 @@ export default function AboutPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
@@ -232,10 +193,7 @@ export default function AboutPage() {
           <span>/</span>
           <span className="text-[#1A1A1A]">About Us</span>
         </nav>
-
-        {/* Header panel — centered hero-style block, matches the category/
-            author page pattern but centered rather than left-aligned since
-            this is a short mission statement, not an article list */}
+    
         <div className="bg-[#F7F5EF] px-6 py-10 sm:px-8 sm:py-14 mb-10 flex flex-col items-center text-center">
           <div className="inline-block bg-[#D01418] px-6 py-3 shadow-sm">
             <h1 className="font-sans text-xl sm:text-2xl font-extrabold uppercase tracking-wide text-white">
@@ -257,11 +215,7 @@ export default function AboutPage() {
           <h2 className="font-sans text-lg font-extrabold uppercase tracking-wide text-[#1A1A1A] mb-4">What We Cover</h2>
           <div className="flex flex-wrap gap-2">
             {categories.map(([slug, label]) => (
-              <Link
-                key={slug}
-                href={`/${slug}`}
-                className="rounded-full border border-[#E0DDD5] px-4 py-1.5 font-sans text-sm text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors"
-              >
+              <Link key={slug} href={`/${slug}`} className="rounded-full border border-[#E0DDD5] px-4 py-1.5 font-sans text-sm text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors">
                 {label}
               </Link>
             ))}

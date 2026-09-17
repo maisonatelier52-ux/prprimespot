@@ -1,49 +1,10 @@
 import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
-/**
- * app/corrections-policy/page.jsx — Corrections Policy
- *
- * Route: /corrections-policy
- *
- * Explains, in plain terms, the mechanism already visible on every
- * article page: an "Updated {date}" label driven by article.updatedAt in
- * public/data/article.json (see app/[category]/[slug]/page.jsx). This
- * page is the plain-language explanation of what that label means and
- * how corrections are handled, not a new mechanism of its own. Builds on
- * the "Corrections, not silent edits" principle already stated on
- * app/about/page.jsx and app/editorial-policy/page.jsx.
- *
- * Static page, plain long-form content. Section copy lives directly in
- * this file (SECTIONS below) rather than in public/data, since this text
- * isn't rendered anywhere else on the site. Structure and styling
- * intentionally mirror app/privacy-policy/page.jsx,
- * app/terms-and-conditions/page.jsx, app/legal/page.jsx, and
- * app/editorial-policy/page.jsx.
- *
- * PLACEHOLDER CONTENT: this describes the site's actual updatedAt-based
- * mechanism honestly, but the process (e.g. whether a standalone
- * correction note is appended in-article) should be kept in sync with
- * whatever the site actually does as it evolves. Not legal advice.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE all come
- * from lib/site.js — nothing here hardcodes the domain.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   cream         #F7F5EF
- *   rule          #E5E5E5
- */
-
 const CONTACT_EMAIL = "corrections@prprimespot.com";
 
 const PAGE_TITLE = "Corrections Policy";
 
-// Short, meta-description length — kept under ~160 chars so it isn't
-// truncated in search results or link previews.
 const PAGE_DESCRIPTION = `How ${SITE_NAME} handles, discloses, and lets you report corrections to published articles.`;
 
 const LAST_UPDATED = "September 17, 2026";
@@ -169,8 +130,7 @@ export default function CorrectionsPolicyPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -190,9 +150,7 @@ export default function CorrectionsPolicyPage() {
             </h1>
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
-          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">
-            Last updated: {LAST_UPDATED}
-          </p>
+          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">Last updated: {LAST_UPDATED}</p>
         </div>
 
         {/* Sections — left-aligned long-form content */}
@@ -204,10 +162,7 @@ export default function CorrectionsPolicyPage() {
               </h2>
               <div className="space-y-3">
                 {section.body.map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="font-sans text-[15px] leading-[1.8] text-[#595959]"
-                  >
+                  <p key={i} className="font-sans text-[15px] leading-[1.8] text-[#595959]">
                     {paragraph}
                   </p>
                 ))}

@@ -1,62 +1,14 @@
 import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
-/**
- * app/legal/page.jsx — Legal
- *
- * Route: /legal
- *
- * This is the general legal-disclosures hub — publisher identity,
- * copyright/IP notice, a general disclaimer, a DMCA/takedown notice, and
- * governing law — plus a directory of links to the site's other, more
- * specific policies (Privacy, Terms, Advertising, Editorial, Corrections,
- * Right of Reply). It's distinct from those individual policy pages,
- * which each cover one topic in depth; this page is the index + the
- * disclosures that don't have a dedicated page of their own.
- *
- * Static page, plain long-form legal content. Section copy lives directly
- * in this file (SECTIONS below) rather than in public/data, since legal
- * text isn't rendered anywhere else on the site. Structure and styling
- * intentionally mirror app/privacy-policy/page.jsx and
- * app/terms-and-conditions/page.jsx.
- *
- * PLACEHOLDER CONTENT: CONTACT_EMAIL, the publisher details, and the
- * wording throughout are reasonable defaults for a static, no-account,
- * no-checkout content site (no user logins, no payments, no server-side
- * database — see README/project notes), but this is not legal advice.
- * Have this reviewed by someone qualified, and fill in real publisher/
- * business registration details, before treating it as your actual
- * legal notice.
- *
- * RELATED_POLICIES below links to routes that may not exist yet
- * (advertising-policy, editorial-policy, corrections-policy,
- * right-of-reply-policy) — same as the footer's LEGAL_LINKS. Create
- * those pages to make the links resolve.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE all come
- * from lib/site.js — nothing here hardcodes the domain.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   cream         #F7F5EF
- *   rule          #E5E5E5
- */
-
 const CONTACT_EMAIL = "legal@prprimespot.com";
 
 const PAGE_TITLE = "Legal";
 
-// Short, meta-description length — kept under ~160 chars so it isn't
-// truncated in search results or link previews.
 const PAGE_DESCRIPTION = `Publisher information, copyright notice, and legal disclosures for ${SITE_NAME}, plus links to our full policies.`;
 
 const LAST_UPDATED = "September 17, 2026";
 
-// The site's other standalone policies — same set as the footer's
-// LEGAL_LINKS plus Terms and Conditions, gathered here as one directory.
 const RELATED_POLICIES = [
   { label: "Privacy Policy", href: "/privacy-policy", description: "What we collect when you visit, and how it's used." },
   { label: "Terms and Conditions", href: "/terms-and-conditions", description: "The terms governing your use of this site." },
@@ -178,8 +130,7 @@ export default function LegalPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -199,24 +150,16 @@ export default function LegalPage() {
             </h1>
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
-          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">
-            Last updated: {LAST_UPDATED}
-          </p>
+          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">Last updated: {LAST_UPDATED}</p>
         </div>
 
         {/* Related policies — directory at the top so visitors can jump
             straight to the specific policy they're after */}
         <section className="mb-12">
-          <h2 className="font-sans text-lg font-extrabold uppercase tracking-wide text-[#1A1A1A] mb-4">
-            Our Policies
-          </h2>
+          <h2 className="font-sans text-lg font-extrabold uppercase tracking-wide text-[#1A1A1A] mb-4">Our Policies</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {RELATED_POLICIES.map((policy) => (
-              <Link
-                key={policy.href}
-                href={policy.href}
-                className="block border border-[#E5E5E5] bg-white p-4 hover:border-[#D01418] transition-colors"
-              >
+              <Link key={policy.href} href={policy.href} className="block border border-[#E5E5E5] bg-white p-4 hover:border-[#D01418] transition-colors">
                 <h3 className="font-serif text-sm font-bold text-[#1A1A1A]">
                   {policy.label}
                 </h3>
@@ -237,10 +180,7 @@ export default function LegalPage() {
               </h2>
               <div className="space-y-3">
                 {section.body.map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="font-sans text-[15px] leading-[1.8] text-[#595959]"
-                  >
+                  <p key={i} className="font-sans text-[15px] leading-[1.8] text-[#595959]">
                     {paragraph}
                   </p>
                 ))}

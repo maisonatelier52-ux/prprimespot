@@ -9,48 +9,11 @@ import {
   SITE_LOGO_PATH,
 } from "@/lib/site";
 
-// Adjust these paths if this file moves relative to /public/data
 import articlesData from "../../../public/data/article.json";
 import authorsData from "../../../public/data/author.json";
 
-/**
- * app/[category]/[slug]/page.jsx — article detail page
- *
- * Route example: /china/china-aid-training-alumni-workshop-sri-lanka
- *
- * Data source: public/data/articles.json (organized by category) +
- * public/data/authors.json, merged together by authorSlug in getArticle().
- *
- * Layout: two columns on lg+ — post (8/12) + sticky "Related Posts"
- * sidebar (4/12). Body content is a list of blocks. "About the Author"
- * card sits after the body and before the tags.
- *
- * SEO: generateMetadata() covers title, description, canonical URL, OG,
- * Twitter card, robots. JSON-LD covers NewsArticle (this is a news/article
- * page, not a blog post — BlogPosting was swapped for NewsArticle),
- * BreadcrumbList, Organization — all sourced from articlesData + authorsData.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE, and
- * SITE_LOGO_PATH all come from lib/site.js (https://www.prprimespot.com).
- * Nothing in this file hardcodes the domain — update lib/site.js if the
- * domain, name, or handle ever changes.
- *
- * Next.js note: `params` is async in the App Router (Next 15+).
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   rule          #E5E5E5
- */
-
-// Fallback OG/hero image used when an article has no heroImage of its own,
-// so social previews and JSON-LD never point at a broken/undefined URL.
 const FALLBACK_IMAGE = "/og-image.jpg";
 
-// Looks up the article matching { category, slug } in articles.json, and
-// merges in author details (name, role, bio, avatar, social) from
-// authors.json via authorSlug.
 function getArticle(category, slug) {
   const post = (articlesData[category] || []).find((p) => p.slug === slug);
 
@@ -114,15 +77,12 @@ function formatDate(iso) {
 
 // ---------------------------------------------------------------------------
 // generateMetadata — title, description, canonical URL, OG, Twitter card,
-// robots, all sourced from article.json (via getArticle) + author.json
 // ---------------------------------------------------------------------------
 export async function generateMetadata({ params }) {
   const { category, slug } = await params;
   const article = getArticle(category, slug);
 
   if (!article) {
-    // Keep 404s out of Google's index instead of letting them get crawled
-    // and indexed as thin/broken content.
     return {
       title: "Article not found",
       robots: { index: false, follow: false },
@@ -188,45 +148,26 @@ export async function generateMetadata({ params }) {
 
 function ImagePlaceholder({ label, className = "" }) {
   return (
-    <div
-      className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`}
-      aria-label={`${label} image placeholder`}
-    >
+    <div className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`} aria-label={`${label} image placeholder`}>
       {label}
     </div>
   );
 }
 
-// `fill` requires a positioned (relative/absolute) parent, which the
-// wrapping className below provides. `priority` should only be set on the
-// hero image (above-the-fold / LCP element) — see usage further down.
 function ArticleImage({ imageUrl, alt, className = "", priority = false, sizes }) {
   if (!imageUrl) {
     return <ImagePlaceholder label={alt || "image"} className={className} />;
   }
   return (
     <div className={`relative overflow-hidden max-w-full ${className}`}>
-      <Image
-        src={imageUrl}
-        alt={alt}
-        fill
-        priority={priority}
-        sizes={sizes || "100vw"}
-        className="object-cover"
-      />
+      <Image src={imageUrl} alt={alt} fill priority={priority} sizes={sizes || "100vw"} className="object-cover"/>
     </div>
   );
 }
 
 function IconLink({ label, children, href }) {
   return (
-    <a
-      href={href}
-      aria-label={label}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200"
-    >
+    <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200">
       {children}
     </a>
   );
@@ -292,12 +233,7 @@ function AuthorCard({ article }) {
   const { author, authorSlug, authorRole, authorImage, authorBio, authorSocial } = article;
   return (
     <div className="mt-10 flex gap-5 rounded-lg border border-[#E5E5E5] p-6">
-      <ArticleImage
-        imageUrl={authorImage}
-        alt={author}
-        className="w-20 h-20 sm:w-28 sm:h-28 rounded-full shrink-0"
-        sizes="112px"
-      />
+      <ArticleImage imageUrl={authorImage} alt={author} className="w-20 h-20 sm:w-28 sm:h-28 rounded-full shrink-0" sizes="112px"/>
       <div className="min-w-0">
         <p className="font-sans text-xs uppercase tracking-wide text-[#A0A0A0] mb-0.5">About the Author</p>
         <h3 className="font-serif text-lg font-bold text-[#1A1A1A] break-words">
@@ -344,12 +280,7 @@ function AuthorCard({ article }) {
 function RelatedSidebarCard({ article }) {
   return (
     <a href={`/${article.category}/${article.slug}`} className="group flex gap-3">
-      <ArticleImage
-        imageUrl={article.heroImage}
-        alt={article.headline}
-        className="w-20 aspect-[4/3] shrink-0"
-        sizes="80px"
-      />
+      <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-20 aspect-[4/3] shrink-0" sizes="80px"/>
       <h3 className="font-serif text-sm font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
@@ -373,12 +304,6 @@ export default async function ArticlePage({ params }) {
 
   // ---------------------------------------------------------------------
   // JSON-LD — NewsArticle + BreadcrumbList + Organization, sourced from
-  // articlesData + authorsData via the `article` object above.
-  //
-  // This is a news/article page (not a blog), so the schema type is
-  // NewsArticle rather than BlogPosting — this is what qualifies the page
-  // for Google News—style rich results (Top Stories carousel, etc.)
-  // instead of the generic blog treatment.
   // ---------------------------------------------------------------------
   const absoluteUrl = `${SITE_URL}${pageUrl}`;
   const imageUrl = getAbsoluteUrl(article.heroImage || FALLBACK_IMAGE);
@@ -409,8 +334,6 @@ export default async function ArticlePage({ params }) {
           name: SITE_NAME,
           logo: {
             "@type": "ImageObject",
-            // Uses the site's real logo asset (lib/site.js) instead of a
-            // non-existent /logo.png at the domain root.
             url: getAbsoluteUrl(SITE_LOGO_PATH),
           },
         },
@@ -450,8 +373,7 @@ export default async function ArticlePage({ params }) {
 
   return (
     <main className="w-full bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -492,27 +414,15 @@ export default async function ArticlePage({ params }) {
             <div className="mt-6 flex flex-wrap items-center justify-between gap-4 py-4 border-y border-[#E5E5E5]">
               <div className="flex items-center gap-3">
                 {article.authorImage && (
-                  <a
-                    href={article.authorSlug ? `/authors/${article.authorSlug}` : undefined}
-                    aria-label={article.author}
-                    className="shrink-0"
-                  >
-                    <ArticleImage
-                      imageUrl={article.authorImage}
-                      alt={article.author}
-                      className="w-10 h-10 rounded-full"
-                      sizes="40px"
-                    />
+                  <a href={article.authorSlug ? `/authors/${article.authorSlug}` : undefined} aria-label={article.author} className="shrink-0">
+                    <ArticleImage imageUrl={article.authorImage} alt={article.author} className="w-10 h-10 rounded-full" sizes="40px"/>
                   </a>
                 )}
                 <div className="font-sans text-sm text-[#595959]">
                   <span className="font-medium text-[#1A1A1A]">
                     By{" "}
                     {article.authorSlug ? (
-                      <a
-                        href={`/authors/${article.authorSlug}`}
-                        className="hover:text-[#D01418] transition-colors"
-                      >
+                      <a href={`/authors/${article.authorSlug}`} className="hover:text-[#D01418] transition-colors">
                         {article.author}
                       </a>
                     ) : (
@@ -531,16 +441,10 @@ export default async function ArticlePage({ params }) {
               </div>
 
               <div className="flex items-center gap-2">
-                <IconLink
-                  label="Share on Facebook"
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(absoluteUrl)}`}
-                >
+                <IconLink label="Share on Facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(absoluteUrl)}`}>
                   <FacebookIcon />
                 </IconLink>
-                <IconLink
-                  label="Share on Twitter"
-                  href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(absoluteUrl)}&text=${encodeURIComponent(article.headline)}`}
-                >
+                <IconLink label="Share on Twitter" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(absoluteUrl)}&text=${encodeURIComponent(article.headline)}`}>
                   <TwitterIcon />
                 </IconLink>
                 <IconLink label="Open article link" href={absoluteUrl}>
@@ -551,13 +455,7 @@ export default async function ArticlePage({ params }) {
 
             {/* Hero image — above the fold, so it's marked priority for LCP */}
             <figure className="mt-8">
-              <ArticleImage
-                imageUrl={article.heroImage}
-                alt={article.headline}
-                className="w-full aspect-[16/10]"
-                priority
-                sizes="(min-width: 1024px) 66vw, 100vw"
-              />
+              <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/10]" priority sizes="(min-width: 1024px) 66vw, 100vw"/>
               {(article.heroCaption || article.heroCredit) && (
                 <figcaption className="mt-2 font-sans text-xs text-[#8A8A8A] leading-snug">
                   {article.heroCaption}
@@ -588,12 +486,7 @@ export default async function ArticlePage({ params }) {
                 <span className="font-semibold text-[#1A1A1A]">Sources and further reading:</span>{" "}
                 {article.sourceLinks.map((source, index) => (
                   <span key={source.url}>
-                    <a
-                      href={source.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline decoration-[#D8D8D8] underline-offset-2 hover:text-[#D01418]"
-                    >
+                    <a href={source.url} target="_blank" rel="noopener noreferrer" className="underline decoration-[#D8D8D8] underline-offset-2 hover:text-[#D01418]">
                       {source.label}
                     </a>
                     {index < article.sourceLinks.length - 1 ? " · " : ""}

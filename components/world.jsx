@@ -1,26 +1,5 @@
 import articlesData from "../public/data/article.json";
 
-/**
- * WorldSection — the "WORLD" category block for the homepage
- *   Left    : two stacked stories — image above headline, no excerpt
- *   Center  : one large main story — big image, headline, excerpt
- *   Right   : three stacked text-only stories, separated by dividers
- *
- * Data source: public/data/articles.json — reads only the "world"
- * category, sorted by publishedAt (newest first). This layout has 6 slots
- * (2 left + 1 main + 3 text-only); the 6 most recent world articles
- * fill them, each used exactly once, so nothing repeats. If there are more
- * than 6 world articles in the data file, the oldest ones simply don't
- * appear here — this is a homepage showcase, not the full category listing
- * (that's app/world/page.jsx, which shows all of them).
- *
- * Palette (matches header/footer/other homepage sections):
- *   masthead-red  #D01418
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   rule          #E5E5E5
- */
-
 const CATEGORY = "World";
 const CATEGORY_SLUG = "world";
 const CATEGORY_HREF = `/${CATEGORY_SLUG}`;
@@ -32,10 +11,7 @@ function getWorldArticles() {
 
 function ImagePlaceholder({ label, className = "" }) {
   return (
-    <div
-      className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`}
-      aria-label={`${label} image placeholder`}
-    >
+    <div className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`} aria-label={`${label} image placeholder`}>
       {label}
     </div>
   );
@@ -71,11 +47,7 @@ function LeftStory({ article }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
     <a href={href} className="group block">
-      <StoryImage
-        imageUrl={article.heroImage}
-        alt={article.headline}
-        className="w-full aspect-[16/9] mb-3"
-      />
+      <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/9] mb-3"/>
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
@@ -87,11 +59,7 @@ function MainStory({ article }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
     <a href={href} className="group block">
-      <StoryImage
-        imageUrl={article.heroImage}
-        alt={article.headline}
-        className="w-full aspect-[16/10] mb-4"
-      />
+      <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/10] mb-4"/>
       <h3 className="font-serif text-4xl font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>

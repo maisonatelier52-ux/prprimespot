@@ -13,51 +13,6 @@ import {
 import articlesData from "../../../public/data/article.json";
 import authorsData from "../../../public/data/author.json";
 
-/**
- * app/authors/[author]/page.jsx — author profile page
- *
- * Route example: /authors/james-carter
- *
- * Layout:
- *   Breadcrumb -> author header (avatar, name, role, bio, social links) ->
- *   uniform grid of that author's articles (same card style/size as the
- *   category page, for visual consistency across the site)
- *
- * Data source: public/data/authors.json + public/data/articles.json — the
- * same two files used by app/[category]/[slug]/page.jsx, so author info
- * only needs to be edited in one place.
- *
- * SEO: generateMetadata() covers title, description, canonical URL, OG
- * (type "profile"), Twitter card, robots. JSON-LD covers Person,
- * BreadcrumbList, ItemList (author's articles), Organization — all sourced
- * from authorsData + articlesData. The visible breadcrumb (Home / Name) and
- * the JSON-LD BreadcrumbList are kept in sync — Google requires the two to
- * match for breadcrumb rich results to be eligible. This project has no
- * /authors index route, so the breadcrumb goes straight from Home to the
- * author's name rather than linking through a page that doesn't exist.
- *
- * getArticlesByAuthor() scans every category in articlesData, not just the
- * author's home `category` field — so a byline outside their usual desk
- * still shows up here and in the ItemList JSON-LD below.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE, and
- * SITE_LOGO_PATH all come from lib/site.js (https://www.prprimespot.com).
- * Nothing in this file hardcodes the domain — update lib/site.js if the
- * domain, name, or handle ever changes.
- *
- * Next.js note: `params` is async in the App Router (Next 15+), so it's
- * awaited before use below.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   rule          #E5E5E5
- */
-
-// Fallback avatar used in OG/Twitter/JSON-LD when an author has no
-// avatarImage, so social previews never point at a broken/undefined URL.
 const FALLBACK_AVATAR = "/default-avatar.jpg";
 
 // Swap this for: const res = await fetch(`${API_URL}/authors/${authorSlug}`)
@@ -66,12 +21,6 @@ function getAuthorBySlug(authorSlug) {
   return info ? { slug: authorSlug.toLowerCase(), ...info } : null;
 }
 
-// Scans every category, not just the author's home `category` field from
-// author.json. An author's home category is just their primary desk — if
-// they ever get a byline outside it (a business writer covering a finance
-// story, say), that post still needs to show up here and in the ItemList
-// JSON-LD below. Filtering to a single category would silently drop it.
-// Swap this for: const res = await fetch(`${API_URL}/articles?author=${authorSlug}`)
 function getArticlesByAuthor(authorSlug) {
   const slug = authorSlug?.toLowerCase();
 
@@ -104,17 +53,11 @@ function formatDate(iso) {
   });
 }
 
-// ---------------------------------------------------------------------------
-// generateMetadata — title, description, canonical URL, OG (profile),
-// Twitter card, robots, all sourced directly from author.json
-// ---------------------------------------------------------------------------
 export async function generateMetadata({ params }) {
   const { author } = await params;
   const authorData = getAuthorBySlug(author);
 
   if (!authorData) {
-    // Keep 404s out of Google's index instead of letting them get crawled
-    // and indexed as thin/broken content.
     return {
       title: "Author not found",
       robots: { index: false, follow: false },
@@ -172,10 +115,7 @@ export async function generateMetadata({ params }) {
 
 function ImagePlaceholder({ label, className = "" }) {
   return (
-    <div
-      className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`}
-      aria-label={`${label} image placeholder`}
-    >
+    <div className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`} aria-label={`${label} image placeholder`}>
       {label}
     </div>
   );
@@ -187,26 +127,14 @@ function ArticleImage({ imageUrl, alt, className = "", sizes }) {
   }
   return (
     <div className={`relative overflow-hidden max-w-full ${className}`}>
-      <Image
-        src={imageUrl}
-        alt={alt}
-        fill
-        sizes={sizes || "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"}
-        className="object-cover"
-      />
+      <Image src={imageUrl} alt={alt} fill sizes={sizes || "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"} className="object-cover"/>
     </div>
   );
 }
 
 function IconLink({ label, children, href }) {
   return (
-    <a
-      href={href}
-      aria-label={label}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200"
-    >
+    <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200">
       {children}
     </a>
   );
@@ -241,11 +169,7 @@ function ArticleCard({ article }) {
   const dateLabel = formatDate(article.publishedAt);
   return (
     <a href={`/${article.category}/${article.slug}`} className="group block">
-      <ArticleImage
-        imageUrl={article.heroImage}
-        alt={article.headline}
-        className="w-full aspect-[4/3] mb-3"
-      />
+      <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3] mb-3"/>
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
@@ -271,11 +195,6 @@ export default async function AuthorPage({ params }) {
 
   // ---------------------------------------------------------------------
   // JSON-LD — Person + BreadcrumbList + ItemList (author's articles) +
-  // Organization, sourced from authorsData + articlesData.
-  //
-  // BreadcrumbList mirrors the on-page breadcrumb exactly (Home / Authors /
-  // Name) — a mismatch between the two is a common reason Google drops
-  // breadcrumb rich results.
   // ---------------------------------------------------------------------
   const url = `${SITE_URL}/authors/${authorData.slug}`;
   const imageUrl = getAbsoluteUrl(authorData.avatarImage || FALLBACK_AVATAR);
@@ -344,8 +263,7 @@ export default async function AuthorPage({ params }) {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -359,22 +277,14 @@ export default async function AuthorPage({ params }) {
 
         {/* Author header — lighter background panel, matching the category page pattern */}
         <div className="bg-[#F7F5EF] px-6 py-8 sm:px-10 sm:py-10 mb-10 flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
-          <ArticleImage
-            imageUrl={authorData.avatarImage}
-            alt={authorData.name}
-            className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shrink-0"
-            sizes="160px"
-          />
+          <ArticleImage imageUrl={authorData.avatarImage} alt={authorData.name} className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shrink-0" sizes="160px"/>
           <div className="min-w-0">
             <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1A1A1A] break-words">
               {authorData.name}
             </h1>
             <div className="flex flex-wrap items-center gap-2 mt-1.5">
               {authorData.category && (
-                <a
-                  href={`/${authorData.category}`}
-                  className="rounded-full bg-[#D01418] px-3 py-0.5 font-sans text-[11px] font-bold uppercase tracking-wide text-white hover:bg-[#a80f13] transition-colors"
-                >
+                <a href={`/${authorData.category}`} className="rounded-full bg-[#D01418] px-3 py-0.5 font-sans text-[11px] font-bold uppercase tracking-wide text-white hover:bg-[#a80f13] transition-colors">
                   {authorData.category}
                 </a>
               )}

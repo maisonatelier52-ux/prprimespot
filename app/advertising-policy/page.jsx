@@ -1,46 +1,10 @@
 import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
-/**
- * app/advertising-policy/page.jsx — Advertising Policy
- *
- * Route: /advertising-policy
- *
- * Static page, plain long-form disclosure content. Section copy lives
- * directly in this file (SECTIONS below) rather than in public/data,
- * since this text isn't rendered anywhere else on the site. Structure
- * and styling intentionally mirror app/privacy-policy/page.jsx,
- * app/terms-and-conditions/page.jsx, app/legal/page.jsx, and
- * app/ownership-and-funding/page.jsx.
- *
- * PLACEHOLDER CONTENT: as of this writing, per Ownership and Funding
- * (app/ownership-and-funding/page.jsx), the site does not run advertising,
- * sponsorships, or affiliate links. This page states that plainly and
- * describes the rules that will govern any of that once it exists, so the
- * policy is already in place before it's needed. This is a factual
- * disclosure, not boilerplate — the moment advertising, sponsored content,
- * or affiliate links actually go live, this page needs to be rewritten to
- * say so and to describe the real labeling/disclosure practice in use.
- * It is also not legal advice.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE all come
- * from lib/site.js — nothing here hardcodes the domain.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   cream         #F7F5EF
- *   rule          #E5E5E5
- */
-
 const CONTACT_EMAIL = "advertising@prprimespot.com";
 
 const PAGE_TITLE = "Advertising Policy";
 
-// Short, meta-description length — kept under ~160 chars so it isn't
-// truncated in search results or link previews.
 const PAGE_DESCRIPTION = `How ${SITE_NAME} handles advertising, sponsorships, and disclosure of paid content.`;
 
 const LAST_UPDATED = "September 17, 2026";
@@ -160,8 +124,7 @@ export default function AdvertisingPolicyPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -181,9 +144,7 @@ export default function AdvertisingPolicyPage() {
             </h1>
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
-          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">
-            Last updated: {LAST_UPDATED}
-          </p>
+          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">Last updated: {LAST_UPDATED}</p>
         </div>
 
         {/* Sections — left-aligned long-form content */}
@@ -195,10 +156,7 @@ export default function AdvertisingPolicyPage() {
               </h2>
               <div className="space-y-3">
                 {section.body.map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="font-sans text-[15px] leading-[1.8] text-[#595959]"
-                  >
+                  <p key={i} className="font-sans text-[15px] leading-[1.8] text-[#595959]">
                     {paragraph}
                   </p>
                 ))}

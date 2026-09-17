@@ -1,45 +1,10 @@
 import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
-/**
- * app/ownership-and-funding/page.jsx — Ownership and Funding
- *
- * Route: /ownership-and-funding
- *
- * Static page, plain long-form disclosure content. Section copy lives
- * directly in this file (SECTIONS below) rather than in public/data,
- * since this text isn't rendered anywhere else on the site. Structure
- * and styling intentionally mirror app/privacy-policy/page.jsx,
- * app/terms-and-conditions/page.jsx, and app/legal/page.jsx.
- *
- * PLACEHOLDER CONTENT: this describes a small, independent,
- * self-funded editorial site with no outside investors and no current
- * advertising program — a reasonable starting disclosure for a site at
- * that stage (no user logins, no payments, no server-side database —
- * see README/project notes). This is not legal advice, and it is a
- * factual disclosure, not boilerplate — once the site actually takes on
- * advertising, sponsorships, affiliate revenue, or outside investment,
- * this page needs to be rewritten to say so accurately. Misrepresenting
- * ownership or funding here would defeat the point of the page.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE all come
- * from lib/site.js — nothing here hardcodes the domain.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   cream         #F7F5EF
- *   rule          #E5E5E5
- */
-
 const CONTACT_EMAIL = "legal@prprimespot.com";
 
 const PAGE_TITLE = "Ownership and Funding";
 
-// Short, meta-description length — kept under ~160 chars so it isn't
-// truncated in search results or link previews.
 const PAGE_DESCRIPTION = `Who owns and funds ${SITE_NAME}, and how that could affect our coverage.`;
 
 const LAST_UPDATED = "September 17, 2026";
@@ -156,8 +121,7 @@ export default function OwnershipAndFundingPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -177,9 +141,7 @@ export default function OwnershipAndFundingPage() {
             </h1>
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
-          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">
-            Last updated: {LAST_UPDATED}
-          </p>
+          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">Last updated: {LAST_UPDATED}</p>
         </div>
 
         {/* Sections — left-aligned long-form legal text */}
@@ -191,10 +153,7 @@ export default function OwnershipAndFundingPage() {
               </h2>
               <div className="space-y-3">
                 {section.body.map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="font-sans text-[15px] leading-[1.8] text-[#595959]"
-                  >
+                  <p key={i} className="font-sans text-[15px] leading-[1.8] text-[#595959]">
                     {paragraph}
                   </p>
                 ))}

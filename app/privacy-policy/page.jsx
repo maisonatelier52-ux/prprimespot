@@ -1,42 +1,10 @@
 import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
-/**
- * app/privacy-policy/page.jsx — Privacy Policy
- *
- * Route: /privacy-policy
- *
- * Static page, plain long-form legal content. Section copy lives directly
- * in this file (SECTIONS below) rather than in public/data, since legal
- * text isn't rendered anywhere else on the site.
- *
- * PLACEHOLDER CONTENT: CONTACT_EMAIL and the wording throughout are
- * reasonable defaults for a static, no-account, no-checkout content site
- * (no user logins, no payments, no server-side database — see README/
- * project notes), but this is not legal advice. Have this reviewed by
- * someone qualified before treating it as your actual policy, especially
- * the analytics/cookies and third-party sections once real tools (Google
- * Analytics, ad networks, a CMS, etc.) are wired in — those each come with
- * their own disclosure obligations this draft doesn't cover.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE all come
- * from lib/site.js — nothing here hardcodes the domain.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   cream         #F7F5EF
- *   rule          #E5E5E5
- */
-
 const CONTACT_EMAIL = "privacy@prprimespot.com";
 
 const PAGE_TITLE = "Privacy Policy";
 
-// Short, meta-description length — kept under ~160 chars so it isn't
-// truncated in search results or link previews.
 const PAGE_DESCRIPTION = `How ${SITE_NAME} collects, uses, and protects information from visitors to this site.`;
 
 const LAST_UPDATED = "September 17, 2026";
@@ -172,8 +140,7 @@ export default function PrivacyPolicyPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -193,9 +160,7 @@ export default function PrivacyPolicyPage() {
             </h1>
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
-          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">
-            Last updated: {LAST_UPDATED}
-          </p>
+          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">Last updated: {LAST_UPDATED}</p>
         </div>
 
         {/* Sections — left-aligned long-form legal text */}
@@ -207,10 +172,7 @@ export default function PrivacyPolicyPage() {
               </h2>
               <div className="space-y-3">
                 {section.body.map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="font-sans text-[15px] leading-[1.8] text-[#595959]"
-                  >
+                  <p key={i} className="font-sans text-[15px] leading-[1.8] text-[#595959]">
                     {paragraph}
                   </p>
                 ))}

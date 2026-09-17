@@ -3,20 +3,6 @@
 import { useState } from "react";
 import { SITE_NAME, SITE_SOCIAL_LINKS } from "@/lib/site";
 
-/**
- * Footer — companion to Header.jsx (white bg, matches header palette)
- *   Top: gold rule + compact masthead + tagline
- *   Mid: 4-column grid — Sections, Company, Follow Us, Newsletter
- *   Bottom bar: copyright, legal links, language switch
- *
- * Palette (matches header):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A   (text)
- *   ink-soft      #595959   (secondary text)
- *   rule          #E5E5E5   (hairlines)
- */
-
 const SECTIONS = [
   { label: "Business", href: "/business" },
   { label: "Finance", href: "/finance" },
@@ -79,6 +65,19 @@ function MediumIcon() {
   );
 }
 
+function RedditIcon() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <circle cx="12" cy="14.1" r="7.4" />
+      <circle cx="7.2" cy="14.3" r="1.35" fill="#fff" />
+      <circle cx="16.8" cy="14.3" r="1.35" fill="#fff" />
+      <path d="M8.3 16.9c1 .8 2.3 1.2 3.7 1.2s2.7-.4 3.7-1.2" stroke="#fff" strokeWidth="1" fill="none" strokeLinecap="round" />
+      <circle cx="18.2" cy="8.3" r="1.6" />
+      <path d="M12 9.2l.9-4.4 3.1.6" stroke="currentColor" strokeWidth="1.1" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 function SocialIcon({ label, href = "#", children }) {
   return (
     <a href={href} aria-label={label} className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8D8D8] text-[#1A1A1A] hover:border-[#D01418] hover:text-[#D01418] transition-colors">
@@ -90,9 +89,7 @@ function SocialIcon({ label, href = "#", children }) {
 function FooterColumn({ title, children }) {
   return (
     <div>
-      <h3 className="font-sans text-[12px] font-semibold uppercase tracking-[0.15em] text-[#8A8A8A] mb-4">
-        {title}
-      </h3>
+      <h3 className="font-sans text-[12px] font-semibold uppercase tracking-[0.15em] text-[#8A8A8A] mb-4">{title}</h3>
       {children}
     </div>
   );
@@ -127,9 +124,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-sans text-sm text-[#595959]">
               {SECTIONS.map((section) => (
                 <li key={section.href}>
-                  <a href={section.href} className="hover:text-[#D01418] transition-colors">
-                    {section.label}
-                  </a>
+                  <a href={section.href} className="hover:text-[#D01418] transition-colors">{section.label}</a>
                 </li>
               ))}
             </ul>
@@ -139,9 +134,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-sans text-sm text-[#595959]">
               {COMPANY_LINKS.map(({ label, href }) => (
                 <li key={label}>
-                  <a href={href} className="hover:text-[#D01418] transition-colors">
-                    {label}
-                  </a>
+                  <a href={href} className="hover:text-[#D01418] transition-colors">{label}</a>
                 </li>
               ))}
             </ul>
@@ -149,20 +142,17 @@ export default function Footer() {
 
           <FooterColumn title="Follow Us">
             <div className="flex items-center gap-3">
-              {/* The site's four real channels — see SITE_SOCIAL_LINKS in
-                  lib/site.js. */}
               <SocialIcon label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIcon>
               <SocialIcon label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIcon>
               <SocialIcon label="Substack" href={SITE_SOCIAL_LINKS.substack}><SubstackIcon /></SocialIcon>
               <SocialIcon label="Medium" href={SITE_SOCIAL_LINKS.medium}><MediumIcon /></SocialIcon>
+              <SocialIcon label="Reddit" href={SITE_SOCIAL_LINKS.reddit}><RedditIcon /></SocialIcon>
             </div>
           </FooterColumn>
 
           <div className="col-span-2 lg:col-span-1">
             <FooterColumn title="Newsletter">
-              <p className="font-sans text-sm text-[#595959] mb-4">
-                New posts and useful context, delivered to your inbox.
-              </p>
+              <p className="font-sans text-sm text-[#595959] mb-4">New posts and useful context, delivered to your inbox.</p>
               {submitted ? (
                 <p className="font-sans text-sm text-[#B8860B]">You&apos;re subscribed. Thanks!</p>
               ) : (

@@ -1,26 +1,5 @@
 import articlesData from "../public/data/article.json";
 
-/**
- * FinanceSection — the "FINANCE" category block for the homepage
- *   Left    : one large story — big image, headline, excerpt
- *   Center  : two stacked stories — smaller image above each headline
- *   Right   : three stacked text-only stories, separated by dividers
- *
- * Data source: public/data/articles.json — reads only the "finance"
- * category, sorted by publishedAt (newest first). This layout has 6 slots
- * (1 main + 2 secondary + 3 text-only); the 6 most recent finance articles
- * fill them, each used exactly once, so nothing repeats. If there are more
- * than 6 finance articles in the data file, the oldest ones simply don't
- * appear here — this is a homepage showcase, not the full category listing
- * (that's app/finance/page.jsx, which shows all of them).
- *
- * Palette (matches header/footer/other homepage sections):
- *   masthead-red  #D01418
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   rule          #E5E5E5
- */
-
 const CATEGORY = "Finance";
 const CATEGORY_SLUG = "finance";
 const CATEGORY_HREF = `/${CATEGORY_SLUG}`;
@@ -32,10 +11,7 @@ function getFinanceArticles() {
 
 function ImagePlaceholder({ label, className = "" }) {
   return (
-    <div
-      className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`}
-      aria-label={`${label} image placeholder`}
-    >
+    <div className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`} aria-label={`${label} image placeholder`}>
       {label}
     </div>
   );
@@ -71,11 +47,7 @@ function MainStory({ article }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
     <a href={href} className="group block">
-      <StoryImage
-        imageUrl={article.heroImage}
-        alt={article.headline}
-        className="w-full aspect-[16/10] mb-4"
-      />
+      <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/10] mb-4"/>
       <h3 className="font-serif text-2xl font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
@@ -90,11 +62,7 @@ function SecondaryStory({ article }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
     <a href={href} className="group block">
-      <StoryImage
-        imageUrl={article.heroImage}
-        alt={article.headline}
-        className="w-full aspect-[16/9] sm:w-72 sm:aspect-auto sm:h-36 mb-3"
-      />
+      <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/9] sm:w-72 sm:aspect-auto sm:h-36 mb-3"/>
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
@@ -134,9 +102,7 @@ export default function FinanceSection() {
     <section className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 border-t-2 border-[#E5E5E5]">
         <a href={CATEGORY_HREF} className="group inline-flex items-center gap-2 mb-6 mt-8">
-          <h2 className="font-sans text-xl font-extrabold uppercase tracking-wide text-[#1A1A1A]">
-            {CATEGORY}
-          </h2>
+          <h2 className="font-sans text-xl font-extrabold uppercase tracking-wide text-[#1A1A1A]">{CATEGORY}</h2>
           <ArrowBadge />
         </a>
 

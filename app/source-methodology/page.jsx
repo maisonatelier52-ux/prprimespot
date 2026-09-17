@@ -1,50 +1,10 @@
 import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
-/**
- * app/source-methodology/page.jsx — Source Methodology
- *
- * Route: /source-methodology
- *
- * Explains, in plain terms, the practice already visible on every article
- * page: a "Source:" credit line, a "Sources and further reading" list of
- * outbound links (article.sourceLinks in public/data/article.json), and
- * hero images labeled "Illustration: <heroCredit>" — many of which are
- * AI-assisted illustrations, not photographs of the actual event. This
- * page is the plain-language explanation of that system, not a new
- * mechanism of its own.
- *
- * Static page, plain long-form content. Section copy lives directly in
- * this file (SECTIONS below) rather than in public/data, since this text
- * isn't rendered anywhere else on the site. Structure and styling
- * intentionally mirror app/privacy-policy/page.jsx,
- * app/terms-and-conditions/page.jsx, app/legal/page.jsx, and
- * app/ownership-and-funding/page.jsx.
- *
- * PLACEHOLDER CONTENT: this is a reasonable, honest description of how
- * public/data/article.json is actually structured (source, sourceLinks,
- * heroCredit) as of this writing, but it is a factual description, not
- * boilerplate — if the sourcing or image-sourcing process changes, this
- * page needs to change with it, or it stops being accurate.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE all come
- * from lib/site.js — nothing here hardcodes the domain.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   cream         #F7F5EF
- *   rule          #E5E5E5
- */
-
 const CONTACT_EMAIL = "editorial@prprimespot.com";
 
 const PAGE_TITLE = "Source Methodology";
 
-// Short, meta-description length — kept under ~160 chars so it isn't
-// truncated in search results or link previews.
 const PAGE_DESCRIPTION = `How ${SITE_NAME} sources, credits, and links to the reporting behind our stories.`;
 
 const LAST_UPDATED = "September 17, 2026";
@@ -171,8 +131,7 @@ export default function SourceMethodologyPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -192,9 +151,7 @@ export default function SourceMethodologyPage() {
             </h1>
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
-          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">
-            Last updated: {LAST_UPDATED}
-          </p>
+          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">Last updated: {LAST_UPDATED}</p>
         </div>
 
         {/* Sections — left-aligned long-form content */}
@@ -206,10 +163,7 @@ export default function SourceMethodologyPage() {
               </h2>
               <div className="space-y-3">
                 {section.body.map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="font-sans text-[15px] leading-[1.8] text-[#595959]"
-                  >
+                  <p key={i} className="font-sans text-[15px] leading-[1.8] text-[#595959]">
                     {paragraph}
                   </p>
                 ))}

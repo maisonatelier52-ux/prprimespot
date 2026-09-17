@@ -1,49 +1,10 @@
 import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
-/**
- * app/right-of-reply-policy/page.jsx — Right of Reply Policy
- *
- * Route: /right-of-reply-policy
- *
- * Explains how someone named or characterized in our coverage can request
- * to respond. Cross-references app/editorial-policy/page.jsx (which
- * already promises this right) and app/corrections-policy/page.jsx (the
- * separate process for factual errors, as opposed to a contested
- * characterization). Uses the same "Updated {date}" mechanism described
- * there — a published reply is added to the article and reflected in its
- * updatedAt, not a silent rewrite.
- *
- * Static page, plain long-form content. Section copy lives directly in
- * this file (SECTIONS below) rather than in public/data, since this text
- * isn't rendered anywhere else on the site. Structure and styling
- * intentionally mirror app/privacy-policy/page.jsx,
- * app/terms-and-conditions/page.jsx, app/legal/page.jsx,
- * app/editorial-policy/page.jsx, and app/corrections-policy/page.jsx.
- *
- * PLACEHOLDER CONTENT: the response timeline and process below are
- * reasonable defaults for a small editorial site with no in-house legal/
- * standards department; adjust the timeline and process to whatever the
- * site can realistically commit to and actually follow. Not legal advice.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE all come
- * from lib/site.js — nothing here hardcodes the domain.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   cream         #F7F5EF
- *   rule          #E5E5E5
- */
-
 const CONTACT_EMAIL = "editorial@prprimespot.com";
 
 const PAGE_TITLE = "Right of Reply Policy";
 
-// Short, meta-description length — kept under ~160 chars so it isn't
-// truncated in search results or link previews.
 const PAGE_DESCRIPTION = `How individuals and organizations named in our coverage can request the chance to respond.`;
 
 const LAST_UPDATED = "September 17, 2026";
@@ -169,8 +130,7 @@ export default function RightOfReplyPolicyPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -190,9 +150,7 @@ export default function RightOfReplyPolicyPage() {
             </h1>
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
-          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">
-            Last updated: {LAST_UPDATED}
-          </p>
+          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">Last updated: {LAST_UPDATED}</p>
         </div>
 
         {/* Sections — left-aligned long-form content */}
@@ -204,10 +162,7 @@ export default function RightOfReplyPolicyPage() {
               </h2>
               <div className="space-y-3">
                 {section.body.map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="font-sans text-[15px] leading-[1.8] text-[#595959]"
-                  >
+                  <p key={i} className="font-sans text-[15px] leading-[1.8] text-[#595959]">
                     {paragraph}
                   </p>
                 ))}

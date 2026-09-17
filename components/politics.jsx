@@ -1,25 +1,5 @@
 import articlesData from "../public/data/article.json";
 
-/**
- * PoliticsSection — "Politics" homepage photo rail
- *
- * Same horizontal scroll-snap gallery pattern as the original PhotoSpotlight
- * concept, now wired to real politics articles instead of placeholder
- * captions.
- *
- * Data source: public/data/articles.json — reads only the "politics"
- * category, sorted by publishedAt (newest first). Unlike the grid-based
- * category sections, this is a horizontal scroll, so there's no fixed slot
- * count to worry about — every politics article gets a card, each used
- * exactly once (no repeats), in one pass over the sorted list.
- *
- * Palette:
- *   ink        #1A1A1A   (section background)
- *   masthead-red #D01418 (accent / camera icon)
- *   paper      #FAFAF7   (headline text on dark bg)
- *   ink-soft-light #B8B8B8 (caption text on dark bg)
- */
-
 const CATEGORY_SLUG = "politics";
 
 function getPoliticsArticles() {
@@ -29,10 +9,7 @@ function getPoliticsArticles() {
 
 function ImagePlaceholder({ label, className = "" }) {
   return (
-    <div
-      className={`flex items-center justify-center bg-[#2A2A2A] text-[#7A7A7A] font-sans text-[11px] uppercase tracking-wide ${className}`}
-      aria-label={`${label} image placeholder`}
-    >
+    <div className={`flex items-center justify-center bg-[#2A2A2A] text-[#7A7A7A] font-sans text-[11px] uppercase tracking-wide ${className}`} aria-label={`${label} image placeholder`}>
       {label}
     </div>
   );
@@ -68,11 +45,7 @@ function PhotoCard({ article, index, total }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
     <a href={href} className="group relative shrink-0 w-[78%] sm:w-[46%] lg:w-[31%] snap-start overflow-hidden">
-      <PhotoImage
-        imageUrl={article.heroImage}
-        alt={article.headline}
-        className="w-full aspect-[4/5] sm:aspect-[3/4]"
-      />
+      <PhotoImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/5] sm:aspect-[3/4]"/>
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
       <span className="absolute top-3 left-3 font-mono text-[11px] text-white/80 tracking-wide">
         {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}

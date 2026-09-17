@@ -11,46 +11,6 @@ import {
   SITE_LOGO_PATH,
 } from "@/lib/site";
 
-/**
- * app/[category]/page.jsx — category archive page
- *
- * Route example: /business
- *
- * Layout:
- *   Breadcrumb -> category header -> uniform grid of articles
- *
- * Data source: public/data/articles.json — the same file used by
- * app/[category]/[slug]/page.jsx and app/authors/[author]/page.jsx, so all
- * three pages now share one source of truth. getArticlesByCategory reads
- * post.dek as the listing excerpt (the full article body/author data isn't
- * needed here). Swap it for a real fetch call when ready — the JSX below
- * doesn't need to change.
- *
- * SEO: generateMetadata() covers title, description, canonical URL, OG,
- * Twitter card, robots. JSON-LD covers CollectionPage, ItemList (articles in
- * this category), BreadcrumbList, Organization — all sourced from
- * articlesData. This is a news section, not a blog, so copy/schema avoid
- * "blog" language (isPartOf points at the WebSite, not a Blog entity).
- *
- * Unknown category slugs now 404 (via notFound()) instead of silently
- * rendering an empty "No posts yet" page — that used to be a soft-404 that
- * search engines could crawl and index as thin content for any random slug.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE, and
- * SITE_LOGO_PATH all come from lib/site.js (https://www.prprimespot.com).
- * Nothing in this file hardcodes the domain — update lib/site.js if the
- * domain, name, or handle ever changes.
- *
- * Next.js note: `params` is async in the App Router (Next 15+), so it's
- * awaited before use below.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   rule          #E5E5E5
- */
-
 const CATEGORY_LABELS = {
   business: "Business",
   finance: "Finance",
@@ -63,8 +23,6 @@ const CATEGORY_LABELS = {
   sports: "Sports",
 };
 
-// Fallback OG/card image used when a category has no articles (yet) with a
-// heroImage, so social previews and JSON-LD never point at a broken URL.
 const FALLBACK_IMAGE = "/og-image.jpg";
 
 function isKnownCategory(category) {
@@ -72,7 +30,6 @@ function isKnownCategory(category) {
   return Boolean(key) && (key in CATEGORY_LABELS || key in articlesData);
 }
 
-// Swap this for: const res = await fetch(`${API_URL}/articles?category=${category}&page=${page}`)
 function getArticlesByCategory(category) {
   const posts = articlesData[category?.toLowerCase()] || [];
 
@@ -103,7 +60,6 @@ function formatDate(iso) {
 
 // ---------------------------------------------------------------------------
 // generateMetadata — title, description, canonical URL, OG, Twitter card,
-// robots, all sourced from article.json (via getArticlesByCategory)
 // ---------------------------------------------------------------------------
 export async function generateMetadata({ params }) {
   const { category } = await params;
@@ -186,13 +142,7 @@ function ArticleImage({ imageUrl, alt, className = "", sizes }) {
   }
   return (
     <div className={`relative overflow-hidden max-w-full ${className}`}>
-      <Image
-        src={imageUrl}
-        alt={alt}
-        fill
-        sizes={sizes || "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"}
-        className="object-cover"
-      />
+      <Image src={imageUrl} alt={alt} fill sizes={sizes || "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"} className="object-cover"/>
     </div>
   );
 }
@@ -201,11 +151,7 @@ function ArticleCard({ article }) {
   const dateLabel = formatDate(article.publishedAt);
   return (
     <a href={`/${article.category}/${article.slug}`} className="group block">
-      <ArticleImage
-        imageUrl={article.heroImage}
-        alt={article.headline}
-        className="w-full aspect-[4/3] mb-3"
-      />
+      <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3] mb-3"/>
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
@@ -231,10 +177,7 @@ export default async function CategoryPage({ params }) {
   const articles = getArticlesByCategory(category);
 
   // ---------------------------------------------------------------------
-  // JSON-LD — CollectionPage + ItemList (articles in this category) +
-  // BreadcrumbList + Organization, sourced from articlesData.
-  // isPartOf points at the WebSite (not a Blog entity) to match the fact
-  // this is a news section, not a blog.
+  // JSON-LD — CollectionPage + ItemList (articles in this category)
   // ---------------------------------------------------------------------
   const url = `${SITE_URL}/${category.toLowerCase()}`;
   const description =
@@ -286,8 +229,6 @@ export default async function CategoryPage({ params }) {
         url: SITE_URL,
         logo: {
           "@type": "ImageObject",
-          // Uses the site's real logo asset (lib/site.js) instead of a
-          // non-existent /logo.png at the domain root.
           url: getAbsoluteUrl(SITE_LOGO_PATH),
         },
       },
@@ -296,8 +237,7 @@ export default async function CategoryPage({ params }) {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 

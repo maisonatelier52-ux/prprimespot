@@ -5,62 +5,12 @@ import Link from "next/link";
 import articlesData from "../public/data/article.json";
 import { SITE_NAME, SITE_SOCIAL_LINKS } from "@/lib/site";
 
-/**
- * Header — masthead layout
- *   Row 1: social icons (left) — centered serif masthead with gold rules — subscribe / search (right)
- *   Row 2 (desktop, md+): category nav shown inline, no menu button
- *   Mobile (<md): only a menu button — opens a sliding drawer with all categories
- *
- * Polish pass:
- *   - Nav links get an animated underline on hover instead of just a color change
- *   - Subscribe is now a filled red button (was outline) for more visual weight
- *   - Social icons: bordered circles that fill solid red + lift slightly on hover
- *   - Search/menu icons sit in a soft hover circle
- *   - Masthead scales up very slightly on hover for a bit of life
- *
- * Nav labels vs. URL slugs:
- *   NAV_LINKS holds the display text shown to the user (e.g. "U.S.").
- *   The URL for each link is derived with slugify(), which strips periods
- *   and other punctuation and collapses whitespace into hyphens, so "U.S."
- *   correctly becomes the route /us instead of /u.s. — never build hrefs
- *   with label.toLowerCase() directly, always go through slugify().
- *
- * Search: clicking the search icon (desktop or mobile) opens a dropdown
- * panel with a text input. Typing live-filters every article across all 6
- * categories in public/data/articles.json (matching on headline or dek),
- * showing up to 8 results that link straight to the matching article.
- *
- * Subscribe: clicking the Subscribe button (desktop or mobile) opens a
- * centered modal with an email input. Submitting shows a small confirmation
- * message inside the modal, then the modal can be closed via the X, the
- * backdrop, or the Escape key.
- *
- * Fonts (add to app/layout.jsx):
- *   Masthead : a high-contrast serif, e.g. "Playfair Display" -> font-serif
- *   Nav/body : a clean grotesque, e.g. "Inter"                -> font-sans
- *
- * Palette:
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959   (nav links)
- *   rule          #E5E5E5   (hairlines)
- */
-
 const NAV_LINKS = ["Home", "Business", "Finance", "World", "U.S.", "Politics", "Sports"];
 
-// "Home" is the one nav label that doesn't follow the /slug pattern — it
-// should always point at "/" regardless of what slugify() would produce.
 function navHref(label) {
   return label === "Home" ? "/" : `/${slugify(label)}`;
 }
 
-// Turns a display label into a URL-safe slug.
-// "U.S." -> "us", "Global Times" -> "global-times", "Business" -> "business".
-// Periods are dropped outright (so "U.S." doesn't become "u-s"), then any
-// remaining run of non-alphanumeric characters (spaces, slashes, etc.)
-// collapses into a single hyphen, and stray leading/trailing hyphens are
-// trimmed off.
 function slugify(label) {
   return label
     .toLowerCase()
@@ -153,6 +103,20 @@ function TwitterIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="sm:w-[18px] sm:h-[18px]">
       <path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4a4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1z" />
+    </svg>
+  );
+}
+
+function RedditIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="sm:w-[18px] sm:h-[18px]">
+      <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" strokeWidth="0" />
+      <circle cx="12" cy="14.1" r="7.4" />
+      <circle cx="7.2" cy="14.3" r="1.35" fill="#fff" />
+      <circle cx="16.8" cy="14.3" r="1.35" fill="#fff" />
+      <path d="M8.3 16.9c1 .8 2.3 1.2 3.7 1.2s2.7-.4 3.7-1.2" stroke="#fff" strokeWidth="1" fill="none" strokeLinecap="round" />
+      <circle cx="18.2" cy="8.3" r="1.6" />
+      <path d="M12 9.2l.9-4.4 3.1.6" stroke="currentColor" strokeWidth="1.1" fill="none" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -258,14 +222,13 @@ export default function Header() {
                 {searchOpen ? <CloseIcon /> : <SearchIcon />}
               </IconButton>
             </div>
-            {/* md and up: social icons — Instagram, Twitter, Substack, Medium,
-                the site's actual four channels (see SITE_SOCIAL_LINKS in
-                lib/site.js) */}
+            
             <div className="hidden md:flex items-center gap-2 sm:gap-2.5">
               <SocialIconButton label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIconButton>
               <SocialIconButton label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIconButton>
               <SocialIconButton label="Substack" href={SITE_SOCIAL_LINKS.substack}><SubstackIcon /></SocialIconButton>
               <SocialIconButton label="Medium" href={SITE_SOCIAL_LINKS.medium}><MediumIcon /></SocialIconButton>
+              <SocialIconButton label="Reddit" href={SITE_SOCIAL_LINKS.reddit}><RedditIcon /></SocialIconButton>
             </div>
           </div>
 
@@ -359,19 +322,11 @@ export default function Header() {
           <nav className="flex items-center justify-center gap-6 lg:gap-10 h-14 font-sans text-[13px] font-medium tracking-wide text-[#2d2b2b]">
             {NAV_LINKS.map((label) =>
               label === "Home" ? (
-                <a
-                  key={label}
-                  href={navHref(label)}
-                  className="uppercase py-1 px-3 rounded-full bg-[#D01418] text-[#efeaea] hover:bg-[#d9a22e] transition-colors"
-                >
+                <a key={label} href={navHref(label)} className="uppercase py-1 px-3 rounded-full bg-[#D01418] text-[#efeaea] hover:bg-[#d9a22e] transition-colors">
                   {label}
                 </a>
               ) : (
-                <a
-                  key={label}
-                  href={navHref(label)}
-                  className="relative uppercase py-1 hover:text-[#D01418] transition-colors after:absolute after:left-1/2 after:-bottom-[1px] after:h-[2px] after:w-0 after:-translate-x-1/2 after:bg-[#D01418] after:transition-all after:duration-300 hover:after:w-full"
-                >
+                <a key={label} href={navHref(label)} className="relative uppercase py-1 hover:text-[#D01418] transition-colors after:absolute after:left-1/2 after:-bottom-[1px] after:h-[2px] after:w-0 after:-translate-x-1/2 after:bg-[#D01418] after:transition-all after:duration-300 hover:after:w-full">
                   {label}
                 </a>
               )
@@ -484,9 +439,7 @@ export default function Header() {
           </button>
 
           <div className="h-[3px] w-10 bg-[#E8B23D] mb-4" />
-          <h2 className="font-serif text-xl font-bold text-[#1A1A1A] mb-1">
-            Subscribe to {SITE_NAME}
-          </h2>
+          <h2 className="font-serif text-xl font-bold text-[#1A1A1A] mb-1">Subscribe to {SITE_NAME}</h2>
 
           {subscribed ? (
             <p className="font-sans text-sm text-[#1A1A1A] mt-4">
@@ -495,13 +448,9 @@ export default function Header() {
             </p>
           ) : (
             <>
-              <p className="font-sans text-sm text-[#8A8A8A] mb-5">
-                Get top stories delivered straight to your inbox.
-              </p>
+              <p className="font-sans text-sm text-[#8A8A8A] mb-5">Get top stories delivered straight to your inbox.</p>
               <form onSubmit={handleSubscribeSubmit} noValidate>
-                <label htmlFor="subscribe-email" className="sr-only">
-                  Email address
-                </label>
+                <label htmlFor="subscribe-email" className="sr-only">Email address</label>
                 <input
                   id="subscribe-email"
                   type="email"
@@ -514,10 +463,7 @@ export default function Header() {
                 {subscribeError && (
                   <p className="mt-2 font-sans text-xs text-[#D01418]">{subscribeError}</p>
                 )}
-                <button
-                  type="submit"
-                  className="mt-4 w-full rounded-full bg-[#D01418] px-5 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#a80f13] hover:shadow-md transition-all"
-                >
+                <button type="submit" className="mt-4 w-full rounded-full bg-[#D01418] px-5 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#a80f13] hover:shadow-md transition-all">
                   Subscribe
                 </button>
               </form>

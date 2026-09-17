@@ -1,32 +1,5 @@
 import articlesData from "../public/data/article.json";
 
-/**
- * SportsSection — the "SPORTS" homepage block
- *
- * Same numbered-ranking-list pattern as the original TrendingSection
- * concept, now wired to real sports articles instead of placeholder ones.
- *
- * Layout:
- *   Header : "SPORTS" + red flame icon, hairline above
- *   Grid   : 6 items, 1 col mobile -> 2 col sm -> 3 col lg
- *            each item: oversized outline numeral + small thumbnail + headline
- *
- * Data source: public/data/articles.json — reads only the "sports"
- * category, sorted by publishedAt (newest first). This layout has 6 slots;
- * the 6 most recent sports articles fill them, each used exactly once, so
- * nothing repeats. With 7 sports articles in the data file today, the
- * oldest one simply doesn't appear here — this is a homepage showcase, not
- * the full category listing (that's app/sports/page.jsx, which shows all
- * of them).
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   rule          #E5E5E5
- *   numeral-ghost #EDEDED   (the big outline number, kept quiet so it doesn't compete with the headline)
- */
-
 const CATEGORY = "Sports";
 const CATEGORY_SLUG = "sports";
 
@@ -37,10 +10,7 @@ function getSportsArticles() {
 
 function ImagePlaceholder({ label, className = "" }) {
   return (
-    <div
-      className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[10px] uppercase tracking-wide ${className}`}
-      aria-label={`${label} image placeholder`}
-    >
+    <div className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[10px] uppercase tracking-wide ${className}`} aria-label={`${label} image placeholder`}>
       {label}
     </div>
   );
@@ -81,11 +51,7 @@ function SportsCard({ article, rank }) {
         {String(rank).padStart(2, "0")}
       </span>
 
-      <StoryImage
-        imageUrl={article.heroImage}
-        alt={article.headline}
-        className="w-16 h-16 sm:w-20 sm:h-20"
-      />
+      <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-16 h-16 sm:w-20 sm:h-20"/>
 
       <h3 className="flex-1 font-serif text-base sm:text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}

@@ -1,26 +1,5 @@
 import articlesData from "../public/data/article.json";
 
-/**
- * BusinessSection — homepage "Business" showcase
- *   Left column   : 2 secondary stories (1 text-only, 1 with thumbnail)
- *   Center column : lead story, largest image, framed with red bars
- *   Right column   : "OP-ED" rail — 4 more stories, first with a thumbnail
- *
- * Data source: public/data/articles.json — reads only the "business"
- * category, sorted by publishedAt (newest first). The 7 slots below (2 left
- * + 1 lead + 4 op-ed) map 1:1 onto the 7 business articles currently in the
- * data file, and each article is sliced into exactly one slot — so nothing
- * repeats. If you add more than 7 business articles later, the extra ones
- * simply won't appear in this section (this is a homepage showcase, not
- * the full category listing — that's app/business/page.jsx).
- *
- * Palette (matches header/footer):
- *   masthead-red  #D01418
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   rule          #E5E5E5
- */
-
 const CATEGORY = "business";
 
 function getBusinessArticles() {
@@ -34,10 +13,7 @@ function Divider() {
 
 function ImagePlaceholder({ label, className = "" }) {
   return (
-    <div
-      className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`}
-      aria-label={`${label} image placeholder`}
-    >
+    <div className={`flex items-center justify-center bg-[#EDEDED] text-[#A0A0A0] font-sans text-[11px] uppercase tracking-wide ${className}`} aria-label={`${label} image placeholder`}>
       {label}
     </div>
   );
@@ -62,11 +38,7 @@ function LeftStoryCard({ article, hasImage }) {
   return (
     <a href={href} className="group block">
       {hasImage && (
-        <StoryImage
-          imageUrl={article.heroImage}
-          alt={article.headline}
-          className="w-full aspect-[16/10] mb-3"
-        />
+        <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/10] mb-3"/>
       )}
       <h3 className="font-serif text-lg sm:text-xl font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors">
         {article.headline}
@@ -85,11 +57,7 @@ function LeadStory({ article }) {
       <a href={href} className="group block">
         <div className="flex">
           <div className="w-3 sm:w-4 shrink-0 bg-[#D01418]" aria-hidden="true" />
-          <StoryImage
-            imageUrl={article.heroImage}
-            alt={article.headline}
-            className="w-full aspect-[4/3]"
-          />
+          <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3]"/>
           <div className="w-3 sm:w-4 shrink-0 bg-[#D01418]" aria-hidden="true" />
         </div>
         <h2 className="mt-4 font-serif text-2xl sm:text-3xl font-bold leading-tight text-[#1A1A1A] group-hover:text-[#D01418] transition-colors">
@@ -120,11 +88,7 @@ function OpEdCard({ article, isFirst }) {
           )}
         </div>
         {isFirst && (
-          <StoryImage
-            imageUrl={article.heroImage}
-            alt={article.headline}
-            className="w-24 sm:w-28 aspect-[4/3] shrink-0"
-          />
+          <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-24 sm:w-28 aspect-[4/3] shrink-0"/>
         )}
       </div>
     </a>

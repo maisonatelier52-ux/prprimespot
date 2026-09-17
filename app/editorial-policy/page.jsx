@@ -1,48 +1,10 @@
 import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
-/**
- * app/editorial-policy/page.jsx — Editorial Policy
- *
- * Route: /editorial-policy
- *
- * Static page, plain long-form disclosure content. Builds directly on the
- * "How We Work" principles already stated on app/about/page.jsx
- * (source-linked reporting, evidence separated from interpretation,
- * corrections not silent edits, one writer/one desk) and on the sourcing
- * mechanics described in app/source-methodology/page.jsx — this page is
- * where those become a stated editorial standard rather than just a
- * mission blurb. Section copy lives directly in this file (SECTIONS
- * below) rather than in public/data, since this text isn't rendered
- * anywhere else on the site. Structure and styling intentionally mirror
- * app/privacy-policy/page.jsx, app/terms-and-conditions/page.jsx,
- * app/legal/page.jsx, and app/ownership-and-funding/page.jsx.
- *
- * PLACEHOLDER CONTENT: this is a reasonable, honest editorial policy for
- * a small site that synthesizes and links existing reporting rather than
- * doing original field newsgathering (consistent with Source Methodology
- * and Ownership and Funding) — it's a factual description, not
- * boilerplate, so keep it in sync if the editorial process changes. Not
- * legal advice.
- *
- * Domain / site identity: SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE all come
- * from lib/site.js — nothing here hardcodes the domain.
- *
- * Palette (matches the rest of the site):
- *   masthead-red  #D01418
- *   gold rule     #E8B23D
- *   ink           #1A1A1A
- *   ink-soft      #595959
- *   cream         #F7F5EF
- *   rule          #E5E5E5
- */
-
 const CONTACT_EMAIL = "editorial@prprimespot.com";
 
 const PAGE_TITLE = "Editorial Policy";
 
-// Short, meta-description length — kept under ~160 chars so it isn't
-// truncated in search results or link previews.
 const PAGE_DESCRIPTION = `The editorial standards and independence that guide reporting on ${SITE_NAME}.`;
 
 const LAST_UPDATED = "September 17, 2026";
@@ -179,8 +141,7 @@ export default function EditorialPolicyPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script
-        type="application/ld+json"
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
@@ -200,9 +161,7 @@ export default function EditorialPolicyPage() {
             </h1>
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
-          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">
-            Last updated: {LAST_UPDATED}
-          </p>
+          <p className="mt-4 font-sans text-sm text-[#8A8A8A]">Last updated: {LAST_UPDATED}</p>
         </div>
 
         {/* Sections — left-aligned long-form content */}
@@ -214,10 +173,7 @@ export default function EditorialPolicyPage() {
               </h2>
               <div className="space-y-3">
                 {section.body.map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="font-sans text-[15px] leading-[1.8] text-[#595959]"
-                  >
+                  <p key={i} className="font-sans text-[15px] leading-[1.8] text-[#595959]">
                     {paragraph}
                   </p>
                 ))}
