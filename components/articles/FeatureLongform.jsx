@@ -1,20 +1,3 @@
-// components/articles/FeatureLongform.jsx
-//
-// A CUSTOM article layout for one-off, magazine-style features.
-// Wide two-column shell: main article on the left, a sticky, styled
-// "At a Glance" sidebar on the right. Headline-first ordering, inset
-// hero below the dek, author avatar in the byline, drop cap on the
-// opening paragraph, explicit pull-quote breaks, numbered section
-// markers, and a compact factbox sidebar. Only slugs registered in
-// lib/articleLayouts.js render through this component — every other
-// article keeps the default ArticleDetail.jsx.
-//
-// NOTE: This is a Server Component. Do NOT add event handlers like
-// onMouseEnter/onMouseLeave directly — use scoped <style> blocks or
-// extract a small "use client" child component instead.
-//
-// Palette: warm red + gold + white, matching the site's core identity.
-
 import Link from "next/link";
 import ShareButtons from "@/components/ShareButtons";
 import { ArticleImage } from "@/components/ArticleMedia";
@@ -35,32 +18,16 @@ const QUOTE_BG = "#FDF8EE";     // warm ivory for pull quotes
 
 function Ornament({ color = GOLD_SOFT, width = 28 }) {
   return (
-    <span
-      aria-hidden="true"
-      className="inline-block align-middle"
-      style={{ width, height: "1px", backgroundColor: color }}
-    />
+    <span aria-hidden="true" className="inline-block align-middle" style={{ width, height: "1px", backgroundColor: color }}/>
   );
 }
 
 function EndMark() {
   return (
     <div className="mt-12 flex items-center justify-center gap-3">
-      <span
-        aria-hidden="true"
-        className="inline-block"
-        style={{ height: 1, width: 48, backgroundColor: RULE }}
-      />
-      <span
-        aria-hidden="true"
-        className="inline-block rotate-45"
-        style={{ width: 7, height: 7, backgroundColor: GOLD }}
-      />
-      <span
-        aria-hidden="true"
-        className="inline-block"
-        style={{ height: 1, width: 48, backgroundColor: RULE }}
-      />
+      <span aria-hidden="true" className="inline-block" style={{ height: 1, width: 48, backgroundColor: RULE }}/>
+      <span aria-hidden="true" className="inline-block rotate-45" style={{ width: 7, height: 7, backgroundColor: GOLD }}/>
+      <span aria-hidden="true" className="inline-block" style={{ height: 1, width: 48, backgroundColor: RULE }}/>
     </div>
   );
 }
@@ -69,10 +36,7 @@ function Eyebrow({ children, color = ACCENT }) {
   return (
     <div className="flex items-center gap-3">
       <Ornament color={color} />
-      <span
-        className="font-sans text-[11px] uppercase tracking-[0.2em]"
-        style={{ color }}
-      >
+      <span className="font-sans text-[11px] uppercase tracking-[0.2em]" style={{ color }}>
         {children}
       </span>
     </div>
@@ -90,12 +54,7 @@ function AuthorAvatar({ src, name, size = 40 }) {
         boxShadow: `0 0 0 2px #FFFFFF, 0 0 0 3px ${GOLD_SOFT}`,
       }}
     >
-      <ArticleImage
-        imageUrl={src}
-        alt={name || "Author"}
-        className="w-full h-full object-cover"
-        sizes={`${size}px`}
-      />
+      <ArticleImage imageUrl={src} alt={name || "Author"} className="w-full h-full object-cover" sizes={`${size}px`}/>
     </span>
   );
 }
@@ -132,7 +91,6 @@ function PullQuote({ text, attribution }) {
         borderLeft: `4px solid ${ACCENT}`,
       }}
     >
-      {/* Watermark quote glyph */}
       <span
         aria-hidden="true"
         className="absolute font-serif italic leading-none pointer-events-none select-none"
@@ -147,7 +105,6 @@ function PullQuote({ text, attribution }) {
         &rdquo;
       </span>
 
-      {/* Quote text */}
       <blockquote
         className="relative font-serif italic text-[#16181D]"
         style={{
@@ -159,17 +116,10 @@ function PullQuote({ text, attribution }) {
         {text}
       </blockquote>
 
-      {/* Attribution */}
       {attribution && (
         <figcaption className="relative mt-6 flex items-center gap-3">
-          <span
-            aria-hidden="true"
-            style={{ width: 40, height: 2, backgroundColor: GOLD }}
-          />
-          <span
-            className="font-sans text-[11px] uppercase tracking-[0.2em]"
-            style={{ color: ACCENT }}
-          >
+          <span aria-hidden="true" style={{ width: 40, height: 2, backgroundColor: GOLD }}/>
+          <span className="font-sans text-[11px] uppercase tracking-[0.2em]" style={{ color: ACCENT }}>
             {attribution}
           </span>
         </figcaption>
@@ -183,18 +133,23 @@ function SectionHeading({ text, index }) {
   const numeral = roman[index] || String(index + 1);
   return (
     <div className="mt-16 mb-6">
-      <div className="flex items-center gap-3 mb-3">
+      <div className="flex items-start gap-3">
         <span
-          className="font-serif italic text-[15px]"
-          style={{ color: ACCENT }}
+          className="font-serif italic shrink-0 pt-[10px]"
+          style={{
+            color: ACCENT,
+            fontSize: "18px",
+            minWidth: 28,
+            lineHeight: 1,
+          }}
+          aria-hidden="true"
         >
           {numeral}.
         </span>
-        <Ornament />
+        <h2 className="font-serif text-[26px] sm:text-[30px] font-bold leading-[1.2] tracking-[-0.005em] text-[#16181D] break-words flex-1 min-w-0">
+          {text}
+        </h2>
       </div>
-      <h2 className="font-serif text-[26px] sm:text-[30px] font-bold leading-[1.2] tracking-[-0.005em] text-[#16181D] break-words">
-        {text}
-      </h2>
     </div>
   );
 }
@@ -208,18 +163,11 @@ function FactRow({ fact, index }) {
         borderTop: index === 0 ? "none" : `1px solid ${RULE_SOFT}`,
       }}
     >
-      <span
-        className="font-serif italic text-[12px] pt-[3px] shrink-0"
-        style={{ color: GOLD, minWidth: 18 }}
-        aria-hidden="true"
-      >
+      <span className="font-serif italic text-[12px] pt-[3px] shrink-0" style={{ color: GOLD, minWidth: 18 }} aria-hidden="true">
         {n}
       </span>
       <div className="min-w-0">
-        <dt
-          className="font-sans text-[10px] uppercase tracking-[0.18em] mb-1"
-          style={{ color: FAINT }}
-        >
+        <dt className="font-sans text-[10px] uppercase tracking-[0.18em] mb-1" style={{ color: FAINT }}>
           {fact.label}
         </dt>
         <dd className="font-serif text-[15px] leading-snug text-[#16181D] break-words">
@@ -241,11 +189,7 @@ function AtAGlanceCard({ facts }) {
           "0 1px 2px rgba(22,24,29,0.04), 0 8px 24px rgba(22,24,29,0.05)",
       }}
     >
-      {/* Header band */}
-      <div
-        className="relative px-5 py-4"
-        style={{ backgroundColor: ACCENT_DEEP }}
-      >
+      <div className="relative px-5 py-4" style={{ backgroundColor: ACCENT_DEEP }}>
         <span
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"
@@ -255,30 +199,18 @@ function AtAGlanceCard({ facts }) {
           }}
         />
         <div className="relative flex items-center gap-3">
-          <span
-            aria-hidden="true"
-            className="inline-block"
-            style={{ width: 24, height: 1, backgroundColor: GOLD_SOFT }}
-          />
-          <h2 className="font-sans text-[11px] uppercase tracking-[0.22em] text-white">
-            At a Glance
-          </h2>
+          <span aria-hidden="true" className="inline-block" style={{ width: 24, height: 1, backgroundColor: GOLD_SOFT }}/>
+          <h2 className="font-sans text-[11px] uppercase tracking-[0.22em] text-white">At a Glance</h2>
         </div>
       </div>
 
-      {/* Body */}
       <div style={{ backgroundColor: PAPER }}>
         <dl className="px-5">
           {facts.map((fact, i) => (
             <FactRow key={i} fact={fact} index={i} />
           ))}
         </dl>
-        {/* Bottom gold accent stripe */}
-        <span
-          aria-hidden="true"
-          className="block"
-          style={{ height: 3, backgroundColor: GOLD }}
-        />
+        <span aria-hidden="true" className="block" style={{ height: 3, backgroundColor: GOLD }}/>
       </div>
     </aside>
   );
@@ -294,38 +226,23 @@ function TagsPanel({ tags }) {
         backgroundColor: PAPER_WARM,
       }}
     >
-      {/* Scoped hover styles — no JS handlers, safe in a Server Component */}
-      <style>{`
-        .fl-tag {
-          background-color: ${CHIP};
-          color: ${ACCENT};
-          border: 1px solid ${RULE};
-        }
-        .fl-tag:hover {
-          background-color: ${ACCENT};
-          color: #FFFFFF;
-          border-color: ${ACCENT};
-        }
-      `}</style>
-
       <div className="flex items-center gap-3 mb-4">
         <Ornament color={ACCENT} />
-        <h2
-          className="font-sans text-[11px] uppercase tracking-[0.2em]"
-          style={{ color: ACCENT }}
-        >
-          Tags
-        </h2>
+        <h2 className="font-sans text-[11px] uppercase tracking-[0.2em]" style={{ color: ACCENT }}>Tags</h2>
       </div>
       <div className="flex flex-wrap gap-2">
         {tags.map((tag) => (
-          <a
+          <span
             key={tag}
-            href={`/tags/${encodeURIComponent(tag.toLowerCase())}`}
-            className="fl-tag rounded-full px-3 py-1 font-sans text-[11px] uppercase tracking-[0.12em] transition-all"
+            className="rounded-full px-3 py-1 font-sans text-[11px] uppercase tracking-[0.12em]"
+            style={{
+              backgroundColor: CHIP,
+              color: ACCENT,
+              border: `1px solid ${RULE}`,
+            }}
           >
             {tag}
-          </a>
+          </span>
         ))}
       </div>
     </div>
@@ -335,22 +252,12 @@ function TagsPanel({ tags }) {
 function SourcesCard({ sources }) {
   if (!sources || sources.length === 0) return null;
   return (
-    <div
-      className="mt-10 rounded-md p-5"
-      style={{ border: `1px solid ${RULE}`, backgroundColor: PAPER }}
-    >
+    <div className="mt-10 rounded-md p-5" style={{ border: `1px solid ${RULE}`, backgroundColor: PAPER }}>
       <Eyebrow>Sources &amp; Further Reading</Eyebrow>
       <ul className="mt-4 space-y-2">
         {sources.map((source, i) => (
-          <li
-            key={source.url}
-            className="font-sans text-[13px] leading-relaxed flex gap-3"
-          >
-            <span
-              className="font-serif italic text-[12px] shrink-0 pt-[2px]"
-              style={{ color: GOLD }}
-              aria-hidden="true"
-            >
+          <li key={source.url} className="font-sans text-[13px] leading-relaxed flex gap-3">
+            <span className="font-serif italic text-[12px] shrink-0 pt-[2px]" style={{ color: GOLD }} aria-hidden="true">
               {String(i + 1).padStart(2, "0")}
             </span>
             <a
@@ -372,25 +279,15 @@ function SourcesCard({ sources }) {
 function AuthorBioCard({ article }) {
   if (!article.authorBio) return null;
   return (
-    <div
-      className="mt-12 rounded-md p-6"
-      style={{ border: `1px solid ${RULE}`, backgroundColor: PAPER }}
-    >
+    <div className="mt-12 rounded-md p-6" style={{ border: `1px solid ${RULE}`, backgroundColor: PAPER }}>
       <Eyebrow>About the Author</Eyebrow>
       <div className="mt-4 flex items-start gap-4">
-        <AuthorAvatar
-          src={article.authorImage}
-          name={article.author}
-          size={56}
-        />
+        <AuthorAvatar src={article.authorImage} name={article.author} size={56}/>
         <div className="min-w-0">
           <p className="font-serif text-[17px] font-bold text-[#16181D]">
             {article.author}
           </p>
-          <p
-            className="mt-2 font-sans text-[13px] leading-relaxed"
-            style={{ color: MUTED }}
-          >
+          <p className="mt-2 font-sans text-[13px] leading-relaxed" style={{ color: MUTED }}>
             {article.authorBio}
           </p>
         </div>
@@ -414,8 +311,7 @@ export default function FeatureLongform({
   related, // kept in signature for API compatibility; not rendered
   categoryLabel,
   absoluteUrl,
-})
- {
+}) {
   const publishedLabel = formatDate(article.publishedAt);
   const updatedLabel =
     article.updatedAt && article.updatedAt !== article.publishedAt
@@ -443,19 +339,11 @@ export default function FeatureLongform({
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10 lg:gap-16">
           {/* ---------- MAIN COLUMN ---------- */}
           <main className="min-w-0">
-            {/* Breadcrumb on a hairline row */}
-            <nav
-              className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.14em] mt-8 pb-5"
-              style={{ color: FAINT, borderBottom: `1px solid ${RULE}` }}
-            >
-              <Link href="/" className="hover:text-[#16181D] transition-colors">
-                Home
-              </Link>
+            {/* Breadcrumb */}
+            <nav className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.14em] mt-8 pb-5" style={{ color: FAINT, borderBottom: `1px solid ${RULE}` }}>
+              <Link href="/" className="hover:text-[#16181D] transition-colors">Home</Link>
               <span style={{ color: GOLD }}>/</span>
-              <a
-                href={`/${article.category}`}
-                className="hover:text-[#16181D] transition-colors"
-              >
+              <a href={`/${article.category}`} className="hover:text-[#16181D] transition-colors">
                 {categoryLabel}
               </a>
             </nav>
@@ -469,15 +357,8 @@ export default function FeatureLongform({
                   border: `1px solid ${GOLD_SOFT}`,
                 }}
               >
-                <span
-                  aria-hidden="true"
-                  className="inline-block"
-                  style={{ width: 18, height: 1, backgroundColor: ACCENT }}
-                />
-                <span
-                  className="font-sans text-[10px] uppercase tracking-[0.22em]"
-                  style={{ color: ACCENT }}
-                >
+                <span aria-hidden="true" className="inline-block" style={{ width: 18, height: 1, backgroundColor: ACCENT }}/>
+                <span className="font-sans text-[10px] uppercase tracking-[0.22em]" style={{ color: ACCENT }}>
                   {kicker}
                 </span>
               </span>
@@ -498,10 +379,7 @@ export default function FeatureLongform({
             {/* Hero image */}
             {article.heroImage && (
               <figure className="mt-8">
-                <div
-                  className="overflow-hidden rounded-sm"
-                  style={{ boxShadow: "0 1px 2px rgba(22,24,29,0.06)" }}
-                >
+                <div className="overflow-hidden rounded-sm" style={{ boxShadow: "0 1px 2px rgba(22,24,29,0.06)" }}>
                   <ArticleImage
                     imageUrl={article.heroImage}
                     alt={article.headline}
@@ -511,10 +389,7 @@ export default function FeatureLongform({
                   />
                 </div>
                 {(article.heroCaption || article.heroCredit) && (
-                  <figcaption
-                    className="mt-3 font-sans text-[12px] leading-relaxed"
-                    style={{ color: FAINT }}
-                  >
+                  <figcaption className="mt-3 font-sans text-[12px] leading-relaxed" style={{ color: FAINT }}>
                     {article.heroCaption}
                     {article.heroCredit && (
                       <span style={{ color: "#B0B0B0" }}>
@@ -528,26 +403,13 @@ export default function FeatureLongform({
             )}
 
             {/* Byline row */}
-            <div
-              className="mt-8 pt-6 pb-6 border-y flex items-center gap-3"
-              style={{ borderColor: RULE }}
-            >
-              <AuthorAvatar
-                src={article.authorImage}
-                name={article.author}
-                size={40}
-              />
-              <div
-                className="font-sans text-[13px] leading-tight min-w-0"
-                style={{ color: MUTED }}
-              >
+            <div className="mt-8 pt-6 pb-6 border-y flex items-center gap-3" style={{ borderColor: RULE }}>
+              <AuthorAvatar src={article.authorImage} name={article.author} size={40}/>
+              <div className="font-sans text-[13px] leading-tight min-w-0" style={{ color: MUTED }}>
                 <div className="truncate">
                   By{" "}
                   {article.authorSlug ? (
-                    <a
-                      href={`/authors/${article.authorSlug}`}
-                      className="font-semibold text-[#16181D] hover:opacity-70 transition-opacity"
-                    >
+                    <a href={`/authors/${article.authorSlug}`} className="font-semibold text-[#16181D] hover:opacity-70 transition-opacity">
                       {article.author}
                     </a>
                   ) : (
@@ -582,21 +444,14 @@ export default function FeatureLongform({
                 }
                 if (block.type === "subheading") {
                   return (
-                    <h3
-                      key={i}
-                      className="font-serif text-xl font-semibold text-[#16181D] mt-10 mb-3 break-words"
-                    >
+                    <h3 key={i} className="font-serif text-xl font-semibold text-[#16181D] mt-10 mb-3 break-words">
                       {block.text}
                     </h3>
                   );
                 }
                 if (block.type === "quote") {
                   return (
-                    <PullQuote
-                      key={i}
-                      text={block.text}
-                      attribution={block.attribution}
-                    />
+                    <PullQuote key={i} text={block.text} attribution={block.attribution}/>
                   );
                 }
 
