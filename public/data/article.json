@@ -2501,6 +2501,73 @@
   ],
   "sports": [
     {
+  "slug": "nfl-week-2-2026-mahomes-return-goodell-international-team-burrow-injury-update",
+  "headline": "NFL Week 2 2026: Mahomes' Return, Goodell's Big Injury News Update",
+  "dek": "Patrick Mahomes made his return from a torn ACL count in Kansas City's Week 1 win, Commissioner Roger Goodell reignited talk of an NFL team based overseas, and a fresh round of quarterback injury news is setting the tone for Week 2.",
+  "authorSlug": "daniel-osei",
+  "source": "NFL.com / NBC Sports / Sports Illustrated",
+  "publishedAt": "2026-09-18T15:00:00Z",
+  "updatedAt": "2026-09-18T15:00:00Z",
+  "heroImage": "/images/nfl-week-2-2026-mahomes-return-goodell-international-team-burrow-injury-update.webp",
+  "heroCaption": "Illustration of a quarterback returning to the field under stadium lights, evoking the storylines shaping Week 2 of the NFL season.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Sports", "NFL", "Football"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The 2026 NFL season is only two weeks old, but it has already delivered one of its biggest storylines: Patrick Mahomes back on the field. The two-time MVP tore his ACL and LCL in a Week 15 game last December, an injury that ended his season and contributed to Kansas City missing the playoffs for the first time since 2014. Nine months of rehab later, Mahomes suited up for the Chiefs' Monday night opener against the division-rival Broncos wearing a knee brace, and coach Andy Reid's team got him back in the win column to open the year."
+    },
+    {
+      "type": "paragraph",
+      "text": "It wasn't just a personal milestone. Denver had won the AFC West while Kansas City struggled through a 6-11 season without its franchise quarterback, so the opener doubled as an early measuring stick for a division race that's expected to be one of the tightest in football this fall."
+    },
+    {
+      "type": "heading",
+      "text": "Goodell floats an NFL team based outside the US"
+    },
+    {
+      "type": "paragraph",
+      "text": "League expansion beyond American borders is back in the conversation. Appearing on a pregame broadcast ahead of Thursday night's Lions-Bills matchup, Commissioner Roger Goodell said he has no doubt the NFL will eventually place a franchise's headquarters outside the United States, and pointed to Europe as the most likely landing spot, citing the league's long history of playing games there and the relative ease of scheduling international travel compared with other regions. Goodell stopped short of offering a timeline, but the comments follow years of expanding international games, including a Paris matchup already scheduled for late October between the Steelers and Saints."
+    },
+    {
+      "type": "heading",
+      "text": "Quarterback injury news shaping Week 2"
+    },
+    {
+      "type": "paragraph",
+      "text": "Health at the quarterback position is once again a major storyline heading into the weekend. Bengals QB Joe Burrow told reporters he is managing back tightness that followed Cincinnati's Week 1 win over Tampa Bay, but said he expects to play Sunday against Houston. In Seattle, Sam Darnold is dealing with a glute injury that will keep him out of Week 2 against Arizona, with coach Mike Macdonald confirming Darnold isn't expected to land on injured reserve and backup Drew Lock will start in his place. Atlanta already worked around a similar situation in Week 1, ruling out Tua Tagovailoa with an oblique issue and turning to Cooper Rush against Pittsburgh."
+    },
+    {
+      "type": "paragraph",
+      "text": "Elsewhere, the season-opening results are already reshaping expectations. Sean McVay's Rams were run over by the 49ers in a season-opening blowout played in Australia, prompting the coach to call it a humbling day for his team. In Dallas, the Cowboys' 28-20 loss to the Giants included a pair of drops from receiver George Pickens, though both Pickens and his coaching staff downplayed the concern afterward."
+    },
+    {
+      "type": "heading",
+      "text": "Roster and contract moves around the league"
+    },
+    {
+      "type": "paragraph",
+      "text": "Teams are also locking in long-term pieces as the season gets underway. The Chicago Bears and running back D'Andre Swift agreed to a three-year extension worth $33.75 million, including $27.5 million guaranteed, according to reporting from ESPN's Adam Schefter. In San Francisco, the 49ers confirmed a multiyear extension for head coach Kyle Shanahan that was finalized during the offseason, a signal of organizational stability as the team opened its season with a lopsided road win."
+    },
+    {
+      "type": "paragraph",
+      "text": "Taken together, the first two weeks of the 2026 season have set up several threads worth tracking: whether Mahomes can sustain his early form as he continues to build back from a serious knee injury, how the Seahawks and Falcons manage backup-quarterback stretches without losing ground in their divisions, and how seriously the league is actually considering a franchise based outside the United States."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "NFL.com — Around the NFL news", "url": "https://www.nfl.com/news" },
+    { "label": "NBC Sports — Pro Football Talk", "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill" },
+    { "label": "Sports Illustrated — NFL coverage", "url": "https://www.si.com/nfl" }
+  ],
+  "takeaways": [
+    "Patrick Mahomes returned from a torn ACL/LCL to start Kansas City's Week 1 win over Denver, a major storyline for the Chiefs' 2026 bounce-back bid.",
+    "Commissioner Roger Goodell said he expects the NFL to eventually headquarter a franchise outside the US, naming Europe as the likely location.",
+    "Quarterback health is a running theme in Week 2: Joe Burrow expects to play through back soreness, while Sam Darnold (Seahawks) and Tua Tagovailoa (Falcons) have each missed time."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Source links identify the material used for the main claims; later developments, including Sunday's Week 2 results, may supersede parts of this account.",
+  "contentType": "News Roundup"
+},
+    {
       "slug": "nfl-digital-athlete-ai-biomechanics-injury-prevention-2026-season",
       "headline": "NFL Expands Its Digital Athlete System to Inform Injury-Prevention Decisions",
       "dek": "The NFL and Amazon Web Services use the Digital Athlete system to combine video, tracking and injury data in simulations intended to identify patterns of player risk.",

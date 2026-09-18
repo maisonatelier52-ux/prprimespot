@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import ShareButtons from "@/components/ShareButtons";
 import {
   getAbsoluteUrl,
   SITE_NAME,
@@ -9,6 +10,7 @@ import {
   SITE_LOGO_PATH,
 } from "@/lib/site";
 
+// Adjust these paths if this file moves relative to /public/data
 import articlesData from "../../../public/data/article.json";
 import authorsData from "../../../public/data/author.json";
 
@@ -77,6 +79,7 @@ function formatDate(iso) {
 
 // ---------------------------------------------------------------------------
 // generateMetadata — title, description, canonical URL, OG, Twitter card,
+// robots, all sourced from article.json (via getArticle) + author.json
 // ---------------------------------------------------------------------------
 export async function generateMetadata({ params }) {
   const { category, slug } = await params;
@@ -173,14 +176,6 @@ function IconLink({ label, children, href }) {
   );
 }
 
-function FacebookIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M13.5 21v-8.1h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.5 3.1 15.4 3 14.2 3c-2.6 0-4.4 1.6-4.4 4.5v2.2H7.1v3.2h2.7V21h3.7z" />
-    </svg>
-  );
-}
-
 function TwitterIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -206,19 +201,6 @@ function MailIcon() {
   );
 }
 
-function LinkIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M9 15l6-6M10 6l1.4-1.4a4 4 0 015.7 5.7L15.7 11.7M14 18l-1.4 1.4a4 4 0 01-5.7-5.7L8.3 12.3"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 function ArrowBadge() {
   return (
     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#D01418]" aria-hidden="true">
@@ -232,7 +214,7 @@ function ArrowBadge() {
 function AuthorCard({ article }) {
   const { author, authorSlug, authorRole, authorImage, authorBio, authorSocial } = article;
   return (
-    <div className="mt-10 flex gap-5 rounded-lg border border-[#E5E5E5] p-6">
+    <div className="mt-10 flex gap-5 rounded-lg border border-[#594f4f] p-6">
       <ArticleImage imageUrl={authorImage} alt={author} className="w-20 h-20 sm:w-28 sm:h-28 rounded-full shrink-0" sizes="112px"/>
       <div className="min-w-0">
         <p className="font-sans text-xs uppercase tracking-wide text-[#A0A0A0] mb-0.5">About the Author</p>
@@ -334,6 +316,8 @@ export default async function ArticlePage({ params }) {
           name: SITE_NAME,
           logo: {
             "@type": "ImageObject",
+            // Uses the site's real logo asset (lib/site.js) instead of a
+            // non-existent /logo.png at the domain root.
             url: getAbsoluteUrl(SITE_LOGO_PATH),
           },
         },
@@ -409,47 +393,32 @@ export default async function ArticlePage({ params }) {
                 {article.dek}
               </p>
             )}
-
-            {/* Byline + share row */}
-            <div className="mt-6 flex flex-wrap items-center justify-between gap-4 py-4 border-y border-[#E5E5E5]">
-              <div className="flex items-center gap-3">
-                {article.authorImage && (
-                  <a href={article.authorSlug ? `/authors/${article.authorSlug}` : undefined} aria-label={article.author} className="shrink-0">
-                    <ArticleImage imageUrl={article.authorImage} alt={article.author} className="w-10 h-10 rounded-full" sizes="40px"/>
-                  </a>
-                )}
-                <div className="font-sans text-sm text-[#595959]">
-                  <span className="font-medium text-[#1A1A1A]">
-                    By{" "}
-                    {article.authorSlug ? (
-                      <a href={`/authors/${article.authorSlug}`} className="hover:text-[#D01418] transition-colors">
-                        {article.author}
-                      </a>
-                    ) : (
-                      article.author
-                    )}
+           
+            <div className="mt-6 flex items-center gap-3 py-4 border-y border-[#E5E5E5]">
+              {article.authorImage && (
+                <a href={article.authorSlug ? `/authors/${article.authorSlug}` : undefined} aria-label={article.author} className="shrink-0">
+                  <ArticleImage imageUrl={article.authorImage} alt={article.author} className="w-10 h-10 rounded-full" sizes="40px"/>
+                </a>
+              )}
+              <div className="font-sans text-sm text-[#595959]">
+                <span className="font-medium text-[#1A1A1A]">
+                  By{" "}
+                  {article.authorSlug ? (
+                    <a href={`/authors/${article.authorSlug}`} className="hover:text-[#D01418] transition-colors">
+                      {article.author}
+                    </a>
+                  ) : (
+                    article.author
+                  )}
+                </span>
+                {publishedLabel && (
+                  <span className="block sm:inline sm:before:content-['_·_'] mt-1 sm:mt-0">
+                    {publishedLabel}
                   </span>
-                  {publishedLabel && (
-                    <span className="block sm:inline sm:before:content-['_·_'] mt-1 sm:mt-0">
-                      {publishedLabel}
-                    </span>
-                  )}
-                  {updatedLabel && (
-                    <span className="block text-xs text-[#A0A0A0] mt-1">Updated {updatedLabel}</span>
-                  )}
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <IconLink label="Share on Facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(absoluteUrl)}`}>
-                  <FacebookIcon />
-                </IconLink>
-                <IconLink label="Share on Twitter" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(absoluteUrl)}&text=${encodeURIComponent(article.headline)}`}>
-                  <TwitterIcon />
-                </IconLink>
-                <IconLink label="Open article link" href={absoluteUrl}>
-                  <LinkIcon />
-                </IconLink>
+                )}
+                {updatedLabel && (
+                  <span className="block text-xs text-[#A0A0A0] mt-1">Updated {updatedLabel}</span>
+                )}
               </div>
             </div>
 
@@ -495,6 +464,9 @@ export default async function ArticlePage({ params }) {
               </p>
             )}
 
+            {/* Share this article */}
+            <ShareButtons url={absoluteUrl} title={article.headline} />
+
             {/* Author card */}
             <AuthorCard article={article} />
 
@@ -502,7 +474,7 @@ export default async function ArticlePage({ params }) {
             {article.tags?.length > 0 && (
               <div className="mt-8 flex flex-wrap gap-2">
                 {article.tags.map((tag) => (
-                  <span key={tag} className="rounded-full border border-[#E5E5E5] px-3 py-1 font-sans text-xs text-[#595959]">
+                  <span key={tag} className="rounded-full border border-[#272424] px-3 py-1 font-sans text-xs text-[#595959]">
                     {tag}
                   </span>
                 ))}
