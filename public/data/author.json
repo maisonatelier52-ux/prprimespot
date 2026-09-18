@@ -5,7 +5,7 @@
     "name": "James Carter",
     "role": "Business Writer",
     "bio": "James Carter writes about companies, trade policy, manufacturing, and corporate strategy. He covers earnings, executive decisions, supply chains, and the deals reshaping major industries. His posts link to the public records and source material used for their central claims, and separate company guidance from independently verified figures.",
-    "avatarImage": "/images/james-carter.jpg",
+    "avatarImage": "/images/james-carter.webp",
     "social": {}
   },
   "elena-vasquez": {
@@ -14,7 +14,7 @@
     "name": "Elena Vasquez",
     "role": "Finance Writer",
     "bio": "Elena Vasquez writes about markets, interest rates, household finance, and economic data. She tracks Federal Reserve policy, inflation reports, and how monetary decisions filter down to borrowing costs and household budgets. Her posts separate observed figures from forecasts and interpretation, citing primary data releases wherever they're available.",
-    "avatarImage": "/images/elena-vasquez.jpg",
+    "avatarImage": "/images/elena-vasquez.webp",
     "social": {}
   },
   "raj-patel": {
@@ -23,7 +23,7 @@
     "name": "Raj Patel",
     "role": "World & Technology Writer",
     "bio": "Raj Patel writes about international affairs, science, technology, and cross-border industry. He covers diplomatic developments, emerging technology, and the global supply chains linking distant economies. His posts identify official claims and distinguish them from independently established facts, with attention to how a story is being reported differently across regions.",
-    "avatarImage": "/images/raj-patel.jpg",
+    "avatarImage": "/images/raj-patel.webp",
     "social": {}
   },
   "sarah-kim": {
@@ -32,7 +32,7 @@
     "name": "Sarah Kim",
     "role": "U.S. Health & Science Writer",
     "bio": "Sarah Kim writes about U.S. public health, medical research, science policy, education, and federal institutions. She covers regulatory decisions, clinical research, and how federal agencies communicate risk and guidance to the public. Her posts link to primary studies and regulator guidance where available, and flag preliminary findings as such.",
-    "avatarImage": "/images/sarah-kim.jpg",
+    "avatarImage": "/images/sarah-kim.webp",
     "social": {}
   },
   "maria-santos": {
@@ -41,7 +41,7 @@
     "name": "Maria Santos",
     "role": "Politics Writer",
     "bio": "Maria Santos writes about elections, courts, Congress, and public institutions. She covers legislative fights, judicial rulings, and campaign developments as they unfold. Her analysis labels projections and source attribution so readers can separate evidence from interpretation, and notes when a race or ruling is still contested.",
-    "avatarImage": "/images/maria-santos.jpg",
+    "avatarImage": "/images/maria-santos.webp",
     "social": {}
   },
   "daniel-osei": {
@@ -50,7 +50,7 @@
     "name": "Daniel Osei",
     "role": "Sports Writer",
     "bio": "Daniel Osei writes about major leagues, national teams, athlete performance, and the business of sport. He covers game outcomes, roster and front-office moves, and the money behind franchises, broadcasts, and sponsorships. Results and records are checked against league or governing-body data when available.",
-    "avatarImage": "/images/daniel-osei.jpg",
+    "avatarImage": "/images/daniel-osei.webp",
     "social": {}
   }
 }
