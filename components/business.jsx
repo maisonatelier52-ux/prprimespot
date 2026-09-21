@@ -1,4 +1,5 @@
 import articlesData from "../public/data/article.json";
+import Image from "next/image";
 
 const CATEGORY = "business";
 
@@ -22,13 +23,13 @@ function ImagePlaceholder({ label, className = "" }) {
 // Sizing classes go on the OUTER wrapper; the <img> just fills it — keeps
 // width/aspect-ratio classes from fighting a hardcoded w-full/h-full on the
 // same element.
-function StoryImage({ imageUrl, alt, className = "" }) {
+function StoryImage({ imageUrl, alt, className = "", priority = false }) {
   if (!imageUrl) {
     return <ImagePlaceholder label={alt || "image"} className={className} />;
   }
   return (
-    <div className={`overflow-hidden ${className}`}>
-      <img src={imageUrl} alt={alt} className="block w-full h-full object-cover" />
+        <div className={`relative overflow-hidden ${className}`}>
+            <Image src={imageUrl} alt={alt} fill priority={priority} sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
     </div>
   );
 }
@@ -57,7 +58,7 @@ function LeadStory({ article }) {
       <a href={href} className="group block">
         <div className="flex">
           <div className="w-3 sm:w-4 shrink-0 bg-[#D01418]" aria-hidden="true" />
-          <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3]"/>
+          <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3]" priority/>
           <div className="w-3 sm:w-4 shrink-0 bg-[#D01418]" aria-hidden="true" />
         </div>
         <h2 className="mt-4 font-serif text-2xl sm:text-3xl font-bold leading-tight text-[#1A1A1A] group-hover:text-[#D01418] transition-colors">

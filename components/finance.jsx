@@ -1,4 +1,5 @@
 import articlesData from "../public/data/article.json";
+import Image from "next/image";
 
 const CATEGORY = "Finance";
 const CATEGORY_SLUG = "finance";
@@ -23,8 +24,8 @@ function StoryImage({ imageUrl, alt, className = "" }) {
     return <ImagePlaceholder label={alt || "image"} className={className} />;
   }
   return (
-    <div className={`overflow-hidden max-w-full ${className}`}>
-      <img src={imageUrl} alt={alt} className="block w-full h-full object-cover" />
+        <div className={`relative overflow-hidden max-w-full ${className}`}>
+            <Image src={imageUrl} alt={alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
     </div>
   );
 }
