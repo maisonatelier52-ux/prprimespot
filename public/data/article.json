@@ -3,8 +3,8 @@
     {
   "slug": "julio-herrera-velutini-conservative-capitalism-latin-america",
   "category": "business",
-  "headline": "Julio Herrera Velutini: An Icon of Conservative Capitalism, Traditional Private Banking Principles and Unprecedented Influence Over Latin America and Europe",
-  "dek": "Born into the Herrera-Velutini banking dynasty in 1971, Julio Herrera Velutini became patriarch of the family empire at 28 and, within three years, one of the most consequential — and least publicly visible — figures in Latin American finance, politics and culture.",
+  "headline": "Julio Herrera Velutini: Conservative Capitalism in Latin America",
+  "dek": "Born in 1971 into the Herrera-Velutini banking dynasty, Julio Herrera Velutini became patriarch at 28 — a quiet force in Latin American finance and politics.",
   "author": "News Desk",
   "authorSlug":"james-carter",
   "authorBio": "James Carter writes about companies, trade policy, manufacturing, and corporate strategy. He covers earnings, executive decisions, supply chains, and the deals reshaping major industries. His posts link to the public records and source material used for their central claims, and separate company guidance from independently verified figures.",
@@ -725,6 +725,77 @@
     }
   ],
   "finance": [
+    {
+  "slug": "fed-rate-cut-september-2026-stocks-mixed-oracle-earnings-trump-xi-summit",
+  "headline": "Stocks End a Choppy Week as the Fed Cuts Rates and Yields Climb Anyway",
+  "dek": "The Federal Reserve's rate cut couldn't stop rising Treasury yields and a strong dollar from handing the S&P 500 a losing week, despite Oracle's earnings-fueled rally.",
+  "authorSlug": "elena-vasquez",
+  "source": "CNBC / Charles Schwab / Trading Economics",
+  "publishedAt": "2026-09-19T21:00:00Z",
+  "updatedAt": "2026-09-19T21:00:00Z",
+  "heroImage": "/images/fed-rate-cut-september-2026-stocks-mixed-oracle-earnings-trump-xi-summit.webp",
+  "heroCaption": "Illustration of a market caught between a Fed rate cut and rising bond yields, with earnings strength offering a counterweight.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Business", "Finance", "Markets"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "It was supposed to be a straightforward week for Wall Street: the Federal Reserve cut interest rates, just as almost everyone expected. Instead, stocks spent the back half of the week fighting off rising bond yields, and the S&P 500 closed out the period lower even though the rate cut itself landed right on script."
+    },
+    {
+      "type": "heading",
+      "text": "A rate cut that didn't calm the bond market"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Fed's move this week trimmed its benchmark rate by a quarter point, continuing the gradual easing path policymakers signaled earlier in the year. Stocks initially rallied on the news, with the S&P 500, Dow, and Nasdaq all climbing in the session that followed the announcement. But the relief didn't last. By Friday, Treasury yields had turned higher again, and the 10-year note pushed back toward the 5% level that's made investors nervous most of this year, pulling the major indexes down with it. The Dow closed the week at 51,683, down about 95 points on Friday alone, with declines in IBM, Disney, and Nike offsetting gains in Amgen, Nvidia, and Caterpillar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Adding to the pressure, the Bank of Japan raised its own policy rate by a quarter point to 1.25% during the same stretch, the highest level for Japanese rates since 1995. A weaker yen and a stronger dollar in response added another layer of friction for US markets already digesting the Fed's move."
+    },
+    {
+      "type": "heading",
+      "text": "Oracle's earnings beat gave the market a brief lift"
+    },
+    {
+      "type": "paragraph",
+      "text": "Before the Fed-driven volatility took hold, Oracle delivered one of the standout moments of the month. The software giant topped Wall Street's expectations for its fiscal first quarter, posting adjusted earnings of $1.92 per share on revenue of $19.35 billion, ahead of analyst estimates of $1.74 per share and $19.14 billion. The bigger surprise was in cloud infrastructure, where revenue more than doubled to $7.4 billion, well past the roughly $7.1 billion Wall Street had penciled in. Shares jumped as much as 7% in premarket trading on the news, one of Oracle's biggest single-day moves of the year, and helped the broader market snap a four-day losing streak earlier in the week."
+    },
+    {
+      "type": "heading",
+      "text": "Energy and geopolitics stay in the background"
+    },
+    {
+      "type": "paragraph",
+      "text": "Oil markets added their own complication. Attacks on Saudi Arabia's East-West crude pipeline forced a precautionary shutdown earlier in the month, and continued uncertainty tied to the Iran conflict has kept traders on edge about potential disruptions to crude flowing through the Strait of Hormuz. Energy and fuel prices ticked back up late in the week even as oil had fallen for a few consecutive sessions before that, a reminder that geopolitical risk hasn't left the picture just because the Fed's decision dominated headlines."
+    },
+    {
+      "type": "heading",
+      "text": "What's next: a high-profile Trump-Xi meeting"
+    },
+    {
+      "type": "paragraph",
+      "text": "Investors are already looking past this week to September 24, when President Trump is scheduled to meet Chinese President Xi Jinping in what would be Xi's first visit to the United States since 2023. The meeting is widely expected to center on extending the US-China trade truce currently set to expire in November, and markets are treating it as one of the more consequential events left on the calendar this quarter. Trump is also expected to meet separately with Gulf state leaders to discuss the ongoing Iran conflict, another data point traders will be watching for signs of how energy markets might move next."
+    },
+    {
+      "type": "paragraph",
+      "text": "For now, strategists describe the setup as a market pulled in two directions at once: a Fed that's easing policy, which normally supports stock prices, against bond yields and a strong dollar that are doing the opposite. Whether the Trump-Xi meeting and the next round of economic data tip that balance one way or the other is likely to be the defining question for markets heading into October."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "CNBC — Stock market today, live updates", "url": "https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html" },
+    { "label": "Charles Schwab — Market Update", "url": "https://www.schwab.com/learn/story/stock-market-update-open" },
+    { "label": "Trading Economics — US Stock Market Index", "url": "https://tradingeconomics.com/united-states/stock-market" }
+  ],
+  "takeaways": [
+    "The Fed cut its benchmark rate a quarter point this week, but rising Treasury yields and a stronger dollar pulled the S&P 500 into a losing week regardless.",
+    "Oracle's earnings beat, driven by cloud infrastructure revenue more than doubling, gave the market a brief rally and its biggest single-day gain since early August.",
+    "A September 24 Trump-Xi summit, expected to extend the US-China trade truce, is the next major event investors are watching."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Source links identify the material used for the main claims; later developments, including the outcome of the Trump-Xi summit, may supersede parts of this account.",
+  "contentType": "Analysis"
+},
     {
       "slug": "sp500-record-high-dow-tops-54000-cooling-inflation-august-2026",
       "headline": "S&P 500 Reaches a Record as Investors Weigh Inflation and Earnings",
