@@ -160,6 +160,15 @@ export default function HomePage() {
   return (
     <main>
       <JsonLd />
+
+      {/* The single <h1> for the homepage. Visually hidden (sr-only) but
+          readable by search engines and screen readers. Remove "sr-only"
+          if you want it visible. Section components should use <h2>. */}
+      <h1 className="sr-only">
+        {SITE_NAME} – U.S. Breaking News, Business, Finance, World, Politics
+        &amp; Sports
+      </h1>
+
       <Business />
       <Finance />
       <World />

@@ -17,17 +17,15 @@ const CATEGORY_LABELS = {
   world: "World",
   us: "U.S.",
   politics: "Politics",
-  technology: "Technology",
-  health: "Health",
-  lifestyle: "Lifestyle",
   sports: "Sports",
 };
 
 const FALLBACK_IMAGE = "/og-image.jpg";
 
+export const dynamicParams = false;
+
 function isKnownCategory(category) {
-  const key = category?.toLowerCase();
-  return Boolean(key) && (key in CATEGORY_LABELS || key in articlesData);
+  return typeof category === "string" && Object.hasOwn(articlesData, category);
 }
 
 function getArticlesByCategory(category) {
