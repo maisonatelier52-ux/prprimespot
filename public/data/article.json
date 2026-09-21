@@ -111,7 +111,7 @@
 },
     {
       "slug": "nvidia-q2-earnings-2026-smashes-estimates-108-billion-revenue-guidance",
-      "headline": "Nvidia Reports $96.2 Billion in Revenue and Forecasts $108 Billion Quarter",
+      "headline": "Nvidia Reports $96.2B Revenue, Forecasts $108B Next Quarter",
       "dek": "Nvidia reported $96.2 billion in fiscal second-quarter revenue, up 106% from a year earlier, and adjusted earnings of $2.22 a share.",
       "authorSlug": "james-carter",
       "source": "CNBC",
@@ -212,8 +212,8 @@
     },
     {
       "slug": "tyson-foods-closes-illinois-utah-beef-plants-cattle-shortage-3200-jobs",
-      "headline": "Tyson Foods to Close Illinois and Utah Beef Plants, Affecting 3,200 Jobs",
-      "dek": "Tyson Foods said it will close its beef plant in Joslin, Illinois, and its case-ready meat facility in Eagle Mountain, Utah, affecting about 3,200 jobs across the two sites.",
+      "headline": "Tyson Foods Closes Illinois, Utah Plants, Cuts 3,200 Jobs",
+      "dek": "Tyson Foods will close its beef plant in Joslin, Illinois, and its case-ready meat facility in Eagle Mountain, Utah, affecting 3,200 jobs across both locations.",
       "authorSlug": "james-carter",
       "source": "KSL.com",
       "publishedAt": "2026-08-14T09:00:00Z",
@@ -297,7 +297,7 @@
     },
     {
       "slug": "dicks-sporting-goods-stock-plunges-30-percent-foot-locker-earnings-miss",
-      "headline": "Dick's Sporting Goods Shares Fall 31% After Foot Locker Weakness Prompts Outlook Cut",
+      "headline": "Dick's Sporting Goods Stock Falls 31% on Foot Locker Woes",
       "dek": "Shares of Dick's Sporting Goods fell 30.7% after the retailer missed second-quarter profit expectations and reduced its full-year outlook.",
       "authorSlug": "james-carter",
       "source": "CNBC",
@@ -382,8 +382,8 @@
     },
     {
       "slug": "fed-chair-kevin-warsh-jackson-hole-speech-inflation-rate-hike-warning",
-      "headline": "Fed Chair Warsh Says Rate Increases Remain Possible if Inflation Persists",
-      "dek": "Federal Reserve Chair Kevin Warsh said at the Jackson Hole Economic Symposium that inflation remains too high and that additional interest-rate increases could be needed.",
+      "headline": "Fed Chair Warsh: Rate Hikes Possible if Inflation Persists",
+      "dek": "Federal Reserve Chair Kevin Warsh said at the Jackson Hole Economic Symposium that inflation remains too high, and more interest-rate increases could be needed.",
       "authorSlug": "james-carter",
       "source": "CNN Business",
       "publishedAt": "2026-08-28T15:00:00Z",
@@ -552,7 +552,7 @@
     },
     {
       "slug": "meta-18-billion-settlement-states-teen-social-media-harm-2026",
-      "headline": "Meta Agrees to Pay Up to $18 Billion and Add Teen-Safety Controls",
+      "headline": "Meta Agrees to Pay Up to $18B, Add Teen-Safety Rules",
       "dek": "Meta agreed to pay up to $18 billion over 10 years and change how minors use Facebook and Instagram, resolving claims brought by nearly all U.S. states.",
       "authorSlug": "james-carter",
       "source": "CNN Business",
@@ -727,8 +727,8 @@
   "finance": [
     {
   "slug": "fed-rate-cut-september-2026-stocks-mixed-oracle-earnings-trump-xi-summit",
-  "headline": "Stocks End a Choppy Week as the Fed Cuts Rates and Yields Climb Anyway",
-  "dek": "The Federal Reserve's rate cut couldn't stop rising Treasury yields and a strong dollar from handing the S&P 500 a losing week, despite Oracle's earnings-fueled rally.",
+  "headline": "Stocks End Choppy Week as Fed Cuts Rates, Yields Climb",
+  "dek": "The Federal Reserve's rate cut couldn't stop rising Treasury yields and a strong dollar from handing the S&P 500 a losing week, despite Oracle's earnings rally.",
   "authorSlug": "elena-vasquez",
   "source": "CNBC / Charles Schwab / Trading Economics",
   "publishedAt": "2026-09-19T21:00:00Z",
@@ -798,7 +798,7 @@
 },
     {
       "slug": "sp500-record-high-dow-tops-54000-cooling-inflation-august-2026",
-      "headline": "S&P 500 Reaches a Record as Investors Weigh Inflation and Earnings",
+      "headline": "S&P 500 Hits Fresh Record as Investors Weigh Inflation Data",
       "dek": "The S&P 500 set a record in August as technology shares, corporate earnings and softer inflation data supported a broad market advance.",
       "authorSlug": "elena-vasquez",
       "source": "CNBC",
@@ -882,7 +882,7 @@
     },
     {
       "slug": "gold-prices-rebound-best-week-since-january-fed-rate-hike-odds-fade",
-      "headline": "Gold Posts Its Strongest Week Since January as Rate Expectations Ease",
+      "headline": "Gold Posts Strongest Week Since January on Rate Outlook",
       "dek": "Gold rose more than 6% in its strongest week since January as softer economic data reduced expectations for an imminent Federal Reserve rate increase.",
       "authorSlug": "elena-vasquez",
       "source": "CNBC",
@@ -1190,7 +1190,7 @@
     },
     {
       "slug": "us-clean-energy-investment-75-billion-q2-2026-battery-storage-boom",
-      "headline": "U.S. Clean-Energy Investment Rises 22% to $75 Billion in the Second Quarter",
+      "headline": "U.S. Clean-Energy Investment Rises 22% to $75B in Q2",
       "dek": "U.S. investment in clean energy and transportation totaled $75 billion in the second quarter of 2026, a 22% increase from the previous quarter.",
       "authorSlug": "elena-vasquez",
       "source": "Clean Investment Monitor / Semafor",
@@ -1277,7 +1277,7 @@
   "world": [
     {
       "slug": "nepal-china-border-flash-floods-thousands-missing-glacier-collapse-2026",
-      "headline": "Nepal-China Border Floods Leave Hundreds Dead and Thousands Missing",
+      "headline": "In Nepal-China Floods Leave Hundreds Dead, Thousands Missing",
       "dek": "A rock-and-ice collapse high in the Himalayas on August 26 triggered a destructive flood along river valleys near the Nepal-China border.",
       "authorSlug": "raj-patel",
       "source": "CNN / Reuters",
@@ -1358,7 +1358,7 @@
     },
     {
       "slug": "us-venezuela-oil-deal-65-billion-barrels-trump-rodriguez-2026",
-      "headline": "U.S.-Venezuela Oil Agreement Covers Rights Tied to 65 Billion Barrels of Reserves",
+      "headline": "U.S.-Venezuela Oil Accord Covers 65B Barrels of Oil Reserves",
       "dek": "President Donald Trump said the United States had secured majority control of interests tied to more than 65 billion barrels of Venezuelan oil reserves.",
       "authorSlug": "raj-patel",
       "source": "NPR / NBC News",
@@ -1439,7 +1439,7 @@
     },
     {
       "slug": "lionel-messi-retires-argentina-national-team-2026",
-      "headline": "Lionel Messi Retires From Argentina's National Team After 21 Years",
+      "headline": "Messi Retires From Argentina's National Team, After 21 Years",
       "dek": "Lionel Messi announced his retirement from international soccer at age 39, ending a 21-year career with Argentina's senior national team.",
       "authorSlug": "raj-patel",
       "source": "NPR / CNN",
@@ -1604,8 +1604,8 @@
     },
     {
       "slug": "ai-decodes-complete-herculaneum-scroll-vesuvius-challenge-2000-years",
-      "headline": "Researchers Use AI to Read an Entire Herculaneum Scroll Without Opening It",
-      "dek": "Researchers working with the Vesuvius Challenge virtually unwrapped and read PHerc. 1667, the first Herculaneum scroll recovered end to end without being physically opened.",
+      "headline": "Researchers Use AI to Fully Read Herculaneum Scroll Unopened",
+      "dek": "Vesuvius Challenge researchers virtually unwrapped and read PHerc. 1667, the first Herculaneum scroll ever recovered end to end without being physically opened.",
       "authorSlug": "raj-patel",
       "source": "Greek Reporter / Nature",
       "publishedAt": "2026-06-26T10:00:00Z",
@@ -1685,7 +1685,7 @@
     },
     {
       "slug": "nvidia-nokia-6g-ai-ran-t-mobile-trials-2026",
-      "headline": "Nvidia and Nokia Expand AI-RAN Work as Carriers Test Paths Toward 6G",
+      "headline": "Nvidia, Nokia Expand AI-RAN Work as Carriers Test 6G Rollout",
       "dek": "Nvidia and Nokia are developing commercial AI-RAN products that combine accelerated computing with radio-access network software.",
       "authorSlug": "raj-patel",
       "source": "NVIDIA Newsroom / DCD",
@@ -1768,8 +1768,8 @@
   "us": [
     {
       "slug": "one-week-social-media-detox-improves-mental-health-jama-study-2026",
-      "headline": "One-Week Social Media Break Is Linked to Better Mental Health in Young Adults",
-      "dek": "Young adults who chose to take a one-week break from five social-media platforms reported lower symptoms of anxiety, depression and insomnia in a cohort study published in JAMA Network Open.",
+      "headline": "One-Week Social Media Break Linked to Improved Mental Health",
+      "dek": "Young adults who took a one-week break from five social media platforms reported lower anxiety, depression and insomnia symptoms, per a JAMA Network Open study.",
       "authorSlug": "sarah-kim",
       "source": "JAMA Network Open / EdSource",
       "publishedAt": "2026-07-02T13:00:00Z",
@@ -1845,7 +1845,7 @@
     {
       "slug": "acs-colorectal-cancer-screening-guidelines-2026-new-blood-test-option",
       "headline": "American Cancer Society Adds New Colorectal Screening Options",
-      "dek": "The American Cancer Society's 2026 guideline continues to recommend that average-risk adults begin colorectal cancer screening at age 45 and adds blood-based and newer stool-based options.",
+      "dek": "American Cancer Society's 2026 guideline keeps colorectal cancer screening age at 45, and adds blood-based and stool-based test options for average-risk adults.",
       "authorSlug": "sarah-kim",
       "source": "American Cancer Society",
       "publishedAt": "2026-05-27T14:00:00Z",
@@ -1924,7 +1924,7 @@
     },
     {
       "slug": "fda-approves-first-mrna-flu-vaccine-moderna-mflusiva-2026",
-      "headline": "FDA Approves the First mRNA Seasonal Flu Vaccine for Adults 50 and Older",
+      "headline": "FDA OKs First mRNA Seasonal Flu Shot for Adults 50 and Older",
       "dek": "The Food and Drug Administration approved Moderna's mFLUSIVA, the first U.S. seasonal influenza vaccine based on messenger RNA technology.",
       "authorSlug": "sarah-kim",
       "source": "NPR / US News",
@@ -2088,7 +2088,7 @@
     },
     {
       "slug": "army-secretary-dan-driscoll-resigns-hegseth-tension-2026",
-      "headline": "Army Secretary Dan Driscoll Resigns After Reported Tensions With Hegseth",
+      "headline": "Army Secretary Driscoll Quits Amid Reported Hegseth Tensions",
       "dek": "Army Secretary Dan Driscoll resigned and said September 2 would be his last full day in the role.",
       "authorSlug": "sarah-kim",
       "source": "CNN / Military Times",
@@ -2164,7 +2164,7 @@
     },
     {
       "slug": "us-student-loan-debt-1-9-trillion-new-repayment-rules-2026",
-      "headline": "U.S. Student-Loan Balances Approach $1.9 Trillion as Repayment Rules Change",
+      "headline": "U.S. Student-Loan Debt Nears $1.9 Trillion Mark, Rules Shift",
       "dek": "U.S. student-loan balances approached $1.9 trillion in the first quarter of 2026 as federal borrowers moved into a new repayment framework.",
       "authorSlug": "sarah-kim",
       "source": "Federal Reserve / CNBC / Department of Education",
@@ -2254,8 +2254,8 @@
   "politics": [
     {
       "slug": "trump-michael-whatley-north-carolina-senate-rally-crime-2026",
-      "headline": "Trump Campaigns for Michael Whatley in North Carolina Senate Race with Crime-Focused Message",
-      "dek": "Donald Trump campaigned in North Carolina for Republican Senate candidate Michael Whatley, focusing on crime, affordability, and Democratic policies ahead of the midterm elections.",
+      "headline": "Trump Campaigns for Whatley in N.C. Senate With Crime Focus",
+      "dek": "Trump campaigned for GOP Senate candidate Michael Whatley in North Carolina focusing on crime, affordability and Democratic policies ahead of the 2026 midterms.",
       "authorSlug": "maria-santos",
       "source": "WBTV / NBC News / The Guardian",
       "publishedAt": "2026-09-17T05:00:00Z",
@@ -2340,7 +2340,7 @@
     },
     {
       "slug": "supreme-court-trump-white-house-ballroom-construction-ruling-2026",
-      "headline": "Supreme Court Allows White House Ballroom Construction to Continue During Appeal",
+      "headline": "Supreme Court Allows White House Ballroom Work During Appeal",
       "dek": "The Supreme Court allowed construction of President Donald Trump's planned White House ballroom to continue while litigation proceeds.",
       "authorSlug": "maria-santos",
       "source": "NPR / NBC News / Slate",
@@ -2496,7 +2496,7 @@
     },
     {
       "slug": "us-strikes-iran-hormuz-escalation-september-2026",
-      "headline": "U.S. Launches New Strikes on Iranian Targets Near the Strait of Hormuz",
+      "headline": "U.S. Launches Strikes on Iran Targets Near Strait of Hormuz.",
       "dek": "U.S. Central Command said American forces struck Islamic Revolutionary Guard Corps targets in Iran after attempted attacks on commercial shipping and U.S. personnel.",
       "authorSlug": "maria-santos",
       "source": "CNBC / Axios / CENTCOM",
@@ -2577,7 +2577,7 @@
     {
       "slug": "senate-republicans-trump-political-liability-2026-midterms",
       "headline": "Senate Control Tightens as Republicans Confront Trump's Standing",
-      "dek": "Republicans' path to retaining the Senate has narrowed as competitive races expand and President Donald Trump's approval ratings weigh on the party's national environment.",
+      "dek": "Republicans' path to retaining the Senate has narrowed as competitive races expand and President Trump's approval ratings weigh on the GOP's national landscape.",
       "authorSlug": "maria-santos",
       "source": "The Hill / Polymarket / Britannica",
       "publishedAt": "2026-08-01T14:00:00Z",
@@ -2740,7 +2740,7 @@
     },
     {
       "slug": "kennedy-center-artist-cancellations-continue-2026-trump-renaming",
-      "headline": "Kennedy Center Cancellations Continue Amid Leadership and Renaming Disputes",
+      "headline": "Kennedy Center Cancellations Continue Amid Renaming Disputes",
       "dek": "Artists and performing-arts organizations have continued to withdraw from Kennedy Center engagements after changes to the institution's leadership and name.",
       "authorSlug": "maria-santos",
       "source": "NPR / Washington Post / Newsweek",
@@ -2822,8 +2822,8 @@
   "sports": [
     {
       "slug": "nfl-week-2-2026-mahomes-return-goodell-international-team-burrow-injury-update",
-      "headline": "NFL Week 2 2026: Mahomes' Return, Goodell's Big Injury News Update",
-      "dek": "Patrick Mahomes made his return from a torn ACL count in Kansas City's Week 1 win, Commissioner Roger Goodell reignited talk of an NFL team based overseas, and a fresh round of quarterback injury news is setting the tone for Week 2.",
+      "headline": "NFL Week 2 2026: Mahomes Return, Goodell's Big Injury Update",
+      "dek": "Patrick Mahomes returned from a torn ACL in Kansas City's Week 1 win, Goodell revived talk of an overseas NFL team, and new QB injuries set the tone for Week 2.",
       "authorSlug": "daniel-osei",
       "source": "NFL.com / NBC Sports / Sports Illustrated",
       "publishedAt": "2026-09-18T15:00:00Z",
@@ -2902,8 +2902,8 @@
     },
     {
       "slug": "nfl-digital-athlete-ai-biomechanics-injury-prevention-2026-season",
-      "headline": "NFL Expands Its Digital Athlete System to Inform Injury-Prevention Decisions",
-      "dek": "The NFL and Amazon Web Services use the Digital Athlete system to combine video, tracking and injury data in simulations intended to identify patterns of player risk.",
+      "headline": "NFL Expands Digital Athlete System for Injury Prevention",
+      "dek": "NFL and Amazon Web Services use the Digital Athlete system, combining video, tracking and injury data in simulations to identify player risk patterns.",
       "authorSlug": "daniel-osei",
       "source": "NFL / AWS",
       "publishedAt": "2026-08-25T15:00:00Z",
@@ -3059,7 +3059,7 @@
     {
       "slug": "nfl-record-2026-international-games-expansion-future-franchise",
       "headline": "NFL Schedules a Record Nine International Games for 2026",
-      "dek": "The NFL scheduled nine regular-season games outside the United States in 2026, the most in league history, across four continents, seven countries and eight stadiums.",
+      "dek": "NFL schedules a record nine 2026 regular-season games abroad, spanning four continents, seven countries and eight stadiums worldwide, the most in league history.",
       "authorSlug": "daniel-osei",
       "source": "NFL / Pro Football Hall of Fame",
       "publishedAt": "2026-08-26T13:00:00Z",
