@@ -197,7 +197,15 @@ export default async function ArticlePage({ params }) {
   // Layout selection — a slug registered in lib/articleLayouts.js renders
   // through its own custom component; everything else uses the shared
   // ArticleDetail broadsheet template.
-  // ---------------------------------------------------------------------
+  //
+  // getArticleLayout() is a pure lookup into a static, module-level object
+  // (lib/articleLayouts.js); it always returns the same stable component
+  // reference (or null) for a given category/slug, never a freshly created
+  // one. The react-hooks/static-components rule's "resets state on remount"
+  // concern also doesn't apply here regardless: this is an async Server
+  // Component (no "use client", no hooks, no client-side reconciliation)
+  // rendered once per page at build/request time. Suppressed below at the
+  // JSX usage site, where the rule actually reports it.
   const CustomLayout = getArticleLayout(article.category, article.slug);
 
   return (
@@ -208,6 +216,7 @@ export default async function ArticlePage({ params }) {
       />
 
       {CustomLayout ? (
+        // eslint-disable-next-line react-hooks/static-components -- see note above CustomLayout
         <CustomLayout
           article={article}
           related={related}
