@@ -168,7 +168,7 @@ function MailIcon() {
 function ArticleCard({ article }) {
   const dateLabel = formatDate(article.publishedAt);
   return (
-    <a href={`/${article.category}/${article.slug}`} className="group block">
+    <Link href={`/${article.category}/${article.slug}`} className="group block">
       <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3] mb-3"/>
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
@@ -179,7 +179,7 @@ function ArticleCard({ article }) {
       {dateLabel && (
         <p className="mt-2 font-sans text-xs text-[#A0A0A0]">{dateLabel}</p>
       )}
-    </a>
+    </Link>
   );
 }
 
@@ -275,14 +275,16 @@ export default async function AuthorPage({ params }) {
           <span className="text-[#1A1A1A]">{authorData.name}</span>
         </nav>
 
-        {/* Author header — lighter background panel, matching the category page pattern */}
-        <div className="bg-[#F7F5EF] px-6 py-8 sm:px-10 sm:py-10 mb-10 flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
+        {/* Author header — lighter background panel, matching the category page pattern.
+            Centered on mobile (avatar/name/badges/bio/icons stack and center under
+            narrow widths); switches to the original left-aligned row from sm: up. */}
+        <div className="bg-[#F7F5EF] px-6 py-8 sm:px-10 sm:py-10 mb-10 flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-6 sm:gap-8">
           <ArticleImage imageUrl={authorData.avatarImage} alt={authorData.name} className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shrink-0" sizes="160px"/>
-          <div className="min-w-0">
+          <div className="min-w-0 w-full">
             <h1 className="font-serif text-2xl sm:text-3xl font-bold text-[#1A1A1A] break-words">
               {authorData.name}
             </h1>
-            <div className="flex flex-wrap items-center gap-2 mt-1.5">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mt-1.5">
               {authorData.category && (
                 <a href={`/${authorData.category}`} className="rounded-full bg-[#D01418] px-3 py-0.5 font-sans text-[11px] font-bold uppercase tracking-wide text-white hover:bg-[#a80f13] transition-colors">
                   {authorData.category}
@@ -293,11 +295,11 @@ export default async function AuthorPage({ params }) {
               )}
             </div>
             {authorData.bio && (
-              <p className="mt-3 font-sans text-sm leading-relaxed text-[#595959] break-words max-w-2xl">
+              <p className="mt-3 font-sans text-sm leading-relaxed text-[#595959] break-words max-w-2xl mx-auto sm:mx-0">
                 {authorData.bio}
               </p>
             )}
-            <div className="flex items-center gap-3 mt-4">
+            <div className="flex items-center justify-center sm:justify-start gap-3 mt-4">
               {authorData.social?.twitter && (
                 <IconLink label={`${authorData.name} on Twitter`} href={authorData.social.twitter}>
                   <TwitterIcon />

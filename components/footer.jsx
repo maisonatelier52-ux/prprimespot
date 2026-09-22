@@ -128,7 +128,7 @@ export default function Footer() {
         </div>
 
         {/* link grid */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 py-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-10">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 py-10 lg:grid-cols-4 lg:gap-x-10">
           <FooterColumn title="Sections">
             <ul className="space-y-2.5 font-sans text-sm text-[#595959]">
               {SECTIONS.map((section) => (
@@ -149,15 +149,17 @@ export default function Footer() {
             </ul>
           </FooterColumn>
 
-          <FooterColumn title="Follow Us">
-            <div className="flex items-center gap-3">
-              <SocialIcon label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIcon>
-              <SocialIcon label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIcon>
-              <SocialIcon label="Substack" href={SITE_SOCIAL_LINKS.substack}><SubstackIcon /></SocialIcon>
-              <SocialIcon label="Medium" href={SITE_SOCIAL_LINKS.medium}><MediumIcon /></SocialIcon>
-              <SocialIcon label="Reddit" href={SITE_SOCIAL_LINKS.reddit}><RedditIcon /></SocialIcon>
-            </div>
-          </FooterColumn>
+          <div className="col-span-2 lg:col-span-1 text-center lg:text-left">
+            <FooterColumn title="Follow Us">
+              <div className="flex items-center justify-center gap-3 lg:justify-start">
+                <SocialIcon label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIcon>
+                <SocialIcon label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIcon>
+                <SocialIcon label="Substack" href={SITE_SOCIAL_LINKS.substack}><SubstackIcon /></SocialIcon>
+                <SocialIcon label="Medium" href={SITE_SOCIAL_LINKS.medium}><MediumIcon /></SocialIcon>
+                <SocialIcon label="Reddit" href={SITE_SOCIAL_LINKS.reddit}><RedditIcon /></SocialIcon>
+              </div>
+            </FooterColumn>
+          </div>
 
           <div className="col-span-2 lg:col-span-1">
             <FooterColumn title="Newsletter">
@@ -186,12 +188,12 @@ export default function Footer() {
         </div>
 
         {/* bottom bar */}
-        <div className="flex flex-col gap-4 border-t border-[#E5E5E5] py-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-sans text-xs text-[#8A8A8A] order-2 sm:order-1">
+        <div className="flex flex-col items-center text-center gap-4 border-t border-[#E5E5E5] py-6 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+          <p className="w-full font-sans text-xs text-[#8A8A8A] order-2 sm:order-1 sm:w-auto">
             © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
 
-          <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 order-1 sm:order-2">
+          <nav className="flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-2 order-1 sm:order-2 sm:w-auto sm:justify-start">
             {LEGAL_LINKS.map(({ label, href }) => (
               <Link key={label} href={href} className="font-sans text-xs text-[#8A8A8A] hover:text-[#D01418] transition-colors">
                 {label}
