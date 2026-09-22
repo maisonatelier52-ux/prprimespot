@@ -1,3 +1,4 @@
+import Link from "next/link";
 import articlesData from "../public/data/article.json";
 import Image from "next/image";
 
@@ -37,7 +38,7 @@ function StoryImage({ imageUrl, alt, className = "", priority = false }) {
 function LeftStoryCard({ article, hasImage }) {
   const href = `/${CATEGORY}/${article.slug}`;
   return (
-    <a href={href} className="group block">
+    <Link href={href} className="group block">
       {hasImage && (
         <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/10] mb-3"/>
       )}
@@ -47,7 +48,7 @@ function LeftStoryCard({ article, hasImage }) {
       {article.dek && (
         <p className="mt-2 font-sans text-sm leading-relaxed text-[#595959]">{article.dek}</p>
       )}
-    </a>
+    </Link>
   );
 }
 
@@ -55,7 +56,7 @@ function LeadStory({ article }) {
   const href = `/${CATEGORY}/${article.slug}`;
   return (
     <div>
-      <a href={href} className="group block">
+      <Link href={href} className="group block">
         <div className="flex">
           <div className="w-3 sm:w-4 shrink-0 bg-[#D01418]" aria-hidden="true" />
           <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3]" priority/>
@@ -67,7 +68,7 @@ function LeadStory({ article }) {
         <p className="mt-3 font-sans text-[15px] leading-relaxed text-[#595959]">
           {article.dek}
         </p>
-      </a>
+      </Link>
     </div>
   );
 }
@@ -75,7 +76,7 @@ function LeadStory({ article }) {
 function OpEdCard({ article, isFirst }) {
   const href = `/${CATEGORY}/${article.slug}`;
   return (
-    <a href={href} className="group block">
+    <Link href={href} className="group block">
       <div className={isFirst ? "flex items-start gap-4" : ""}>
         <div className="flex-1">
           <h3 className="font-serif text-base sm:text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors">
@@ -92,7 +93,7 @@ function OpEdCard({ article, isFirst }) {
           <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-24 sm:w-28 aspect-[4/3] shrink-0"/>
         )}
       </div>
-    </a>
+    </Link>
   );
 }
 

@@ -417,9 +417,9 @@ export default function FeatureLongform({
             <nav className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.14em] mt-8 pb-5" style={{ color: FAINT, borderBottom: `1px solid ${RULE}` }}>
               <Link href="/" className="hover:text-[#16181D] transition-colors">Home</Link>
               <span style={{ color: GOLD }}>/</span>
-              <a href={`/${article.category}`} className="hover:text-[#16181D] transition-colors">
+              <Link href={`/${article.category}`} className="hover:text-[#16181D] transition-colors">
                 {categoryLabel}
-              </a>
+              </Link>
             </nav>
 
             {/* Kicker badge */}
@@ -483,9 +483,9 @@ export default function FeatureLongform({
                 <div className="truncate">
                   By{" "}
                   {article.authorSlug ? (
-                    <a href={`/authors/${article.authorSlug}`} className="font-semibold text-[#16181D] hover:opacity-70 transition-opacity">
+                    <Link href={`/authors/${article.authorSlug}`} className="font-semibold text-[#16181D] hover:opacity-70 transition-opacity">
                       {article.author}
-                    </a>
+                    </Link>
                   ) : (
                     <span className="font-semibold text-[#16181D]">
                       {article.author}

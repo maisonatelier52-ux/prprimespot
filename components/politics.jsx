@@ -1,3 +1,4 @@
+import Link from "next/link";
 import articlesData from "../public/data/article.json";
 import Image from "next/image";
 
@@ -45,7 +46,7 @@ function CameraIcon() {
 function PhotoCard({ article, index, total }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
-    <a href={href} className="group relative shrink-0 w-[78%] sm:w-[46%] lg:w-[31%] snap-start overflow-hidden">
+    <Link href={href} className="group relative shrink-0 w-[78%] sm:w-[46%] lg:w-[31%] snap-start overflow-hidden">
       <PhotoImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/5] sm:aspect-[3/4]"/>
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
       <span className="absolute top-3 left-3 font-mono text-[11px] text-white/80 tracking-wide">
@@ -54,7 +55,7 @@ function PhotoCard({ article, index, total }) {
       <p className="absolute bottom-0 left-0 right-0 p-4 font-sans text-base sm:text-lg leading-snug text-white group-hover:text-[#F2B8B8] transition-colors">
         {article.headline}
       </p>
-    </a>
+    </Link>
   );
 }
 
@@ -73,9 +74,9 @@ export default function PoliticsSection() {
             <CameraIcon />
             <h2 className="font-sans text-xl font-extrabold uppercase tracking-wide text-[#FAFAF7]">Politics</h2>
           </div>
-          <a href={`/${CATEGORY_SLUG}`} className="hidden sm:block font-sans text-sm text-[#B8B8B8] hover:text-white transition-colors">
+          <Link href={`/${CATEGORY_SLUG}`} className="hidden sm:block font-sans text-sm text-[#B8B8B8] hover:text-white transition-colors">
             View all →
-          </a>
+          </Link>
         </div>
 
         <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

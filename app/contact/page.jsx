@@ -8,32 +8,32 @@ const PAGE_DESCRIPTION = `How to get in touch with ${SITE_NAME} — editorial, c
 const CONTACT_CHANNELS = [
   {
     label: "General Inquiries",
-    email: "hello@prprimespot.com",
+    email: "prprimespot@gmail.com",
     body: "Questions, feedback, or anything that doesn't fit the categories below.",
   },
   {
     label: "News Tips & Story Ideas",
-    email: "tips@prprimespot.com",
+    email: "prprimespot@gmail.com",
     body: "Have a lead, a document, or a story we should be covering? Send it our way.",
   },
   {
     label: "Corrections",
-    email: "corrections@prprimespot.com",
+    email: "prprimespot@gmail.com",
     body: "Spotted an error in something we published? Tell us the article and what's wrong — see our Corrections Policy for how we handle these.",
   },
   {
     label: "Editorial",
-    email: "editorial@prprimespot.com",
+    email: "prprimespot@gmail.com",
     body: "Questions about a specific story, byline, or our editorial approach.",
   },
   {
     label: "Advertising & Partnerships",
-    email: "advertising@prprimespot.com",
+    email: "prprimespot@gmail.com",
     body: "Sponsorship, advertising, or partnership inquiries.",
   },
   {
     label: "Legal & Privacy",
-    email: "legal@prprimespot.com",
+    email: "prprimespot@gmail.com",
     body: "Terms, privacy, rights of reply, or other legal matters.",
   },
 ];
@@ -138,7 +138,7 @@ export default function ContactPage() {
         {/* Contact channels */}
         <div className="grid gap-4 sm:grid-cols-2">
           {CONTACT_CHANNELS.map((channel) => (
-            <div key={channel.email} className="border border-[#E5E5E5] bg-white p-5 hover:border-[#D01418] transition-colors">
+            <div key={channel.label} className="border border-[#E5E5E5] bg-white p-5 hover:border-[#D01418] transition-colors">
               <h2 className="font-serif text-base font-bold text-[#1A1A1A]">
                 {channel.label}
               </h2>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import articlesData from "../public/data/article.json";
 import Image from "next/image";
 
@@ -47,7 +48,7 @@ function Divider() {
 function MainStory({ article }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
-    <a href={href} className="group block">
+    <Link href={href} className="group block">
       <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/10] mb-4"/>
       <h3 className="font-serif text-2xl font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
@@ -55,26 +56,26 @@ function MainStory({ article }) {
       <p className="mt-3 font-sans text-sm leading-relaxed text-[#595959] break-words">
         {article.dek}
       </p>
-    </a>
+    </Link>
   );
 }
 
 function SecondaryStory({ article }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
-    <a href={href} className="group block">
+    <Link href={href} className="group block">
       <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/9] sm:w-72 sm:aspect-auto sm:h-36 mb-3"/>
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
-    </a>
+    </Link>
   );
 }
 
 function TextStory({ article }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
-    <a href={href} className="group block">
+    <Link href={href} className="group block">
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
@@ -83,7 +84,7 @@ function TextStory({ article }) {
           {article.dek}
         </p>
       )}
-    </a>
+    </Link>
   );
 }
 
@@ -102,10 +103,10 @@ export default function FinanceSection() {
   return (
     <section className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2 border-t-2 border-[#E5E5E5]">
-        <a href={CATEGORY_HREF} className="group inline-flex items-center gap-2 mb-6 mt-8">
+        <Link href={CATEGORY_HREF} className="group inline-flex items-center gap-2 mb-6 mt-8">
           <h2 className="font-sans text-xl font-extrabold uppercase tracking-wide text-[#1A1A1A]">{CATEGORY}</h2>
           <ArrowBadge />
-        </a>
+        </Link>
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
           {/* Left — main story */}

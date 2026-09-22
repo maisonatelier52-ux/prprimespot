@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
-const CONTACT_EMAIL = "corrections@prprimespot.com";
+const CONTACT_EMAIL = "prprimespot@gmail.com";
 
 const PAGE_TITLE = "Corrections Policy";
 

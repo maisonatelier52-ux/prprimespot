@@ -1,3 +1,4 @@
+import Link from "next/link";
 import articlesData from "../public/data/article.json";
 import Image from "next/image";
 
@@ -43,7 +44,7 @@ function FlameIcon() {
 function SportsCard({ article, rank }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
-    <a href={href} className="group flex items-center gap-4 py-5 border-b border-[#E5E5E5]">
+    <Link href={href} className="group flex items-center gap-4 py-5 border-b border-[#E5E5E5]">
       <span
         className="shrink-0 font-serif text-5xl font-bold leading-none text-transparent select-none"
         style={{ WebkitTextStroke: "1.5px #A3A3A3" }}
@@ -57,7 +58,7 @@ function SportsCard({ article, rank }) {
       <h3 className="flex-1 font-serif text-base sm:text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
-    </a>
+    </Link>
   );
 }
 

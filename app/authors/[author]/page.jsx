@@ -286,9 +286,9 @@ export default async function AuthorPage({ params }) {
             </h1>
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mt-1.5">
               {authorData.category && (
-                <a href={`/${authorData.category}`} className="rounded-full bg-[#D01418] px-3 py-0.5 font-sans text-[11px] font-bold uppercase tracking-wide text-white hover:bg-[#a80f13] transition-colors">
+                <Link href={`/${authorData.category}`} className="rounded-full bg-[#D01418] px-3 py-0.5 font-sans text-[11px] font-bold uppercase tracking-wide text-white hover:bg-[#a80f13] transition-colors">
                   {authorData.category}
-                </a>
+                </Link>
               )}
               {authorData.role && (
                 <p className="font-sans text-sm text-[#8A8A8A]">{authorData.role}</p>
