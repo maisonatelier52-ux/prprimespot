@@ -1770,6 +1770,76 @@
   ],
   "us": [
     {
+  "slug": "faa-875-million-ai-airspace-system-air-traffic-control-modernization-2026",
+  "headline": "FAA Bets $875 Million on AI to Fix America's Overloaded Skies",
+  "dek": "The FAA has hired startup Air Space Intelligence to build an AI-powered system meant to ease flight delays and modernize air traffic control, but critics say it won't fix the deeper staffing and infrastructure problems.",
+  "authorSlug": "sarah-kim",
+  "source": "NPR / AeroTime",
+  "publishedAt": "2026-09-21T18:00:00Z",
+  "updatedAt": "2026-09-21T18:00:00Z",
+  "heroImage": "/images/faa-875-million-ai-airspace-system-air-traffic-control-modernization-2026.webp",
+  "heroCaption": "Illustration of an AI system mapping flight routes across a congested national airspace network.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["US News", "Technology", "Transportation"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The Federal Aviation Administration is making one of its biggest bets yet on artificial intelligence to fix a problem that's frustrated travelers for years: an air traffic control system that hasn't kept pace with how much the country actually flies. The agency awarded a 12-year, $875 million contract to Air Space Intelligence, a small Seattle-based startup, to build what it's calling the SMART system, short for Strategic Management of Airspace, Routes, and Trajectories."
+    },
+    {
+      "type": "paragraph",
+      "text": "The pitch is straightforward even if the technology underneath it isn't: instead of controllers and dispatchers reacting to congestion after it forms, the AI system is designed to crunch data on air traffic, weather, and airport conditions in real time and predict bottlenecks before they happen, then suggest more efficient routes to prevent them."
+    },
+    {
+      "type": "heading",
+      "text": "A system already tested by a major airline"
+    },
+    {
+      "type": "paragraph",
+      "text": "This isn't untested technology. Alaska Airlines has been running a version of Air Space Intelligence's software, called Flyways, since 2021, using it to help dispatchers pick more fuel-efficient and less congested routes than a human working alone could reliably calculate. The airline says the tool saves it tens of thousands of flight hours and roughly a million gallons of fuel every year. The FAA is essentially betting that what worked for one airline's dispatch desk can scale up to manage the entire national airspace."
+    },
+    {
+      "type": "paragraph",
+      "text": "Federal officials involved in the project have described the current system in blunt terms. The airspace is safe, they say, because controllers keep aircraft separated at every stage of a flight, but the broader system for managing traffic flow is fragmented, with no single facility able to see the entire national picture at once. That's the gap the SMART system is meant to close."
+    },
+    {
+      "type": "heading",
+      "text": "Part of a much bigger, and more expensive, overhaul"
+    },
+    {
+      "type": "paragraph",
+      "text": "The AI contract is only one piece of a far larger modernization push. Congress set aside $12.5 billion for the broader air traffic control overhaul, and Transportation Secretary Sean Duffy has said the full effort, covering everything from new radar and communications equipment to replacing aging control towers, will ultimately cost more than $31 billion. Earlier this year, the FAA separately awarded $835.8 million to build new control towers and upgrade equipment at dozens of airports across two dozen states, and the agency has said it plans to install 5,000 new high-speed fiber, satellite, and wireless network connections by 2028."
+    },
+    {
+      "type": "paragraph",
+      "text": "An industry coalition that includes Boeing, Airbus, and major airline and pilot groups has pushed Congress for another $20 billion on top of what's already been approved, arguing that chronic delays and an aging patchwork of facilities pose a growing safety and efficiency risk. Duffy has said the Department of Transportation is aiming to have the broader modernization effort substantially complete within four years, though officials have acknowledged some parts of the timeline are running behind schedule."
+    },
+    {
+      "type": "heading",
+      "text": "Why critics remain skeptical"
+    },
+    {
+      "type": "paragraph",
+      "text": "Not everyone is convinced new software solves the underlying problem. The government has tried, and largely failed, to modernize the national airspace system since 2003, and critics of the current push argue that an AI routing tool doesn't address the FAA's long-running air traffic controller shortage, a staffing gap that has contributed to mandatory overtime and, at times, temporary flight restrictions at understaffed facilities. Predictive software can suggest a more efficient route, in other words, but it can't put a qualified controller in an empty seat."
+    },
+    {
+      "type": "paragraph",
+      "text": "For now, the SMART system is expected to begin rolling out in phases, with the FAA and Air Space Intelligence using Alaska's Flyways deployment as a proof of concept for the wider rollout. Whether an AI tool built for one airline's dispatch desk can actually bring order to the entire country's airspace is likely to become clearer only once it's tested at that scale."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "NPR — The FAA wants to reboot the nation's airspace", "url": "https://www.npr.org/sections/national/" },
+    { "label": "AeroTime — FAA picks ASI for $875M AI-enabled airspace system", "url": "https://rotatepilot.com/news/faa-picks-asi-for-875m-ai-enabled-airspace-management-system-2026-06-22" }
+  ],
+  "takeaways": [
+    "The FAA awarded a 12-year, $875 million contract to Air Space Intelligence to build an AI system meant to predict and prevent air traffic bottlenecks nationwide.",
+    "The technology is based on Flyways, a tool Alaska Airlines has used since 2021 to save fuel and flight hours on its own routes.",
+    "The AI contract is part of a broader air traffic control overhaul expected to cost more than $31 billion, though critics say it doesn't fix the FAA's controller staffing shortage."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Source links identify the material used for the main claims; later developments in the FAA's modernization timeline may supersede this account.",
+  "contentType": "Explainer"
+},
+    {
       "slug": "one-week-social-media-detox-improves-mental-health-jama-study-2026",
       "headline": "One-Week Social Media Break Linked to Improved Mental Health",
       "dek": "Young adults who took a one-week break from five social media platforms reported lower anxiety, depression and insomnia symptoms, per a JAMA Network Open study.",
