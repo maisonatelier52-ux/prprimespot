@@ -101,9 +101,14 @@ export const metadata = {
   manifest: "/site.webmanifest",
 };
 
-// JSON-LD: describes the site/org for rich results + lets Google
-// surface a sitelinks search box. Two @graph nodes — Organization
-// and WebSite — linked together.
+// JSON-LD: describes the site/org for rich results. Two @graph nodes —
+// Organization and WebSite — linked together.
+//
+// NOTE: no `potentialAction`/SearchAction here on purpose. That schema
+// tells Google "/search?q={term}" returns real results, but this app has
+// no /search route — a stale SearchAction would 404 real visitors and can
+// get flagged in Search Console. Add it back only once a working /search
+// page exists.
 function JsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -134,14 +139,6 @@ function JsonLd() {
         description: PAGE_DESCRIPTION,
         publisher: {
           "@id": `${SITE_URL}/#organization`,
-        },
-        potentialAction: {
-          "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
-          },
-          "query-input": "required name=search_term_string",
         },
       },
     ],

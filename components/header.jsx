@@ -65,7 +65,13 @@ function IconButton({ label, children, href = "#", onClick }) {
 // instead of just a tinted background, a bit more premium than IconButton.
 function SocialIconButton({ label, children, href = "#" }) {
   return (
-    <a href={href} aria-label={label} className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
+    <a
+      href={href}
+      aria-label={label}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+    >
       {children}
     </a>
   );

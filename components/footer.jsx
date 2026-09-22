@@ -80,7 +80,13 @@ function RedditIcon() {
 
 function SocialIcon({ label, href = "#", children }) {
   return (
-    <a href={href} aria-label={label} className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8D8D8] text-[#1A1A1A] hover:border-[#D01418] hover:text-[#D01418] transition-colors">
+    <a
+      href={href}
+      aria-label={label}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8D8D8] text-[#1A1A1A] hover:border-[#D01418] hover:text-[#D01418] transition-colors"
+    >
       {children}
     </a>
   );
