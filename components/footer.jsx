@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { SITE_NAME, SITE_SOCIAL_LINKS } from "@/lib/site";
 
 const SECTIONS = [
@@ -120,8 +121,10 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* masthead */}
         <div className="flex flex-col items-center text-center pt-10 pb-8 border-b border-[#E5E5E5]">
-          <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#D01418]">PR PRIMESPOT</span>
-          <span className="mt-2 text-[10px] tracking-[0.18em] text-[#8A8A8A] font-sans">U.S. BREAKING NEWS, POLITICS &amp; BUSINESS</span>
+          <Link href="/" aria-label={`${SITE_NAME} — home`} className="inline-flex flex-col items-center">
+            <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#D01418]">PR PRIMESPOT</span>
+            <span className="mt-2 text-[10px] tracking-[0.18em] text-[#8A8A8A] font-sans">U.S. BREAKING NEWS, POLITICS &amp; BUSINESS</span>
+          </Link>
         </div>
 
         {/* link grid */}
@@ -130,7 +133,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-sans text-sm text-[#595959]">
               {SECTIONS.map((section) => (
                 <li key={section.href}>
-                  <a href={section.href} className="hover:text-[#D01418] transition-colors">{section.label}</a>
+                  <Link href={section.href} className="hover:text-[#D01418] transition-colors">{section.label}</Link>
                 </li>
               ))}
             </ul>
@@ -140,7 +143,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-sans text-sm text-[#595959]">
               {COMPANY_LINKS.map(({ label, href }) => (
                 <li key={label}>
-                  <a href={href} className="hover:text-[#D01418] transition-colors">{label}</a>
+                  <Link href={href} className="hover:text-[#D01418] transition-colors">{label}</Link>
                 </li>
               ))}
             </ul>
@@ -190,9 +193,9 @@ export default function Footer() {
 
           <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 order-1 sm:order-2">
             {LEGAL_LINKS.map(({ label, href }) => (
-              <a key={label} href={href} className="font-sans text-xs text-[#8A8A8A] hover:text-[#D01418] transition-colors">
+              <Link key={label} href={href} className="font-sans text-xs text-[#8A8A8A] hover:text-[#D01418] transition-colors">
                 {label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

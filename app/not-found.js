@@ -44,7 +44,7 @@ export default function NotFound() {
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
           <p className="mt-4 max-w-xl font-serif text-base sm:text-lg leading-relaxed text-[#595959]">
-            The page you're looking for doesn't exist — it may have been
+            The page you&apos;re looking for doesn&apos;t exist — it may have been
             moved, renamed, or the link may be out of date. Try one of the
             sections below, or head back to the {SITE_NAME} homepage.
           </p>

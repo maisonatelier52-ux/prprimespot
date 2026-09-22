@@ -131,7 +131,7 @@ export default function ContactPage() {
           </div>
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
           <p className="mt-4 max-w-xl font-serif text-base sm:text-lg leading-relaxed text-[#595959]">
-            Pick the address that best matches what you're reaching out about, and it'll go straight to the right 
+            Pick the address that best matches what you&apos;re reaching out about, and it&apos;ll go straight to the right 
             desk. Every link below opens your own email app — nothing is submitted through this site.</p>
         </div>
 

@@ -330,8 +330,32 @@ export default function FeatureLongform({
       ? article.atAGlance
       : buildFallbackFacts(article, categoryLabel);
 
-  let paragraphCount = 0;
-  let headingCount = 0;
+  // Precompute each block's heading index and "is this the very first
+  // paragraph" flag BEFORE any JSX is built, using reduce (no reassigned
+  // `let` counters) so nothing is mutated anywhere in this render function
+  // — what react-hooks/immutability (React Compiler's rule) requires.
+  const bodyMeta = article.body.reduce((acc, block) => {
+    const { list, headingIndex, paragraphIndex } = acc;
+    if (block.type === "heading") {
+      return {
+        list: [...list, { headingIndex }],
+        headingIndex: headingIndex + 1,
+        paragraphIndex,
+      };
+    }
+    if (block.type === "paragraph") {
+      const nextParagraphIndex = paragraphIndex + 1;
+      return {
+        list: [
+          ...list,
+          { isFirstParagraph: firstBlockIsParagraph && nextParagraphIndex === 1 },
+        ],
+        headingIndex,
+        paragraphIndex: nextParagraphIndex,
+      };
+    }
+    return { list: [...list, {}], headingIndex, paragraphIndex };
+  }, { list: [], headingIndex: 0, paragraphIndex: 0 }).list;
 
   return (
     <article className="pb-24" style={{ backgroundColor: "#FFFFFF" }}>
@@ -436,10 +460,8 @@ export default function FeatureLongform({
             <div className="mt-10">
               {article.body.map((block, i) => {
                 if (block.type === "heading") {
-                  const idx = headingCount;
-                  headingCount += 1;
                   return (
-                    <SectionHeading key={i} text={block.text} index={idx} />
+                    <SectionHeading key={i} text={block.text} index={bodyMeta[i].headingIndex} />
                   );
                 }
                 if (block.type === "subheading") {
@@ -455,9 +477,7 @@ export default function FeatureLongform({
                   );
                 }
 
-                paragraphCount += 1;
-                const isFirstParagraph =
-                  firstBlockIsParagraph && paragraphCount === 1;
+                const isFirstParagraph = bodyMeta[i].isFirstParagraph;
 
                 return (
                   <div key={i}>
