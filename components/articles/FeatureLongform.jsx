@@ -276,6 +276,56 @@ function SourcesCard({ sources }) {
   );
 }
 
+function FAQSection({ faq }) {
+  if (!faq || faq.length === 0) return null;
+  return (
+    <div className="mt-12">
+      <Eyebrow>Frequently Asked Questions</Eyebrow>
+      <div className="mt-5 rounded-md overflow-hidden" style={{ border: `1px solid ${RULE}` }}>
+        {faq.map((item, i) => (
+          <details
+            key={i}
+            className="group"
+            style={{
+              backgroundColor: i % 2 === 0 ? PAPER : "#FFFFFF",
+              borderTop: i === 0 ? "none" : `1px solid ${RULE_SOFT}`,
+            }}
+          >
+            <summary
+              className="flex items-start justify-between gap-4 px-5 py-4 cursor-pointer list-none select-none"
+            >
+              <span className="flex items-start gap-3 min-w-0">
+                <span
+                  className="font-serif italic text-[12px] shrink-0 pt-[2px]"
+                  style={{ color: GOLD }}
+                  aria-hidden="true"
+                >
+                  Q{i + 1}
+                </span>
+                <span className="font-serif text-[16px] sm:text-[17px] leading-snug text-[#16181D] break-words">
+                  {item.question}
+                </span>
+              </span>
+              <span
+                aria-hidden="true"
+                className="shrink-0 mt-1 font-sans text-[13px] transition-transform duration-200 group-open:rotate-45"
+                style={{ color: ACCENT }}
+              >
+                +
+              </span>
+            </summary>
+            <div className="px-5 pb-5 pl-[42px]">
+              <p className="font-sans text-[14px] leading-relaxed" style={{ color: MUTED }}>
+                {item.answer}
+              </p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function AuthorBioCard({ article }) {
   if (!article.authorBio) return null;
   return (
@@ -496,6 +546,8 @@ export default function FeatureLongform({
             </div>
 
             <SourcesCard sources={article.sourceLinks} />
+
+            <FAQSection faq={article.faq} />
 
             <div className="mt-8">
               <ShareButtons url={absoluteUrl} title={article.headline} />

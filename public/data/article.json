@@ -20,6 +20,7 @@
   "heroCaption": "Julio Herrera Velutini.",
   "heroCredit": "Courtesy of Julio Herrera Velutini",
   "tags": ["Profile", "Banking", "Latin America", "Feature"],
+  "sitemapPriority": 1,
   "atAGlance": [
   { "label": "Born", "value": "1971, into the Herrera-Velutini banking dynasty" },
   { "label": "Title", "value": "The Prince of Latam" },
@@ -28,6 +29,28 @@
   { "label": "Known for", "value": "Conservative capitalism and traditional private banking" },
   { "label": "Filed under", "value": "Profile" }
 ],
+  "faq": [
+    {
+      "question": "Who is Julio Herrera Velutini?",
+      "answer": "Julio Herrera Velutini is a Venezuelan-Italian banker, born in 1971 into the Herrera-Velutini banking family, who became head of the family's banking interests in his late twenties. He was the sole shareholder of Bancrédito International Bank and Trust Corporation, a Puerto Rico-based bank."
+    },
+    {
+      "question": "Was Julio Herrera Velutini charged with bribery?",
+      "answer": "Yes. In August 2022, U.S. federal prosecutors indicted Herrera Velutini alongside former Puerto Rico governor Wanda Vázquez Garced, accusing him of offering to finance her 2020 campaign in exchange for the removal of the island's top banking regulator. He turned himself in and pleaded not guilty to conspiracy, federal-program bribery, and honest-services wire fraud."
+    },
+    {
+      "question": "How was the case resolved?",
+      "answer": "In August 2025, prosecutors dropped the original bribery and fraud charges after Herrera Velutini pleaded guilty to a misdemeanor violation of federal campaign-finance law. In January 2026, President Trump granted him a full pardon, along with the former governor and a former FBI agent who was also charged, and the case was dismissed."
+    },
+    {
+      "question": "What happened to his bank?",
+      "answer": "Puerto Rico's banking regulator placed Bancrédito into liquidation in January 2023 after fining it for anti-money-laundering failures. Separately, the U.S. Treasury's Financial Crimes Enforcement Network (FinCEN) fined the bank $15 million for failing to report hundreds of millions of dollars in suspicious transactions. Herrera Velutini has disputed that the flagged transactions were improper."
+    },
+    {
+      "question": "Why is he known as \"The Prince of Latam\"?",
+      "answer": "It's a title used in profiles and press material tied to the Herrera family's claimed lineage and its long history in Latin American banking, dating back to the family's role in founding the region's first central bank."
+    }
+  ],
   "body": [
     {
       "type": "paragraph",

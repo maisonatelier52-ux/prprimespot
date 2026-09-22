@@ -174,6 +174,22 @@ export default async function ArticlePage({ params }) {
           url: getAbsoluteUrl(SITE_LOGO_PATH),
         },
       },
+      ...(article.faq && article.faq.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${absoluteUrl}#faq`,
+              mainEntity: article.faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 
