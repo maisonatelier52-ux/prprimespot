@@ -148,7 +148,7 @@ function ArticleImage({ imageUrl, alt, className = "", sizes }) {
 function ArticleCard({ article }) {
   const dateLabel = formatDate(article.publishedAt);
   return (
-    <a href={`/${article.category}/${article.slug}`} className="group block">
+    <Link href={`/${article.category}/${article.slug}`} className="group block">
       <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3] mb-3"/>
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
@@ -159,7 +159,7 @@ function ArticleCard({ article }) {
       {dateLabel && (
         <p className="mt-2 font-sans text-xs text-[#A0A0A0]">{dateLabel}</p>
       )}
-    </a>
+    </Link>
   );
 }
 

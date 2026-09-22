@@ -303,7 +303,7 @@ export default function Header() {
                   </p>
                 ) : (
                   results.map((article) => (
-                    <a
+                    <Link
                       key={`${article.category}-${article.slug}`}
                       href={`/${slugify(article.category)}/${article.slug}`}
                       onClick={closeSearch}
@@ -313,7 +313,7 @@ export default function Header() {
                       <span className="shrink-0 font-sans text-[10px] font-bold uppercase tracking-wide text-[#D01418]">
                         {article.category}
                       </span>
-                    </a>
+                    </Link>
                   ))
                 )}
               </div>
@@ -328,13 +328,13 @@ export default function Header() {
           <nav className="flex items-center justify-center gap-6 lg:gap-10 h-14 font-sans text-[13px] font-medium tracking-wide text-[#2d2b2b]">
             {NAV_LINKS.map((label) =>
               label === "Home" ? (
-                <a key={label} href={navHref(label)} className="uppercase py-1 px-3 rounded-full bg-[#D01418] text-[#efeaea] hover:bg-[#d9a22e] transition-colors">
+                <Link key={label} href={navHref(label)} className="uppercase py-1 px-3 rounded-full bg-[#D01418] text-[#efeaea] hover:bg-[#d9a22e] transition-colors">
                   {label}
-                </a>
+                </Link>
               ) : (
-                <a key={label} href={navHref(label)} className="relative uppercase py-1 hover:text-[#D01418] transition-colors after:absolute after:left-1/2 after:-bottom-[1px] after:h-[2px] after:w-0 after:-translate-x-1/2 after:bg-[#D01418] after:transition-all after:duration-300 hover:after:w-full">
+                <Link key={label} href={navHref(label)} className="relative uppercase py-1 hover:text-[#D01418] transition-colors after:absolute after:left-1/2 after:-bottom-[1px] after:h-[2px] after:w-0 after:-translate-x-1/2 after:bg-[#D01418] after:transition-all after:duration-300 hover:after:w-full">
                   {label}
-                </a>
+                </Link>
               )
             )}
           </nav>
@@ -377,7 +377,7 @@ export default function Header() {
           <nav className="flex flex-col px-5 py-2">
             {NAV_LINKS.map((label) =>
               label === "Home" ? (
-                <a
+                <Link
                   key={label}
                   href={navHref(label)}
                   onClick={() => setMenuOpen(false)}
@@ -386,16 +386,16 @@ export default function Header() {
                   <span className="inline-block rounded-full bg-[#E8B23D] px-3 py-1 hover:bg-[#d9a22e] transition-colors">
                     {label}
                   </span>
-                </a>
+                </Link>
               ) : (
-                <a
+                <Link
                   key={label}
                   href={navHref(label)}
                   onClick={() => setMenuOpen(false)}
                   className="py-3 border-b border-[#E5E5E5] last:border-none font-sans text-sm font-medium uppercase tracking-wide text-[#1A1A1A] hover:text-[#D01418] hover:pl-1 transition-all"
                 >
                   {label}
-                </a>
+                </Link>
               )
             )}
           </nav>

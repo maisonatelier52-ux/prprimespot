@@ -1,12 +1,13 @@
 {
-  "name": "project-4",
+  "name": "pr-primespot",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:updated-at": "node scripts/check-updated-at.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.31.0",

@@ -73,9 +73,9 @@ function AuthorCard({ article }) {
         <p className="font-sans text-xs uppercase tracking-wide text-[#A0A0A0] mb-0.5">About the Author</p>
         <h3 className="font-serif text-lg font-bold text-[#1A1A1A] break-words">
           {authorSlug ? (
-            <a href={`/authors/${authorSlug}`} className="hover:text-[#D01418] transition-colors">
+            <Link href={`/authors/${authorSlug}`} className="hover:text-[#D01418] transition-colors">
               {author}
-            </a>
+            </Link>
           ) : (
             author
           )}
@@ -110,12 +110,12 @@ function AuthorCard({ article }) {
 
 function RelatedSidebarCard({ article }) {
   return (
-    <a href={`/${article.category}/${article.slug}`} className="group flex gap-3">
+    <Link href={`/${article.category}/${article.slug}`} className="group flex gap-3">
       <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-20 aspect-[4/3] shrink-0" sizes="80px" />
       <h3 className="font-serif text-sm font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
-    </a>
+    </Link>
   );
 }
 
@@ -132,18 +132,18 @@ export default function ArticleDetail({ article, related, categoryLabel, absolut
           <nav className="flex flex-wrap items-center gap-1.5 font-sans text-xs text-[#8A8A8A] mb-5">
             <Link href="/" className="hover:text-[#D01418] transition-colors">Home</Link>
             <span>/</span>
-            <a href={`/${article.category}`} className="hover:text-[#D01418] transition-colors">
+            <Link href={`/${article.category}`} className="hover:text-[#D01418] transition-colors">
               {categoryLabel}
-            </a>
+            </Link>
           </nav>
 
           {/* Category badge */}
-          <a href={`/${article.category}`} className="group inline-flex items-center gap-2 mb-4">
+          <Link href={`/${article.category}`} className="group inline-flex items-center gap-2 mb-4">
             <span className="font-sans text-sm font-extrabold uppercase tracking-wide text-[#D01418]">
               {categoryLabel}
             </span>
             <ArrowBadge />
-          </a>
+          </Link>
 
           {/* Headline */}
           <h1 className="font-serif text-3xl sm:text-4xl font-bold leading-tight text-[#1A1A1A] break-words">
@@ -159,17 +159,23 @@ export default function ArticleDetail({ article, related, categoryLabel, absolut
 
           <div className="mt-6 flex items-center gap-3 py-4 border-y border-[#E5E5E5]">
             {article.authorImage && (
-              <a href={article.authorSlug ? `/authors/${article.authorSlug}` : undefined} aria-label={article.author} className="shrink-0">
-                <ArticleImage imageUrl={article.authorImage} alt={article.author} className="w-10 h-10 rounded-full" sizes="40px" />
-              </a>
+              article.authorSlug ? (
+                <Link href={`/authors/${article.authorSlug}`} aria-label={article.author} className="shrink-0">
+                  <ArticleImage imageUrl={article.authorImage} alt={article.author} className="w-10 h-10 rounded-full" sizes="40px" />
+                </Link>
+              ) : (
+                <span aria-label={article.author} className="shrink-0">
+                  <ArticleImage imageUrl={article.authorImage} alt={article.author} className="w-10 h-10 rounded-full" sizes="40px" />
+                </span>
+              )
             )}
             <div className="font-sans text-sm text-[#595959]">
               <span className="font-medium text-[#1A1A1A]">
                 By{" "}
                 {article.authorSlug ? (
-                  <a href={`/authors/${article.authorSlug}`} className="hover:text-[#D01418] transition-colors">
+                  <Link href={`/authors/${article.authorSlug}`} className="hover:text-[#D01418] transition-colors">
                     {article.author}
-                  </a>
+                  </Link>
                 ) : (
                   article.author
                 )}

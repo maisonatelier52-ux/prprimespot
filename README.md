@@ -1,4 +1,4 @@
-# Global Times blog
+# PR Primespot
 
 This is a source-linked current-affairs blog built with Next.js 16. It has statically generated category, post, and author pages.
 
@@ -13,6 +13,35 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Article and author content is stored in `public/data`.
+
+## Editing article content
+
+`public/data/article.json` has no CMS and no build-time validation of its
+own — it's a hand-edited file, so this rule has to be followed by hand (or
+by an AI agent editing this repo):
+
+> **Any edit to an article's `headline`, `dek`, or `body` MUST also update
+> that article's `updatedAt` field to the current ISO-8601 timestamp
+> (e.g. `2026-09-22T14:30:00Z`).**
+
+`updatedAt` is not cosmetic — it's read directly into:
+
+- `NewsArticle.dateModified` in the article's JSON-LD (`app/[category]/[slug]/page.jsx`)
+- `openGraph.modifiedTime` in the article's page metadata
+- the "Updated {date}" byline shown to readers (`components/ArticleDetail.jsx`)
+
+If `updatedAt` isn't bumped, all three keep showing a stale date after a
+real edit — which both misleads readers and gives Google a `dateModified`
+signal that doesn't match the actual content, which can reduce how much
+Search trusts that signal sitewide.
+
+Do **not** bump `updatedAt` for edits that don't change the reader-facing
+article (typo fixes in `tags`, `sourceLinks` reordering, etc.) — only for
+changes to `headline`, `dek`, or `body`.
+
+Run `npm run check:updated-at` before committing changes to
+`public/data/article.json` to catch a missed bump automatically (see
+below).
 
 ## Production checklist
 
@@ -32,4 +61,5 @@ npm run dev
 npm run lint
 npm run build
 npm run start
+npm run check:updated-at
 ```
