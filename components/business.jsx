@@ -6,7 +6,13 @@ const CATEGORY = "business";
 
 function getBusinessArticles() {
   const posts = articlesData[CATEGORY] || [];
-  return [...posts].sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+  // Supporting client pieces marked `hideFromListings: true` don't appear
+  // on the homepage — only via their direct URL or another client page's
+  // related-posts section. The main pillar article isn't marked this way,
+  // so it still shows here normally.
+  return [...posts]
+    .filter((post) => !post.hideFromListings)
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
 }
 
 function Divider() {

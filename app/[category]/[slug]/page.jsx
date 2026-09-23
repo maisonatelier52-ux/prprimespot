@@ -4,6 +4,7 @@ import { getArticleLayout } from "@/lib/articleLayouts";
 import {
   getArticle,
   getRelatedArticles,
+  getClientRelatedArticles,
   getAllArticleParams,
 } from "@/lib/articles";
 import {
@@ -102,6 +103,10 @@ export default async function ArticlePage({ params }) {
   }
 
   const related = getRelatedArticles(article.category, article.slug, 4);
+  // Client pillar/profile pages (see lib/articleLayouts.js) get their own
+  // related set: only other posts about the same client, never generic
+  // same-category news.
+  const clientRelated = getClientRelatedArticles(article.client, article.slug, 5);
   const categoryLabel = article.category.charAt(0).toUpperCase() + article.category.slice(1);
   const pageUrl = `/${article.category}/${article.slug}`;
 
@@ -220,6 +225,7 @@ export default async function ArticlePage({ params }) {
         <CustomLayout
           article={article}
           related={related}
+          clientRelated={clientRelated}
           categoryLabel={categoryLabel}
           absoluteUrl={absoluteUrl}
         />

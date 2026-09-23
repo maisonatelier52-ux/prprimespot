@@ -27,7 +27,11 @@ function getArticlesByAuthor(authorSlug) {
   return Object.entries(articlesData)
     .flatMap(([category, posts]) =>
       posts
-        .filter((post) => post.authorSlug === slug)
+        // Supporting client pieces marked `hideFromListings: true` don't
+        // appear on the author's page — only via their direct URL or
+        // another client page's related-posts section. The main pillar
+        // article isn't marked this way, so it still shows here normally.
+        .filter((post) => post.authorSlug === slug && !post.hideFromListings)
         .map((post) => ({
           category,
           slug: post.slug,

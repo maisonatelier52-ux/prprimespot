@@ -32,6 +32,11 @@ function getArticlesByCategory(category) {
   const posts = articlesData[category?.toLowerCase()] || [];
 
   return posts
+    // Client pillar/profile pieces marked `hideFromListings: true` don't
+    // appear on this category listing — only via their direct URL or
+    // another client page's related-posts section. The main pillar article
+    // itself isn't marked this way, so it still shows here normally.
+    .filter((post) => !post.hideFromListings)
     .map((post) => ({
       category: category.toLowerCase(),
       slug: post.slug,

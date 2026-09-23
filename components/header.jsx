@@ -20,10 +20,15 @@ function slugify(label) {
 }
 
 // Flattens articles.json (grouped by category) into one searchable list.
+// Supporting client pieces marked `hideFromListings: true` are excluded so
+// they don't surface through site search — only via their direct URL or
+// another client page's related-posts section. The main pillar article
+// isn't marked this way, so it's still searchable normally.
 function getAllArticles() {
   const all = [];
   for (const category of Object.keys(articlesData)) {
     for (const post of articlesData[category]) {
+      if (post.hideFromListings) continue;
       all.push({ category, ...post });
     }
   }
