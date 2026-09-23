@@ -1302,6 +1302,68 @@
   ],
   "world": [
     {
+  "slug": "un-general-assembly-2026-guterres-final-session-new-secretary-general-selection",
+  "headline": "World Leaders Gather in NYC for Guterres' Final Session",
+  "dek": "The 81st UN General Assembly opened in New York this week, marking Guterres' final high-level session and kicking off the search for the UN's next leader.",
+  "authorSlug": "raj-patel",
+  "source": "AP / CNN / United Nations",
+  "publishedAt": "2026-09-22T20:00:00Z",
+  "updatedAt": "2026-09-22T20:00:00Z",
+  "heroImage": "/images/un-general-assembly-2026-guterres-final-session-new-secretary-general-selection.webp",
+  "heroCaption": "Illustration of world leaders convening at UN headquarters in New York during the General Assembly's high-level week.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["World", "Diplomacy", "United Nations"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "World leaders are back in New York this week for the 81st session of the United Nations General Assembly, and for one person in the room, it carries a particular weight. Secretary-General António Guterres is attending his final high-level session in the role he's held since 2017, with his second five-year term set to expire on December 31."
+    },
+    {
+      "type": "paragraph",
+      "text": "Guterres marked the moment on social media as the session opened, writing that he carries enormous hope for a healthier and more peaceful future because of the work that happens at the Assembly, and describing it as the place where the world's toughest, most consequential problems get confronted directly. He pledged his support to Bangladeshi Foreign Minister Khalilur Rahman, who now presides over the 81st session."
+    },
+    {
+      "type": "heading",
+      "text": "The General Debate, and a search for the next UN chief"
+    },
+    {
+      "type": "paragraph",
+      "text": "The centerpiece of high-level week is the General Debate, running from September 22 through 26 with a final session on September 28, where heads of state and government take turns addressing the Assembly on the issues they consider most urgent. This year's debate carries extra significance because it's happening alongside the formal process of selecting the UN's next Secretary-General, a procedure that began during the previous session and is now the responsibility of the new Assembly president. Once the Security Council makes its recommendation, the General Assembly will be tasked with formally appointing the organization's 10th Secretary-General."
+    },
+    {
+      "type": "heading",
+      "text": "Trump's remarks put Iran back in the spotlight"
+    },
+    {
+      "type": "paragraph",
+      "text": "Among the speeches drawing the most attention Monday was President Trump's address, in which he said he's facing a significant decision on Iran, framing his choice as either reaching a deal after the U.S. midterm elections or, in his words, taking more drastic action against the country. The remarks added a note of geopolitical tension to a week that's typically as much about diplomacy and process as it is about any single flashpoint, and they're likely to shape sideline discussions among diplomats for the rest of the week."
+    },
+    {
+      "type": "heading",
+      "text": "An assembly with a shrinking budget and a changing role"
+    },
+    {
+      "type": "paragraph",
+      "text": "Guterres used earlier remarks to the Assembly this year to lay out his priorities for what he's called a difficult final stretch, urging member states not to be bystanders to injustice and impunity even as the organization works with less money to do it. The Assembly's Fifth Committee approved a 2026 programme budget of $3.45 billion earlier this year, a figure that reflects roughly a 15% cut in financial resources and close to a 19% reduction in UN staffing, part of a broader belt-tightening effort inside the organization even as the demands on it, from ongoing conflicts to climate-related disasters, show few signs of easing."
+    },
+    {
+      "type": "paragraph",
+      "text": "For an institution marking its 80th anniversary this year, the combination of a leadership transition, a shrinking budget, and a packed agenda of global crises makes this year's General Debate one of the more consequential in recent memory, even if, as historians of the UN often note, the Assembly's resolutions carry less binding weight than they once did. What happens in the halls and side meetings this week, diplomats say, may end up mattering as much as anything said from the podium."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "CNN — UNGA 2026 live coverage", "url": "https://www.cnn.com/2026/09/22/world/live-news/un-general-assembly-trump" },
+    { "label": "United Nations — Guterres 2026 priorities briefing", "url": "https://dppa.dfs.un.org/en/node/213618" }
+  ],
+  "takeaways": [
+    "The UN's 81st General Assembly opened this week in New York, marking Secretary-General António Guterres' final high-level session before his term ends December 31.",
+    "The Assembly is simultaneously running its formal process to select the UN's 10th Secretary-General, following a Security Council recommendation.",
+    "President Trump's UNGA remarks on Iran, framing an upcoming decision between a deal or more drastic action, added a geopolitical flashpoint to the week's proceedings."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Source links identify the material used for the main claims; later developments during high-level week, including additional head-of-state remarks, may supersede parts of this account.",
+  "contentType": "Explainer"
+},
+    {
       "slug": "nepal-china-border-flash-floods-thousands-missing-glacier-collapse-2026",
       "headline": "In Nepal-China Floods Leave Hundreds Dead, Thousands Missing",
       "dek": "A rock-and-ice collapse high in the Himalayas on August 26 triggered a destructive flood along river valleys near the Nepal-China border.",

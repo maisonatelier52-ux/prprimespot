@@ -110,11 +110,29 @@ function AuthorCard({ article }) {
 
 function RelatedSidebarCard({ article }) {
   return (
-    <Link href={`/${article.category}/${article.slug}`} className="group flex gap-3">
-      <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-20 aspect-[4/3] shrink-0" sizes="80px" />
-      <h3 className="font-serif text-sm font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
-        {article.headline}
-      </h3>
+    <Link
+      href={`/${article.category}/${article.slug}`}
+      className="group flex gap-4 rounded-md p-2 -mx-2 transition-colors duration-200 hover:bg-white"
+    >
+      <div className="w-24 aspect-[4/3] shrink-0 overflow-hidden rounded-sm">
+        <ArticleImage
+          imageUrl={article.heroImage}
+          alt={article.headline}
+          className="h-full w-full transition-transform duration-300 ease-out group-hover:scale-[1.08]"
+          sizes="96px"
+        />
+      </div>
+      <div className="min-w-0 flex flex-col justify-center">
+        <h3 className="font-serif text-[15px] font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
+          {article.headline}
+        </h3>
+        <span className="mt-2 inline-flex items-center gap-1 font-sans text-[11px] font-semibold uppercase tracking-wide text-[#8A8A8A] group-hover:text-[#D01418] transition-colors">
+          Read story
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      </div>
     </Link>
   );
 }
@@ -254,11 +272,14 @@ export default function ArticleDetail({ article, related, categoryLabel, absolut
         {/* Sticky related-posts sidebar */}
         {related.length > 0 && (
           <aside className="lg:col-span-4">
-            <div className="lg:sticky lg:top-6 lg:self-start">
-              <h2 className="font-sans text-sm font-extrabold uppercase tracking-wide text-[#1A1A1A] mb-4 pb-3 border-b border-[#E5E5E5]">
-                Related Posts
-              </h2>
-              <div className="space-y-5">
+            <div className="lg:sticky lg:top-6 lg:self-start rounded-md border border-[#d3a014] bg-[#FAF7F2] p-5">
+              <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-[#c50808]">
+                <span className="h-4 w-[3px] bg-[#D01418]" aria-hidden="true" />
+                <h2 className="font-sans text-sm font-extrabold uppercase tracking-wide text-[#1A1A1A]">
+                  Related Posts
+                </h2>
+              </div>
+              <div className="divide-y divide-[#ba0d0d]">
                 {related.map((a) => (
                   <RelatedSidebarCard key={a.slug} article={a} />
                 ))}

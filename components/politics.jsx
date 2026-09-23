@@ -52,9 +52,9 @@ function PhotoCard({ article, index, total }) {
       <span className="absolute top-3 left-3 font-mono text-[11px] text-white/80 tracking-wide">
         {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
       </span>
-      <p className="absolute bottom-0 left-0 right-0 p-4 font-sans text-base sm:text-lg leading-snug text-white group-hover:text-[#F2B8B8] transition-colors">
+      <h3 className="absolute bottom-0 left-0 right-0 p-4 font-sans text-base sm:text-lg leading-snug text-white group-hover:text-[#F2B8B8] transition-colors">
         {article.headline}
-      </p>
+      </h3>
     </Link>
   );
 }

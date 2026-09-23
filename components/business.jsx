@@ -62,9 +62,9 @@ function LeadStory({ article }) {
           <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3]" priority/>
           <div className="w-3 sm:w-4 shrink-0 bg-[#D01418]" aria-hidden="true" />
         </div>
-        <h2 className="mt-4 font-serif text-2xl sm:text-3xl font-bold leading-tight text-[#1A1A1A] group-hover:text-[#D01418] transition-colors">
+        <h3 className="mt-4 font-serif text-2xl sm:text-3xl font-bold leading-tight text-[#1A1A1A] group-hover:text-[#D01418] transition-colors">
           {article.headline}
-        </h2>
+        </h3>
         <p className="mt-3 font-sans text-[15px] leading-relaxed text-[#595959]">
           {article.dek}
         </p>
