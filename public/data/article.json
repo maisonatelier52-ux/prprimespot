@@ -20,8 +20,8 @@
           "url": "https://www.prnewswire.com/news-releases/julio-herrera-velutinis-attorney-announces-dismissal-of-all-major-charges-against-the-banker-the-evidence-did-not-support-the-allegations-he-stated-302542003.html"
         }
       ],
-      "publishedAt": "2026-09-18T09:00:00Z",
-      "updatedAt": "2026-09-18T09:00:00Z",
+      "publishedAt": "2026-09-25T09:00:00Z",
+      "updatedAt": "2026-09-25T09:00:00Z",
       "heroImage": "/images/julio-herrera-velutini-conservative-capitalism-latin-america.webp",
       "heroCaption": "Julio Herrera Velutini.",
       "heroCredit": "Courtesy of Julio Herrera Velutini",
@@ -166,6 +166,72 @@
       ],
       "client": "Julio Herrera Velutini"
     },
+    {
+  "slug": "paramount-warner-bros-discovery-merger-settlement-state-attorneys-general-2026",
+  "headline": "Paramount Clears Final Hurdle in $110B Warner Bros Deal",
+  "dek": "Paramount Skydance settles with California and 11 state attorneys general, clearing the final hurdle for its $110 billion Warner Bros. Discovery deal.",
+  "authorSlug": "james-carter",
+  "source": "AP / Reuters / Bloomberg",
+  "publishedAt": "2026-09-24T16:00:00Z",
+  "updatedAt": "2026-09-24T16:00:00Z",
+  "heroImage": "/images/paramount-warner-bros-discovery-merger-settlement-state-attorneys-general-2026.webp",
+  "heroCaption": "Illustration of two major media conglomerates merging under the weight of a resolved antitrust dispute.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Business", "Technology", "Media", "M&A"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "After months of stalled negotiations, public sniping, and a canceled meeting that briefly blew up settlement talks entirely, Paramount Skydance has cleared the last real obstacle standing between it and one of the largest media mergers in Hollywood history. The company reached a settlement Monday with a coalition of 12 state attorneys general, led by California's Rob Bonta, resolving the antitrust lawsuit that had frozen its $110 billion acquisition of Warner Bros. Discovery."
+    },
+    {
+      "type": "paragraph",
+      "text": "The deal would combine two of the industry's oldest studios under one roof, bringing together television networks like CBS and CNN, streaming platforms HBO Max and Paramount+, and film libraries stretching from Harry Potter to Top Gun. At roughly $110 billion, it's already being described as the largest transaction in the history of the entertainment industry."
+    },
+    {
+      "type": "heading",
+      "text": "A deal that nearly fell apart in August"
+    },
+    {
+      "type": "paragraph",
+      "text": "The path to Monday's announcement wasn't smooth. Talks between Paramount and the state coalition broke down publicly in late August, when Bonta canceled a scheduled meeting after accusing the company of leaking details of confidential settlement discussions and, in his words, misrepresenting what had actually been discussed. Paramount had already secured antitrust clearance from regulators in 68 jurisdictions worldwide, including the Department of Justice, the European Union, and the United Kingdom, but the 12-state coalition remained the one holdout standing between the company and a closed deal."
+    },
+    {
+      "type": "paragraph",
+      "text": "Negotiations resumed and accelerated in the weeks that followed, with people familiar with the discussions describing a frenzied weekend of talks before four states that had held out on California's proposed terms ultimately came around. The urgency wasn't just legal, it was financial: without a settlement, Paramount faced a $7 million daily fee owed to Warner Bros. Discovery shareholders for every day the deal remained unclosed past September 30, a penalty clock that was about to start ticking in earnest."
+    },
+    {
+      "type": "heading",
+      "text": "What Paramount agreed to give up"
+    },
+    {
+      "type": "paragraph",
+      "text": "The states' core objection was that combining the two companies would shrink competition in theatrical film distribution and cable channel licensing, ultimately raising prices for consumers and squeezing out both Hollywood workers and independent studios. To resolve those concerns, Paramount agreed to a five-year, court-enforceable commitment to keep film output high, releasing 30 films a year (including 20 wide theatrical releases) in the first two years, rising to 32 films a year afterward, with at least four independent films released annually throughout the term."
+    },
+    {
+      "type": "paragraph",
+      "text": "The settlement also includes real teeth if Paramount doesn't follow through. If the company misses its film-output commitments in any given year, it will be required to divest Miramax Studios and pay $30 million per missed film into healthcare and retirement funds tied to entertainment-industry unions, including the Writers Guild, IATSE, the Directors Guild, and the Teamsters. Separately, Bloomberg reported that the states also secured independent editorial boards for CBS and CNN as part of the broader agreement, an apparent response to concerns raised during the litigation about the merged company's influence over news coverage."
+    },
+    {
+      "type": "heading",
+      "text": "What happens next"
+    },
+    {
+      "type": "paragraph",
+      "text": "With the state lawsuit resolved, Paramount is now positioned to close the deal well ahead of the trial date that had been set for March 2027. Shares of both companies moved higher on the news, continuing a run that began days earlier when reports first surfaced that a settlement was close. For an industry that's spent much of the year watching this deal in limbo, the settlement effectively clears the runway for what Paramount CEO David Ellison, son of Oracle co-founder Larry Ellison, has called a stronger, better-capitalized competitor in an entertainment landscape increasingly dominated by streaming."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "AP News — Paramount reaches deal with states over Warner buyout", "url": "https://abcnews.com/Business/wireStory/paramount-reaches-deal-states-settle-case-challenging-warner-136625869" },
+    { "label": "StreamTV Insider — Paramount, state AGs settle lawsuit", "url": "https://www.streamtvinsider.com/content/paramount-state-ags-settle-lawsuit-over-warner-bros-discovery-deal" }
+  ],
+  "takeaways": [
+    "Paramount Skydance settled with California and 11 other state attorneys general, clearing the last legal obstacle to its $110 billion Warner Bros. Discovery merger.",
+    "Paramount committed to a five-year, court-enforceable film-output requirement, with financial penalties and a forced Miramax divestiture if it falls short.",
+    "The states also reportedly secured independent editorial boards for CBS and CNN as part of the settlement terms."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Source links identify the material used for the main claims; later developments, including the deal's formal closing, may supersede parts of this account.",
+  "contentType": "Explainer"
+},
     {
       "slug": "nvidia-q2-earnings-2026-smashes-estimates-108-billion-revenue-guidance",
       "headline": "Nvidia Reports $96.2B Revenue, Forecasts $108B Next Quarter",
