@@ -1,7 +1,24 @@
+import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import "./globals.css";
+
+// Self-hosted at build time by next/font — no runtime request to Google,
+// no render-blocking external call. display: "swap" shows the fallback
+// (Arial, via the --font-sans chain in globals.css) immediately and swaps
+// to Geist once it's loaded, so there's no invisible-text flash.
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -34,7 +51,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <Header />
         {children}

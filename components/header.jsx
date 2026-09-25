@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import articlesData from "../public/data/article.json";
+import { useRouter } from "next/navigation";
 import { SITE_NAME, SITE_SOCIAL_LINKS } from "@/lib/site";
+// Shared with the /search page (app/search/page.jsx) so the header dropdown
+// and the full search page always agree on what counts as a match, instead
+// of maintaining two copies of the same filter logic.
+import { searchArticles } from "@/lib/articles";
 
 const NAV_LINKS = ["Home", "Business", "Finance", "World", "U.S.", "Politics", "Sports"];
 
@@ -17,34 +21,6 @@ function slugify(label) {
     .replace(/\./g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
-}
-
-// Flattens articles.json (grouped by category) into one searchable list.
-// Supporting client pieces marked `hideFromListings: true` are excluded so
-// they don't surface through site search — only via their direct URL or
-// another client page's related-posts section. The main pillar article
-// isn't marked this way, so it's still searchable normally.
-function getAllArticles() {
-  const all = [];
-  for (const category of Object.keys(articlesData)) {
-    for (const post of articlesData[category]) {
-      if (post.hideFromListings) continue;
-      all.push({ category, ...post });
-    }
-  }
-  return all;
-}
-
-const ALL_ARTICLES = getAllArticles();
-
-function searchArticles(query) {
-  const q = query.trim().toLowerCase();
-  if (!q) return [];
-  return ALL_ARTICLES.filter(
-    (a) =>
-      a.headline.toLowerCase().includes(q) ||
-      (a.dek && a.dek.toLowerCase().includes(q))
-  ).slice(0, 8);
 }
 
 function IconButton({ label, children, href = "#", onClick }) {
@@ -161,6 +137,7 @@ function CloseIcon() {
 }
 
 export default function Header() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -187,6 +164,17 @@ export default function Header() {
   function closeSearch() {
     setSearchOpen(false);
     setQuery("");
+  }
+
+  // Enter (or tapping the dropdown's "See all results" link) sends the
+  // visitor to the real /search page instead of only ever showing the
+  // top 8 matches in this dropdown.
+  function handleSearchSubmit(e) {
+    e.preventDefault();
+    const trimmed = query.trim();
+    if (!trimmed) return;
+    router.push(`/search?q=${encodeURIComponent(trimmed)}`);
+    closeSearch();
   }
 
   function openSubscribe() {
@@ -290,15 +278,18 @@ export default function Header() {
       {searchOpen && (
         <div className="border-t border-[#E5E5E5] bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-            <input
-              type="text"
-              autoFocus
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              onKeyDown={(e) => e.key === "Escape" && closeSearch()}
-              placeholder="Search articles..."
-              className="w-full border border-[#E5E5E5] rounded-sm px-4 py-2 font-sans text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D01418]"
-            />
+            <form role="search" onSubmit={handleSearchSubmit}>
+              <input
+                type="search"
+                name="q"
+                autoFocus
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => e.key === "Escape" && closeSearch()}
+                placeholder="Search articles..."
+                className="w-full border border-[#E5E5E5] rounded-sm px-4 py-2 font-sans text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D01418]"
+              />
+            </form>
 
             {query.trim() && (
               <div className="mt-3 max-h-80 overflow-y-auto divide-y divide-[#E5E5E5]">
@@ -307,19 +298,28 @@ export default function Header() {
                     No results for &ldquo;{query}&rdquo;.
                   </p>
                 ) : (
-                  results.map((article) => (
+                  <>
+                    {results.map((article) => (
+                      <Link
+                        key={`${article.category}-${article.slug}`}
+                        href={`/${slugify(article.category)}/${article.slug}`}
+                        onClick={closeSearch}
+                        className="flex items-center justify-between gap-4 py-3 hover:bg-[#F7F5EF] transition-colors"
+                      >
+                        <span className="font-sans text-sm text-[#1A1A1A]">{article.headline}</span>
+                        <span className="shrink-0 font-sans text-[10px] font-bold uppercase tracking-wide text-[#D01418]">
+                          {article.category}
+                        </span>
+                      </Link>
+                    ))}
                     <Link
-                      key={`${article.category}-${article.slug}`}
-                      href={`/${slugify(article.category)}/${article.slug}`}
+                      href={`/search?q=${encodeURIComponent(query.trim())}`}
                       onClick={closeSearch}
-                      className="flex items-center justify-between gap-4 py-3 hover:bg-[#F7F5EF] transition-colors"
+                      className="block py-3 font-sans text-sm font-bold text-[#D01418] hover:underline"
                     >
-                      <span className="font-sans text-sm text-[#1A1A1A]">{article.headline}</span>
-                      <span className="shrink-0 font-sans text-[10px] font-bold uppercase tracking-wide text-[#D01418]">
-                        {article.category}
-                      </span>
+                      See all results for &ldquo;{query.trim()}&rdquo;
                     </Link>
-                  ))
+                  </>
                 )}
               </div>
             )}
