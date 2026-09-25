@@ -47,7 +47,7 @@ function PhotoCard({ article, index, total }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
     <Link href={href} className="group relative shrink-0 w-[78%] sm:w-[46%] lg:w-[31%] snap-start overflow-hidden">
-      <PhotoImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/5] sm:aspect-[3/4]"/>
+      <PhotoImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-full aspect-[4/5] sm:aspect-[3/4]"/>
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
       <span className="absolute top-3 left-3 font-mono text-[11px] text-white/80 tracking-wide">
         {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}

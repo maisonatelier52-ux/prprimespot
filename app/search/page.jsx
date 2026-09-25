@@ -78,7 +78,7 @@ function ResultCard({ article }) {
     <Link href={`/${article.category}/${article.slug}`} className="group flex gap-4 py-6">
       <ArticleImage
         imageUrl={article.heroImage}
-        alt={article.headline}
+        alt={article.heroCaption || article.headline}
         className="w-28 h-28 sm:w-36 sm:h-36 shrink-0"
       />
       <div className="min-w-0">

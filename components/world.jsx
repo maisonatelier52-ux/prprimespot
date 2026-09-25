@@ -49,7 +49,7 @@ function LeftStory({ article }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
     <Link href={href} className="group block">
-      <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/9] mb-3"/>
+      <StoryImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-full aspect-[16/9] mb-3"/>
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>
@@ -61,7 +61,7 @@ function MainStory({ article }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
     <Link href={href} className="group block">
-      <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/10] mb-4"/>
+      <StoryImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-full aspect-[16/10] mb-4"/>
       <h3 className="font-serif text-4xl font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>

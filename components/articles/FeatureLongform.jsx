@@ -356,7 +356,7 @@
 //       <div className="overflow-hidden">
 //         <ArticleImage
 //           imageUrl={article.heroImage}
-//           alt={article.headline}
+//           alt={article.heroCaption || article.headline}
 //           className="w-full aspect-[4/3] transition-transform duration-300 ease-out group-hover:scale-[1.05]"
 //           sizes="(min-width: 1100px) 200px, (min-width: 640px) 33vw, 50vw"
 //         />
@@ -495,7 +495,7 @@
 //                 <div className="overflow-hidden rounded-sm" style={{ boxShadow: "0 1px 2px rgba(22,24,29,0.06)" }}>
 //                   <ArticleImage
 //                     imageUrl={article.heroImage}
-//                     alt={article.headline}
+//                     alt={article.heroCaption || article.headline}
 //                     className="w-full aspect-[16/9]"
 //                     priority
 //                     sizes="(min-width: 1100px) 760px, 100vw"
@@ -976,7 +976,7 @@ function RelatedClientCard({ article }) {
       <div className="overflow-hidden">
         <ArticleImage
           imageUrl={article.heroImage}
-          alt={article.headline}
+          alt={article.heroCaption || article.headline}
           className="w-full aspect-[4/3] transition-transform duration-300 ease-out group-hover:scale-[1.05]"
           sizes="(min-width: 1100px) 200px, (min-width: 640px) 33vw, 50vw"
         />
@@ -1123,7 +1123,7 @@ export default function FeatureLongform({
                 <div className="overflow-hidden rounded-sm" style={{ boxShadow: "0 1px 2px rgba(22,24,29,0.06)" }}>
                   <ArticleImage
                     imageUrl={article.heroImage}
-                    alt={article.headline}
+                    alt={article.heroCaption || article.headline}
                     className="w-full aspect-[16/9]"
                     priority
                     sizes="(min-width: 1100px) 760px, 100vw"

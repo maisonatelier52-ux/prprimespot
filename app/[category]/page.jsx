@@ -154,7 +154,7 @@ function ArticleCard({ article }) {
   const dateLabel = formatDate(article.publishedAt);
   return (
     <Link href={`/${article.category}/${article.slug}`} className="group block">
-      <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3] mb-3"/>
+      <ArticleImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-full aspect-[4/3] mb-3"/>
       <h3 className="font-serif text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
       </h3>

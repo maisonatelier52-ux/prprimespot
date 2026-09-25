@@ -117,7 +117,7 @@ function RelatedSidebarCard({ article }) {
       <div className="w-24 aspect-[4/3] shrink-0 overflow-hidden rounded-sm">
         <ArticleImage
           imageUrl={article.heroImage}
-          alt={article.headline}
+          alt={article.heroCaption || article.headline}
           className="h-full w-full transition-transform duration-300 ease-out group-hover:scale-[1.08]"
           sizes="96px"
         />
@@ -211,7 +211,7 @@ export default function ArticleDetail({ article, related, categoryLabel, absolut
 
           {/* Hero image — above the fold, so it's marked priority for LCP */}
           <figure className="mt-8">
-            <ArticleImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/10]" priority sizes="(min-width: 1024px) 66vw, 100vw" />
+            <ArticleImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-full aspect-[16/10]" priority sizes="(min-width: 1024px) 66vw, 100vw" />
             {(article.heroCaption || article.heroCredit) && (
               <figcaption className="mt-2 font-sans text-xs text-[#8A8A8A] leading-snug">
                 {article.heroCaption}

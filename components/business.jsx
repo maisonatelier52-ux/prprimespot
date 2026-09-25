@@ -46,7 +46,7 @@ function LeftStoryCard({ article, hasImage }) {
   return (
     <Link href={href} className="group block">
       {hasImage && (
-        <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[16/10] mb-3"/>
+        <StoryImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-full aspect-[16/10] mb-3"/>
       )}
       <h3 className="font-serif text-lg sm:text-xl font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors">
         {article.headline}
@@ -65,7 +65,7 @@ function LeadStory({ article }) {
       <Link href={href} className="group block">
         <div className="flex">
           <div className="w-3 sm:w-4 shrink-0 bg-[#D01418]" aria-hidden="true" />
-          <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-full aspect-[4/3]" priority/>
+          <StoryImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-full aspect-[4/3]" priority/>
           <div className="w-3 sm:w-4 shrink-0 bg-[#D01418]" aria-hidden="true" />
         </div>
         <h3 className="mt-4 font-serif text-2xl sm:text-3xl font-bold leading-tight text-[#1A1A1A] group-hover:text-[#D01418] transition-colors">
@@ -96,7 +96,7 @@ function OpEdCard({ article, isFirst }) {
           )}
         </div>
         {isFirst && (
-          <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-24 sm:w-28 aspect-[4/3] shrink-0"/>
+          <StoryImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-24 sm:w-28 aspect-[4/3] shrink-0"/>
         )}
       </div>
     </Link>

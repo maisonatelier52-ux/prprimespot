@@ -53,7 +53,7 @@ function SportsCard({ article, rank }) {
         {String(rank).padStart(2, "0")}
       </span>
 
-      <StoryImage imageUrl={article.heroImage} alt={article.headline} className="w-16 h-16 sm:w-20 sm:h-20"/>
+      <StoryImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-16 h-16 sm:w-20 sm:h-20"/>
 
       <h3 className="flex-1 font-serif text-base sm:text-lg font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
         {article.headline}
