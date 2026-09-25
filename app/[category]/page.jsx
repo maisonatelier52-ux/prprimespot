@@ -22,6 +22,21 @@ const CATEGORY_LABELS = {
 
 const FALLBACK_IMAGE = "/og-image.jpg";
 
+// For a real nav category, use its fixed label. For a client/pillar hub
+// category (not in CATEGORY_LABELS — e.g. "julio-herrera-velutini"),
+// derive a readable label from the posts' shared `client` field rather
+// than showing the raw URL slug as the page heading/title.
+function getCategoryLabel(category, posts) {
+  const key = category?.toLowerCase();
+  if (Object.hasOwn(CATEGORY_LABELS, key)) return CATEGORY_LABELS[key];
+  const client = posts.find((p) => p.client)?.client;
+  if (client) return client;
+  return key
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
 export const dynamicParams = false;
 
 function isKnownCategory(category) {
@@ -29,16 +44,22 @@ function isKnownCategory(category) {
 }
 
 function getArticlesByCategory(category) {
-  const posts = articlesData[category?.toLowerCase()] || [];
+  const key = category?.toLowerCase();
+  const posts = articlesData[key] || [];
+  // Real nav categories (business, finance, world, us, politics, sports)
+  // hide `hideFromListings: true` posts, since those are client/pillar
+  // pieces filed elsewhere that shouldn't clutter a general news listing.
+  // A client/pillar hub category (e.g. "julio-herrera-velutini") is NOT
+  // in CATEGORY_LABELS and exists specifically to host those pieces —
+  // hiding them from *this* page too would make the hub permanently
+  // empty. They're already excluded from the homepage and author pages
+  // (those filters are separate and unaffected by this).
+  const isNavCategory = Object.hasOwn(CATEGORY_LABELS, key);
 
   return posts
-    // Client pillar/profile pieces marked `hideFromListings: true` don't
-    // appear on this category listing — only via their direct URL or
-    // another client page's related-posts section. The main pillar article
-    // itself isn't marked this way, so it still shows here normally.
-    .filter((post) => !post.hideFromListings)
+    .filter((post) => isNavCategory ? !post.hideFromListings : true)
     .map((post) => ({
-      category: category.toLowerCase(),
+      category: key,
       slug: post.slug,
       headline: post.headline,
       excerpt: post.dek,
@@ -74,8 +95,9 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const label = CATEGORY_LABELS[category.toLowerCase()] || category;
   const articles = getArticlesByCategory(category);
+  const label = getCategoryLabel(category, articlesData[category.toLowerCase()] || []);
+  const titleWord = Object.hasOwn(CATEGORY_LABELS, category.toLowerCase()) ? "News" : "Coverage";
 
   const url = `${SITE_URL}/${category.toLowerCase()}`;
   const description =
@@ -88,7 +110,7 @@ export async function generateMetadata({ params }) {
   const imageUrl = getAbsoluteUrl(articles[0]?.heroImage || FALLBACK_IMAGE);
 
   return {
-    title: `${label} News`,
+    title: `${label} ${titleWord}`,
     description,
     alternates: {
       canonical: url,
@@ -105,7 +127,7 @@ export async function generateMetadata({ params }) {
       },
     },
     openGraph: {
-      title: `${label} News | ${SITE_NAME}`,
+      title: `${label} ${titleWord} | ${SITE_NAME}`,
       description,
       url,
       siteName: SITE_NAME,
@@ -124,7 +146,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       site: SITE_TWITTER_HANDLE,
       creator: SITE_TWITTER_HANDLE,
-      title: `${label} News | ${SITE_NAME}`,
+      title: `${label} ${titleWord} | ${SITE_NAME}`,
       description,
       images: [imageUrl],
     },
@@ -176,8 +198,9 @@ export default async function CategoryPage({ params }) {
     notFound();
   }
 
-  const label = CATEGORY_LABELS[category.toLowerCase()] || category;
   const articles = getArticlesByCategory(category);
+  const label = getCategoryLabel(category, articlesData[category.toLowerCase()] || []);
+  const titleWord = Object.hasOwn(CATEGORY_LABELS, category.toLowerCase()) ? "News" : "Coverage";
 
   // ---------------------------------------------------------------------
   // JSON-LD — CollectionPage + ItemList (articles in this category)
@@ -194,7 +217,7 @@ export default async function CategoryPage({ params }) {
       {
         "@type": "CollectionPage",
         "@id": `${url}#collectionpage`,
-        name: `${label} News | ${SITE_NAME}`,
+        name: `${label} ${titleWord} | ${SITE_NAME}`,
         description,
         url,
         inLanguage: "en",
@@ -208,7 +231,7 @@ export default async function CategoryPage({ params }) {
       {
         "@type": "ItemList",
         "@id": `${url}#articles`,
-        name: `${label} News`,
+        name: `${label} ${titleWord}`,
         numberOfItems: articles.length,
         itemListElement: articles.map((post, i) => ({
           "@type": "ListItem",

@@ -32,11 +32,23 @@ export default function sitemap() {
   );
   const siteLastModified = newestDate(allArticles);
 
+  // Real nav categories (business, finance, world, us, politics, sports)
+  // get the standard 0.8 priority. Any other top-level article.json key
+  // is a client/pillar content hub (e.g. "julio-herrera-velutini") — it's
+  // a real, indexable page, just lower priority than the main sections.
+  const NAV_CATEGORIES = {
+    business: 1,
+    finance: 1,
+    world: 1,
+    us: 1,
+    politics: 1,
+    sports: 1,
+  };
   const categories = Object.entries(articlesData).map(([category, posts]) => ({
     url: `${SITE_URL}/${category}`,
     lastModified: newestDate(posts) || undefined,
     changeFrequency: "daily",
-    priority: 0.8,
+    priority: Object.hasOwn(NAV_CATEGORIES, category) ? 0.8 : 0.2,
   }));
 
   const articles = allArticles.map((post) => ({
