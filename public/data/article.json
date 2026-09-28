@@ -3788,6 +3788,76 @@
   ],
   "sports": [
     {
+  "slug": "nfl-week-3-2026-broncos-comeback-rams-chiefs-3-0-dolphins-recap",
+  "headline": "NFL Week 3 2026: Broncos Rally Past Rams, Chiefs Go 3-0",
+  "dek": "Denver erased a 16-point halftime deficit to beat the Rams 30-26 on Sunday night, while Kansas City moved to 3-0 behind a sharp Patrick Mahomes in Miami.",
+  "authorSlug": "daniel-osei",
+  "source": "NFL game data / KCTV5",
+  "publishedAt": "2026-09-28T08:00:00Z",
+  "updatedAt": "2026-09-28T08:00:00Z",
+  "heroImage": "/images/nfl-week-3-2026-broncos-comeback-rams-chiefs-3-0-dolphins-recap.webp",
+  "heroCaption": "Illustration of a late fourth-quarter touchdown under stadium lights on a Sunday night in Denver.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Sports", "NFL", "Football"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Week 3 of the NFL season gave fans the kind of Sunday night that makes people forget they had somewhere to be in the morning. The Denver Broncos trailed the Los Angeles Rams 16-0 at halftime, then scored 30 of the game's final 40 points to win 30-26, capped by a one-yard Bo Nix touchdown run with 48 seconds left."
+    },
+    {
+      "type": "heading",
+      "text": "How Denver flipped the game"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Rams looked in control for two quarters. Matthew Stafford found Tyler Higbee for an early touchdown, and Rams kicker Harrison Mevis added three field goals before the break, sending Denver to the locker room without a point. The second half told a different story. Nix threw touchdown passes to Pat Bryant and Nate Adkins in the third quarter, and Denver went for two both times, converting each to pull level at 16-16."
+    },
+    {
+      "type": "paragraph",
+      "text": "The game then turned on one play. With Los Angeles leading 19-16 in the fourth quarter, Stafford's pass was picked off by safety Talanoa Hufanga, who took it 66 yards for a touchdown. Stafford answered with a 48-yard touchdown pass to Konata Mumpfield to put the Rams back ahead 26-23, but Denver's final drive ended with Nix sneaking in from a yard out for the win."
+    },
+    {
+      "type": "paragraph",
+      "text": "The box score makes the result even more surprising. The Rams outgained Denver 482 yards to 257 and held the ball for more than 34 minutes. But they also committed 13 penalties for 91 yards, and Stafford, who threw for 390 yards on 55 attempts, was intercepted twice and sacked four times. The win moves Denver to 2-1 after its Week 1 loss to Kansas City."
+    },
+    {
+      "type": "heading",
+      "text": "Chiefs stay perfect in Miami"
+    },
+    {
+      "type": "paragraph",
+      "text": "Kansas City, meanwhile, quietly went about its business. The Chiefs beat the Miami Dolphins 24-10 to improve to 3-0, following a 31-10 opening win over Denver and a 33-30 overtime victory over Indianapolis. Patrick Mahomes was efficient throughout, completing 20 of 24 passes for 246 yards and two touchdowns, with one interception."
+    },
+    {
+      "type": "paragraph",
+      "text": "Running back Kenneth Walker, the Chiefs' free-agent addition, scored on a 10-yard run and a five-yard catch, and Travis Kelce sealed things with an 11-yard touchdown reception in the final minutes. The defense did its part too, stopping Miami on three fourth-down attempts and holding the Dolphins to 10 points."
+    },
+    {
+      "type": "heading",
+      "text": "Around the league"
+    },
+    {
+      "type": "paragraph",
+      "text": "Elsewhere on Sunday, the Baltimore Ravens edged the Dallas Cowboys 34-31 on the road, and the Washington Commanders beat the Seattle Seahawks 33-31. Jacksonville routed New England 35-6, and Pittsburgh got past Cincinnati 30-27. On Thursday night, the Atlanta Falcons had already won 35-14 at Green Bay."
+    },
+    {
+      "type": "paragraph",
+      "text": "Week 3 wraps up tonight with the Philadelphia Eagles visiting the Chicago Bears on Monday Night Football, and Thursday's Steelers-Browns game opens Week 4. If Sunday night showed anything, it's that a big halftime lead in this league is a lot less safe than it looks."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "NFL scores and schedule", "url": "https://www.nfl.com/scores" },
+    { "label": "KCTV5 — Chiefs 31-10 season-opening win over Broncos", "url": "https://www.kctv5.com/2026/09/15/walker-mahomes-lead-chiefs-31-10-season-opening-win-over-broncos/" }
+  ],
+  "takeaways": [
+    "Denver beat the Rams 30-26 after trailing 16-0 at halftime, winning on a Bo Nix one-yard touchdown run with 48 seconds left.",
+    "Talanoa Hufanga's 66-yard interception return for a touchdown was the biggest swing in a game the Rams dominated statistically.",
+    "Kansas City beat Miami 24-10 to move to 3-0, with Patrick Mahomes completing 20 of 24 passes for 246 yards and two touchdowns."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Scores and statistics come from official game data; later developments, including tonight's Eagles-Bears game, may supersede this account.",
+  "contentType": "News Roundup"
+},
+    {
       "slug": "nfl-week-2-2026-mahomes-return-goodell-international-team-burrow-injury-update",
       "headline": "NFL Week 2 2026: Mahomes Return, Goodell's Big Injury Update",
       "dek": "Patrick Mahomes returned from a torn ACL in Kansas City's Week 1 win, Goodell revived talk of an overseas NFL team, and new QB injuries set the tone for Week 2.",
