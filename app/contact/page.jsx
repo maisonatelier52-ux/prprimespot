@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl, getOrganizationSchema } from "@/lib/site";
+import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, SITE_SOCIAL_LINKS, getAbsoluteUrl, getOrganizationSchema } from "@/lib/site";
 
 const PAGE_TITLE = "Contact";
 
