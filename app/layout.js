@@ -34,9 +34,6 @@ export const metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: DEFAULT_DESCRIPTION,
-  alternates: {
-    canonical: "/",
-  },
 
   // Root-level fallback only. Every real route (home, category, article,
   // author, search, policy pages) sets its own openGraph/twitter in its

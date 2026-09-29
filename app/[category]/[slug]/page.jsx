@@ -16,6 +16,7 @@ import {
   getOrganizationSchema,
 } from "@/lib/site";
 import { getCategoryLabel } from "@/lib/categories";
+import { getLocalImageSize } from "@/lib/imageSize";
 
 const FALLBACK_IMAGE = "/og-image.jpg";
 
@@ -40,7 +41,11 @@ export async function generateMetadata({ params }) {
   }
 
   const url = `${SITE_URL}/${category}/${slug}`;
-  const imageUrl = getAbsoluteUrl(article.heroImage || FALLBACK_IMAGE);
+  const imagePath = article.heroImage || FALLBACK_IMAGE;
+  const imageUrl = getAbsoluteUrl(imagePath);
+  // Real dimensions read from the file (null for remote/unreadable images,
+  // in which case width/height are simply left out).
+  const imageDims = getLocalImageSize(imagePath);
 
   return {
     // absolute = skip the "| PR Primespot" template from app/layout.js,
@@ -82,8 +87,7 @@ export async function generateMetadata({ params }) {
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
+          ...(imageDims ? { width: imageDims.width, height: imageDims.height } : {}),
           alt: article.heroCaption || article.headline,
         },
       ],
@@ -121,7 +125,9 @@ export default async function ArticlePage({ params }) {
   // article regardless of which layout renders its body below.
   // ---------------------------------------------------------------------
   const absoluteUrl = `${SITE_URL}${pageUrl}`;
-  const imageUrl = getAbsoluteUrl(article.heroImage || FALLBACK_IMAGE);
+  const imagePath = article.heroImage || FALLBACK_IMAGE;
+  const imageUrl = getAbsoluteUrl(imagePath);
+  const imageDims = getLocalImageSize(imagePath);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -134,8 +140,7 @@ export default async function ArticlePage({ params }) {
         image: {
           "@type": "ImageObject",
           url: imageUrl,
-          width: 1200,
-          height: 630,
+          ...(imageDims ? { width: imageDims.width, height: imageDims.height } : {}),
         },
         datePublished: article.publishedAt || undefined,
         dateModified: article.updatedAt || article.publishedAt || undefined,
