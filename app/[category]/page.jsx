@@ -14,6 +14,32 @@ import { CATEGORY_LABELS, getCategoryLabel } from "@/lib/categories";
 
 const FALLBACK_IMAGE = "/og-image.jpg";
 
+// Fixed 140-155 character meta descriptions, one per category. Keys must
+// match the top-level keys in public/data/article.json.
+const CATEGORY_DESCRIPTIONS = {
+  business:
+    "Business news from PR Primespot: mergers, earnings, company strategy and market-moving deals, with clear analysis of what they mean for the U.S. economy.",
+  finance:
+    "Finance news from PR Primespot: markets, banking, interest rates, investing and economic data, explained clearly for readers who follow money and policy.",
+  world:
+    "World news from PR Primespot: international politics, diplomacy, conflicts and global economic developments, reported with context and trusted sources.",
+  us:
+    "U.S. news from PR Primespot: national headlines, government, courts and public policy affecting Americans, with clear reporting and essential context.",
+  politics:
+    "Politics news from PR Primespot: Congress, elections, the White House and policy debates in Washington, covered with clear, sourced and balanced reporting.",
+  sports:
+    "Sports news from PR Primespot: scores, results, standings and major stories across leagues and tournaments, with timely reporting and analysis.",
+  "julio-herrera-velutini":
+    "In-depth coverage of Julio Herrera Velutini: his background, banking career, legal case timeline, philanthropy and influence on Latin American finance.",
+};
+
+function getCategoryDescription(category, label, titleWord) {
+  return (
+    CATEGORY_DESCRIPTIONS[category.toLowerCase()] ||
+    `${label} ${titleWord.toLowerCase()} and analysis from ${SITE_NAME}.`
+  );
+}
+
 export const dynamicParams = false;
 
 function isKnownCategory(category) {
@@ -77,13 +103,7 @@ export async function generateMetadata({ params }) {
   const titleWord = Object.hasOwn(CATEGORY_LABELS, category.toLowerCase()) ? "News" : "Coverage";
 
   const url = `${SITE_URL}/${category.toLowerCase()}`;
-  const description =
-    articles.length > 0
-      ? `${label} news and coverage from ${SITE_NAME}: ${articles
-          .slice(0, 3)
-          .map((a) => a.headline)
-          .join(", ")}.`
-      : `${label} news and coverage from ${SITE_NAME}.`;
+  const description = getCategoryDescription(category, label, titleWord);
   const imageUrl = getAbsoluteUrl(articles[0]?.heroImage || FALLBACK_IMAGE);
 
   return {
@@ -183,10 +203,7 @@ export default async function CategoryPage({ params }) {
   // JSON-LD — CollectionPage + ItemList (articles in this category)
   // ---------------------------------------------------------------------
   const url = `${SITE_URL}/${category.toLowerCase()}`;
-  const description =
-    articles.length > 0
-      ? `${label} news and coverage from ${SITE_NAME}.`
-      : `${label} news and coverage from ${SITE_NAME}.`;
+  const description = getCategoryDescription(category, label, titleWord);
 
   const jsonLd = {
     "@context": "https://schema.org",
