@@ -3,10 +3,13 @@ import articlesData from "../public/data/article.json";
 import Image from "next/image";
 
 const CATEGORY_SLUG = "politics";
+const HOMEPAGE_LIMIT = 6;
 
-function getPoliticsArticles() {
+function getPoliticsArticles(limit = HOMEPAGE_LIMIT) {
   const posts = articlesData[CATEGORY_SLUG] || [];
-  return [...posts].sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+  return [...posts]
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+    .slice(0, limit);
 }
 
 function ImagePlaceholder({ label, className = "" }) {

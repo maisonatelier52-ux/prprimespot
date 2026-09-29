@@ -3220,6 +3220,72 @@
   ],
   "politics": [
     {
+  "slug": "house-gop-affordability-anxiety-pre-midterm-recess-cost-of-living-2026",
+  "headline": "House GOP Recess Begins Amid New Cost-of-Living Anxiety",
+  "dek": "House Republicans left Washington for a seven-week pre-midterm recess showing visible nerves about affordability, as both parties warn of rising costs now.",
+  "authorSlug": "maria-santos",
+  "source": "Politico / NBC News / NOTUS",
+  "publishedAt": "2026-09-29T14:00:00Z",
+  "updatedAt": "2026-09-29T14:00:00Z",
+  "heroImage": "/images/house-gop-affordability-anxiety-pre-midterm-recess-cost-of-living-2026.webp",
+  "heroCaption": "Illustration of lawmakers departing the Capitol with cost-of-living concerns weighing on the midterm campaign ahead.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Politics", "US", "Congress", "Republican Party", "2026 Midterms"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "House Republicans left Washington earlier this month for a seven-week recess ahead of the midterms, but not before a handful of last-minute moves made clear how nervous the cost of living has made the conference. In the final days before departing, seven Republicans broke with their party to rebuke the administration's military action in Iran, other members pushed unsuccessfully for a vote on suspending the federal gas tax, and one of the week's last votes targeted rising utility costs tied to data centers. None of it reflected a unified strategy so much as a party scrambling to be seen doing something about prices before facing voters."
+    },
+    {
+      "type": "heading",
+      "text": "A party publicly second-guessing itself"
+    },
+    {
+      "type": "paragraph",
+      "text": "The unease isn't confined to back-channel grumbling anymore. Georgia Rep. Marjorie Taylor Greene, one of the more prominent Republican voices to break from the party line this fall, told Semafor bluntly that Republicans risk losing the House if Americans keep living paycheck to paycheck, adding that voters will be looking at the midterms through the lens of their bank accounts. Greene has also criticized House Speaker Mike Johnson for keeping the chamber out of session during the recent government shutdown, arguing the House should have stayed in Washington finishing appropriations work instead."
+    },
+    {
+      "type": "paragraph",
+      "text": "The concern extends to the Senate side as well. Missouri Senator Josh Hawley said Senate Republicans have largely failed to match the president's own attention to lowering costs, while Louisiana Senator John Kennedy has pushed for a new reconciliation bill aimed squarely at reducing regulations he argues are driving up prices for goods and services. Senate Majority Leader John Thune has said he wouldn't rule out another party-line bill, though he's indicated a preference for a bipartisan deal that could draw the 60 votes needed to pass more durable legislation."
+    },
+    {
+      "type": "heading",
+      "text": "Republicans say they inherited the problem, but need to own the fix"
+    },
+    {
+      "type": "paragraph",
+      "text": "Many GOP lawmakers are careful to frame affordability as a problem they inherited from the Biden administration rather than one of their own making. But even members making that argument acknowledge the party needs a sharper message heading into November. Texas Rep. Tony Gonzales put it plainly to NBC News, saying Republicans would be making a serious mistake if they didn't sharpen their economic platform given how much the issue is weighing on voters' minds."
+    },
+    {
+      "type": "paragraph",
+      "text": "That internal frustration has occasionally been aimed at the White House directly. Several Republicans have privately and publicly voiced frustration with what they describe as the administration's dismissive attitude toward affordability concerns; President Trump has at times referred to the issue as a Democratic-manufactured narrative rather than a genuine economic problem, a characterization some in his own party worry undersells what voters are actually experiencing at the grocery store and the pump."
+    },
+    {
+      "type": "heading",
+      "text": "Why the anxiety is showing up now"
+    },
+    {
+      "type": "paragraph",
+      "text": "Part of what's driving the nerves is recent electoral evidence. A special election result in Tennessee, a district Trump carried by a wide margin in the last presidential race, saw the Republican candidate win by a narrower-than-expected margin, with voters who spoke to reporters afterward citing the cost of living as a top factor in their decision. Republican Rep. Scott DesJarlais of Tennessee called the result a wake-up call, telling reporters that while the economy is always a factor in elections, healthcare and affordability specifically need to move to the front of the party's agenda."
+    },
+    {
+      "type": "paragraph",
+      "text": "Democrats, for their part, have leaned into the opening. Party strategists have pointed to the GOP's internal disagreements as evidence that Republicans lack a coherent response to rising costs, and have continued to tie affordability concerns to the broader fight over healthcare subsidies that contributed to this fall's government shutdown. With Congress now largely out of session until after the midterms, the question of whether Republicans can coalesce around a unified affordability message, or whether the current scramble simply continues into the fall campaign season, is likely to remain one of the defining storylines of the election."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Political Wire — Economic Nerves Emerge as House GOP Calls It Quits", "url": "https://politicalwire.com/2026/09/18/economic-nerves-emerge-as-house-gop-calls-it-quits/" },
+    { "label": "NOTUS — Senate Republicans Push Leadership on Cost-of-Living Concerns", "url": "https://www.notus.org/senate/republicans-action-affordability-senate" }
+  ],
+  "takeaways": [
+    "House Republicans left for a seven-week pre-midterm recess after a flurry of last-minute votes tied to affordability, including gas tax and utility cost measures.",
+    "GOP lawmakers including Marjorie Taylor Greene and Josh Hawley have publicly pushed their own party to act faster on the cost of living ahead of November.",
+    "A narrower-than-expected special election win in a Trump-favorable Tennessee district, driven partly by cost-of-living concerns, has amplified anxiety within the party."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Statements from lawmakers are presented as their own positions and do not represent independently verified conclusions. Later developments may update this account.",
+  "contentType": "Analysis"
+},
+    {
       "slug": "trump-michael-whatley-north-carolina-senate-rally-crime-2026",
       "headline": "Trump Campaigns for Whatley in N.C. Senate With Crime Focus",
       "dek": "Trump campaigned for GOP Senate candidate Michael Whatley in North Carolina focusing on crime, affordability and Democratic policies ahead of the 2026 midterms.",
