@@ -4,9 +4,10 @@ This is a source-linked current-affairs blog built with Next.js 16. It has stati
 
 ## Getting Started
 
-Install dependencies, copy `.env.example` to `.env.local`, set the site URL, and run the development server:
+Install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
 ```
 
@@ -45,8 +46,8 @@ below).
 
 ## Production checklist
 
-- Set `NEXT_PUBLIC_SITE_URL` to the final HTTPS origin, without a trailing slash.
-- Run `npm run lint` and `npm run build` using the same environment variables as production.
+- Confirm `SITE_URL` in `lib/site.js` is the final HTTPS origin (currently `https://www.prprimespot.com`), without a trailing slash. It is hardcoded there and feeds canonical URLs, the sitemap, robots.txt, Open Graph tags, and JSON-LD; there is no environment variable for it.
+- Run `npm run lint` and `npm run build`.
 - Deploy to a host that supports Next.js 16. For static-only hosting, first test a deliberate static-export configuration.
 - Confirm that every image is licensed for publication.
 - Replace or remove unfinished newsletter, subscription, social, company, and legal links.

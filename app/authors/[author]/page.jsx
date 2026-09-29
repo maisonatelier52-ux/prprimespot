@@ -6,7 +6,8 @@ import {
   SITE_NAME,
   SITE_URL,
   SITE_TWITTER_HANDLE,
-  SITE_LOGO_PATH,
+  ORGANIZATION_REF,
+  getOrganizationSchema,
 } from "@/lib/site";
 
 // Adjust these paths if this file moves relative to /public/data
@@ -136,39 +137,6 @@ function ArticleImage({ imageUrl, alt, className = "", sizes }) {
   );
 }
 
-function IconLink({ label, children, href }) {
-  return (
-    <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200">
-      {children}
-    </a>
-  );
-}
-
-function TwitterIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4a4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1z" />
-    </svg>
-  );
-}
-
-function LinkedinIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M6.94 8.5H3.56V20.5H6.94V8.5ZM5.25 3.5A1.95 1.95 0 103.3 5.45 1.94 1.94 0 005.25 3.5ZM20.5 20.5V13.9c0-3.53-1.88-5.17-4.4-5.17a3.8 3.8 0 00-3.44 1.9h-.05V8.5H9.4c.05 1 0 12 0 12h3.38v-6.7c0-.36.03-.71.13-.97.29-.71.94-1.44 2.05-1.44 1.45 0 2.03 1.1 2.03 2.72V20.5h3.51Z" />
-    </svg>
-  );
-}
-
-function MailIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.6" />
-      <path d="M4 6.5l8 6 8-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 function ArticleCard({ article }) {
   const dateLabel = formatDate(article.publishedAt);
   return (
@@ -223,12 +191,7 @@ export default async function AuthorPage({ params }) {
         sameAs: [authorData.social?.twitter, authorData.social?.linkedin].filter(
           Boolean
         ),
-        worksFor: {
-          "@type": "Organization",
-          "@id": `${SITE_URL}#organization`,
-          name: SITE_NAME,
-          url: SITE_URL,
-        },
+        worksFor: ORGANIZATION_REF,
       },
       {
         "@type": "BreadcrumbList",
@@ -250,18 +213,7 @@ export default async function AuthorPage({ params }) {
           name: post.headline,
         })),
       },
-      {
-        "@type": "Organization",
-        "@id": `${SITE_URL}#organization`,
-        name: SITE_NAME,
-        url: SITE_URL,
-        logo: {
-          "@type": "ImageObject",
-          // Uses the site's real logo asset (lib/site.js) instead of a
-          // non-existent /logo.png at the domain root.
-          url: getAbsoluteUrl(SITE_LOGO_PATH),
-        },
-      },
+      getOrganizationSchema(),
     ],
   };
 
@@ -303,23 +255,6 @@ export default async function AuthorPage({ params }) {
                 {authorData.bio}
               </p>
             )}
-            <div className="flex items-center justify-center sm:justify-start gap-3 mt-4">
-              {authorData.social?.twitter && (
-                <IconLink label={`${authorData.name} on Twitter`} href={authorData.social.twitter}>
-                  <TwitterIcon />
-                </IconLink>
-              )}
-              {authorData.social?.linkedin && (
-                <IconLink label={`${authorData.name} on LinkedIn`} href={authorData.social.linkedin}>
-                  <LinkedinIcon />
-                </IconLink>
-              )}
-              {authorData.social?.email && (
-                <IconLink label={`Email ${authorData.name}`} href={authorData.social.email}>
-                  <MailIcon />
-                </IconLink>
-              )}
-            </div>
           </div>
         </div>
 

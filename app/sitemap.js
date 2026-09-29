@@ -64,11 +64,20 @@ export default function sitemap() {
       : {}),
   }));
 
-  const authors = Object.keys(authorsData).map((author) => ({
-    url: `${SITE_URL}/authors/${author}`,
-    changeFrequency: "monthly",
-    priority: 0.5,
-  }));
+  // An author page changes when that author publishes or updates a post,
+  // so its lastModified is the newest date among the posts shown on it
+  // (hideFromListings posts don't appear on author pages, so they're skipped).
+  const authors = Object.keys(authorsData).map((author) => {
+    const authorPosts = allArticles.filter(
+      (post) => post.authorSlug === author && !post.hideFromListings
+    );
+    return {
+      url: `${SITE_URL}/authors/${author}`,
+      lastModified: newestDate(authorPosts) || undefined,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    };
+  });
 
   const staticPages = STATIC_PAGES.map(({ path, changeFrequency, priority }) => ({
     url: `${SITE_URL}${path}`,

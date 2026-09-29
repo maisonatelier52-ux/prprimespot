@@ -966,7 +966,6 @@ function AuthorBioCard({ article }) {
 }
 
 function RelatedClientCard({ article }) {
-  console.log("RelatedClientCard heroImage:", article.heroImage);
   return (
     <Link
       href={`/${article.category}/${article.slug}`}

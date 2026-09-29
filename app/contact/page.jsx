@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, SITE_SOCIAL_LINKS, getAbsoluteUrl } from "@/lib/site";
+import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl, getOrganizationSchema } from "@/lib/site";
 
 const PAGE_TITLE = "Contact";
 
@@ -96,16 +96,12 @@ export default function ContactPage() {
         ],
       },
       {
-        "@type": "Organization",
-        "@id": `${SITE_URL}#organization`,
-        name: SITE_NAME,
-        url: SITE_URL,
+        ...getOrganizationSchema(),
         contactPoint: CONTACT_CHANNELS.map((c) => ({
           "@type": "ContactPoint",
           contactType: c.label,
           email: c.email,
         })),
-        sameAs: Object.values(SITE_SOCIAL_LINKS),
       },
     ],
   };

@@ -5,22 +5,15 @@ import {
   SITE_NAME,
   SITE_URL,
   SITE_TWITTER_HANDLE,
-  SITE_LOGO_PATH,
+  ORGANIZATION_REF,
+  getOrganizationSchema,
 } from "@/lib/site";
+import { CATEGORY_LABELS } from "@/lib/categories";
 
 import authorsData from "../../public/data/author.json";
 import articlesData from "../../public/data/article.json";
 
 const FALLBACK_AVATAR = "/default-avatar.jpg";
-
-const CATEGORY_LABELS = {
-  business: "Business",
-  finance: "Finance",
-  world: "World",
-  us: "U.S.",
-  politics: "Politics",
-  sports: "Sports",
-};
 
 const PAGE_TITLE = "About Us";
 
@@ -147,12 +140,13 @@ export default function AboutPage() {
         url: `${SITE_URL}/about`,
         name: `${PAGE_TITLE} | ${SITE_NAME}`,
         description: PAGE_DESCRIPTION,
-        isPartOf: { "@type": "WebSite", url: SITE_URL, name: SITE_NAME },
-        about: {
-          "@type": "Organization",
-          "@id": `${SITE_URL}#organization`,
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": `${SITE_URL}/#website`,
+          url: SITE_URL,
           name: SITE_NAME,
         },
+        about: ORGANIZATION_REF,
       },
       {
         "@type": "BreadcrumbList",
@@ -162,14 +156,7 @@ export default function AboutPage() {
         ],
       },
       {
-        "@type": "Organization",
-        "@id": `${SITE_URL}#organization`,
-        name: SITE_NAME,
-        url: SITE_URL,
-        logo: {
-          "@type": "ImageObject",
-          url: getAbsoluteUrl(SITE_LOGO_PATH),
-        },
+        ...getOrganizationSchema(),
         employee: writers.map((w) => ({
           "@type": "Person",
           name: w.name,

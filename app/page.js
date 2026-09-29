@@ -7,9 +7,8 @@ import Politics from "@/components/politics";
 import {
   SITE_URL,
   SITE_NAME,
-  SITE_LOGO_PATH,
-  SITE_SOCIAL_LINKS,
-  getAbsoluteUrl,
+  ORGANIZATION_REF,
+  getOrganizationSchema,
 } from "@/lib/site";
 
 // ─────────────────────────────────────────────────────────────
@@ -113,33 +112,14 @@ function JsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "NewsMediaOrganization",
-        "@id": `${SITE_URL}/#organization`,
-        name: SITE_NAME,
-        url: SITE_URL,
-        logo: {
-          "@type": "ImageObject",
-          // Real logo asset (lib/site.js) instead of a non-existent
-          // /logo.png at the domain root.
-          url: getAbsoluteUrl(SITE_LOGO_PATH),
-        },
-        sameAs: [
-          SITE_SOCIAL_LINKS.instagram,
-          SITE_SOCIAL_LINKS.twitter,
-          SITE_SOCIAL_LINKS.substack,
-          SITE_SOCIAL_LINKS.medium,
-        ].filter(Boolean),
-      },
+      getOrganizationSchema(),
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
         url: SITE_URL,
         name: SITE_NAME,
         description: PAGE_DESCRIPTION,
-        publisher: {
-          "@id": `${SITE_URL}/#organization`,
-        },
+        publisher: ORGANIZATION_REF,
         potentialAction: {
           "@type": "SearchAction",
           target: {

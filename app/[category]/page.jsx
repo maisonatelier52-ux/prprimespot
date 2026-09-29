@@ -8,34 +8,11 @@ import {
   SITE_NAME,
   SITE_URL,
   SITE_TWITTER_HANDLE,
-  SITE_LOGO_PATH,
+  getOrganizationSchema,
 } from "@/lib/site";
-
-const CATEGORY_LABELS = {
-  business: "Business",
-  finance: "Finance",
-  world: "World",
-  us: "U.S.",
-  politics: "Politics",
-  sports: "Sports",
-};
+import { CATEGORY_LABELS, getCategoryLabel } from "@/lib/categories";
 
 const FALLBACK_IMAGE = "/og-image.jpg";
-
-// For a real nav category, use its fixed label. For a client/pillar hub
-// category (not in CATEGORY_LABELS — e.g. "julio-herrera-velutini"),
-// derive a readable label from the posts' shared `client` field rather
-// than showing the raw URL slug as the page heading/title.
-function getCategoryLabel(category, posts) {
-  const key = category?.toLowerCase();
-  if (Object.hasOwn(CATEGORY_LABELS, key)) return CATEGORY_LABELS[key];
-  const client = posts.find((p) => p.client)?.client;
-  if (client) return client;
-  return key
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
 
 export const dynamicParams = false;
 
@@ -96,7 +73,7 @@ export async function generateMetadata({ params }) {
   }
 
   const articles = getArticlesByCategory(category);
-  const label = getCategoryLabel(category, articlesData[category.toLowerCase()] || []);
+  const label = getCategoryLabel(category);
   const titleWord = Object.hasOwn(CATEGORY_LABELS, category.toLowerCase()) ? "News" : "Coverage";
 
   const url = `${SITE_URL}/${category.toLowerCase()}`;
@@ -199,7 +176,7 @@ export default async function CategoryPage({ params }) {
   }
 
   const articles = getArticlesByCategory(category);
-  const label = getCategoryLabel(category, articlesData[category.toLowerCase()] || []);
+  const label = getCategoryLabel(category);
   const titleWord = Object.hasOwn(CATEGORY_LABELS, category.toLowerCase()) ? "News" : "Coverage";
 
   // ---------------------------------------------------------------------
@@ -248,16 +225,7 @@ export default async function CategoryPage({ params }) {
           { "@type": "ListItem", position: 2, name: label, item: url },
         ],
       },
-      {
-        "@type": "Organization",
-        "@id": `${SITE_URL}#organization`,
-        name: SITE_NAME,
-        url: SITE_URL,
-        logo: {
-          "@type": "ImageObject",
-          url: getAbsoluteUrl(SITE_LOGO_PATH),
-        },
-      },
+      getOrganizationSchema(),
     ],
   };
 

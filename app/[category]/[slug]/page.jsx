@@ -12,8 +12,10 @@ import {
   SITE_NAME,
   SITE_URL,
   SITE_TWITTER_HANDLE,
-  SITE_LOGO_PATH,
+  ORGANIZATION_REF,
+  getOrganizationSchema,
 } from "@/lib/site";
+import { getCategoryLabel } from "@/lib/categories";
 
 const FALLBACK_IMAGE = "/og-image.jpg";
 
@@ -41,7 +43,10 @@ export async function generateMetadata({ params }) {
   const imageUrl = getAbsoluteUrl(article.heroImage || FALLBACK_IMAGE);
 
   return {
-    title: article.headline,
+    // absolute = skip the "| PR Primespot" template from app/layout.js,
+    // so the <title> is just the headline (or the optional seoTitle
+    // override from article.json for unusually long headlines).
+    title: { absolute: article.seoTitle || article.headline },
     description: article.dek,
     alternates: {
       canonical: url,
@@ -107,7 +112,8 @@ export default async function ArticlePage({ params }) {
   // related set: only other posts about the same client, never generic
   // same-category news.
   const clientRelated = getClientRelatedArticles(article.client, article.slug, 5);
-  const categoryLabel = article.category.charAt(0).toUpperCase() + article.category.slice(1);
+  // "us" -> "U.S.", hub slugs -> the client's name (see lib/categories.js)
+  const categoryLabel = getCategoryLabel(article.category);
   const pageUrl = `/${article.category}/${article.slug}`;
 
   // ---------------------------------------------------------------------
@@ -138,16 +144,7 @@ export default async function ArticlePage({ params }) {
           name: article.author,
           ...(article.authorSlug ? { url: `${SITE_URL}/authors/${article.authorSlug}` } : {}),
         },
-        publisher: {
-          "@type": "Organization",
-          name: SITE_NAME,
-          logo: {
-            "@type": "ImageObject",
-            // Uses the site's real logo asset (lib/site.js) instead of a
-            // non-existent /logo.png at the domain root.
-            url: getAbsoluteUrl(SITE_LOGO_PATH),
-          },
-        },
+        publisher: ORGANIZATION_REF,
         mainEntityOfPage: { "@type": "WebPage", "@id": absoluteUrl },
         articleSection: categoryLabel,
         inLanguage: "en",
@@ -169,16 +166,7 @@ export default async function ArticlePage({ params }) {
           { "@type": "ListItem", position: 3, name: article.headline, item: absoluteUrl },
         ],
       },
-      {
-        "@type": "Organization",
-        "@id": `${SITE_URL}#organization`,
-        name: SITE_NAME,
-        url: SITE_URL,
-        logo: {
-          "@type": "ImageObject",
-          url: getAbsoluteUrl(SITE_LOGO_PATH),
-        },
-      },
+      getOrganizationSchema(),
       ...(article.faq && article.faq.length > 0
         ? [
             {
