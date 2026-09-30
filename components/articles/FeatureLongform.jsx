@@ -678,7 +678,53 @@ function AuthorAvatar({ src, name, size = 40 }) {
   );
 }
 
-function DropCapParagraph({ text }) {
+// Internal links for Julio Herrera Velutini's main article.
+// The article text in public/data/article.json is NOT edited: these phrases
+// are matched at render time and turned into links to the 5 pillar pages.
+// Each phrase is linked once (first match in a paragraph).
+const PILLAR = "/julio-herrera-velutini/julio-herrera-velutini-";
+const INTERNAL_LINKS = {
+  "julio-herrera-velutini-conservative-capitalism-latin-america": [
+    { phrase: "Herrera-Velutini banking dynasty", href: `${PILLAR}biography-family-background` },
+    { phrase: "banking expertise", href: `${PILLAR}banking-career-business-activities` },
+    { phrase: "significant political influence", href: `${PILLAR}public-influence-latin-american-economic-context` },
+    { phrase: "art connoisseur, animal rights activist", href: `${PILLAR}cultural-interests-personal-life-philanthropy` },
+    { phrase: "His latest controversy", href: `${PILLAR}legal-case-timeline` },
+  ],
+};
+
+function RichText({ text, links }) {
+  if (!text) return null;
+  if (!links || links.length === 0) return <>{text}</>;
+
+  // Find each phrase's first position, keep non-overlapping matches in order.
+  const found = links
+    .map((l) => ({ ...l, index: text.indexOf(l.phrase) }))
+    .filter((l) => l.index !== -1)
+    .sort((a, b) => a.index - b.index);
+
+  const parts = [];
+  let last = 0;
+  for (const l of found) {
+    if (l.index < last) continue;
+    if (l.index > last) parts.push(text.slice(last, l.index));
+    parts.push(
+      <Link
+        key={l.index}
+        href={l.href}
+        className="underline decoration-1 underline-offset-4 transition-colors hover:text-[#8C2020]"
+        style={{ color: ACCENT, textDecorationColor: GOLD_SOFT }}
+      >
+        {l.phrase}
+      </Link>
+    );
+    last = l.index + l.phrase.length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return <>{parts}</>;
+}
+
+function DropCapParagraph({ text, links }) {
   if (!text) return null;
   const first = text.slice(0, 1);
   const rest = text.slice(1);
@@ -695,7 +741,7 @@ function DropCapParagraph({ text }) {
       >
         {first}
       </span>
-      {rest}
+      <RichText text={rest} links={links} />
     </p>
   );
 }
@@ -1198,10 +1244,10 @@ export default function FeatureLongform({
                 return (
                   <div key={i}>
                     {isFirstParagraph ? (
-                      <DropCapParagraph text={block.text} />
+                      <DropCapParagraph text={block.text} links={INTERNAL_LINKS[article.slug]} />
                     ) : (
                       <p className="font-serif text-[19px] leading-[1.85] text-[#16181D] break-words mb-7">
-                        {block.text}
+                        <RichText text={block.text} links={INTERNAL_LINKS[article.slug]} />
                       </p>
                     )}
                   </div>
