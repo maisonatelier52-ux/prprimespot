@@ -2091,6 +2091,68 @@
   ],
   "world": [
     {
+  "slug": "swiss-glaciers-second-worst-ice-loss-2026-climate-report",
+  "headline": "Swiss Glaciers Post Their Second-Worst Ice Loss Ever",
+  "dek": "Switzerland's glaciers lost 5.5% of their ice volume in 2026, the second-largest decline on record, as the Alps lose their grip on Europe's water supply.",
+  "authorSlug": "raj-patel",
+  "source": "Swiss Commission for Cryosphere Observation / Business Standard",
+  "publishedAt": "2026-10-01T09:00:00Z",
+  "updatedAt": "2026-10-01T09:00:00Z",
+  "heroImage": "/images/swiss-glaciers-second-worst-ice-loss-2026-climate-report.webp",
+  "heroCaption": "Illustration of a shrinking Alpine glacier revealing exposed rock after a season of record melt.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["World", "Climate", "Switzerland"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Switzerland's glaciers lost 5.5% of their total ice volume this year, making 2026 the second-worst year for glacial melt ever recorded, trailing only 2022. The figures come from the Swiss Commission for Cryosphere Observation, part of the Swiss Academy of Sciences, which has tracked glacier volume through its long-running GLAMOS monitoring network."
+    },
+    {
+      "type": "heading",
+      "text": "A familiar, worsening pattern"
+    },
+    {
+      "type": "paragraph",
+      "text": "This year's losses followed a pattern that's become routine for Swiss glaciologists: a winter with thin snow cover, followed by a hot summer that stripped away whatever protective snow remained and began eating directly into the ice underneath. Researchers call the point at which a glacier's snow reserves run out and every bit of further melt comes straight off the ice itself \"Glacier Loss Day,\" and in recent years that day has been arriving earlier and earlier in the season, a clear sign the glaciers are spending more of the year in open decline."
+    },
+    {
+      "type": "paragraph",
+      "text": "The scale of the long-term change is stark. Switzerland's glaciers have lost roughly a quarter of their total volume since 2015 alone, and more than 1,000 smaller glaciers across the country have disappeared entirely in that stretch. Four of the five worst years for glacier shrinkage on record, 2022, 2023, 2026, and 2003, have all occurred within the past two decades."
+    },
+    {
+      "type": "heading",
+      "text": "Why it matters beyond the mountains"
+    },
+    {
+      "type": "paragraph",
+      "text": "Switzerland is sometimes called Europe's water tower because its glaciers store winter snowfall and release it gradually through meltwater during spring and summer, feeding rivers that millions of people downstream depend on for drinking water, agriculture, and hydropower. As glacier volume shrinks, that buffering effect weakens, meaning rivers fed by glacial melt become more vulnerable to running low during hot, dry stretches precisely when demand for water is highest."
+    },
+    {
+      "type": "paragraph",
+      "text": "The melting has also been linked to more immediate physical dangers. Glaciologists have pointed to the continuous shrinking of glaciers as a factor destabilizing the mountainsides around them, a dynamic blamed in part for the 2025 disaster in which a massive rock-and-ice avalanche buried much of the village of Blatten in the Lötschental valley. Swiss authorities have since stepped up monitoring of unstable slopes in other Alpine valleys where retreating ice has left rock faces exposed and prone to collapse."
+    },
+    {
+      "type": "heading",
+      "text": "What comes next"
+    },
+    {
+      "type": "paragraph",
+      "text": "Scientists with the monitoring network say there's little reason to expect this year's losses to be an outlier rather than a continuation of the broader trend. More than half of all glacier ice in the Alps sits within Switzerland's borders, and temperatures in the region have been rising at roughly twice the global average, a pace that has repeatedly outstripped earlier projections for how quickly the ice would disappear. The next full volumetric glacier inventory is scheduled for 2028, which researchers say will show more clearly whether individual glaciers, some already down to their last few years of existence, have survived the stretch of back-to-back severe melt seasons."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Business Standard — Swiss glaciers lose 5.5% of ice volume in 2026", "url": "https://www.business-standard.com/world-news" },
+    { "label": "WSL — And Swiss glaciers continue to melt", "url": "https://www.slf.ch/en/news/and-swiss-glaciers-continue-to-melt/" }
+  ],
+  "takeaways": [
+    "Swiss glaciers lost 5.5% of their remaining ice volume in 2026, the second-largest annual loss on record after 2022.",
+    "Glaciers nationwide have lost about a quarter of their total volume since 2015, with more than 1,000 smaller glaciers vanishing entirely.",
+    "Shrinking glaciers threaten downstream water supplies and have been linked to mountainside instability, including the 2025 disaster that buried the village of Blatten."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Source links identify the material used for the main claims; the next full glacier volume survey in 2028 may update parts of this account.",
+  "contentType": "Explainer"
+},
+    {
       "slug": "un-general-assembly-2026-guterres-final-session",
       "headline": "World Leaders Gather in NYC for Guterres' Final Session",
       "dek": "The 81st UN General Assembly opened in New York this week, marking Guterres' final high-level session and kicking off the search for the UN's next leader.",
