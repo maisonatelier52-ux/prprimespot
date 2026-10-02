@@ -1528,6 +1528,81 @@
   ],
   "finance": [
     {
+  "slug": "stock-market-october-2026-micron-earnings-treasury-yields",
+  "headline": "Stocks Rise in October as Bond Yields Hit 24-Year High",
+  "dek": "Micron's blowout earnings and Alphabet's new AI model pushed stocks higher as Treasury yields hit near 24-year highs and Nike shares slid on weak sales.",
+  "authorSlug": "elena-vasquez",
+  "source": "CNBC / Yahoo Finance / Charles Schwab",
+  "publishedAt": "2026-10-02T15:00:00Z",
+  "updatedAt": "2026-10-02T15:00:00Z",
+  "heroImage": "/images/stock-market-october-2026-micron-earnings-treasury-yields.webp",
+  "heroCaption": "Illustration of tech stocks climbing against a backdrop of rising bond yields at the start of the fourth quarter.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Business", "Finance", "Markets"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wall Street opened the fourth quarter on a split note this week: tech stocks kept doing what they've done most of the year, carrying the broader market higher, while the bond market sent a very different signal, pushing yields to levels investors haven't seen in more than two decades."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Dow Jones Industrial Average added roughly 85 points, the S&P 500 ticked up about 0.2%, and the Nasdaq Composite climbed 0.3% to start the week, with the S&P 500 going on to notch a fresh closing high shortly after as Treasury yields briefly retreated. The gains came even as the 10-year Treasury yield hovered just under 24-year highs near 5.33%, and Brent crude pushed toward $100 a barrel on escalating Middle East tensions."
+    },
+    {
+      "type": "heading",
+      "text": "Micron's blowout quarter"
+    },
+    {
+      "type": "paragraph",
+      "text": "The standout story of the week came from Micron Technology, whose quarterly results stunned even bullish analysts. The chipmaker's revenue quadrupled from a year earlier, a performance that lifted shares across the broader semiconductor sector and extended a run that's left Micron stock up roughly 270% so far this year. The results reinforced a theme that's defined markets for much of 2026: AI-driven demand for memory chips and data-center hardware continuing to outrun even optimistic Wall Street forecasts."
+    },
+    {
+      "type": "paragraph",
+      "text": "Alphabet added to the AI momentum, with shares trading about 2% higher after the company introduced its newest Gemini model. The dynamic underlined how narrow this year's rally has become at times: most components of the S&P 500 actually finished September in negative territory, with a handful of large AI-linked tech names doing the heavy lifting for the index as a whole."
+    },
+    {
+      "type": "heading",
+      "text": "Nike's rough quarter"
+    },
+    {
+      "type": "paragraph",
+      "text": "Not every earnings report landed well. Nike shares fell as the company posted disappointing sales and announced plans to cut jobs, with the stock trading near 12-year lows heading into its results. The report added to a difficult stretch for the retailer as it works through inventory challenges and softer demand in key markets, a contrast to the AI-fueled optimism dominating the rest of the tech-heavy market."
+    },
+    {
+      "type": "heading",
+      "text": "Why yields are climbing, and why it matters"
+    },
+    {
+      "type": "paragraph",
+      "text": "The bond market's move has been a slower-building story than any single earnings report, but it's arguably the more consequential one for the broader economy. Rising Treasury yields make borrowing more expensive across the board, from mortgages to corporate debt, and tend to make bonds more attractive relative to stocks, a dynamic that's weighed on rate-sensitive sectors even as AI-linked names have powered through it. Wells Fargo Investment Institute's Tracie McMillion noted that corporate earnings have continued to show resilience despite the headwinds, but added that whether that strength can hold up as borrowing costs stay elevated remains the key question hanging over markets."
+    },
+    {
+      "type": "paragraph",
+      "text": "Federal Reserve Vice Chairman Philip Jefferson weighed in on the tension directly this week, acknowledging that inflation has remained too high for too long even as he signaled the central bank needs more time before making further moves on interest rates. Manufacturing data added a modestly encouraging note: the final September ISM Manufacturing PMI came in at 55.9, its highest reading in more than four years and the 14th consecutive month of expansion, even after a downward revision from its initial estimate."
+    },
+    {
+      "type": "heading",
+      "text": "What investors are watching next"
+    },
+    {
+      "type": "paragraph",
+      "text": "All eyes are now on Friday's September jobs report, widely seen as the next major data point that could shape expectations for the Fed's next move on rates. Investors are also digesting corporate developments beyond earnings, including reports that Anthropic is exploring a public listing as early as mid-November, and continued volatility in energy markets tied to the ongoing conflict in the Middle East. For now, strategists describe the market as holding two competing stories at once: an AI-driven rally that keeps setting records, and a bond market quietly signaling that borrowing costs are a bigger problem than the headline index levels suggest."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Yahoo Finance — Dow, S&P 500, Nasdaq open higher to start October 2026", "url": "https://finance.yahoo.com/markets/stocks/articles/dow-p-500-nasdaq-open-140619252.html" },
+    { "label": "Charles Schwab — Stocks Up on Firm Tech Despite 24-Year Yield Highs", "url": "https://www.schwab.com/learn/story/stock-market-update-open" },
+    { "label": "Edward Jones — Daily Market Recap", "url": "https://www.edwardjones.com/us-en/market-news-insights/stock-market-news/daily-market-recap" }
+  ],
+  "takeaways": [
+    "Micron's revenue quadrupled from a year earlier, extending a roughly 270% year-to-date stock gain and lifting the broader chip sector to start October.",
+    "The 10-year Treasury yield pushed to nearly 5.33%, its highest level in about 24 years, even as the S&P 500 notched fresh record closes.",
+    "Nike shares fell to near 12-year lows after disappointing sales and announced layoffs, while investors now await Friday's September jobs report for direction on the Fed's next move."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Source links identify the material used for the main claims; Friday's jobs report and later market developments may supersede parts of this account.",
+  "contentType": "Analysis"
+},
+    {
       "slug": "fed-rate-cut-september-2026-stocks-mixed-oracle-earnings-trump-xi-summit",
       "headline": "Stocks End Choppy Week as Fed Cuts Rates, Yields Climb",
       "dek": "The Federal Reserve's rate cut couldn't stop rising Treasury yields and a strong dollar from handing the S&P 500 a losing week, despite Oracle's earnings rally.",
