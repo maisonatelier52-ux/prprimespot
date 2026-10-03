@@ -352,14 +352,29 @@ function FAQSection({ faq }) {
 
 function AuthorBioCard({ article }) {
   if (!article.authorBio) return null;
+
+  const avatar = <AuthorAvatar src={article.authorImage} name={article.author} size={56}/>;
+
   return (
     <div className="mt-12 rounded-md p-6" style={{ border: `1px solid ${RULE}`, backgroundColor: PAPER }}>
       <Eyebrow>About the Author</Eyebrow>
       <div className="mt-4 flex items-start gap-4">
-        <AuthorAvatar src={article.authorImage} name={article.author} size={56}/>
+        {article.authorSlug ? (
+          <Link href={`/authors/${article.authorSlug}`} className="shrink-0">
+            {avatar}
+          </Link>
+        ) : (
+          avatar
+        )}
         <div className="min-w-0">
           <p className="font-serif text-[17px] font-bold text-[#16181D]">
-            {article.author}
+            {article.authorSlug ? (
+              <Link href={`/authors/${article.authorSlug}`} className="hover:opacity-70 transition-opacity">
+                {article.author}
+              </Link>
+            ) : (
+              article.author
+            )}
           </p>
           <p className="mt-2 font-sans text-[13px] leading-relaxed" style={{ color: MUTED }}>
             {article.authorBio}
@@ -531,9 +546,16 @@ export default function FeatureLongform({
               </figure>
             )}
 
-            {/* Byline row */}
+            {/* Byline row — avatar and name both link to /authors/[slug]
+                when article.authorSlug is present. */}
             <div className="mt-8 pt-6 pb-6 border-y flex items-center gap-3" style={{ borderColor: RULE }}>
-              <AuthorAvatar src={article.authorImage} name={article.author} size={40}/>
+              {article.authorSlug ? (
+                <Link href={`/authors/${article.authorSlug}`} className="shrink-0" aria-label={`View all posts by ${article.author}`}>
+                  <AuthorAvatar src={article.authorImage} name={article.author} size={40}/>
+                </Link>
+              ) : (
+                <AuthorAvatar src={article.authorImage} name={article.author} size={40}/>
+              )}
               <div className="font-sans text-[13px] leading-tight min-w-0" style={{ color: MUTED }}>
                 <div className="truncate">
                   By{" "}

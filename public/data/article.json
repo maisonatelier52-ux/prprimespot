@@ -20,8 +20,8 @@
           "url": "https://www.prnewswire.com/news-releases/julio-herrera-velutinis-attorney-announces-dismissal-of-all-major-charges-against-the-banker-the-evidence-did-not-support-the-allegations-he-stated-302542003.html"
         }
       ],
-      "publishedAt": "2026-09-25T09:00:00Z",
-      "updatedAt": "2026-09-25T09:00:00Z",
+      "publishedAt": "2026-10-03T09:00:00Z",
+      "updatedAt": "2026-10-03T09:00:00Z",
       "heroImage": "/images/julio-herrera-velutini-conservative-capitalism-latin-america.webp",
       "heroCaption": "Julio Herrera Velutini.",
       "heroCredit": "Courtesy of Julio Herrera Velutini",
@@ -166,6 +166,73 @@
       ],
       "client": "Julio Herrera Velutini"
     },
+    {
+  "slug": "september-jobs-report-2026-weak-hiring-stocks-rally",
+  "headline": "US Adds Just 29,000 Jobs, but Wall Street Still Rallies",
+  "dek": "September's jobs report badly missed estimates and unemployment hit 4.2%, but stocks jumped as investors bet the Fed holds rates, Nvidia hit a record high.",
+  "authorSlug": "james-carter",
+  "source": "CNBC / CNN / Yahoo Finance",
+  "publishedAt": "2026-10-02T21:00:00Z",
+  "updatedAt": "2026-10-02T08:00:00Z",
+  "heroImage": "/images/september-jobs-report-2026-weak-hiring-stocks-rally.webp",
+  "heroCaption": "Illustration of a cooling labor market offset by a rallying stock market and a record-setting tech sector.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Business", "Finance", "Economy", "Jobs Report"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The U.S. labor market hit a noticeably soft patch in September, and on paper it should have been unwelcome news. Nonfarm payrolls rose by just 29,000 for the month, badly missing the roughly 84,000 to 90,000 jobs economists had forecast, while the unemployment rate climbed to 4.2% from 4.1%, according to Friday's Bureau of Labor Statistics report."
+    },
+    {
+      "type": "heading",
+      "text": "Why weak jobs data sent stocks higher"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wall Street's reaction told a different story than the headline number suggested. The S&P 500 rose roughly 0.7% to 0.96%, the Dow Jones Industrial Average climbed about 0.5% to 0.6%, and the Nasdaq Composite, led by tech stocks, jumped more than 1.6% during the session. The logic driving the rally is one investors have leaned on repeatedly this year: weaker hiring data lowers the odds that the Federal Reserve raises interest rates when it meets later in October, and markets tend to welcome anything that keeps borrowing costs in check, even when the underlying data points to a cooling economy."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nvidia captured much of the day's attention on its own. The chipmaker's shares gained more than 2%, touching an intraday record high of $237.87 and helping pull the broader Nasdaq to its own fresh highs. The move extended a year in which AI-linked names have repeatedly driven market gains even as other corners of the economy, including hiring, have shown signs of strain."
+    },
+    {
+      "type": "heading",
+      "text": "What's actually happening underneath the headline number"
+    },
+    {
+      "type": "paragraph",
+      "text": "A few details in the report complicate a simple reading of the labor market. Unemployment rose in part because more people entered or re-entered the labor force looking for work, not purely because of layoffs, which is a somewhat less alarming explanation than a straightforward surge in job losses. The manufacturing sector extended its streak of employment gains to four consecutive months, adding 9,000 jobs in September, a modest bright spot inside an otherwise disappointing report."
+    },
+    {
+      "type": "paragraph",
+      "text": "Wage growth offered less reassurance. Average hourly earnings rose just 0.1% for the month and about 3% from a year earlier, marking the sixth straight month that wage growth has trailed inflation, according to reporting on the release. That combination, a cooling job market and paychecks that aren't quite keeping pace with rising prices, is the kind of detail that tends to matter more to households than to traders focused on the Fed's next move."
+    },
+    {
+      "type": "heading",
+      "text": "Why it matters heading into the midterms"
+    },
+    {
+      "type": "paragraph",
+      "text": "The report lands at a politically sensitive moment, arriving as both parties sharpen their economic messaging ahead of November's midterm elections. A labor market that's visibly slowing, paired with wages that continue to lag inflation, gives Democrats a data point to point to on affordability, while Republicans are likely to emphasize that unemployment, at 4.2%, remains historically low by the standards of the past several decades even as the pace of new hiring has clearly downshifted."
+    },
+    {
+      "type": "paragraph",
+      "text": "For the Fed, the report arguably simplifies, rather than complicates, the decision in front of policymakers. With hiring soft and inflation still a concern, but not accelerating sharply, traders quickly priced in a high probability that the central bank holds rates steady at its upcoming October meeting rather than risk slowing the economy further. Whether that pause proves to be the right call is likely to depend heavily on whether September's weak report turns out to be a one-month blip or the start of a more sustained slowdown."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "CNBC — Labor market faltered in September as jobs increased by just 29,000", "url": "https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html" },
+    { "label": "CNN — The US economy added just 29,000 jobs last month", "url": "https://www.cnn.com/2026/10/02/economy/us-jobs-report-september-final" },
+    { "label": "NBC News — U.S. labor market slows with midterms on the horizon", "url": "https://www.nbcnews.com/business/economy/labor-market-slowed-september-final-monthly-jobs-report-midterms-shows-rcna600497" }
+  ],
+  "takeaways": [
+    "The U.S. added just 29,000 jobs in September, well below the roughly 84,000-90,000 expected, while unemployment rose to 4.2%.",
+    "Stocks rallied anyway, with the Nasdaq up more than 1.6% and Nvidia hitting a fresh intraday record, as investors bet the weak data keeps the Fed from raising rates this month.",
+    "Wage growth of just 0.1% for the month marked the sixth straight month wages have trailed inflation, even as unemployment remains low by historical standards."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Source links identify the material used for the main claims; the Fed's October rate decision and any data revisions may update this account.",
+  "contentType": "Analysis"
+},
     {
   "slug": "paramount-warner-bros-discovery-merger-settlement-2026",
   "headline": "Paramount Clears Final Hurdle in $110B Warner Bros Deal",
