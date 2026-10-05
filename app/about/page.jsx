@@ -169,9 +169,7 @@ export default function AboutPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Breadcrumb */}

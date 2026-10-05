@@ -12,12 +12,6 @@
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
-/* No prefers-color-scheme override: every component hardcodes the light
-   newspaper palette (paper #FAFAF7 / ink #1A1A1A), so flipping only these
-   two body-level variables left dark body background showing through the
-   gaps between sections. Reinstate this block only alongside a real
-   dark-mode pass across components/. */
-
 body {
   background: var(--background);
   color: var(--foreground);

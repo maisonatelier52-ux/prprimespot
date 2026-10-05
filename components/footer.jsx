@@ -81,13 +81,7 @@ function RedditIcon() {
 
 function SocialIcon({ label, href = "#", children }) {
   return (
-    <a
-      href={href}
-      aria-label={label}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8D8D8] text-[#1A1A1A] hover:border-[#D01418] hover:text-[#D01418] transition-colors"
-    >
+    <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8D8D8] text-[#1A1A1A] hover:border-[#D01418] hover:text-[#D01418] transition-colors">
       {children}
     </a>
   );
@@ -169,15 +163,7 @@ export default function Footer() {
               ) : (
                 <form onSubmit={handleSubmit} className="flex">
                   <label htmlFor="footer-email" className="sr-only">Email address</label>
-                  <input
-                    id="footer-email"
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Email address"
-                    className="min-w-0 flex-1 rounded-l-sm border border-[#D8D8D8] bg-white px-3 py-2 font-sans text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] focus:outline-none focus:border-[#D01418]"
-                  />
+                  <input id="footer-email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email address" className="min-w-0 flex-1 rounded-l-sm border border-[#D8D8D8] bg-white px-3 py-2 font-sans text-sm text-[#1A1A1A] placeholder:text-[#A0A0A0] focus:outline-none focus:border-[#D01418]"/>
                   <button type="submit" className="shrink-0 rounded-r-sm bg-[#D01418] px-4 py-2 font-sans text-sm font-medium text-white hover:bg-[#b01115] transition-colors">
                     Sign up
                   </button>

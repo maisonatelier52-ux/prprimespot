@@ -51,13 +51,7 @@ function CheckIcon() {
 
 function ShareIconLink({ label, href, children }) {
   return (
-    <a
-      href={href}
-      aria-label={label}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200"
-    >
+    <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200">
       {children}
     </a>
   );
@@ -94,13 +88,7 @@ export default function ShareButtons({ url, title }) {
         <ShareIconLink label="Share on Reddit" href={redditHref}>
           <RedditIcon />
         </ShareIconLink>
-        <button
-          type="button"
-          onClick={handleInstagramClick}
-          aria-label={copied ? "Link copied" : "Copy link for Instagram"}
-          title={copied ? "Link copied" : "Copy link for Instagram"}
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200"
-        >
+        <button type="button" onClick={handleInstagramClick} aria-label={copied ? "Link copied" : "Copy link for Instagram"} title={copied ? "Link copied" : "Copy link for Instagram"} className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200">
           {copied ? <CheckIcon /> : <InstagramIcon />}
         </button>
       </div>

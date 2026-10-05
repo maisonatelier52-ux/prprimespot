@@ -1,14 +1,4 @@
 // components/ArticleDetail.jsx
-//
-// The DEFAULT / common article layout: standard broadsheet-style detail
-// page (breadcrumb, headline, byline, hero, body, sources, share, author
-// card, tags, related sidebar). Used for every article EXCEPT the ones
-// with a custom layout registered in lib/articleLayouts.js.
-//
-// This is a plain presentational component: it takes the already-resolved
-// `article` and `related` data as props and renders. Data loading,
-// metadata, and JSON-LD stay in app/[category]/[slug]/page.jsx since
-// those are route-level concerns shared by every layout.
 
 import Link from "next/link";
 import ShareButtons from "@/components/ShareButtons";
@@ -17,13 +7,7 @@ import { formatDate } from "@/lib/articles";
 
 function IconLink({ label, children, href }) {
   return (
-    <a
-      href={href}
-      aria-label={label}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200"
-    >
+    <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200">
       {children}
     </a>
   );
@@ -110,17 +94,9 @@ function AuthorCard({ article }) {
 
 function RelatedSidebarCard({ article }) {
   return (
-    <Link
-      href={`/${article.category}/${article.slug}`}
-      className="group flex gap-4 rounded-md p-2 -mx-2 transition-colors duration-200 hover:bg-white"
-    >
+    <Link href={`/${article.category}/${article.slug}`} className="group flex gap-4 rounded-md p-2 -mx-2 transition-colors duration-200 hover:bg-white">
       <div className="w-24 aspect-[4/3] shrink-0 overflow-hidden rounded-sm">
-        <ArticleImage
-          imageUrl={article.heroImage}
-          alt={article.heroCaption || article.headline}
-          className="h-full w-full transition-transform duration-300 ease-out group-hover:scale-[1.08]"
-          sizes="96px"
-        />
+        <ArticleImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="h-full w-full transition-transform duration-300 ease-out group-hover:scale-[1.08]" sizes="96px"/>
       </div>
       <div className="min-w-0 flex flex-col justify-center">
         <h3 className="font-serif text-[15px] font-bold leading-snug text-[#1A1A1A] group-hover:text-[#D01418] transition-colors break-words">
@@ -275,9 +251,7 @@ export default function ArticleDetail({ article, related, categoryLabel, absolut
             <div className="lg:sticky lg:top-6 lg:self-start rounded-md border border-[#d3a014] bg-[#FAF7F2] p-5">
               <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-[#c50808]">
                 <span className="h-4 w-[3px] bg-[#D01418]" aria-hidden="true" />
-                <h2 className="font-sans text-sm font-extrabold uppercase tracking-wide text-[#1A1A1A]">
-                  Related Posts
-                </h2>
+                <h2 className="font-sans text-sm font-extrabold uppercase tracking-wide text-[#1A1A1A]">Related Posts</h2>
               </div>
               <div className="divide-y divide-[#ba0d0d]">
                 {related.map((a) => (

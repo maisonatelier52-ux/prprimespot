@@ -14,8 +14,6 @@ import { CATEGORY_LABELS, getCategoryLabel } from "@/lib/categories";
 
 const FALLBACK_IMAGE = "/og-image.jpg";
 
-// Fixed 140-155 character meta descriptions, one per category. Keys must
-// match the top-level keys in public/data/article.json.
 const CATEGORY_DESCRIPTIONS = {
   business:
     "Business news from PR Primespot: mergers, earnings, company strategy and market-moving deals, with clear analysis of what they mean for the U.S. economy.",
@@ -49,14 +47,6 @@ function isKnownCategory(category) {
 function getArticlesByCategory(category) {
   const key = category?.toLowerCase();
   const posts = articlesData[key] || [];
-  // Real nav categories (business, finance, world, us, politics, sports)
-  // hide `hideFromListings: true` posts, since those are client/pillar
-  // pieces filed elsewhere that shouldn't clutter a general news listing.
-  // A client/pillar hub category (e.g. "julio-herrera-velutini") is NOT
-  // in CATEGORY_LABELS and exists specifically to host those pieces —
-  // hiding them from *this* page too would make the hub permanently
-  // empty. They're already excluded from the homepage and author pages
-  // (those filters are separate and unaffected by this).
   const isNavCategory = Object.hasOwn(CATEGORY_LABELS, key);
 
   return posts
@@ -248,9 +238,7 @@ export default async function CategoryPage({ params }) {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Breadcrumb */}

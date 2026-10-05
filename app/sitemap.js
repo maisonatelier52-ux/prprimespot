@@ -9,9 +9,6 @@ function newestDate(posts) {
   }, null);
 }
 
-// Static, non-article pages. Content pages (About, Contact) get a
-// slightly higher priority than pure legal/policy boilerplate, since
-// they're more likely to be useful search-landing pages.
 const STATIC_PAGES = [
   { path: "/about", changeFrequency: "monthly", priority: 0.5 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
@@ -55,9 +52,6 @@ export default function sitemap() {
     url: `${SITE_URL}/${post.category}/${post.slug}`,
     lastModified: post.updatedAt || post.publishedAt || undefined,
     changeFrequency: "weekly",
-    // Most articles get the default 0.7. A post can opt into a higher
-    // (or lower) value by setting "sitemapPriority" in article.json —
-    // used sparingly, e.g. for a small number of flagship features.
     priority: typeof post.sitemapPriority === "number" ? post.sitemapPriority : 0.7,
     ...(post.heroImage
       ? { images: [`${SITE_URL}${post.heroImage.startsWith("/") ? "" : "/"}${post.heroImage}`] }
@@ -65,8 +59,6 @@ export default function sitemap() {
   }));
 
   // An author page changes when that author publishes or updates a post,
-  // so its lastModified is the newest date among the posts shown on it
-  // (hideFromListings posts don't appear on author pages, so they're skipped).
   const authors = Object.keys(authorsData).map((author) => {
     const authorPosts = allArticles.filter(
       (post) => post.authorSlug === author && !post.hideFromListings

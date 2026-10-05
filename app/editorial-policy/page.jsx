@@ -2,11 +2,8 @@ import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
 const CONTACT_EMAIL = "prprimespot@gmail.com";
-
 const PAGE_TITLE = "Editorial Policy";
-
 const PAGE_DESCRIPTION = `The editorial standards and independence that guide reporting on ${SITE_NAME}.`;
-
 const LAST_UPDATED = "September 17, 2026";
 
 const SECTIONS = [
@@ -141,9 +138,7 @@ export default function EditorialPolicyPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Breadcrumb */}

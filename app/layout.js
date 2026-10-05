@@ -4,10 +4,6 @@ import Footer from "@/components/footer";
 import { SITE_URL, SITE_NAME, SITE_TWITTER_HANDLE } from "@/lib/site";
 import "./globals.css";
 
-// Self-hosted at build time by next/font — no runtime request to Google,
-// no render-blocking external call. display: "swap" shows the fallback
-// (Arial, via the --font-sans chain in globals.css) immediately and swaps
-// to Geist once it's loaded, so there's no invisible-text flash.
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,9 +16,6 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-// Shared with the openGraph/twitter fallback blocks below — kept as
-// plain strings (rather than only living inside `metadata.title`/
-// `.description`) so those blocks can reuse the exact same copy.
 const DEFAULT_TITLE = `${SITE_NAME} – Business, Finance, World & U.S. Politics`;
 const DEFAULT_DESCRIPTION =
   "Stay updated with U.S. breaking news, business, finance, world affairs, politics, and sports, with real-time coverage, trusted analysis, and essential daily insights.";
@@ -34,12 +27,7 @@ export const metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: DEFAULT_DESCRIPTION,
-
-  // Root-level fallback only. Every real route (home, category, article,
-  // author, search, policy pages) sets its own openGraph/twitter in its
-  // own generateMetadata/metadata export, which fully overrides this.
-  // This exists so a future route added without metadata still gets a
-  // usable social preview instead of none at all.
+ 
   openGraph: {
     type: "website",
     url: SITE_URL,

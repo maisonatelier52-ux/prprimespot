@@ -35,12 +35,7 @@ function PhotoImage({ imageUrl, alt, className = "" }) {
 function CameraIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M4 8.5h3l1.5-2h7L17 8.5h3a1.5 1.5 0 011.5 1.5v8a1.5 1.5 0 01-1.5 1.5H4A1.5 1.5 0 012.5 18v-8A1.5 1.5 0 014 8.5z"
-        stroke="#D01418"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
+      <path d="M4 8.5h3l1.5-2h7L17 8.5h3a1.5 1.5 0 011.5 1.5v8a1.5 1.5 0 01-1.5 1.5H4A1.5 1.5 0 012.5 18v-8A1.5 1.5 0 014 8.5z" stroke="#D01418" strokeWidth="1.6" strokeLinejoin="round"/>
       <circle cx="12" cy="13.5" r="3.2" stroke="#D01418" strokeWidth="1.6" />
     </svg>
   );

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, SITE_SOCIAL_LINKS, getAbsoluteUrl, getOrganizationSchema } from "@/lib/site";
 
 const PAGE_TITLE = "Contact";
-
 const PAGE_DESCRIPTION = `How to get in touch with ${SITE_NAME} — editorial, corrections, advertising, and general inquiries.`;
 
 const CONTACT_CHANNELS = [
@@ -108,9 +107,7 @@ export default function ContactPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Breadcrumb */}
@@ -153,13 +150,7 @@ export default function ContactPage() {
           <h2 className="font-sans text-lg font-extrabold uppercase tracking-wide text-[#1A1A1A] mb-4">Follow Us</h2>
           <div className="flex flex-wrap gap-2 mb-8">
             {Object.entries(SITE_SOCIAL_LINKS).map(([platform, url]) => (
-              <a
-                key={platform}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-[#E0DDD5] px-4 py-1.5 font-sans text-sm capitalize text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors"
-              >
+              <a key={platform} href={url} target="_blank" rel="noopener noreferrer" className="rounded-full border border-[#E0DDD5] px-4 py-1.5 font-sans text-sm capitalize text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors">
                 {platform}
               </a>
             ))}

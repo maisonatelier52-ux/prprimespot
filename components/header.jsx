@@ -4,9 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { SITE_NAME, SITE_SOCIAL_LINKS } from "@/lib/site";
-// Shared with the /search page (app/search/page.jsx) so the header dropdown
-// and the full search page always agree on what counts as a match, instead
-// of maintaining two copies of the same filter logic.
 import { searchArticles } from "@/lib/articles";
 
 const NAV_LINKS = ["Home", "Business", "Finance", "World", "U.S.", "Politics", "Sports"];
@@ -42,17 +39,9 @@ function IconButton({ label, children, href = "#", onClick }) {
   );
 }
 
-// Bordered circle treatment for the social row — fills solid red on hover
-// instead of just a tinted background, a bit more premium than IconButton.
 function SocialIconButton({ label, children, href = "#" }) {
   return (
-    <a
-      href={href}
-      aria-label={label}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
-    >
+    <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
       {children}
     </a>
   );
@@ -165,10 +154,7 @@ export default function Header() {
     setSearchOpen(false);
     setQuery("");
   }
-
-  // Enter (or tapping the dropdown's "See all results" link) sends the
-  // visitor to the real /search page instead of only ever showing the
-  // top 8 matches in this dropdown.
+  
   function handleSearchSubmit(e) {
     e.preventDefault();
     const trimmed = query.trim();
@@ -247,11 +233,7 @@ export default function Header() {
 
           {/* right — subscribe / search (desktop) */}
           <div className="hidden md:flex items-center justify-end gap-5 font-sans text-sm">
-            <button
-              type="button"
-              onClick={openSubscribe}
-              className="rounded-full bg-[#D01418] px-5 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-[#a80f13] hover:shadow-md transition-all"
-            >
+            <button type="button" onClick={openSubscribe} className="rounded-full bg-[#D01418] px-5 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-[#a80f13] hover:shadow-md transition-all">
               Subscribe
             </button>
             <IconButton label={searchOpen ? "Close search" : "Search"} onClick={toggleSearch}>
@@ -261,13 +243,7 @@ export default function Header() {
 
           {/* right — menu trigger (mobile) */}
           <div className="flex md:hidden items-center justify-end gap-1 sm:gap-2">
-            <button
-              type="button"
-              onClick={() => setMenuOpen(true)}
-              className="flex h-8 w-8 items-center justify-center rounded-full text-[#1A1A1A] hover:bg-[#F5EEDD] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D01418] focus-visible:ring-offset-2"
-              aria-label="Open menu"
-              aria-expanded={menuOpen}
-            >
+            <button type="button" onClick={() => setMenuOpen(true)} className="flex h-8 w-8 items-center justify-center rounded-full text-[#1A1A1A] hover:bg-[#F5EEDD] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D01418] focus-visible:ring-offset-2" aria-label="Open menu" aria-expanded={menuOpen}>
               <MenuIcon />
             </button>
           </div>
@@ -279,16 +255,7 @@ export default function Header() {
         <div className="border-t border-[#E5E5E5] bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
             <form role="search" onSubmit={handleSearchSubmit}>
-              <input
-                type="search"
-                name="q"
-                autoFocus
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                onKeyDown={(e) => e.key === "Escape" && closeSearch()}
-                placeholder="Search articles..."
-                className="w-full border border-[#E5E5E5] rounded-sm px-4 py-2 font-sans text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D01418]"
-              />
+              <input type="search" name="q" autoFocus value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={(e) => e.key === "Escape" && closeSearch()} placeholder="Search articles..." className="w-full border border-[#E5E5E5] rounded-sm px-4 py-2 font-sans text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D01418]"/>
             </form>
 
             {query.trim() && (
@@ -300,23 +267,14 @@ export default function Header() {
                 ) : (
                   <>
                     {results.map((article) => (
-                      <Link
-                        key={`${article.category}-${article.slug}`}
-                        href={`/${slugify(article.category)}/${article.slug}`}
-                        onClick={closeSearch}
-                        className="flex items-center justify-between gap-4 py-3 hover:bg-[#F7F5EF] transition-colors"
-                      >
+                      <Link key={`${article.category}-${article.slug}`} href={`/${slugify(article.category)}/${article.slug}`} onClick={closeSearch} className="flex items-center justify-between gap-4 py-3 hover:bg-[#F7F5EF] transition-colors">
                         <span className="font-sans text-sm text-[#1A1A1A]">{article.headline}</span>
                         <span className="shrink-0 font-sans text-[10px] font-bold uppercase tracking-wide text-[#D01418]">
                           {article.category}
                         </span>
                       </Link>
                     ))}
-                    <Link
-                      href={`/search?q=${encodeURIComponent(query.trim())}`}
-                      onClick={closeSearch}
-                      className="block py-3 font-sans text-sm font-bold text-[#D01418] hover:underline"
-                    >
+                    <Link href={`/search?q=${encodeURIComponent(query.trim())}`} onClick={closeSearch} className="block py-3 font-sans text-sm font-bold text-[#D01418] hover:underline">
                       See all results for &ldquo;{query.trim()}&rdquo;
                     </Link>
                   </>
@@ -354,10 +312,7 @@ export default function Header() {
         aria-hidden={!menuOpen}
       >
         {/* backdrop */}
-        <div
-          onClick={() => setMenuOpen(false)}
-          className="absolute inset-0 bg-black/40"
-        />
+        <div onClick={() => setMenuOpen(false)} className="absolute inset-0 bg-black/40"/>
 
         {/* panel */}
         <div
@@ -369,12 +324,7 @@ export default function Header() {
         >
           <div className="flex items-center justify-between px-5 h-16 border-b border-[#E5E5E5]">
             <span className="font-serif text-lg font-bold text-[#D01418]">Menu</span>
-            <button
-              type="button"
-              onClick={() => setMenuOpen(false)}
-              className="flex h-8 w-8 items-center justify-center rounded-full text-[#1A1A1A] hover:bg-[#F5EEDD] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D01418] focus-visible:ring-offset-2"
-              aria-label="Close menu"
-            >
+            <button type="button" onClick={() => setMenuOpen(false)} className="flex h-8 w-8 items-center justify-center rounded-full text-[#1A1A1A] hover:bg-[#F5EEDD] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D01418] focus-visible:ring-offset-2" aria-label="Close menu">
               <CloseIcon />
             </button>
           </div>
@@ -382,23 +332,13 @@ export default function Header() {
           <nav className="flex flex-col px-5 py-2">
             {NAV_LINKS.map((label) =>
               label === "Home" ? (
-                <Link
-                  key={label}
-                  href={navHref(label)}
-                  onClick={() => setMenuOpen(false)}
-                  className="py-3 border-b border-[#E5E5E5] last:border-none font-sans text-sm font-medium uppercase tracking-wide text-[#1A1A1A] transition-all"
-                >
+                <Link key={label} href={navHref(label)} onClick={() => setMenuOpen(false)} className="py-3 border-b border-[#E5E5E5] last:border-none font-sans text-sm font-medium uppercase tracking-wide text-[#1A1A1A] transition-all">
                   <span className="inline-block rounded-full bg-[#E8B23D] px-3 py-1 hover:bg-[#d9a22e] transition-colors">
                     {label}
                   </span>
                 </Link>
               ) : (
-                <Link
-                  key={label}
-                  href={navHref(label)}
-                  onClick={() => setMenuOpen(false)}
-                  className="py-3 border-b border-[#E5E5E5] last:border-none font-sans text-sm font-medium uppercase tracking-wide text-[#1A1A1A] hover:text-[#D01418] hover:pl-1 transition-all"
-                >
+                <Link key={label} href={navHref(label)} onClick={() => setMenuOpen(false)} className="py-3 border-b border-[#E5E5E5] last:border-none font-sans text-sm font-medium uppercase tracking-wide text-[#1A1A1A] hover:text-[#D01418] hover:pl-1 transition-all">
                   {label}
                 </Link>
               )
@@ -406,8 +346,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-4 px-5 pt-4">
-            <button
-              type="button"
+            <button type="button"
               onClick={() => {
                 setMenuOpen(false);
                 openSubscribe();
@@ -431,21 +370,12 @@ export default function Header() {
         <div onClick={closeSubscribe} className="absolute inset-0 bg-black/50" />
 
         {/* dialog */}
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={`Subscribe to ${SITE_NAME}`}
-          onKeyDown={(e) => e.key === "Escape" && closeSubscribe()}
+        <div role="dialog" aria-modal="true" aria-label={`Subscribe to ${SITE_NAME}`} onKeyDown={(e) => e.key === "Escape" && closeSubscribe()}
           className={`relative w-full max-w-sm bg-white rounded-md shadow-2xl px-6 py-7 transition-all duration-300 ${
             subscribeOpen ? "translate-y-0 scale-100" : "translate-y-4 scale-95"
           }`}
         >
-          <button
-            type="button"
-            onClick={closeSubscribe}
-            aria-label="Close"
-            className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full text-[#1A1A1A] hover:bg-[#F5EEDD] hover:text-[#D01418] transition-colors"
-          >
+          <button type="button" onClick={closeSubscribe} aria-label="Close" className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full text-[#1A1A1A] hover:bg-[#F5EEDD] hover:text-[#D01418] transition-colors">
             <CloseIcon />
           </button>
 
@@ -462,15 +392,7 @@ export default function Header() {
               <p className="font-sans text-sm text-[#8A8A8A] mb-5">Get top stories delivered straight to your inbox.</p>
               <form onSubmit={handleSubscribeSubmit} noValidate>
                 <label htmlFor="subscribe-email" className="sr-only">Email address</label>
-                <input
-                  id="subscribe-email"
-                  type="email"
-                  autoFocus
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@example.com"
-                  className="w-full border border-[#E5E5E5] rounded-sm px-4 py-2 font-sans text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D01418]"
-                />
+                <input id="subscribe-email" type="email" autoFocus value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" className="w-full border border-[#E5E5E5] rounded-sm px-4 py-2 font-sans text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D01418]"/>
                 {subscribeError && (
                   <p className="mt-2 font-sans text-xs text-[#D01418]">{subscribeError}</p>
                 )}

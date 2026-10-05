@@ -46,8 +46,7 @@ function Eyebrow({ children, color = ACCENT }) {
 function AuthorAvatar({ src, name, size = 40 }) {
   if (!src) return null;
   return (
-    <span
-      className="inline-block shrink-0 rounded-full overflow-hidden"
+    <span className="inline-block shrink-0 rounded-full overflow-hidden"
       style={{
         width: size,
         height: size,
@@ -60,9 +59,6 @@ function AuthorAvatar({ src, name, size = 40 }) {
 }
 
 // Internal links for Julio Herrera Velutini's main article.
-// The article text in public/data/article.json is NOT edited: these phrases
-// are matched at render time and turned into links to the 5 pillar pages.
-// Each phrase is linked once (first match in a paragraph).
 const PILLAR = "/julio-herrera-velutini/julio-herrera-velutini-";
 const INTERNAL_LINKS = {
   "julio-herrera-velutini-conservative-capitalism-latin-america": [
@@ -106,8 +102,7 @@ function DropCapParagraph({ text, links }) {
   const rest = text.slice(1);
   return (
     <p className="font-serif text-[19px] leading-[1.85] text-[#16181D] break-words mb-7">
-      <span
-        className="float-left font-serif font-bold leading-[0.8] pr-3 pt-1 mr-1"
+      <span className="float-left font-serif font-bold leading-[0.8] pr-3 pt-1 mr-1"
         style={{
           fontSize: "3.8rem",
           color: ACCENT,
@@ -125,16 +120,13 @@ function DropCapParagraph({ text, links }) {
 function PullQuote({ text, attribution }) {
   if (!text) return null;
   return (
-    <figure
-      className="relative my-14 -mx-2 sm:-mx-6 px-6 sm:px-10 py-10 rounded-sm overflow-hidden"
+    <figure className="relative my-14 -mx-2 sm:-mx-6 px-6 sm:px-10 py-10 rounded-sm overflow-hidden"
       style={{
         backgroundColor: QUOTE_BG,
         borderLeft: `4px solid ${ACCENT}`,
       }}
     >
-      <span
-        aria-hidden="true"
-        className="absolute font-serif italic leading-none pointer-events-none select-none"
+      <span aria-hidden="true" className="absolute font-serif italic leading-none pointer-events-none select-none"
         style={{
           top: "-14px",
           right: "14px",
@@ -146,8 +138,7 @@ function PullQuote({ text, attribution }) {
         &rdquo;
       </span>
 
-      <blockquote
-        className="relative font-serif italic text-[#16181D]"
+      <blockquote className="relative font-serif italic text-[#16181D]"
         style={{
           fontSize: "clamp(22px, 2.2vw, 28px)",
           lineHeight: 1.4,
@@ -175,8 +166,7 @@ function SectionHeading({ text, index }) {
   return (
     <div className="mt-16 mb-6">
       <div className="flex items-start gap-3">
-        <span
-          className="font-serif italic shrink-0 pt-[10px]"
+        <span className="font-serif italic shrink-0 pt-[10px]"
           style={{
             color: ACCENT,
             fontSize: "18px",
@@ -221,8 +211,7 @@ function FactRow({ fact, index }) {
 function AtAGlanceCard({ facts }) {
   if (!facts || facts.length === 0) return null;
   return (
-    <aside
-      className="rounded-md overflow-hidden"
+    <aside className="rounded-md overflow-hidden"
       style={{
         border: `1px solid ${RULE}`,
         boxShadow:
@@ -230,9 +219,7 @@ function AtAGlanceCard({ facts }) {
       }}
     >
       <div className="relative px-5 py-4" style={{ backgroundColor: ACCENT_DEEP }}>
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
+        <span aria-hidden="true" className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
               "repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 8px)",
@@ -259,8 +246,7 @@ function AtAGlanceCard({ facts }) {
 function TagsPanel({ tags }) {
   if (!tags || tags.length === 0) return null;
   return (
-    <div
-      className="rounded-md p-5"
+    <div className="rounded-md p-5"
       style={{
         border: `1px solid ${RULE}`,
         backgroundColor: PAPER_WARM,
@@ -272,9 +258,7 @@ function TagsPanel({ tags }) {
       </div>
       <div className="flex flex-wrap gap-2">
         {tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full px-3 py-1 font-sans text-[11px] uppercase tracking-[0.12em]"
+          <span key={tag} className="rounded-full px-3 py-1 font-sans text-[11px] uppercase tracking-[0.12em]"
             style={{
               backgroundColor: CHIP,
               color: ACCENT,
@@ -317,9 +301,7 @@ function FAQSection({ faq }) {
       <Eyebrow>Frequently Asked Questions</Eyebrow>
       <div className="mt-5 rounded-md overflow-hidden" style={{ border: `1px solid ${RULE}` }}>
         {faq.map((item, i) => (
-          <details
-            key={i}
-            className="group"
+          <details key={i} className="group"
             style={{
               backgroundColor: i % 2 === 0 ? PAPER : "#FFFFFF",
               borderTop: i === 0 ? "none" : `1px solid ${RULE_SOFT}`,
@@ -450,17 +432,11 @@ export default function FeatureLongform({
       : buildFallbackFacts(article, categoryLabel);
 
   // Client-package pieces (see RelatedClientPosts below) carry an
-  // article.client value that isn't part of atAGlance/buildFallbackFacts,
-  // so surface it explicitly as the first fact whenever it's set.
   const facts =
     article.client && !baseFacts.some((f) => f.label === "Subject")
       ? [{ label: "Subject", value: article.client }, ...baseFacts]
       : baseFacts;
-
-  // Precompute each block's heading index and "is this the very first
-  // paragraph" flag BEFORE any JSX is built, using reduce (no reassigned
-  // `let` counters) so nothing is mutated anywhere in this render function
-  // — what react-hooks/immutability (React Compiler's rule) requires.
+ 
   const bodyMeta = article.body.reduce((acc, block) => {
     const { list, headingIndex, paragraphIndex } = acc;
     if (block.type === "heading") {
@@ -633,12 +609,7 @@ export default function FeatureLongform({
             <AuthorBioCard article={article} />
           </main>
 
-          {/* ---------- SIDEBAR ----------
-              Sticky only within this two-column section — its containing
-              block is the grid row, which now ends right after the author
-              bio (RelatedClientPosts was moved out below, full-width), so
-              the sidebar naturally stops sticking once the reader scrolls
-              past the author section instead of trailing the whole page. */}
+          {/* ---------- SIDEBAR ---------- */}
           <aside className="min-w-0 lg:pt-[104px]">
             <div className="lg:sticky lg:top-8 space-y-6">
               <AtAGlanceCard facts={facts} />

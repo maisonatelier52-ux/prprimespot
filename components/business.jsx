@@ -6,10 +6,6 @@ const CATEGORY = "business";
 
 function getBusinessArticles() {
   const posts = articlesData[CATEGORY] || [];
-  // Supporting client pieces marked `hideFromListings: true` don't appear
-  // on the homepage — only via their direct URL or another client page's
-  // related-posts section. The main pillar article isn't marked this way,
-  // so it still shows here normally.
   return [...posts]
     .filter((post) => !post.hideFromListings)
     .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
@@ -27,9 +23,6 @@ function ImagePlaceholder({ label, className = "" }) {
   );
 }
 
-// Sizing classes go on the OUTER wrapper; the <img> just fills it — keeps
-// width/aspect-ratio classes from fighting a hardcoded w-full/h-full on the
-// same element.
 function StoryImage({ imageUrl, alt, className = "", priority = false }) {
   if (!imageUrl) {
     return <ImagePlaceholder label={alt || "image"} className={className} />;

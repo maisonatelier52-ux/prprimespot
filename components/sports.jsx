@@ -33,10 +33,7 @@ function StoryImage({ imageUrl, alt, className = "" }) {
 function FlameIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M12 2c1 3-2 4-2 7a4 4 0 108 0c0-1.2-.5-2-1-2.5.6 2-1 3-2 3-1.5 0-2-1.2-1.5-2.5C14 6 13 4 12 2zM8.5 14A3.5 3.5 0 0012 17.5 3.5 3.5 0 0015.5 14c0-.6-.1-1-.3-1.4-.4.9-1.3 1.4-2.2 1.4-1.4 0-2.5-1.1-2.5-2.5 0-.3 0-.6.1-.9C9.4 11.3 8.5 12.5 8.5 14z"
-        fill="#D01418"
-      />
+      <path d="M12 2c1 3-2 4-2 7a4 4 0 108 0c0-1.2-.5-2-1-2.5.6 2-1 3-2 3-1.5 0-2-1.2-1.5-2.5C14 6 13 4 12 2zM8.5 14A3.5 3.5 0 0012 17.5 3.5 3.5 0 0015.5 14c0-.6-.1-1-.3-1.4-.4.9-1.3 1.4-2.2 1.4-1.4 0-2.5-1.1-2.5-2.5 0-.3 0-.6.1-.9C9.4 11.3 8.5 12.5 8.5 14z" fill="#D01418"/>
     </svg>
   );
 }
@@ -45,11 +42,7 @@ function SportsCard({ article, rank }) {
   const href = `/${CATEGORY_SLUG}/${article.slug}`;
   return (
     <Link href={href} className="group flex items-center gap-4 py-5 border-b border-[#E5E5E5]">
-      <span
-        className="shrink-0 font-serif text-5xl font-bold leading-none text-transparent select-none"
-        style={{ WebkitTextStroke: "1.5px #A3A3A3" }}
-        aria-hidden="true"
-      >
+      <span className="shrink-0 font-serif text-5xl font-bold leading-none text-transparent select-none" style={{ WebkitTextStroke: "1.5px #A3A3A3" }} aria-hidden="true">
         {String(rank).padStart(2, "0")}
       </span>
 

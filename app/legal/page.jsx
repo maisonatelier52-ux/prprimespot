@@ -2,9 +2,7 @@ import Link from "next/link";
 import { SITE_NAME, SITE_URL, SITE_TWITTER_HANDLE, getAbsoluteUrl } from "@/lib/site";
 
 const CONTACT_EMAIL = "prprimespot@gmail.com";
-
 const PAGE_TITLE = "Legal";
-
 const PAGE_DESCRIPTION = `Publisher information, copyright notice, and legal disclosures for ${SITE_NAME}, plus links to our full policies.`;
 
 const LAST_UPDATED = "September 17, 2026";
@@ -130,9 +128,7 @@ export default function LegalPage() {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Breadcrumb */}
@@ -152,9 +148,7 @@ export default function LegalPage() {
           <div className="h-[3px] w-16 bg-[#E8B23D] mt-2 mx-auto" />
           <p className="mt-4 font-sans text-sm text-[#8A8A8A]">Last updated: {LAST_UPDATED}</p>
         </div>
-
-        {/* Related policies — directory at the top so visitors can jump
-            straight to the specific policy they're after */}
+       
         <section className="mb-12">
           <h2 className="font-sans text-lg font-extrabold uppercase tracking-wide text-[#1A1A1A] mb-4">Our Policies</h2>
           <div className="grid gap-3 sm:grid-cols-2">

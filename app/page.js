@@ -11,13 +11,6 @@ import {
   getOrganizationSchema,
 } from "@/lib/site";
 
-// ─────────────────────────────────────────────────────────────
-// Site identity (domain, name, logo, socials) now comes from
-// lib/site.js instead of being hardcoded here — see that file to
-// change the domain, name, handle, or logo path in one place.
-// ⚠️  Drop a real 1200x630 image at /public/og-image.jpg (used
-//     for Open Graph + Twitter card previews).
-// ─────────────────────────────────────────────────────────────
 const PAGE_TITLE = `${SITE_NAME} – Business, Finance, World & U.S. Politics`;
 const PAGE_DESCRIPTION =
   "Stay updated with U.S. breaking news, business, finance, world affairs, politics, and sports, with real-time coverage, trusted analysis, and essential daily insights.";
@@ -100,14 +93,6 @@ export const metadata = {
   manifest: "/site.webmanifest",
 };
 
-// JSON-LD: describes the site/org for rich results. Two @graph nodes —
-// Organization and WebSite — linked together.
-//
-// WebSite carries a SearchAction pointing at /search?q={term} (see
-// app/search/page.js), which is what lets Google show a sitelinks
-// searchbox directly under a branded result for this site. Only add this
-// back if /search is ever removed — a stale SearchAction 404s real
-// visitors and gets flagged in Search Console.
 function JsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -133,10 +118,7 @@ function JsonLd() {
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
   );
 }
 
@@ -144,10 +126,7 @@ export default function HomePage() {
   return (
     <main>
       <JsonLd />
-
-      {/* The single <h1> for the homepage. Visually hidden (sr-only) but
-          readable by search engines and screen readers. Remove "sr-only"
-          if you want it visible. Section components should use <h2>. */}
+      
       <h1 className="sr-only">
         {SITE_NAME} – U.S. Breaking News, Business, Finance, World, Politics
         &amp; Sports

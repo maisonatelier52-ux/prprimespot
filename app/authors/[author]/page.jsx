@@ -10,13 +10,11 @@ import {
   getOrganizationSchema,
 } from "@/lib/site";
 
-// Adjust these paths if this file moves relative to /public/data
 import articlesData from "../../../public/data/article.json";
 import authorsData from "../../../public/data/author.json";
 
 const FALLBACK_AVATAR = "/default-avatar.jpg";
 
-// Swap this for: const res = await fetch(`${API_URL}/authors/${authorSlug}`)
 function getAuthorBySlug(authorSlug) {
   const info = authorsData[authorSlug?.toLowerCase()];
   return info ? { slug: authorSlug.toLowerCase(), ...info } : null;
@@ -28,10 +26,6 @@ function getArticlesByAuthor(authorSlug) {
   return Object.entries(articlesData)
     .flatMap(([category, posts]) =>
       posts
-        // Supporting client pieces marked `hideFromListings: true` don't
-        // appear on the author's page — only via their direct URL or
-        // another client page's related-posts section. The main pillar
-        // article isn't marked this way, so it still shows here normally.
         .filter((post) => post.authorSlug === slug && !post.hideFromListings)
         .map((post) => ({
           category,
@@ -219,9 +213,7 @@ export default async function AuthorPage({ params }) {
 
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
-      <script type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Breadcrumb — matches the BreadcrumbList JSON-LD above node-for-node */}
@@ -230,10 +222,7 @@ export default async function AuthorPage({ params }) {
           <span>/</span>
           <span className="text-[#1A1A1A]">{authorData.name}</span>
         </nav>
-
-        {/* Author header — lighter background panel, matching the category page pattern.
-            Centered on mobile (avatar/name/badges/bio/icons stack and center under
-            narrow widths); switches to the original left-aligned row from sm: up. */}
+        
         <div className="bg-[#F7F5EF] px-6 py-8 sm:px-10 sm:py-10 mb-10 flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-6 sm:gap-8">
           <ArticleImage imageUrl={authorData.avatarImage} alt={authorData.name} className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shrink-0" sizes="160px"/>
           <div className="min-w-0 w-full">
