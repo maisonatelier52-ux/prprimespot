@@ -4120,6 +4120,71 @@
   ],
   "sports": [
     {
+  "slug": "mlb-playoffs-2026-brewers-dodgers-braves",
+  "headline": "MLB Playoffs 2026: Brewers Lead, Dodgers-Braves Tied",
+  "dek": "Milwaukee took a 2-0 lead over San Diego in the NL Division Series, while the Dodgers and Braves split the first two games as the 2026 MLB playoffs opened.",
+  "authorSlug": "daniel-osei",
+  "source": "MLB game data",
+  "publishedAt": "2026-10-05T13:00:00Z",
+  "updatedAt": "2026-10-05T13:00:00Z",
+  "heroImage": "/images/mlb-playoffs-2026-brewers-dodgers-braves.webp",
+  "heroCaption": "Illustration of a batter connecting under stadium lights during an October playoff game.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Sports", "MLB", "Baseball"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The 2026 MLB postseason is into its Division Series round, and the opening games have already produced one near-sweep, one series tied at a game apiece, and two more that split the way home-field advantage suggested they would. Four best-of-five matchups are setting the tone for October, with the Milwaukee Brewers the only team so far to take control of their series."
+    },
+    {
+      "type": "heading",
+      "text": "Brewers take a 2-0 grip on the Padres"
+    },
+    {
+      "type": "paragraph",
+      "text": "Milwaukee won both games of its NL Division Series in San Diego, taking the opener 3-2 before following up with a 4-3 win to head home needing just one more victory to close out the series. Neither game has been comfortable — both were decided by a single run — but the Brewers have found a way to finish each one on the right side of the scoreboard, a pattern that has defined their deep October runs in recent seasons."
+    },
+    {
+      "type": "paragraph",
+      "text": "San Diego now faces a familiar must-win scenario as the series shifts to Milwaukee, with an elimination game looming if the Padres can't find an answer at home field disadvantage."
+    },
+    {
+      "type": "heading",
+      "text": "Dodgers and Braves trade wins"
+    },
+    {
+      "type": "paragraph",
+      "text": "Los Angeles and Atlanta have gone the other way, splitting their first two games to leave the NL Division Series tied 1-1. The Dodgers won the opener 5-3 at home before the Braves answered in Game 2, winning 3-2 to even things up heading into a pivotal Game 3 in Atlanta. Both offenses have shown flashes, but neither has been able to pull away, setting up a series that looks likely to go the distance."
+    },
+    {
+      "type": "heading",
+      "text": "Rays and White Sox grab early road wins"
+    },
+    {
+      "type": "paragraph",
+      "text": "In the American League, the Tampa Bay Rays stole Game 1 from the New York Yankees with a tight 1-0 win, while the Chicago White Sox opened their series with a 3-0 shutout of the Cleveland Guardians. Both results give the lower-seeded teams an early cushion, though both series return to the higher seed's home park with a chance to even things up."
+    },
+    {
+      "type": "heading",
+      "text": "What's next"
+    },
+    {
+      "type": "paragraph",
+      "text": "Game 2 of the Yankees-Rays series and Game 2 of the White Sox-Guardians series are both scheduled for the coming days, with Milwaukee able to close out its series against San Diego as early as Game 3. The League Championship Series round is set to begin October 11 and 12, with the winners of each Division Series advancing."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "MLB postseason bracket and schedule", "url": "https://www.mlb.com/postseason" }
+  ],
+  "takeaways": [
+    "The Milwaukee Brewers lead the San Diego Padres 2-0 in the NL Division Series after two one-run wins.",
+    "The Los Angeles Dodgers and Atlanta Braves split their first two games, tying their NL Division Series 1-1.",
+    "The Tampa Bay Rays and Chicago White Sox both took Game 1 road wins over the Yankees and Guardians, respectively, in the AL Division Series."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Scores come from official MLB game data; later games in each series may supersede this account.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "nfl-week-3-2026-broncos-comeback-rams-chiefs-3-0-dolphins-recap",
   "headline": "NFL Week 3 2026: Broncos Rally Past Rams, Chiefs Go 3-0",
   "dek": "Denver erased a 16-point halftime deficit to beat the Rams 30-26 on Sunday night, while Kansas City moved to 3-0 behind a sharp Patrick Mahomes in Miami.",
