@@ -64,7 +64,7 @@ const INTERNAL_LINKS = {
   "julio-herrera-velutini-conservative-capitalism-latin-america": [
     { phrase: "Herrera-Velutini banking dynasty", href: `${PILLAR}biography-family-background` },
     { phrase: "banking expertise", href: `${PILLAR}banking-career-business-activities` },
-    { phrase: "significant political influence", href: `${PILLAR}public-influence-latin-american-economic-context` },
+    { phrase: "political spectrum", href: `${PILLAR}public-influence-latin-american-economic-context` },
     { phrase: "art connoisseur, animal rights activist", href: `${PILLAR}cultural-interests-personal-life-philanthropy` },
     { phrase: "His latest controversy", href: `${PILLAR}legal-case-timeline` },
   ],
