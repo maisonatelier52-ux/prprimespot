@@ -3486,6 +3486,67 @@
   ],
   "politics": [
     {
+  "slug": "trump-approval-career-low-32-percent-reuters-ipsos-poll-2026",
+  "headline": "Trump Approval Hits Career-Low 32% in Reuters/Ipsos Poll",
+  "dek": "A new Reuters/Ipsos poll put President Trump's approval at a career-low 32%, with cost-of-living frustration and the Iran war eroding support even among Republicans.",
+  "authorSlug": "maria-santos",
+  "source": "Reuters/Ipsos",
+  "publishedAt": "2026-10-06T13:00:00Z",
+  "updatedAt": "2026-10-06T13:00:00Z",
+  "heroImage": "/images/trump-approval-career-low-32-percent-reuters-ipsos-poll-2026.webp",
+  "heroCaption": "Illustration of the White House with a downward-trending approval line overlaid against a gray sky.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Politics", "US", "Donald Trump", "2026 Midterms", "Polling"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "President Trump's approval rating has fallen to 32%, the lowest point of his political career, according to a Reuters/Ipsos poll conducted over four days and completed September 20. It's a sharp drop from the 35% approval the same poll found just a week earlier, and it comes with a warning sign Republican strategists can't easily explain away: the president's own party is souring on his handling of the economy."
+    },
+    {
+      "type": "heading",
+      "text": "Cost of living is the dominant factor"
+    },
+    {
+      "type": "paragraph",
+      "text": "Only 17% of respondents approved of how Trump is handling the cost of living, an issue voters have repeatedly flagged as their top concern heading into the midterms. The poll surveyed 1,277 U.S. adults online, with a margin of error of about 3 percentage points. Among Republicans specifically, the numbers have flipped in a way that hasn't happened before in his second term: 51% now disapprove of his handling of inflation and prices, compared with 44% who approve."
+    },
+    {
+      "type": "paragraph",
+      "text": "Overall Republican approval of Trump dropped to 73%, down from 82% the week before, a double-digit slide within his own base that pollsters called unusually steep for a single week. Trump returned to the White House in January 2025 promising to tame inflation and end foreign wars; the poll suggests a growing share of voters, including some of his own supporters, don't feel either promise has been kept."
+    },
+    {
+      "type": "heading",
+      "text": "The Iran war's economic fallout"
+    },
+    {
+      "type": "paragraph",
+      "text": "A significant driver behind the price concerns is the war with Iran that Trump launched in February 2025, which has disrupted global oil markets and pushed up gasoline and diesel prices for American drivers and businesses. Trump has defended the costs as a necessary price for preventing what he has called an adversarial nuclear program, but the poll suggests that argument isn't resonating at the pump."
+    },
+    {
+      "type": "heading",
+      "text": "What it means for the midterms"
+    },
+    {
+      "type": "paragraph",
+      "text": "The same poll found Democrats leading Republicans 43% to 35% on a generic midterm ballot question, a gap that has widened as affordability concerns have intensified. With the election five weeks away, Republican strategists are watching the erosion in Trump's own base closely: a president whose approval among his own party is sliding gives vulnerable GOP incumbents far less cover to run on his record."
+    },
+    {
+      "type": "paragraph",
+      "text": "Trump's approval rating at his January 2025 inauguration stood at 47%. The 15-point drop since then, concentrated heavily in the past two months, has turned affordability from a talking point into what both parties now describe as the central question of the midterm campaign."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Reuters/Ipsos poll coverage — Trump approval falls to career low of 32%", "url": "https://theprint.in/world/exclusive-trump-approval-falls-to-career-low-of-32-as-high-costs-bite-reuters-ipsos-poll-finds/3049245/" }
+  ],
+  "takeaways": [
+    "A Reuters/Ipsos poll found Trump's approval at 32%, a career low, down from 35% the week before.",
+    "Only 17% of respondents approved of his handling of the cost of living, and Republican disapproval of his inflation record now outweighs approval for the first time in his second term.",
+    "Democrats led Republicans 43% to 35% on the generic midterm ballot in the same poll, with the election five weeks away."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Polling figures come from the Reuters/Ipsos survey completed September 20, 2026; later polls may show different results.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "house-gop-affordability-anxiety-pre-midterm-recess-cost-of-living-2026",
   "headline": "House GOP Recess Begins Amid New Cost-of-Living Anxiety",
   "dek": "House Republicans left Washington for a seven-week pre-midterm recess showing visible nerves about affordability, as both parties warn of rising costs now.",

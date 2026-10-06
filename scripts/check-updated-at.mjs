@@ -1,21 +1,3 @@
-#!/usr/bin/env node
-// scripts/check-updated-at.mjs
-//
-// Guards the freshness signal documented in README.md ("Editing article
-// content"): if an article's headline, dek, or body changed relative to
-// the last commit, its `updatedAt` timestamp must also have changed.
-//
-// `updatedAt` feeds NewsArticle.dateModified (JSON-LD), openGraph.modifiedTime,
-// and the "Updated {date}" byline — a stale value there is a real freshness-
-// signal bug, not a cosmetic one, so this runs in CI and can be wired into
-// a pre-commit hook.
-//
-// Usage:
-//   node scripts/check-updated-at.mjs            # compare against HEAD
-//   node scripts/check-updated-at.mjs --base=main # compare against another ref
-//
-// Exit code 0 = clean, 1 = one or more articles need updatedAt bumped.
-
 import { execSync } from "node:child_process";
 
 const ARTICLE_PATH = "public/data/article.json";
@@ -35,13 +17,11 @@ function readJsonAtRef(ref, path) {
     });
     return JSON.parse(raw);
   } catch {
-    // File didn't exist at that ref (e.g. brand-new file) — treat as empty.
     return null;
   }
 }
 
 function flattenArticles(data) {
-  // { category: [ {slug, ...}, ... ] }  ->  Map<"category/slug", article>
   const map = new Map();
   if (!data) return map;
   for (const [category, posts] of Object.entries(data)) {
@@ -65,8 +45,6 @@ function main() {
 
   let afterData;
   try {
-    // Prefer the working-tree file so this also catches uncommitted edits,
-    // not just committed ones.
     afterData = JSON.parse(
       execSync(`git show :${ARTICLE_PATH}`, { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] })
     );
