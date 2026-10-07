@@ -2858,6 +2858,67 @@
   ],
   "us": [
     {
+  "slug": "pennsylvania-measles-outbreak-943-cases-fifth-death-2026",
+  "headline": "Pennsylvania Measles Outbreak Hits 943 Cases, 5 Deaths",
+  "dek": "Pennsylvania has now confirmed its fifth measles-related death as statewide cases climb to 943 across 39 counties, the largest U.S. outbreak in 35+ years.",
+  "authorSlug": "sarah-kim",
+  "source": "Pennsylvania Department of Health",
+  "publishedAt": "2026-10-07T13:00:00Z",
+  "updatedAt": "2026-10-07T13:00:00Z",
+  "heroImage": "/images/pennsylvania-measles-outbreak-943-cases-fifth-death-2026.webp",
+  "heroCaption": "Illustration of a pop-up vaccination clinic in rural Pennsylvania during the state's measles outbreak response.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["US News", "Health", "Pennsylvania", "Public Health"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Pennsylvania's Department of Health has confirmed a fifth measles-associated death, an unvaccinated Lancaster County resident, as the state's outbreak climbs to 943 confirmed cases across 39 counties. It's the largest measles outbreak any U.S. state has reported in 35 years, and the case count has kept climbing steadily since it began in late April, with 40 new infections confirmed in just the two days before the latest update."
+    },
+    {
+      "type": "heading",
+      "text": "A outbreak concentrated among the unvaccinated"
+    },
+    {
+      "type": "paragraph",
+      "text": "Of the 943 confirmed cases statewide, fewer than 1%, just four people, were vaccinated against measles. The other 939 cases involve people who were unvaccinated or whose vaccination status is unknown, a pattern consistent with measles outbreaks nationally this year. The state has also recorded 176 hospitalizations tied to the outbreak, underscoring that measles, often dismissed as a mild childhood illness, can put a meaningful share of patients in a hospital bed."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Department of Health declined to release further identifying details about the Lancaster County resident who died, saying the family deserves privacy to grieve. It marks the fifth death tied to the outbreak since it began, each one so far involving someone who had not been vaccinated."
+    },
+    {
+      "type": "heading",
+      "text": "Vaccinations have surged in response"
+    },
+    {
+      "type": "paragraph",
+      "text": "The outbreak has driven a sharp rise in vaccine uptake across the state. Pennsylvania providers administered roughly 53,000 doses of the MMR vaccine in September alone, more than double what the state typically sees in a month, following a similarly elevated 49,000 doses in August against a usual monthly baseline of about 25,000. State-run health centers have also run more than 180 pop-up vaccination clinics since the outbreak began, administering over 5,500 doses directly."
+    },
+    {
+      "type": "paragraph",
+      "text": "Health officials are leaning hard on that message as the primary defense. The Department of Health has reiterated that two doses of the MMR vaccine provide 97% lifetime protection against measles, and is urging anyone with symptoms, including fever, cough, and the characteristic rash, to contact a healthcare provider or call the state's public health hotline before showing up in person, to avoid exposing others in a waiting room."
+    },
+    {
+      "type": "heading",
+      "text": "Part of a larger national pattern"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pennsylvania's outbreak is the most severe single-state outbreak in the country, but it isn't isolated. Measles cases have been climbing nationally through 2026, with public health officials warning the U.S. risks losing its measles elimination status, a designation it has held since 2000, if transmission chains like Pennsylvania's continue uninterrupted. For now, state officials say the outbreak's trajectory will depend heavily on how quickly vaccination rates in the hardest-hit counties catch up."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Pennsylvania Department of Health — Fifth measles-associated death confirmed", "url": "https://www.pa.gov/agencies/health/newsroom/pa-department-of-health-confirms-fifth-measles-associated-death" }
+  ],
+  "takeaways": [
+    "Pennsylvania has confirmed 943 measles cases across 39 counties and a fifth measles-associated death, in an unvaccinated Lancaster County resident.",
+    "Fewer than 1% of cases involved vaccinated individuals; the state has recorded 176 hospitalizations tied to the outbreak.",
+    "Vaccinations have surged in response, with September MMR doses statewide more than double the typical monthly rate."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Case counts and details come from the Pennsylvania Department of Health; later updates may show higher totals.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "openai-gpt-6-astra-launch-ai-safety-concerns-2026",
   "headline": "OpenAI's Astra: Most Powerful AI Yet, Hard to Monitor",
   "dek": "OpenAI is rolling out GPT-6 Astra, its most capable model yet, after pausing development over safety concerns tied to its autonomous cybersecurity skills.",
