@@ -2232,6 +2232,76 @@
   ],
   "world": [
     {
+  "slug": "2026-nobel-prizes-medicine-physics-chemistry-optogenetics-neutrinos",
+  "headline": "2026 Nobel Prizes Honor Optogenetics and Ghost Particles",
+  "dek": "This year's Nobel Prizes have honored the scientists behind optogenetics in medicine and a physicist who tracked cosmic neutrinos through Antarctic ice.",
+  "authorSlug": "raj-patel",
+  "source": "Nobel Assembly / Al Jazeera / Khaleej Times",
+  "publishedAt": "2026-10-08T09:00:00Z",
+  "updatedAt": "2026-10-08T09:00:00Z",
+  "heroImage": "/images/2026-nobel-prizes-medicine-physics-chemistry-optogenetics-neutrinos.webp",
+  "heroCaption": "Illustration of a neuron lit from within, alongside an ice-bound observatory tracking particles from deep space.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["World", "Science", "Nobel Prize"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nobel Week is underway in Stockholm and Oslo, and the first announcements of 2026 have gone to research that sounds almost like science fiction: a technique that lets scientists flip individual brain cells on and off with light, and a decade-long hunt for subatomic \"ghost particles\" buried a mile deep in Antarctic ice. Three prizes have been awarded so far, in medicine, physics, and chemistry, with literature, peace, and economics still to come."
+    },
+    {
+      "type": "heading",
+      "text": "Medicine: the scientists who taught neurons to answer to light"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Nobel Assembly at Sweden's Karolinska Institute awarded the 2026 Prize in Physiology or Medicine to Karl Deisseroth of Stanford University, Peter Hegemann of Humboldt University of Berlin, and Georg Nagel of the University of Wurzburg, for their discovery of a molecular switch for nerve cells. Their work, known as optogenetics, uses light to control the activity of individual neurons in a living brain, letting researchers switch specific cells on or off and watch exactly what that cell contributes to behaviors like learning, fear, addiction, and movement."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nobel Assembly secretary-general Thomas Perlmann said the method \"makes it possible to switch on, or off, the activity of individual nerve cells in a living brain,\" while Nobel committee chair Per Svenningsson called it a tool for \"mapping the brain in a way that we could once only dream of.\" Beyond basic research, scientists hope the underlying technology could eventually lead to more precise cochlear implants. The three laureates will split a prize of 12 million Swedish crowns, roughly $1.2 million."
+    },
+    {
+      "type": "heading",
+      "text": "Physics: tracking neutrinos from the bottom of the world"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Physics Prize went to Belgian physicist Francis Halzen, honored for his decisive contributions to the IceCube Neutrino Observatory and the discovery of high-energy neutrinos of astrophysical origin. IceCube is a detector array buried deep in the Antarctic ice at the South Pole, built to catch rare flashes of light produced when neutrinos, often called ghost particles because they pass through almost all matter without interacting, occasionally collide with atoms in the ice."
+    },
+    {
+      "type": "paragraph",
+      "text": "Halzen's decades of work on the project helped confirm that some of these neutrinos originate far outside our solar system, opening a new way of observing violent cosmic events, like black holes and exploding stars, that can't be studied through light alone."
+    },
+    {
+      "type": "heading",
+      "text": "Chemistry: building molecules that build themselves"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Chemistry Prize was awarded to Henri B. Kagan and Kenso Soai for their discovery of non-linear effects and autocatalysis in asymmetric organic synthesis, work that showed how a small chemical imbalance can amplify itself into a much larger one as a reaction proceeds. The finding has shaped how chemists design processes to produce only the specific molecular structure they want, a problem that matters enormously in drug manufacturing, where the wrong mirror-image version of a molecule can be ineffective or even harmful."
+    },
+    {
+      "type": "heading",
+      "text": "What's left this week"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Nobel Prize in Literature is set to be announced Thursday, followed by the Peace Prize on Friday and the Economic Sciences prize the following week. Nominations for this year's Peace Prize included a record 287 names, with speculation already swirling over several high-profile contenders ahead of Friday's announcement in Oslo."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Al Jazeera — Nobel medicine prize honours US and German scientists for optogenetics work", "url": "https://www.aljazeera.com/news/2026/10/5/nobel-medicine-prize-honours-us-and-german-scientists-for-optogenetics-work" },
+    { "label": "Khaleej Times — Belgium's Francis Halzen wins Nobel Prize in Physics", "url": "https://www.khaleejtimes.com/world/belgium-francis-halzen-wins-nobel-prize-in-physics-2026" }
+  ],
+  "takeaways": [
+    "The 2026 Nobel Prize in Medicine went to Karl Deisseroth, Peter Hegemann, and Georg Nagel for discovering optogenetics, a technique that uses light to control individual nerve cells.",
+    "Belgian physicist Francis Halzen won the Physics Prize for his work on the IceCube Neutrino Observatory and the discovery of high-energy cosmic neutrinos.",
+    "Henri B. Kagan and Kenso Soai won the Chemistry Prize for discovering how small imbalances in chemical reactions can self-amplify, aiding precise drug manufacturing."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. The Literature, Peace, and Economic Sciences prizes had not yet been announced as of publication and will be covered separately.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "swiss-glaciers-second-worst-ice-loss-2026-climate-report",
   "headline": "Swiss Glaciers Post Their Second-Worst Ice Loss Ever",
   "dek": "Switzerland's glaciers lost 5.5% of their ice volume in 2026, the second-largest decline on record, as the Alps lose their grip on Europe's water supply.",
