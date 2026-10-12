@@ -18,7 +18,6 @@ function ImagePlaceholder({ label, className = "" }) {
   );
 }
 
-// Sizing classes go on the outer wrapper; the <img> just fills it.
 function StoryImage({ imageUrl, alt, className = "" }) {
   if (!imageUrl) {
     return <ImagePlaceholder label={alt || "image"} className={className} />;

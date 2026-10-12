@@ -48,9 +48,7 @@ function AuthorAvatar({ src, name, size = 40 }) {
   return (
     <span className="inline-block shrink-0 rounded-full overflow-hidden"
       style={{
-        width: size,
-        height: size,
-        boxShadow: `0 0 0 2px #FFFFFF, 0 0 0 3px ${GOLD_SOFT}`,
+        width: size, height: size, boxShadow: `0 0 0 2px #FFFFFF, 0 0 0 3px ${GOLD_SOFT}`,
       }}
     >
       <ArticleImage imageUrl={src} alt={name || "Author"} className="w-full h-full object-cover" sizes={`${size}px`}/>
@@ -58,7 +56,6 @@ function AuthorAvatar({ src, name, size = 40 }) {
   );
 }
 
-// Internal links for Julio Herrera Velutini's main article.
 const PILLAR = "/julio-herrera-velutini/julio-herrera-velutini-";
 const INTERNAL_LINKS = {
   "julio-herrera-velutini-conservative-capitalism-latin-america": [
@@ -73,8 +70,7 @@ const INTERNAL_LINKS = {
 function RichText({ text, links }) {
   if (!text) return null;
   if (!links || links.length === 0) return <>{text}</>;
-
-  // Find each phrase's first position, keep non-overlapping matches in order.
+  
   const found = links
     .map((l) => ({ ...l, index: text.indexOf(l.phrase) }))
     .filter((l) => l.index !== -1)
@@ -103,10 +99,7 @@ function DropCapParagraph({ text, links }) {
   return (
     <p className="font-serif text-[19px] leading-[1.85] text-[#16181D] break-words mb-7">
       <span className="float-left font-serif font-bold leading-[0.8] pr-3 pt-1 mr-1"
-        style={{
-          fontSize: "3.8rem",
-          color: ACCENT,
-          borderBottom: `2px solid ${GOLD_SOFT}`,
+        style={{ fontSize: "3.8rem", color: ACCENT, borderBottom: `2px solid ${GOLD_SOFT}`,
         }}
         aria-hidden="true"
       >
@@ -121,28 +114,18 @@ function PullQuote({ text, attribution }) {
   if (!text) return null;
   return (
     <figure className="relative my-14 -mx-2 sm:-mx-6 px-6 sm:px-10 py-10 rounded-sm overflow-hidden"
-      style={{
-        backgroundColor: QUOTE_BG,
-        borderLeft: `4px solid ${ACCENT}`,
+      style={{ backgroundColor: QUOTE_BG, borderLeft: `4px solid ${ACCENT}`,
       }}
     >
       <span aria-hidden="true" className="absolute font-serif italic leading-none pointer-events-none select-none"
-        style={{
-          top: "-14px",
-          right: "14px",
-          fontSize: "9rem",
-          color: GOLD_SOFT,
-          opacity: 0.3,
+        style={{ top: "-14px", right: "14px", fontSize: "9rem", color: GOLD_SOFT, opacity: 0.3,
         }}
       >
         &rdquo;
       </span>
 
       <blockquote className="relative font-serif italic text-[#16181D]"
-        style={{
-          fontSize: "clamp(22px, 2.2vw, 28px)",
-          lineHeight: 1.4,
-          letterSpacing: "-0.005em",
+        style={{ fontSize: "clamp(22px, 2.2vw, 28px)", lineHeight: 1.4, letterSpacing: "-0.005em",
         }}
       >
         {text}
@@ -167,11 +150,7 @@ function SectionHeading({ text, index }) {
     <div className="mt-16 mb-6">
       <div className="flex items-start gap-3">
         <span className="font-serif italic shrink-0 pt-[10px]"
-          style={{
-            color: ACCENT,
-            fontSize: "18px",
-            minWidth: 28,
-            lineHeight: 1,
+          style={{ color: ACCENT, fontSize: "18px", minWidth: 28, lineHeight: 1,
           }}
           aria-hidden="true"
         >
@@ -189,8 +168,7 @@ function FactRow({ fact, index }) {
   const n = String(index + 1).padStart(2, "0");
   return (
     <div className="flex gap-3 py-3"
-      style={{
-        borderTop: index === 0 ? "none" : `1px solid ${RULE_SOFT}`,
+      style={{ borderTop: index === 0 ? "none" : `1px solid ${RULE_SOFT}`,
       }}
     >
       <span className="font-serif italic text-[12px] pt-[3px] shrink-0" style={{ color: GOLD, minWidth: 18 }} aria-hidden="true">
@@ -212,17 +190,12 @@ function AtAGlanceCard({ facts }) {
   if (!facts || facts.length === 0) return null;
   return (
     <aside className="rounded-md overflow-hidden"
-      style={{
-        border: `1px solid ${RULE}`,
-        boxShadow:
-          "0 1px 2px rgba(22,24,29,0.04), 0 8px 24px rgba(22,24,29,0.05)",
+      style={{ border: `1px solid ${RULE}`, boxShadow: "0 1px 2px rgba(22,24,29,0.04), 0 8px 24px rgba(22,24,29,0.05)",
       }}
     >
       <div className="relative px-5 py-4" style={{ backgroundColor: ACCENT_DEEP }}>
         <span aria-hidden="true" className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 8px)",
+          style={{ backgroundImage: "repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 8px)",
           }}
         />
         <div className="relative flex items-center gap-3">
@@ -247,9 +220,7 @@ function TagsPanel({ tags }) {
   if (!tags || tags.length === 0) return null;
   return (
     <div className="rounded-md p-5"
-      style={{
-        border: `1px solid ${RULE}`,
-        backgroundColor: PAPER_WARM,
+      style={{ border: `1px solid ${RULE}`, backgroundColor: PAPER_WARM,
       }}
     >
       <div className="flex items-center gap-3 mb-4">
@@ -259,10 +230,7 @@ function TagsPanel({ tags }) {
       <div className="flex flex-wrap gap-2">
         {tags.map((tag) => (
           <span key={tag} className="rounded-full px-3 py-1 font-sans text-[11px] uppercase tracking-[0.12em]"
-            style={{
-              backgroundColor: CHIP,
-              color: ACCENT,
-              border: `1px solid ${RULE}`,
+            style={{ backgroundColor: CHIP, color: ACCENT, border: `1px solid ${RULE}`,
             }}
           >
             {tag}
@@ -302,9 +270,7 @@ function FAQSection({ faq }) {
       <div className="mt-5 rounded-md overflow-hidden" style={{ border: `1px solid ${RULE}` }}>
         {faq.map((item, i) => (
           <details key={i} className="group"
-            style={{
-              backgroundColor: i % 2 === 0 ? PAPER : "#FFFFFF",
-              borderTop: i === 0 ? "none" : `1px solid ${RULE_SOFT}`,
+            style={{ backgroundColor: i % 2 === 0 ? PAPER : "#FFFFFF", borderTop: i === 0 ? "none" : `1px solid ${RULE_SOFT}`,
             }}
           >
             <summary className="flex items-start justify-between gap-4 px-5 py-4 cursor-pointer list-none select-none">
@@ -478,9 +444,7 @@ export default function FeatureLongform({
             {/* Kicker badge */}
             <div className="mt-10">
               <span className="inline-flex items-center gap-3 rounded-full px-3 py-1"
-                style={{
-                  backgroundColor: PAPER_WARM,
-                  border: `1px solid ${GOLD_SOFT}`,
+                style={{ backgroundColor: PAPER_WARM, border: `1px solid ${GOLD_SOFT}`,
                 }}
               >
                 <span aria-hidden="true" className="inline-block" style={{ width: 18, height: 1, backgroundColor: ACCENT }}/>
@@ -599,12 +563,8 @@ export default function FeatureLongform({
             </div>
 
             <SourcesCard sources={article.sourceLinks} />
-
             <FAQSection faq={article.faq} />
-
-            <div className="mt-8">
-              <ShareButtons url={absoluteUrl} title={article.headline} />
-            </div>
+            <div className="mt-8"><ShareButtons url={absoluteUrl} title={article.headline} /></div>
 
             <AuthorBioCard article={article} />
           </main>
@@ -617,9 +577,7 @@ export default function FeatureLongform({
             </div>
           </aside>
         </div>
-
-        {/* Full-width, below the two-column section so it sits under both
-            the body copy and the (now-stopped) sticky sidebar. */}
+        
         <RelatedClientPosts posts={clientRelated} clientName={article.client} />
       </div>
     </article>

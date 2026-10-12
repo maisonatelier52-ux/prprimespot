@@ -130,14 +130,11 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
-
-  // subscribe modal state
   const [subscribeOpen, setSubscribeOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const [subscribeError, setSubscribeError] = useState("");
-
-  // lock body scroll while the mobile drawer or subscribe modal is open
+  
   useEffect(() => {
     document.body.style.overflow = menuOpen || subscribeOpen ? "hidden" : "";
     return () => {
@@ -261,9 +258,7 @@ export default function Header() {
             {query.trim() && (
               <div className="mt-3 max-h-80 overflow-y-auto divide-y divide-[#E5E5E5]">
                 {results.length === 0 ? (
-                  <p className="py-4 font-sans text-sm text-[#8A8A8A]">
-                    No results for &ldquo;{query}&rdquo;.
-                  </p>
+                  <p className="py-4 font-sans text-sm text-[#8A8A8A]">No results for &ldquo;{query}&rdquo;.</p>
                 ) : (
                   <>
                     {results.map((article) => (

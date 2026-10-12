@@ -19,7 +19,6 @@ function ImagePlaceholder({ label, className = "" }) {
   );
 }
 
-// Sizing classes go on the outer wrapper; the <img> just fills it.
 function StoryImage({ imageUrl, alt, className = "" }) {
   if (!imageUrl) {
     return <ImagePlaceholder label={alt || "image"} className={className} />;
@@ -90,8 +89,6 @@ function RightStory({ article }) {
 
 export default function USSection() {
   const sorted = getUSArticles();
-
-  // Each article used exactly once across these three slices — no repeats.
   const mainArticle = sorted[0];
   const leftArticles = sorted.slice(1, 4); // 3 stories
   const rightArticles = sorted.slice(4, 6); // 2 stories

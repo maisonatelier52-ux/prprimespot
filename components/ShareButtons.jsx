@@ -79,15 +79,9 @@ export default function ShareButtons({ url, title }) {
     <div className="mt-8 p-5 border border-[#0e0d0d] rounded-lg flex items-center justify-between gap-4">
       <p className="font-sans text-xs font-bold uppercase tracking-wide text-[#3c3838]">Share this article</p>
       <div className="flex items-center gap-2">
-        <ShareIconLink label="Share on Facebook" href={facebookHref}>
-          <FacebookIcon />
-        </ShareIconLink>
-        <ShareIconLink label="Share on LinkedIn" href={linkedinHref}>
-          <LinkedinIcon />
-        </ShareIconLink>
-        <ShareIconLink label="Share on Reddit" href={redditHref}>
-          <RedditIcon />
-        </ShareIconLink>
+        <ShareIconLink label="Share on Facebook" href={facebookHref}><FacebookIcon /></ShareIconLink>
+        <ShareIconLink label="Share on LinkedIn" href={linkedinHref}><LinkedinIcon /></ShareIconLink>
+        <ShareIconLink label="Share on Reddit" href={redditHref}><RedditIcon /></ShareIconLink>
         <button type="button" onClick={handleInstagramClick} aria-label={copied ? "Link copied" : "Copy link for Instagram"} title={copied ? "Link copied" : "Copy link for Instagram"} className="flex h-9 w-9 items-center justify-center rounded-full border border-[#E0DDD5] text-[#1A1A1A] hover:bg-[#D01418] hover:border-[#D01418] hover:text-white transition-colors duration-200">
           {copied ? <CheckIcon /> : <InstagramIcon />}
         </button>

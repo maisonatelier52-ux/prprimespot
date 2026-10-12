@@ -9,7 +9,6 @@ import {
   getOrganizationSchema,
 } from "@/lib/site";
 import { CATEGORY_LABELS } from "@/lib/categories";
-
 import authorsData from "../../public/data/author.json";
 import articlesData from "../../public/data/article.json";
 

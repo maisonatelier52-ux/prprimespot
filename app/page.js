@@ -128,8 +128,7 @@ export default function HomePage() {
       <JsonLd />
       
       <h1 className="sr-only">
-        {SITE_NAME} – U.S. Breaking News, Business, Finance, World, Politics
-        &amp; Sports
+        {SITE_NAME} – U.S. Breaking News, Business, Finance, World, Politics &amp; Sports
       </h1>
 
       <Business />

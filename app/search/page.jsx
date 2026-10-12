@@ -15,7 +15,6 @@ export async function generateMetadata({ searchParams }) {
     alternates: {
       canonical: "/search",
     },
-    // Functional but not for search engines to index — see file header note.
     robots: { index: false, follow: true },
   };
 }

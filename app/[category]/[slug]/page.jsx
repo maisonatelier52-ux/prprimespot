@@ -24,9 +24,7 @@ export function generateStaticParams() {
   return getAllArticleParams();
 }
 
-// ---------------------------------------------------------------------
-// generateMetadata — title, description, canonical URL, OG, Twitter card,
-// ---------------------------------------------------------------------
+// generateMetadata — title, description, canonical URL, OG, Twitter card
 export async function generateMetadata({ params }) {
   const { category, slug } = await params;
   const article = getArticle(category, slug);
@@ -109,9 +107,7 @@ export default async function ArticlePage({ params }) {
   const categoryLabel = getCategoryLabel(article.category);
   const pageUrl = `/${article.category}/${article.slug}`;
 
-  // ---------------------------------------------------------------------
   // JSON-LD — NewsArticle + BreadcrumbList + Organization. Shared by every
-  // ---------------------------------------------------------------------
   const absoluteUrl = `${SITE_URL}${pageUrl}`;
   const imagePath = article.heroImage || FALLBACK_IMAGE;
   const imageUrl = getAbsoluteUrl(imagePath);
@@ -187,7 +183,6 @@ export default async function ArticlePage({ params }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
 
       {CustomLayout ? (
-        // eslint-disable-next-line react-hooks/static-components -- see note above CustomLayout
         <CustomLayout article={article} related={related} clientRelated={clientRelated} categoryLabel={categoryLabel} absoluteUrl={absoluteUrl}/>
       ) : (
         <ArticleDetail article={article} related={related} categoryLabel={categoryLabel} absoluteUrl={absoluteUrl}/>

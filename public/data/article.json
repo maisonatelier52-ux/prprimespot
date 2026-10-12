@@ -20,8 +20,8 @@
           "url": "https://www.prnewswire.com/news-releases/julio-herrera-velutinis-attorney-announces-dismissal-of-all-major-charges-against-the-banker-the-evidence-did-not-support-the-allegations-he-stated-302542003.html"
         }
       ],
-      "publishedAt": "2026-10-03T09:00:00Z",
-      "updatedAt": "2026-10-03T09:00:00Z",
+      "publishedAt": "2026-10-12T09:00:00Z",
+      "updatedAt": "2026-10-12T09:00:00Z",
       "heroImage": "/images/julio-herrera-velutini-conservative-capitalism-latin-america.webp",
       "heroCaption": "Julio Herrera Velutini.",
       "heroCredit": "Courtesy of Julio Herrera Velutini",
@@ -166,6 +166,68 @@
       ],
       "client": "Julio Herrera Velutini"
     },
+    {
+  "slug": "pepsico-q3-2026-earnings-beat-profit-outlook-cut",
+  "headline": "PepsiCo Beats Q3 Estimates but Cuts 2026 Profit Outlook",
+  "dek": "PepsiCo topped Wall Street estimates in the third quarter, but a weak North American snack business pushed the company to cut its full-year profit outlook.",
+  "authorSlug": "james-carter",
+  "source": "PepsiCo earnings release / Morningstar / Financial Modeling Prep",
+  "publishedAt": "2026-10-11T11:00:00Z",
+  "updatedAt": "2026-10-11T11:00:00Z",
+  "heroImage": "/images/pepsico-q3-2026-earnings-beat-profit-outlook-cut.webp",
+  "heroCaption": "Illustration of a grocery aisle stocked with snack brands as PepsiCo navigates a North American turnaround.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Business", "Finance", "Earnings"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "PepsiCo topped Wall Street's expectations for the third quarter, posting core earnings of $2.34 a share against an estimated $2.30 and revenue of $25.27 billion versus a $24.97 billion consensus. But the headline beat masked a weaker story underneath: the company once again cut its full-year profit outlook, this time pointing squarely at its struggling North American snack business."
+    },
+    {
+      "type": "heading",
+      "text": "A beat that came with a downgrade"
+    },
+    {
+      "type": "paragraph",
+      "text": "PepsiCo now expects core constant-currency earnings to grow just 1% to 2% in 2026, down from a prior range that started at 4%. Including currency effects, the guidance works out to roughly 2.5% to 3.5% growth, which analysts estimate implies full-year earnings of around $8.34 to $8.42 a share, below the $8.55 Wall Street had been expecting. It's the kind of guidance cut that tends to overshadow a beat, and shares, which had been trading near a 12-month low heading into the report, rose only modestly in premarket trading."
+    },
+    {
+      "type": "heading",
+      "text": "What's dragging on North America"
+    },
+    {
+      "type": "paragraph",
+      "text": "The pressure is concentrated in PepsiCo's North American snack division, home to brands like Lay's and Doritos. Back in February, the company cut prices on several of those brands by up to 15% to win back volume it had lost to competitors and private-label alternatives. That strategy appears to be working on the sales-volume side, snack volume and market share both improved in the third quarter, but the lower prices left the division's revenue essentially flat, and its core operating profit fell 12% for the quarter."
+    },
+    {
+      "type": "paragraph",
+      "text": "The decline fits a longer pattern. Operating income in the division has fallen roughly 15% since 2023, with its profit margin sliding from nearly 26% to just over 22% over that stretch, even as revenue has stayed roughly flat. CEO Ramon Laguarta acknowledged the challenge directly, saying the company is \"acting with urgency to sustainably improve our performance in North America,\" and signaling additional structural cost cuts are coming, though he didn't specify their size or timing."
+    },
+    {
+      "type": "heading",
+      "text": "The plan: raise prices again, carefully"
+    },
+    {
+      "type": "paragraph",
+      "text": "PepsiCo's next move is to start nudging chip prices back up, by a low-to-mid single-digit percentage, with increases expected to take effect in late 2026 or early 2027, though still below where prices stood before February's cuts. The strategy carries real risk: if the volume gains from earlier this year hold up as prices rise, margins could begin to recover. If shoppers pull back once prices climb again, the division's troubles could deepen heading into 2027."
+    },
+    {
+      "type": "paragraph",
+      "text": "International operations offered a clearer bright spot, with core constant-currency operating profit climbing between 9% and 19% across PepsiCo's four international segments, helping offset the North American softness. For now, PepsiCo's stock trades at roughly 14 times forward earnings, near its lowest valuation in five years, reflecting investor caution about whether the domestic snack turnaround can actually stick."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Financial Modeling Prep — PepsiCo Q3 2026 earnings beat, EPS outlook cut", "url": "https://site.financialmodelingprep.com/market-news/pepsico-q3-2026-earnings-beat-eps-outlook-cut" },
+    { "label": "PepsiCo Q3 2026 financial results (SEC 8-K)", "url": "https://www.sec.gov/Archives/edgar/data/0000077476/000007747626000050/q320268-kxexhibit991.htm" }
+  ],
+  "takeaways": [
+    "PepsiCo beat Q3 estimates with core EPS of $2.34 and revenue of $25.27 billion, but cut its full-year 2026 profit growth outlook to roughly 2.5%-3.5%.",
+    "North American snack division profit fell 12% in the quarter, even as February's price cuts helped volume and market share improve.",
+    "CEO Ramon Laguarta said PepsiCo is 'acting with urgency' on North America and signaled more cost cuts, while planning modest price increases on chips in late 2026 or early 2027."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Figures come from PepsiCo's Q3 2026 earnings release and related financial reporting; the company's fourth-quarter results may update parts of this account.",
+  "contentType": "Analysis"
+},
     {
   "slug": "september-jobs-report-2026-weak-hiring-stocks-rally",
   "headline": "US Adds Just 29,000 Jobs, but Wall Street Still Rallies",

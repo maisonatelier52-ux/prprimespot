@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-// Adjust this path if this file moves relative to /public/data
 import articlesData from "../../public/data/article.json";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,20 +14,13 @@ import { CATEGORY_LABELS, getCategoryLabel } from "@/lib/categories";
 const FALLBACK_IMAGE = "/og-image.jpg";
 
 const CATEGORY_DESCRIPTIONS = {
-  business:
-    "Business news from PR Primespot: mergers, earnings, company strategy and market-moving deals, with clear analysis of what they mean for the U.S. economy.",
-  finance:
-    "Finance news from PR Primespot: markets, banking, interest rates, investing and economic data, explained clearly for readers who follow money and policy.",
-  world:
-    "World news from PR Primespot: international politics, diplomacy, conflicts and global economic developments, reported with context and trusted sources.",
-  us:
-    "U.S. news from PR Primespot: national headlines, government, courts and public policy affecting Americans, with clear reporting and essential context.",
-  politics:
-    "Politics news from PR Primespot: Congress, elections, the White House and policy debates in Washington, covered with clear, sourced and balanced reporting.",
-  sports:
-    "Sports news from PR Primespot: scores, results, standings and major stories across leagues and tournaments, with timely reporting and analysis.",
-  "julio-herrera-velutini":
-    "In-depth coverage of Julio Herrera Velutini: his background, banking career, legal case timeline, philanthropy and influence on Latin American finance.",
+  business: "Business news from PR Primespot: mergers, earnings, company strategy and market-moving deals, with clear analysis of what they mean for the U.S. economy.",
+  finance: "Finance news from PR Primespot: markets, banking, interest rates, investing and economic data, explained clearly for readers who follow money and policy.",
+  world: "World news from PR Primespot: international politics, diplomacy, conflicts and global economic developments, reported with context and trusted sources.",
+  us: "U.S. news from PR Primespot: national headlines, government, courts and public policy affecting Americans, with clear reporting and essential context.",
+  politics: "Politics news from PR Primespot: Congress, elections, the White House and policy debates in Washington, covered with clear, sourced and balanced reporting.",
+  sports: "Sports news from PR Primespot: scores, results, standings and major stories across leagues and tournaments, with timely reporting and analysis.",
+  "julio-herrera-velutini": "In-depth coverage of Julio Herrera Velutini: his background, banking career, legal case timeline, philanthropy and influence on Latin American finance.",
 };
 
 function getCategoryDescription(category, label, titleWord) {
@@ -75,9 +67,7 @@ function formatDate(iso) {
   });
 }
 
-// ---------------------------------------------------------------------------
-// generateMetadata — title, description, canonical URL, OG, Twitter card,
-// ---------------------------------------------------------------------------
+// generateMetadata — title, description, canonical URL, OG, Twitter card
 export async function generateMetadata({ params }) {
   const { category } = await params;
 
@@ -179,8 +169,7 @@ function ArticleCard({ article }) {
 
 export default async function CategoryPage({ params }) {
   const { category } = await params;
-
-  // Unknown category slug -> real 404, not a silently-rendered empty page.
+ 
   if (!isKnownCategory(category)) {
     notFound();
   }
@@ -188,10 +177,8 @@ export default async function CategoryPage({ params }) {
   const articles = getArticlesByCategory(category);
   const label = getCategoryLabel(category);
   const titleWord = Object.hasOwn(CATEGORY_LABELS, category.toLowerCase()) ? "News" : "Coverage";
-
-  // ---------------------------------------------------------------------
+ 
   // JSON-LD — CollectionPage + ItemList (articles in this category)
-  // ---------------------------------------------------------------------
   const url = `${SITE_URL}/${category.toLowerCase()}`;
   const description = getCategoryDescription(category, label, titleWord);
 

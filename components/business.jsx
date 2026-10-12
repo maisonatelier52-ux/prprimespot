@@ -98,8 +98,6 @@ function OpEdCard({ article, isFirst }) {
 
 export default function BusinessSection() {
   const sorted = getBusinessArticles();
-
-  // Each article is used exactly once across these three slices — no repeats.
   const leadArticle = sorted[0];
   const leftArticles = sorted.slice(1, 3); // 2 stories
   const opEdArticles = sorted.slice(3, 7); // 4 stories

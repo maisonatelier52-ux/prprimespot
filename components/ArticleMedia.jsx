@@ -1,5 +1,3 @@
-// components/ArticleMedia.jsx
-
 import Image from "next/image";
 
 export function ImagePlaceholder({ label, className = "" }) {

@@ -1,5 +1,3 @@
-// components/ArticleDetail.jsx
-
 import Link from "next/link";
 import ShareButtons from "@/components/ShareButtons";
 import { ArticleImage } from "@/components/ArticleMedia";

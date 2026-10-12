@@ -19,7 +19,6 @@ export default function NotFound() {
   return (
     <main className="w-full max-w-[100vw] overflow-x-hidden bg-white text-[#1A1A1A]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        {/* Breadcrumb */}
         <nav className="flex flex-wrap items-center gap-1.5 font-sans text-xs text-[#8A8A8A] mb-6">
           <Link href="/" className="hover:text-[#D01418] transition-colors">Home</Link>
           <span>/</span>
