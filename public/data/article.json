@@ -4430,6 +4430,71 @@
   ],
   "sports": [
     {
+  "slug": "nfl-week-6-2026-bills-rams-commanders-giants-tie-recap",
+  "headline": "NFL Week 6 2026: Bills Edge Rams, Commanders Tie Giants",
+  "dek": "Buffalo outlasted the Los Angeles Rams 37-34 on Monday night, while Washington and the Giants played to a rare 27-27 tie in an action-packed Week 6 slate.",
+  "authorSlug": "daniel-osei",
+  "source": "NFL game data",
+  "publishedAt": "2026-10-13T14:00:00Z",
+  "updatedAt": "2026-10-13T14:00:00Z",
+  "heroImage": "/images/nfl-week-6-2026-bills-rams-commanders-giants-tie-recap.webp",
+  "heroCaption": "Illustration of a quarterback releasing a deep pass under Monday night lights as the clock winds down.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Sports", "NFL", "Football"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Week 6 of the NFL season delivered one of the stranger, wilder slates of the year, capped by a Monday night shootout in which the Buffalo Bills held off the Los Angeles Rams 37-34. Earlier in the day, two other teams couldn't be separated at all: the Washington Commanders and New York Giants played to a 27-27 tie, a result so rare in the NFL that most fans will go years without seeing one."
+    },
+    {
+      "type": "heading",
+      "text": "Bills survive a Rams shootout"
+    },
+    {
+      "type": "paragraph",
+      "text": "Buffalo and Los Angeles traded big plays all night before the Bills pulled away late to close out a 37-34 win on Monday Night Football. Both offenses moved the ball at will for long stretches, and the three-point final margin undersold just how back-and-forth the game felt in the fourth quarter. The win keeps Buffalo near the top of the AFC East, while the Rams will have to shake off a tough road loss heading into their next matchup."
+    },
+    {
+      "type": "heading",
+      "text": "A tie game in Washington"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Commanders and Giants played to a 27-27 deadlock, the kind of result that generates headlines simply because it almost never happens. Both teams had chances to win it outright, but neither could find the game-deciding score, leaving both with a result that counts as half a win and half a loss in the standings rather than going to either side's ledger cleanly."
+    },
+    {
+      "type": "heading",
+      "text": "Blowouts and statement wins"
+    },
+    {
+      "type": "paragraph",
+      "text": "Not every game was close. The Detroit Lions routed the Arizona Cardinals 45-21, and the New England Patriots dismantled the Las Vegas Raiders 45-17 in one of the more lopsided results of the week. The Green Bay Packers handled the Chicago Bears 31-7, and the Pittsburgh Steelers beat the Indianapolis Colts 34-22. The Houston Texans cruised past the Tennessee Titans 26-3, continuing a dominant stretch for Houston's defense."
+    },
+    {
+      "type": "paragraph",
+      "text": "Elsewhere, the San Francisco 49ers edged the Seattle Seahawks 32-29 in a tight division battle, the Denver Broncos beat the Los Angeles Chargers 23-17, the Cincinnati Bengals topped the Miami Dolphins 31-24, the New York Jets held off the Cleveland Browns 17-12, the Minnesota Vikings beat the New Orleans Saints 23-13, and the Jacksonville Jaguars edged the Philadelphia Eagles 19-17 in an early-window nail-biter."
+    },
+    {
+      "type": "heading",
+      "text": "Sunday night and the week ahead"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Baltimore Ravens closed out Sunday's action with a 30-23 win over the Atlanta Falcons on Sunday Night Football. Week 7 kicks off with the Denver Broncos hosting the Seattle Seahawks on Thursday night, as teams around the league start looking toward the stretch run of the regular season."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "NFL scores and schedule", "url": "https://www.nfl.com/scores" }
+  ],
+  "takeaways": [
+    "The Buffalo Bills beat the Los Angeles Rams 37-34 on Monday Night Football in a back-and-forth shootout.",
+    "The Washington Commanders and New York Giants played to a rare 27-27 tie, one of the few ties in recent NFL seasons.",
+    "The Baltimore Ravens beat the Atlanta Falcons 30-23 on Sunday Night Football, and Week 7 opens with Denver hosting Seattle on Thursday."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Scores come from official NFL game data; later developments may supersede this account.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "mlb-playoffs-2026-brewers-dodgers-braves",
   "headline": "MLB Playoffs 2026: Brewers Lead, Dodgers-Braves Tied",
   "dek": "Milwaukee took a 2-0 lead over San Diego in the NL Division Series, while the Dodgers and Braves split the first two games as the 2026 MLB playoffs opened.",
