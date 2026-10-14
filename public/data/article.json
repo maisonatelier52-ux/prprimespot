@@ -3735,6 +3735,68 @@
   ],
   "politics": [
     {
+  "slug": "michigan-senate-el-sayed-hasan-piker-controversy-2026",
+  "headline": "Michigan Senate Race Tests El-Sayed Ties to Hasan Piker",
+  "dek": "Democrat Abdul El-Sayed is distancing himself from streamer Hasan Piker in Michigan's tight Senate race, as the controversy keeps splitting his own party.",
+  "authorSlug": "maria-santos",
+  "source": "Forbes / CBS News / The Hill",
+  "publishedAt": "2026-10-14T13:00:00Z",
+  "updatedAt": "2026-10-14T13:00:00Z",
+  "heroImage": "/images/michigan-senate-el-sayed-hasan-piker-controversy-2026.webp",
+  "heroCaption": "Illustration of a Michigan campaign rally stage with a divided crowd beneath state and national flags.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Politics", "US", "2026 Midterms", "Michigan", "Senate"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "With three weeks left before Election Day, one of the most closely watched Senate races in the country has turned into a referendum on something that has nothing to do with the economy or healthcare: a progressive Democrat's past appearances alongside a controversial Twitch streamer. Michigan Democratic Senate candidate Abdul El-Sayed is working to put distance between himself and Hasan Piker, after months of pressure from members of his own party."
+    },
+    {
+      "type": "heading",
+      "text": "A relationship that started at the primary"
+    },
+    {
+      "type": "paragraph",
+      "text": "El-Sayed, a progressive supported by Sen. Bernie Sanders and Rep. Ro Khanna, held rallies with Piker this month at Michigan State University and the University of Michigan as part of his primary effort against Rep. Haley Stevens and state Sen. Mallory McMorrow. The events attracted a total of 1,200 attendees and leveraged Piker’s audience of more than three million followers, most of them young and progressive Twitch viewers. Both of El-Sayed’s main rivals at the time slammed the decision, with McMorrow saying Piker “is not someone that you should be campaigning with” and comparing some of his rhetoric to that of far-right figure Nick Fuentes."
+    },
+    {
+      "type": "heading",
+      "text": "Comments that reignited the controversy"
+    },
+    {
+      "type": "paragraph",
+      "text": "The matter resurfaced in August, when Piker said on a stream that the concept of Jewish people being “singularly invested in Israel” could trigger antisemitic violence because “eventually someone will come around and take action” against American Jews. He later said the comments were meant to show that being Jewish and being pro-Israel are not the same thing. The remarks drew immediate pushback from House Minority Leader Hakeem Jeffries, Rep. Debbie Dingell and Sen. Elissa Slotkin and placed renewed pressure on El-Sayed, who already had apologized earlier in the year to the Michigan Jewish Democratic Caucus for separate comments he made after a synagogue attack in suburban Detroit."
+    },
+    {
+      "type": "heading",
+      "text": "El-Sayed tries to change the subject"
+    },
+    {
+      "type": "paragraph",
+      "text": "El-Sayed has said he has no plans to campaign with Piker again before the general election and, according to CNN reporting citing two unnamed sources, recently called the streamer directly to tell him his rhetoric was costing the campaign votes. Publicly, El-Sayed has stopped short of a full disavowal, saying instead that he disagrees with any rhetoric that puts the Jewish community at risk and that only he and his spokespeople speak for the campaign. Asked about the controversy on CBS, he deflected, dismissing the idea of spending time discussing a California-based Twitch streamer, and has instead framed the episode as a distraction from what he says are Michigan voters' real concerns about affordability."
+    },
+    {
+      "type": "heading",
+      "text": "A party still divided, a race still close"
+    },
+    {
+      "type": "paragraph",
+      "text": "The hesitation has cost him support within his own party. Rep. Hillary Scholten has withheld her endorsement, arguing that El-Sayed had a clear opportunity to cut ties with Piker and directly disavow his comments but chose not to take it. Republicans, meanwhile, have seized on the association, with El-Sayed's opponent, Rep. Mike Rogers, routinely referring to Piker as his running mate on the campaign trail. Despite the controversy, the race remains a toss-up, with a recent Fox News poll showing El-Sayed at 50% and Rogers at 49%, underscoring how little room either side has for a misstep with three weeks to go."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Forbes — El-Sayed called Hasan Piker to say his rhetoric is hurting campaign, report says", "url": "https://www.forbes.com/sites/saradorn/2026/10/07/el-sayed-called-hasan-piker-to-say-his-rhetoric-is-hurting-campaign-report-says/" },
+    { "label": "CBS News — Democratic Senate candidate's events with Hasan Piker exposes party rift in Michigan", "url": "https://www.cbsnews.com/news/hasan-piker-michigan-senate-race-abdul-el-sayed/" }
+  ],
+  "takeaways": [
+    "Michigan Senate candidate Abdul El-Sayed is distancing himself from streamer Hasan Piker after remarks Piker made in August drew accusations of inciting antisemitism.",
+    "El-Sayed reportedly called Piker directly to say his rhetoric was hurting the campaign, but has stopped short of fully disavowing him, costing him the endorsement of Rep. Hillary Scholten.",
+    "The race remains a toss-up against Republican Rep. Mike Rogers, with a recent poll showing El-Sayed at 50% and Rogers at 49% just three weeks before Election Day."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Quotes and details are drawn from Forbes and CBS News reporting; later campaign developments may update this account.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "trump-approval-career-low-32-percent-reuters-ipsos-poll-2026",
   "headline": "Trump Approval Hits Career-Low 32% in Reuters/Ipsos Poll",
   "dek": "A new Reuters/Ipsos poll put President Trump's approval at a career-low 32%, with cost-of-living frustration and the Iran war eroding support even among Republicans.",
