@@ -3046,6 +3046,63 @@
   ],
   "us": [
     {
+  "slug": "spacex-crew-13-fastest-trip-iss-record-2026",
+  "headline": "SpaceX Crew-13 Sets Record for Fastest-Ever Trip to ISS",
+  "dek": "NASA and SpaceX launched four astronauts to the ISS aboard Crew-13, docking in just 8 hours, the fastest-ever U.S. spacecraft trip to the orbiting station.",
+  "authorSlug": "sarah-kim",
+  "source": "NASA / SpaceX / Fox Weather",
+  "publishedAt": "2026-10-15T13:00:00Z",
+  "updatedAt": "2026-10-15T13:00:00Z",
+  "heroImage": "/images/spacex-crew-13-fastest-trip-iss-record-2026.webp",
+  "heroCaption": "Illustration of a Dragon spacecraft approaching the International Space Station against a backdrop of Earth.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["US News", "Space", "NASA", "SpaceX"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "NASA and SpaceX launched four astronauts to the International Space Station on Crew-13 earlier this month, and the spacecraft reached the station faster than any American vehicle ever has. A Falcon 9 rocket carrying a Dragon capsule lifted off from Space Launch Complex 40 at Cape Canaveral Space Force Station on October 1, and the spacecraft docked autonomously at the station's Harmony module roughly eight hours later, the fastest launch-to-docking trip by a U.S. spacecraft in the station's history."
+    },
+    {
+      "type": "heading",
+      "text": "A multinational crew for the 13th commercial mission"
+    },
+    {
+      "type": "paragraph",
+      "text": "Crew-13 marks the 13th crewed mission to the station flown under NASA's commercial crew program, and it carries a notably international lineup. NASA astronaut Jessica Watkins is commanding the mission, becoming the first NASA astronaut to fly twice aboard a SpaceX Dragon spacecraft. She's joined by NASA astronaut Luke Delaney, Canadian Space Agency astronaut Joshua Kutryk, and Roscosmos cosmonaut Sergey Teteryatnikov, continuing the pattern of international cooperation that has defined crew rotations to the station."
+    },
+    {
+      "type": "heading",
+      "text": "What the crew will be doing in orbit"
+    },
+    {
+      "type": "paragraph",
+      "text": "Once settled in, the crew will take on a research-heavy schedule designed to support future missions to the Moon and Mars while also producing findings with applications back on Earth. Planned experiments include studying human stem-cell-derived tissues relevant to heart disease and Parkinson's disease research, testing crop production methods in microgravity, and trying out new diagnostic medical equipment for monitoring astronaut health. The crew will also assist with SpaceX's upcoming CRS-35 commercial resupply mission and Northrop Grumman's CRS-25 mission later this year."
+    },
+    {
+      "type": "heading",
+      "text": "What officials are saying"
+    },
+    {
+      "type": "paragraph",
+      "text": "NASA Administrator Jared Isaacman called Crew-13 a demonstration of what he described as unmatched capability in human spaceflight and a sign of the strength of NASA's commercial partnerships, adding that missions like this build the experience needed to eventually reach the Moon and beyond. Dr. Lori Glaze, NASA's associate administrator for the Human Spaceflight Mission Directorate, said each station mission adds another piece to what she called the blueprint for exploration, while Dana Weigel, manager of NASA's Low Earth Orbit Program, pointed to the medical research the crew will help carry out, including work aimed at treating heart disease and Parkinson's disease."
+    },
+    {
+      "type": "paragraph",
+      "text": "The record-setting docking time underscores how routine, and increasingly efficient, crew rotations to the station have become nearly a quarter-century after it began hosting continuous human presence. With Crew-13 now aboard, the station's current crew will spend the coming months running experiments before handing off to the next rotation."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Fox Weather — NASA launches SpaceX's Crew-13 on a record-breaking journey to the ISS", "url": "https://www.foxweather.com/earth-space/nasa-launches-spacexs-crew-13-record-breaking-journey-international-space-station" }
+  ],
+  "takeaways": [
+    "SpaceX's Crew-13 launched October 1 and docked with the ISS in about eight hours, the fastest launch-to-docking trip by a U.S. spacecraft in station history.",
+    "The four-person crew includes NASA's Jessica Watkins and Luke Delaney, Canadian astronaut Joshua Kutryk, and Russian cosmonaut Sergey Teteryatnikov.",
+    "The mission will focus on research into heart disease, Parkinson's disease, crop production in microgravity, and new medical diagnostic tools, supporting future Moon and Mars missions."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Mission details come from NASA and SpaceX reporting; later developments during the mission may update this account.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "pennsylvania-measles-outbreak-943-cases-fifth-death-2026",
   "headline": "Pennsylvania Measles Outbreak Hits 943 Cases, 5 Deaths",
   "dek": "Pennsylvania has now confirmed its fifth measles-related death as statewide cases climb to 943 across 39 counties, the largest U.S. outbreak in 35+ years.",
