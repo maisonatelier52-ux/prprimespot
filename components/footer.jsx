@@ -79,6 +79,22 @@ function RedditIcon() {
   );
 }
 
+function PinterestIcon() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 4.1 2.5 7.6 6.1 9.1-.1-.8-.2-2 0-2.8.2-.8 1.3-5.4 1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.6 0 1-.6 2.4-1 3.7-.3 1.1.5 2 1.6 2 1.9 0 3.2-2.5 3.2-5.3 0-2.2-1.5-3.9-4.2-3.9-3.1 0-5 2.3-5 4.8 0 .9.3 1.5.7 2 .2.2.2.3.1.5l-.2.9c-.1.3-.3.4-.6.2-1.1-.4-1.6-1.7-1.6-3.1 0-2.3 1.9-5 5.8-5 3.1 0 5.1 2.2 5.1 4.6 0 3.1-1.8 5.5-4.4 5.5-.9 0-1.7-.5-2-1.0l-.6 2.2c-.2.8-.6 1.7-1 2.3.8.2 1.6.3 2.5.3 5.4 0 9.8-4.4 9.8-9.8s-4.4-9.8-9.8-9.8z" />
+    </svg>
+  );
+}
+
+function LinkedinIcon() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M6.94 8.5H3.56V20.5H6.94V8.5ZM5.25 3.5A1.95 1.95 0 103.3 5.45 1.94 1.94 0 005.25 3.5ZM20.5 20.5V13.9c0-3.53-1.88-5.17-4.4-5.17a3.8 3.8 0 00-3.44 1.9h-.05V8.5H9.4c.05 1 0 12 0 12h3.38v-6.7c0-.36.03-.71.13-.97.29-.71.94-1.44 2.05-1.44 1.45 0 2.03 1.1 2.03 2.72V20.5h3.51Z" />
+    </svg>
+  );
+}
+
 function SocialIcon({ label, href = "#", children }) {
   return (
     <a href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-[#D8D8D8] text-[#1A1A1A] hover:border-[#D01418] hover:text-[#D01418] transition-colors">
@@ -113,7 +129,6 @@ export default function Footer() {
       <div className="h-[3px] w-full bg-[#E8B23D]" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* masthead */}
         <div className="flex flex-col items-center text-center pt-10 pb-8 border-b border-[#E5E5E5]">
           <Link href="/" aria-label={`${SITE_NAME} — home`} className="inline-flex flex-col items-center">
             <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#D01418]">PR PRIMESPOT</span>
@@ -145,9 +160,11 @@ export default function Footer() {
 
           <div className="col-span-2 lg:col-span-1 text-center lg:text-left">
             <FooterColumn title="Follow Us">
-              <div className="flex items-center justify-center gap-3 lg:justify-start">
+              <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
                 <SocialIcon label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIcon>
                 <SocialIcon label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIcon>
+                <SocialIcon label="LinkedIn" href={SITE_SOCIAL_LINKS.linkedin}><LinkedinIcon /></SocialIcon>
+                <SocialIcon label="Pinterest" href={SITE_SOCIAL_LINKS.pinterest}><PinterestIcon /></SocialIcon>
                 <SocialIcon label="Substack" href={SITE_SOCIAL_LINKS.substack}><SubstackIcon /></SocialIcon>
                 <SocialIcon label="Medium" href={SITE_SOCIAL_LINKS.medium}><MediumIcon /></SocialIcon>
                 <SocialIcon label="Reddit" href={SITE_SOCIAL_LINKS.reddit}><RedditIcon /></SocialIcon>

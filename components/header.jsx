@@ -21,8 +21,7 @@ function slugify(label) {
 }
 
 function IconButton({ label, children, href = "#", onClick }) {
-  const className =
-    "flex h-8 w-8 items-center justify-center rounded-full text-[#1A1A1A] hover:bg-[#F5EEDD] hover:text-[#D01418] transition-colors";
+  const className = "flex h-8 w-8 items-center justify-center rounded-full text-[#1A1A1A] hover:bg-[#F5EEDD] hover:text-[#D01418] transition-colors";
 
   if (onClick) {
     return (
@@ -97,6 +96,22 @@ function RedditIcon() {
   );
 }
 
+function PinterestIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="sm:w-[18px] sm:h-[18px]">
+      <path d="M12 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 4.1 2.5 7.6 6.1 9.1-.1-.8-.2-2 0-2.8.2-.8 1.3-5.4 1.3-5.4s-.3-.7-.3-1.6c0-1.5.9-2.7 2-2.7.9 0 1.4.7 1.4 1.6 0 1-.6 2.4-1 3.7-.3 1.1.5 2 1.6 2 1.9 0 3.2-2.5 3.2-5.3 0-2.2-1.5-3.9-4.2-3.9-3.1 0-5 2.3-5 4.8 0 .9.3 1.5.7 2 .2.2.2.3.1.5l-.2.9c-.1.3-.3.4-.6.2-1.1-.4-1.6-1.7-1.6-3.1 0-2.3 1.9-5 5.8-5 3.1 0 5.1 2.2 5.1 4.6 0 3.1-1.8 5.5-4.4 5.5-.9 0-1.7-.5-2-1.0l-.6 2.2c-.2.8-.6 1.7-1 2.3.8.2 1.6.3 2.5.3 5.4 0 9.8-4.4 9.8-9.8s-4.4-9.8-9.8-9.8z" />
+    </svg>
+  );
+}
+
+function LinkedinIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="sm:w-[18px] sm:h-[18px]">
+      <path d="M6.94 8.5H3.56V20.5H6.94V8.5ZM5.25 3.5A1.95 1.95 0 103.3 5.45 1.94 1.94 0 005.25 3.5ZM20.5 20.5V13.9c0-3.53-1.88-5.17-4.4-5.17a3.8 3.8 0 00-3.44 1.9h-.05V8.5H9.4c.05 1 0 12 0 12h3.38v-6.7c0-.36.03-.71.13-.97.29-.71.94-1.44 2.05-1.44 1.45 0 2.03 1.1 2.03 2.72V20.5h3.51Z" />
+    </svg>
+  );
+}
+
 function SearchIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="sm:w-[19px] sm:h-[19px]">
@@ -134,7 +149,7 @@ export default function Header() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const [subscribeError, setSubscribeError] = useState("");
-  
+
   useEffect(() => {
     document.body.style.overflow = menuOpen || subscribeOpen ? "hidden" : "";
     return () => {
@@ -151,7 +166,7 @@ export default function Header() {
     setSearchOpen(false);
     setQuery("");
   }
-  
+
   function handleSearchSubmit(e) {
     e.preventDefault();
     const trimmed = query.trim();
@@ -204,10 +219,12 @@ export default function Header() {
                 {searchOpen ? <CloseIcon /> : <SearchIcon />}
               </IconButton>
             </div>
-            
+
             <div className="hidden md:flex items-center gap-2 sm:gap-2.5">
               <SocialIconButton label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIconButton>
               <SocialIconButton label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIconButton>
+              <SocialIconButton label="LinkedIn" href={SITE_SOCIAL_LINKS.linkedin}><LinkedinIcon /></SocialIconButton>
+              <SocialIconButton label="Pinterest" href={SITE_SOCIAL_LINKS.pinterest}><PinterestIcon /></SocialIconButton>
               <SocialIconButton label="Substack" href={SITE_SOCIAL_LINKS.substack}><SubstackIcon /></SocialIconButton>
               <SocialIconButton label="Medium" href={SITE_SOCIAL_LINKS.medium}><MediumIcon /></SocialIconButton>
               <SocialIconButton label="Reddit" href={SITE_SOCIAL_LINKS.reddit}><RedditIcon /></SocialIconButton>
@@ -341,15 +358,20 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-4 px-5 pt-4">
-            <button type="button"
-              onClick={() => {
-                setMenuOpen(false);
-                openSubscribe();
-              }}
-              className="rounded-full bg-[#D01418] px-5 py-1.5 text-sm font-medium text-white hover:bg-[#a80f13] transition-colors"
-            >
+            <button type="button" onClick={() => { setMenuOpen(false); openSubscribe();}} className="rounded-full bg-[#D01418] px-5 py-1.5 text-sm font-medium text-white hover:bg-[#a80f13] transition-colors">
               Subscribe
             </button>
+          </div>
+
+          {/* Social icons in the mobile drawer footer */}
+          <div className="flex items-center gap-2.5 px-5 pt-5">
+            <SocialIconButton label="Instagram" href={SITE_SOCIAL_LINKS.instagram}><InstagramIcon /></SocialIconButton>
+            <SocialIconButton label="Twitter" href={SITE_SOCIAL_LINKS.twitter}><TwitterIcon /></SocialIconButton>
+            <SocialIconButton label="LinkedIn" href={SITE_SOCIAL_LINKS.linkedin}><LinkedinIcon /></SocialIconButton>
+            <SocialIconButton label="Pinterest" href={SITE_SOCIAL_LINKS.pinterest}><PinterestIcon /></SocialIconButton>
+            <SocialIconButton label="Substack" href={SITE_SOCIAL_LINKS.substack}><SubstackIcon /></SocialIconButton>
+            <SocialIconButton label="Medium" href={SITE_SOCIAL_LINKS.medium}><MediumIcon /></SocialIconButton>
+            <SocialIconButton label="Reddit" href={SITE_SOCIAL_LINKS.reddit}><RedditIcon /></SocialIconButton>
           </div>
         </div>
       </div>
