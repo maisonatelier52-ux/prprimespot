@@ -2351,6 +2351,68 @@
   ],
   "world": [
     {
+  "slug": "2026-nobel-peace-prize-navi-pillay-literature-anne-carson",
+  "headline": "Nobel Peace Prize Goes to Jurist Navi Pillay for 2026",
+  "dek": "Navi Pillay won the 2026 Nobel Peace Prize for decades of work advancing international justice, while Canadian poet Anne Carson took the Literature prize.",
+  "authorSlug": "raj-patel",
+  "source": "Norwegian Nobel Committee / Swedish Academy / Khaleej Times",
+  "publishedAt": "2026-10-16T09:00:00Z",
+  "updatedAt": "2026-10-16T09:00:00Z",
+  "heroImage": "/images/2026-nobel-peace-prize-navi-pillay-literature-anne-carson.webp",
+  "heroCaption": "Illustration of a courtroom gavel beside an open book, representing this year's Peace and Literature laureates.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["World", "Nobel Prize", "Human Rights"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Nobel Week has delivered its two most closely watched announcements. The Norwegian Nobel Committee awarded the 2026 Peace Prize to South African jurist Navi Pillay for her decades of work on international law and justice, while a day earlier the Swedish Academy gave the Literature Prize to Canadian poet and writer Anne Carson, rounding out a week that already honored breakthroughs in medicine, physics, and chemistry."
+    },
+    {
+      "type": "heading",
+      "text": "A five-decade journey from apartheid-era courts"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pillay, 85, was born in Durban to a Tamil family and came of age under apartheid, when she was shut out of white-led law firms and built her own practice defending anti-apartheid activists and political detainees, including those held on Robben Island. After apartheid ended, she became the first non-white woman appointed to South Africa's High Court. Her international career followed quickly: she served as a judge and later president of the Rwanda tribunal, where she sat on the landmark 1998 Akayesu case that recognized rape and sexual violence as acts of genocide, then spent five years as a judge at the International Criminal Court in The Hague."
+    },
+    {
+      "type": "paragraph",
+      "text": "From 2008 to 2014, Pillay served as the UN High Commissioner for Human Rights, pressing for consistent enforcement of human rights standards and advocating for the abolition of the death penalty and for LGBT rights. More recently, she chaired the UN's Independent International Commission of Inquiry on the Occupied Palestinian Territory and Israel, which concluded in 2025 that Israel had committed genocide in Gaza, a finding Israel has rejected. The Norwegian Nobel Committee cited her efforts to promote peace and international law and pointed to what it called a firm moral compass running through her career. This year's prize drew a record 287 nominations, 208 individuals and 79 organizations."
+    },
+    {
+      "type": "heading",
+      "text": "Anne Carson wins the Literature Prize"
+    },
+    {
+      "type": "paragraph",
+      "text": "A day earlier, the Swedish Academy awarded the Literature Prize to Anne Carson, a 76-year-old Canadian poet and writer who has held Icelandic citizenship since 2022. Carson is best known for blending verse, prose, translation, and classical scholarship into work that ranges from opera libretti to literary criticism, including the verse novel Autobiography of Red and the performance piece Norma Jeane Baker of Troy, which merges Euripides' Helen with the story of Marilyn Monroe."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Academy praised what it called her bold and inventive body of work, saying she has created new forms for contemporary literature through a playful engagement with the classical tradition that shapes nearly everything she writes. Academy permanent secretary Ingrid Carlberg said Carson, reached in Iceland, was genuinely caught off guard by the news. The prize carries an award of 12 million Swedish crowns, roughly $1.2 million, and places Carson alongside past laureates including Alice Munro, Ernest Hemingway, and last year's winner, Hungarian writer László Krasznahorkai."
+    },
+    {
+      "type": "heading",
+      "text": "What's left"
+    },
+    {
+      "type": "paragraph",
+      "text": "With Medicine, Physics, Chemistry, Literature, and Peace all now awarded, only the Prize in Economic Sciences remains, scheduled for announcement the following week and closing out this year's Nobel season."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Khaleej Times — Navanethem 'Navi' Pillay wins Nobel Peace Prize 2026", "url": "https://www.khaleejtimes.com/world/navanethem-navi-pillay-wins-nobel-peace-prize-2026" },
+    { "label": "Khaleej Times — Anne Carson, Canadian poet and writer, wins 2026 Nobel Prize in Literature", "url": "https://www.khaleejtimes.com/world/anne-carson-canadian-poet-writer-2026-nobel-prize-literature" }
+  ],
+  "takeaways": [
+    "South African jurist Navi Pillay won the 2026 Nobel Peace Prize for decades of work in international law, from the Rwanda tribunal to UN High Commissioner for Human Rights.",
+    "Canadian poet Anne Carson won the 2026 Nobel Prize in Literature for a body of work blending verse, translation, and classical scholarship.",
+    "Only the Economic Sciences prize remains to be announced, closing out this year's Nobel Week."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. The Economic Sciences prize had not yet been announced as of publication and will be covered separately.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "2026-nobel-prizes-medicine-physics-chemistry-optogenetics-neutrinos",
   "headline": "2026 Nobel Prizes Honor Optogenetics and Ghost Particles",
   "dek": "This year's Nobel Prizes have honored the scientists behind optogenetics in medicine and a physicist who tracked cosmic neutrinos through Antarctic ice.",
