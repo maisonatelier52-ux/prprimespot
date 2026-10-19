@@ -1104,7 +1104,7 @@
     {
       "slug": "julio-herrera-velutini-banking-career-business-activities",
       "headline": "Julio Herrera Velutini: Banking Career & Business Profile",
-      "dek": "Julio Herrera Velutini's private banking career, Bancrédito International Bank ties, and global business networks shape his financial profile and legacy.",
+      "dek": "Julio Herrera Velutini’s banking career, Bancrédito International Bank connections and global business networks define his financial profile and legacy.",
       "author": "James Carter",
       "authorSlug": "james-carter",
       "authorBio": "James Carter writes about companies, trade policy, manufacturing, and corporate strategy. He covers earnings, executive decisions, supply chains, and the deals reshaping major industries. His posts link to the public records and source material used for their central claims, and separate company guidance from independently verified figures.",
@@ -1656,9 +1656,66 @@
   ],
   "finance": [
     {
+  "slug": "goldman-sachs-jpmorgan-wells-fargo-q3-2026-earnings",
+  "headline": "Goldman Sachs Crushes Earnings as Bank Season Kicks Off",
+  "dek": "Goldman Sachs beats Wall Street estimates with record equities trading revenue in Q3 2026, but JPMorgan was flat and Wells Fargo shares fell 3%.",
+  "authorSlug": "elena-vasquez",
+  "source": "Goldman Sachs earnings release / 247wallst.com",
+  "publishedAt": "2026-10-19T10:00:00Z",
+  "updatedAt": "2026-10-19T10:00:00Z",
+  "heroImage": "/images/goldman-sachs-jpmorgan-wells-fargo-q3-2026-earnings.webp",
+  "heroCaption": "Illustration of a Wall Street trading floor as big banks kick off third-quarter earnings season.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Finance", "Markets", "Banking"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Big bank earnings season kicked off this past week, and Goldman Sachs set the tone with results that blew past what Wall Street was expecting. The firm reported diluted earnings of $17.01 a share against a $13.65 consensus, on revenue of $18.68 billion versus an expected $17.03 billion, a beat large enough to lift the stock in early trading even as the rest of the sector turned in a far more mixed picture."
+    },
+    {
+      "type": "heading",
+      "text": "Trading and dealmaking power Goldman's quarter"
+    },
+    {
+      "type": "paragraph",
+      "text": "The standout number came from Goldman's equities trading desk, where revenue jumped 72% year over year to $6.44 billion, driven largely by prime brokerage and derivatives activity, with equities financing revenue up 96% on its own. Investment banking advisory fees hit a record $1.65 billion as completed merger activity picked up, though the bank's deal backlog actually shrank from the prior quarter, a sign that future advisory revenue may cool even as this quarter's results looked strong. Asset and wealth management revenue rose 14% to $5.05 billion, with assets under supervision reaching a record $4.1 trillion."
+    },
+    {
+      "type": "paragraph",
+      "text": "CEO David Solomon called it the firm's second-highest quarterly net revenue total and a record for net revenue year-to-date, crediting continued client demand for Goldman's advice, execution, and financing services. The bank also disclosed it has agreed to acquire asset managers NEOS Investments and LCN Capital Partners, and declared a $5 quarterly dividend alongside share buybacks."
+    },
+    {
+      "type": "heading",
+      "text": "JPMorgan steady, Wells Fargo stumbles"
+    },
+    {
+      "type": "paragraph",
+      "text": "JPMorgan Chase's results landed with far less drama. The bank's stock barely moved in the session following its report, reflecting a quarter that came in largely in line with expectations rather than delivering the kind of upside surprise Goldman posted. Wells Fargo had a tougher time of it: third-quarter revenue of $21.87 billion disappointed investors, and the stock fell 3% as the market digested the results."
+    },
+    {
+      "type": "heading",
+      "text": "What it signals for the sector"
+    },
+    {
+      "type": "paragraph",
+      "text": "The divergence among the three banks underscores just how uneven this earnings season has been even within the same industry. Active markets and higher volatility have helped trading-heavy firms like Goldman Sachs, but banks more reliant on traditional lending and consumer banking like Wells Fargo have struggled more to stand out. The Financial Select Sector SPDR ETF, a broad gage of bank stocks, was up about 1% on the day, with Goldman's strength offsetting softer results elsewhere in the sector. More regional and consumer-focused banks will report in coming weeks, which should give a more complete picture of how the broader industry fared heading into the fourth quarter."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "247wallst.com — Goldman Sachs rises on equities-led earnings beat; JPMorgan treads water, Wells Fargo declines 3%", "url": "https://247wallst.com/investing/2026/10/13/goldman-sachs-rises-on-equities-led-earnings-beat-jpmorgan-chase-treads-water-wells-fargo-declines-3/" }
+  ],
+  "takeaways": [
+    "Goldman Sachs beat Q3 2026 estimates with EPS of $17.01 versus $13.65 expected, driven by a 72% jump in equities trading revenue.",
+    "JPMorgan Chase's stock was little changed on its results, while Wells Fargo shares fell 3% after revenue of $21.87 billion disappointed investors.",
+    "Goldman's investment banking advisory fees hit a record $1.65 billion, though its deal backlog shrank, suggesting future quarters may cool."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Figures come from Goldman Sachs' Q3 2026 earnings release and related financial reporting; later bank earnings this season may add further context.",
+  "contentType": "Analysis"
+},
+    {
   "slug": "gold-record-high-4200-october-2026-fed-rate-cut-bets",
   "headline": "Gold Hits Record Above $4,200 as Investors Seek Safety",
-  "dek": "Gold prices have climbed past $4,200 an ounce in October 2026, a fresh record, as investors bet on more Fed rate cuts and a softer U.S. dollar ahead.",
+  "dek": "Gold prices hit a fresh high above $4,200 an ounce on Thursday, as investors bet on more rate cuts by the Fed and a softer U.S. dollar ahead.",
   "authorSlug": "elena-vasquez",
   "source": "Market data / FXStreet",
   "publishedAt": "2026-10-09T13:00:00Z",
@@ -2485,7 +2542,7 @@
     {
   "slug": "swiss-glaciers-second-worst-ice-loss-2026-climate-report",
   "headline": "Swiss Glaciers Post Their Second-Worst Ice Loss Ever",
-  "dek": "Switzerland's glaciers lost 5.5% of their ice volume in 2026, the second-largest decline on record, as the Alps lose their grip on Europe's water supply.",
+  "dek": "By 2026, the Alps are declining in their hold on Europe’s water supply, with Swiss glaciers dropping 5.5% of their ice volume, the second-largest loss ever.",
   "authorSlug": "raj-patel",
   "source": "Swiss Commission for Cryosphere Observation / Business Standard",
   "publishedAt": "2026-10-01T09:00:00Z",
@@ -2781,7 +2838,7 @@
     {
       "slug": "lionel-messi-retires-argentina-national-team-2026",
       "headline": "Messi Retires From Argentina's National Team, After 21 Years",
-      "dek": "Lionel Messi announced his retirement from international soccer at age 39, ending a 21-year career with Argentina's senior national team.",
+      "dek": "Lionel Messi, 39, has announced his retirement from international soccer after a 21-year career with Argentina’s senior national team.",
       "authorSlug": "raj-patel",
       "source": "NPR / CNN",
       "publishedAt": "2026-08-31T16:00:00Z",
@@ -3526,7 +3583,7 @@
     {
       "slug": "fda-approves-first-mrna-flu-vaccine-moderna-mflusiva-2026",
       "headline": "FDA OKs First mRNA Seasonal Flu Shot for Adults 50 and Older",
-      "dek": "The Food and Drug Administration approved Moderna's mFLUSIVA, the first U.S. seasonal influenza vaccine based on messenger RNA technology.",
+      "dek": "The Food and Drug Administration approved Moderna’s mFLUSIVA, the first seasonal influenza vaccine in the U.S. to use messenger RNA technology.",
       "authorSlug": "sarah-kim",
       "source": "NPR / US News",
       "publishedAt": "2026-08-07T12:00:00Z",

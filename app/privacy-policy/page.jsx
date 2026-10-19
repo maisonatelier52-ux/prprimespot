@@ -140,7 +140,6 @@ export default function PrivacyPolicyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        {/* Breadcrumb */}
         <nav className="flex flex-wrap items-center gap-1.5 font-sans text-xs text-[#8A8A8A] mb-6">
           <Link href="/" className="hover:text-[#D01418] transition-colors">Home</Link>
           <span>/</span>
