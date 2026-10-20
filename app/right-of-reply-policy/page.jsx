@@ -28,8 +28,8 @@ const SECTIONS = [
   {
     heading: "How We Handle Requests",
     body: [
-      "We review each request to confirm it's a genuine reply to something specific in the article, rather than an attempt to remove or water down accurate reporting. Where a request is warranted, we add your response to the article — typically as an appended statement near the relevant passage — and the article's updated date reflects that change, consistent with our Corrections Policy.",
-      "We aim to acknowledge requests within a few business days and to resolve most of them within two weeks, though complex cases may take longer.",
+      "We review every request to make sure it is a real response to something in the article, not an effort to erase or dilute accurate reporting. If a request is justified, we’ll include your response in the article — typically as an added statement next to the material in question — and update the article’s date to reflect the change, in accordance with our Corrections Policy.",
+      "We will try to respond to requests within a few business days and to resolve most within two weeks, although more complex cases may take longer.",
     ],
   },
   {

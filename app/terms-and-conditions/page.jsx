@@ -25,7 +25,7 @@ const SECTIONS = [
     heading: "Content and Intellectual Property",
     body: [
       `Unless otherwise noted, articles, text, graphics, logos, and other material on this site are owned by or licensed to ${SITE_NAME} and are protected by copyright and other intellectual property laws.`,
-      "You may share links to our articles and quote brief excerpts with proper attribution and a link back to the original article, consistent with fair use. Reproducing, republishing, or distributing our content in full, or using it for commercial purposes, without our prior written permission is not permitted.",
+      "Fair use allows you to link to our articles and quote short excerpts from them, provided you give credit to us with a link back to the original article. You may not reproduce, republish, distribute or otherwise use our content, in whole or in part, for commercial purposes without our prior written permission.",
     ],
   },
   {
@@ -38,7 +38,7 @@ const SECTIONS = [
   {
     heading: "Third-Party Links",
     body: [
-      "Our articles may link to external websites, source documents, or third-party services for reference and context. These links are provided for convenience, and we don't control or endorse the content, accuracy, or practices of those external sites. Visiting a linked site is at your own risk and subject to that site's own terms and policies.",
+      "Our articles may link to external websites, source documents, or third-party services for reference and context. These links are provided for your convenience and we do not control or endorse the content, accuracy or practices of those external sites. Links to other sites are provided for your convenience and information and we are not responsible for the content or policies of any such sites.",
     ],
   },
   {

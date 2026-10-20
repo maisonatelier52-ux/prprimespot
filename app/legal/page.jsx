@@ -34,7 +34,7 @@ const SECTIONS = [
     heading: "Copyright and Intellectual Property",
     body: [
       `© ${new Date().getFullYear()} ${SITE_NAME}. All rights reserved. Unless otherwise credited, articles, headlines, graphics, and other original content on this site are the property of ${SITE_NAME} and are protected by copyright and other applicable intellectual property laws.`,
-      "Brief excerpts may be quoted with proper attribution and a link back to the original article, consistent with fair use. Republishing or distributing our content in full, or using it for commercial purposes, requires our prior written permission. Images, quotes, and data attributed to third parties remain the property of their respective owners.",
+      "Short excerpts may be quoted with appropriate attribution and a link back to the original article in accordance with fair use. Our content may not be republished or distributed in whole or in part for commercial purposes without our prior written consent. Images, quotes and data attributed to third parties remain the property of their respective owners.",
     ],
   },
   {

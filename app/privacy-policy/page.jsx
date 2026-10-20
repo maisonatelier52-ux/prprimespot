@@ -18,14 +18,14 @@ const SECTIONS = [
     heading: "Information We Collect",
     body: [
       "Information you provide directly: if you contact us by email, we receive whatever information is contained in that message — typically your email address and the content of your message. We use this only to respond to you.",
-      "Information collected automatically: like most websites, our hosting and analytics tools may automatically log technical information when you visit, such as your IP address, browser and device type, pages viewed, referring page, and timestamps. This data is used in aggregate to understand traffic patterns and improve the site — we do not use it to identify individual visitors.",
+      "Information We Collect Automatically Most websites (including ours) may automatically collect technical information when you visit. This information may include your IP address, browser/device type, pages viewed, referring page and timestamps. We use this data in aggregate to help us understand traffic patterns and to improve the site -- we do not use it to identify individual visitors.",
     ],
   },
   {
     heading: "Cookies and Similar Technologies",
     body: [
       "Cookies are small text files stored on your device. We may use strictly necessary cookies (to keep the site functioning correctly) and, where analytics tools are enabled, analytics cookies (to understand aggregate traffic and usage patterns).",
-      "Most browsers let you refuse or delete cookies through their settings. Refusing cookies may affect how some parts of the site behave, but you can still read articles with cookies disabled.",
+      "You can usually set your browser to refuse or delete cookies . Disabling cookies can impact some of the features of the site. You are still able to read articles with cookies disabled.",
     ],
   },
   {
