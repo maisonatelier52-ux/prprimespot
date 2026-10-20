@@ -167,6 +167,59 @@
       "client": "Julio Herrera Velutini"
     },
     {
+  "slug": "tesla-q3-2026-deliveries-beat-estimates-earnings-preview",
+  "headline": "Tesla Beats Q3 Delivery Estimates Ahead of Earnings",
+  "dek": "Tesla delivered 486,532 vehicles in the third quarter, topping Wall Street estimates, as investors await Tuesday's earnings report for profit margin clues.",
+  "authorSlug": "james-carter",
+  "source": "Tesla delivery report / The Motley Fool",
+  "publishedAt": "2026-10-20T10:00:00Z",
+  "updatedAt": "2026-10-20T10:00:00Z",
+  "heroImage": "/images/tesla-q3-2026-deliveries-beat-estimates-earnings-preview.webp",
+  "heroCaption": "Illustration of electric vehicles rolling off a production line ahead of a quarterly earnings report.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Business", "Finance", "Earnings"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Tesla delivered 486,532 vehicles in the third quarter, beating Wall Street's estimate of roughly 461,974 by a comfortable margin and edging out the prior quarter's total of 480,126. The company produced 464,391 vehicles over the same period, a gap between production and deliveries that suggests Tesla worked down some of the inventory buildup it had carried since earlier in the year. The numbers, released ahead of Tesla's full earnings report, gave investors an early read on demand heading into a quarter that will be judged as much on profitability as on volume."
+    },
+    {
+      "type": "heading",
+      "text": "Deliveries looked good, margins are the real question"
+    },
+    {
+      "type": "paragraph",
+      "text": "Delivery beats have become almost a given for Tesla in recent quarters, but they haven't always translated into stronger profits. In the second quarter, automotive revenue came in at $16.2 billion against $12.8 billion in cost of automotive revenue, leaving a gross profit of about $3.4 billion, which worked out to roughly $7,213 in gross profit per vehicle delivered, a figure analysts described as a disappointing drop tied to weaker pricing power and higher production costs. For the third quarter to be read as a genuine turnaround rather than just a volume story, analysts say automotive revenue needs to hold at or above that $16.2 billion level, costs need to stay in check, and per-vehicle profit needs to climb back above where it landed in Q2."
+    },
+    {
+      "type": "heading",
+      "text": "A shifting story beyond car sales"
+    },
+    {
+      "type": "paragraph",
+      "text": "Even as the market scrutinizes Tesla's core vehicle margins, the company has increasingly tried to steer investor attention toward its newer bets: humanoid robotics and robotaxi services. How much weight investors place on EV profitability versus these longer-term, unproven businesses has become one of the more interesting dynamics of each earnings cycle, since a weak quarter in the car business has repeatedly been offset by enthusiasm for Tesla's broader technology ambitions."
+    },
+    {
+      "type": "heading",
+      "text": "What's next"
+    },
+    {
+      "type": "paragraph",
+      "text": "Tesla is scheduled to release its full third-quarter financial results on October 21, when the delivery numbers released earlier this month will finally be matched against actual revenue, margins, and profit figures. The report will be closely watched not just for whether Tesla can convert this quarter's delivery strength into better per-vehicle economics, but also for any updates on the timeline and progress of its robotics and autonomous driving initiatives."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "The Motley Fool — Tesla delivered 486,532 vehicles in Q3", "url": "https://www.fool.com/investing/2026/10/08/tesla-delivered-486532-vehicles-in-q3-heres-the-ma/" }
+  ],
+  "takeaways": [
+    "Tesla delivered 486,532 vehicles in Q3 2026, beating the roughly 461,974 analysts expected and edging out Q2's 480,126 deliveries.",
+    "Q2 gross profit per vehicle fell to about $7,213, and analysts say Q3's earnings report needs to show that weakness was a one-off.",
+    "Tesla reports full third-quarter earnings on October 21, which will reveal whether delivery strength translated into improved margins."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Delivery figures are from Tesla's official Q3 2026 report; the October 21 earnings release may update the financial picture.",
+  "contentType": "Analysis"
+},
+    {
   "slug": "pepsico-q3-2026-earnings-beat-profit-outlook-cut",
   "headline": "PepsiCo Beats Q3 Estimates but Cuts 2026 Profit Outlook",
   "dek": "PepsiCo topped Wall Street estimates in the third quarter, but a weak North American snack business pushed the company to cut its full-year profit outlook.",

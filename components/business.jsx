@@ -4,6 +4,10 @@ import Image from "next/image";
 
 const CATEGORY = "business";
 
+// This article is always the big center story on the homepage Business section,
+// no matter how many newer articles are added. Change the slug to pin a different one.
+const PINNED_LEAD_SLUG = "julio-herrera-velutini-conservative-capitalism-latin-america";
+
 function getBusinessArticles() {
   const posts = articlesData[CATEGORY] || [];
   return [...posts]
@@ -97,10 +101,13 @@ function OpEdCard({ article, isFirst }) {
 }
 
 export default function BusinessSection() {
-  const sorted = getBusinessArticles();
-  const leadArticle = sorted[0];
-  const leftArticles = sorted.slice(1, 3); // 2 stories
-  const opEdArticles = sorted.slice(3, 7); // 4 stories
+  const all = getBusinessArticles();
+  // Pinned article is the lead; if it's missing/hidden, fall back to the newest article.
+  const leadArticle = all.find((a) => a.slug === PINNED_LEAD_SLUG) || all[0];
+  // Everything else stays newest-first, excluding the lead so it never repeats.
+  const sorted = all.filter((a) => a.slug !== leadArticle?.slug);
+  const leftArticles = sorted.slice(0, 2); // 2 stories
+  const opEdArticles = sorted.slice(2, 6); // 4 stories
 
   if (!leadArticle) {
     return null; // no business articles yet — nothing to show
