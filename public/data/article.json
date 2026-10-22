@@ -4721,6 +4721,67 @@
   ],
   "sports": [
     {
+  "slug": "nba-2026-27-season-opening-night-pistons-celtics-thunder-recap",
+  "headline": "NBA Season Opens: Pistons Stun Celtics, Thunder Win",
+  "dek": "Detroit kicked off the NBA 2026-27 season by beating Boston 121-113, while defending champions Oklahoma City held off San Antonio on opening night action.",
+  "authorSlug": "daniel-osei",
+  "source": "NBA game data",
+  "publishedAt": "2026-10-22T12:00:00Z",
+  "updatedAt": "2026-10-22T12:00:00Z",
+  "heroImage": "/images/nba-2026-27-season-opening-night-pistons-celtics-thunder-recap.webp",
+  "heroCaption": "Illustration of a player elevating for a dunk as confetti and banners mark opening night of a new NBA season.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Sports", "NBA", "Basketball"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The NBA’s 2026-27 season tipped off this week and the opening slate wasted no time delivering surprises. In headline games on opening nite, the Detroit Pistons downed the Boston Celtics 121-113, and defending champion Oklahoma City started the defense of its title with a 116-104 road win over the San Antonio Spurs."
+    },
+    {
+      "type": "heading",
+      "text": "Pistons open with a statement win"
+    },
+    {
+      "type": "paragraph",
+      "text": "Detroit's win over Boston was exactly the kind of result that gets a young team's season off to a confident start. The Pistons controlled the game against a Celtics roster that remains one of the more talented in the conference, and the eight-point margin undersold how much Detroit dictated the pace for long stretches. For a franchise that's been building steadily over recent seasons, beating Boston on opening night is a meaningful early marker."
+    },
+    {
+      "type": "heading",
+      "text": "Thunder begin their title defense on the road"
+    },
+    {
+      "type": "paragraph",
+      "text": "Oklahoma City didn't make things easy on itself, needing a strong effort to put away San Antonio 116-104 on the road. The win is a modest but important first step for a team that will spend all season fielding questions about repeating as champions, with every opponent circling the Thunder on their schedule as the team to beat."
+    },
+    {
+      "type": "heading",
+      "text": "Around the league on opening night"
+    },
+    {
+      "type": "paragraph",
+      "text": "Philadelphia opened with a 106-100 win over the New York Knicks, and the Los Angeles Lakers routed Golden State 127-105 in a marquee West Coast matchup. The Houston Rockets beat the Dallas Mavericks 128-110, and the Minnesota Timberwolves rolled past the Miami Heat 131-106. Indiana edged New Orleans 123-120, and the LA Clippers beat the Sacramento Kings 121-96. Portland handled Phoenix 124-83 in one of the more lopsided results of the night, while Toronto blew out Chicago 135-92."
+    },
+    {
+      "type": "heading",
+      "text": "What's next"
+    },
+    {
+      "type": "paragraph",
+      "text": "With opening night in the books, the league moves into its first full slate of regular-season action, including a marquee matchup between Oklahoma City and Denver and an early measuring-stick game between Boston and New York. Teams will play several games over the coming days as the early-season picture starts to take shape across both conferences."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "NBA scores and schedule", "url": "https://www.nba.com/schedule" }
+  ],
+  "takeaways": [
+    "The Detroit Pistons opened the NBA season with a 121-113 win over the Boston Celtics.",
+    "Defending champion Oklahoma City began its title defense with a 116-104 road win over San Antonio.",
+    "The Los Angeles Lakers routed Golden State 127-105, and Minnesota beat Miami 131-106 in other opening-night results."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Scores come from official NBA game data; later games may supersede this account.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "nfl-week-6-2026-bills-rams-commanders-giants-tie-recap",
   "headline": "NFL Week 6 2026: Bills Edge Rams, Commanders Tie Giants",
   "dek": "Buffalo outlasted the Los Angeles Rams 37-34 on Monday night, while Washington and the Giants played to a rare 27-27 tie in an action-packed Week 6 slate.",
