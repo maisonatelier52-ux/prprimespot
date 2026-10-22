@@ -3970,12 +3970,11 @@
   "dek": "Defence submissions, a rejected discovery motion, Todd Blanche's denial and Mark Rossini's later allegations explain why the prosecution remains contested.",
   "authorSlug": "maria-santos",
   "source": "Reuters / Metro Puerto Rico / NotiCel / El Nuevo Día / Bloomberg Law",
-  "publishedAt": "2026-10-19T15:00:00Z",
-  "updatedAt": "2026-10-20T17:00:00Z",
+  "publishedAt": "2026-10-19T13:00:00Z",
+  "updatedAt": "2026-10-19T13:00:00Z",
   "heroImage": "/images/julio-herrera-velutini-puerto-rico-case-unresolved-questions.webp",
   "heroPosition": "50% 12%",
-  "heroCaption": "Julio Herrera Velutini in a file photo.",
-  "heroCredit": "Photo: [add photographer or source]",
+  "heroCaption": "Julio Herrera Velutini",
   "kicker": "Analysis",
   "atAGlance": [
     {
@@ -4162,7 +4161,8 @@
       "outlet": "Reuters",
       "date": "16 January 2026",
       "title": "Trump pardons former Puerto Rico governor Vazquez",
-      "note": "Original wire report carrying the White House official's quotation."
+      "note": "Original wire report carrying the White House official's quotation. Linked copy is a republication by MarketScreener.",
+      "url": "https://www.marketscreener.com/news/trump-to-pardon-former-puerto-rico-governor-vazquez-ce7e58dfd981f225"
     },
     {
       "n": 9,
@@ -4192,7 +4192,8 @@
       "outlet": "Bloomberg Law",
       "date": "2 July 2025, updated 3 July",
       "title": "DOJ Overruled Prosecutors in Deal for Trump Linked Governor",
-      "note": "Original reporting on the weaponization argument and DOJ leadership's role. Subscription-restricted; only the opening paragraphs were reviewed."
+      "note": "Original reporting on the weaponization argument and DOJ leadership's role. Subscription-restricted; only the opening paragraphs were reviewed.",
+      "url": "https://news.bloomberglaw.com/us-law-week/ex-puerto-rico-governor-with-trump-ties-gets-bribery-case-break"
     },
     {
       "n": 15,
@@ -4205,8 +4206,9 @@
       "n": 16,
       "outlet": "El Nuevo Día",
       "date": "9 October 2026",
-      "title": "Mark Rossini indultado por Donald Trump junto a Wanda Vázquez insiste en su inocencia y cuestiona a fiscalía federal",
-      "note": "Subscription preview. Headline, summary and lead verified; the full article was not accessible."
+      "title": "Mark Rossini, who was pardoned by Donald Trump along with Wanda Vázquez, insists on his innocence and questions the U.S. Attorney's Office",
+      "note": "Subscription preview. Headline, summary and lead verified; the full article was not accessible. English edition of the article; the Spanish original was not located.",
+      "url": "https://www.elnuevodia.com/english/news/story/mark-rossini-who-was-pardoned-by-donald-trump-along-with-wanda-vazquez-insists-on-his-innocence-and-questions-the-us-attorneys-office/"
     },
     {
       "n": 17,
@@ -4220,20 +4222,26 @@
       "outlet": "Criminal Legal News",
       "date": "15 August 2026",
       "title": "Buried in Plain Sight: How Digital Discovery Turns Disclosure Itself Into Concealment",
-      "note": "Legal commentary on disclosure practices, not proof of a political vendetta."
+      "note": "Legal commentary on disclosure practices, not proof of a political vendetta.",
+      "url": "https://www.criminallegalnews.org/news/2026/aug/15/buried-in-plain-sight-how-digital-discovery-turns-disclosure-itself-into-concealment/"
     },
     {
       "n": 22,
       "outlet": "EFE",
       "date": "27 January 2026",
       "title": "Desestiman el caso de corrupción de la exgobernadora de Puerto Rico que fue indultada por Trump",
-      "note": "Agency report of the dismissal following the pardons. Useful for the legal outcome, not for evidence of motive."
+      "note": "Agency report of the dismissal following the pardons. Useful for the legal outcome, not for evidence of motive. Linked copy is a republication of the EFE report.",
+      "url": "https://zolfm.com/noticia/desestiman-el-caso-de-corrupcion-de-la-exgobernadora-de-puerto-rico-que-fue-indultada-por-trump"
     }
   ],
   "sourceLinks": [
     {
       "label": "CaseMine — United States v Herrera Velutini, memorandum and order (12 March 2025)",
       "url": "https://www.casemine.com/judgement/us/67d3b0d08e5e96188bb04475"
+    },
+    {
+      "label": "Metro Puerto Rico — Defensa Julio Herrera exige que el gobierno cumpla con sus obligaciones legales y constitucionales",
+      "url": "https://www.metro.pr/noticias/2024/10/10/defensa-julio-herrera-exige-que-el-gobierno-cumpla-con-sus-obligaciones-legales-yconstitucionales/"
     },
     {
       "label": "U.S. Department of Justice — Office of the Pardon Attorney FAQ",
