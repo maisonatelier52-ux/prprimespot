@@ -8,13 +8,13 @@ export function ImagePlaceholder({ label, className = "" }) {
   );
 }
 
-export function ArticleImage({ imageUrl, alt, className = "", priority = false, sizes }) {
+export function ArticleImage({ imageUrl, alt, className = "", priority = false, sizes, objectPosition }) {
   if (!imageUrl) {
     return <ImagePlaceholder label={alt || "image"} className={className} />;
   }
   return (
     <div className={`relative overflow-hidden max-w-full ${className}`}>
-      <Image src={imageUrl} alt={alt} fill priority={priority} sizes={sizes || "100vw"} className="object-cover"/>
+      <Image src={imageUrl} alt={alt} fill priority={priority} sizes={sizes || "100vw"} className="object-cover" style={objectPosition ? { objectPosition } : undefined}/>
     </div>
   );
 }

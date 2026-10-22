@@ -67,9 +67,33 @@ const INTERNAL_LINKS = {
   ],
 };
 
-function RichText({ text, links }) {
+// [n] markers in analysis pieces become small gold superscripts that jump to
+// the matching entry in the Source notes card (only used when the article has
+// `sourceNotes`; other articles are untouched).
+function Cited({ text, light = false }) {
   if (!text) return null;
-  if (!links || links.length === 0) return <>{text}</>;
+  const parts = [];
+  let last = 0;
+  let m;
+  const marker = /\[(\d{1,3})\]/g;
+  while ((m = marker.exec(text)) !== null) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    parts.push(
+      <sup key={m.index} className="mx-[1px] font-sans text-[0.62em] font-semibold">
+        <a href={`#source-${m[1]}`} aria-label={`Source ${m[1]}`} className="px-[2px] no-underline hover:underline" style={{ color: light ? GOLD_SOFT : ACCENT }}>
+          {m[1]}
+        </a>
+      </sup>
+    );
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return <>{parts}</>;
+}
+
+function RichText({ text, links, cite = false }) {
+  if (!text) return null;
+  if (!links || links.length === 0) return cite ? <Cited text={text} /> : <>{text}</>;
   
   const found = links
     .map((l) => ({ ...l, index: text.indexOf(l.phrase) }))
@@ -92,7 +116,7 @@ function RichText({ text, links }) {
   return <>{parts}</>;
 }
 
-function DropCapParagraph({ text, links }) {
+function DropCapParagraph({ text, links, cite }) {
   if (!text) return null;
   const first = text.slice(0, 1);
   const rest = text.slice(1);
@@ -105,12 +129,12 @@ function DropCapParagraph({ text, links }) {
       >
         {first}
       </span>
-      <RichText text={rest} links={links} />
+      <RichText text={rest} links={links} cite={cite} />
     </p>
   );
 }
 
-function PullQuote({ text, attribution }) {
+function PullQuote({ text, attribution, cite }) {
   if (!text) return null;
   return (
     <figure className="relative my-14 -mx-2 sm:-mx-6 px-6 sm:px-10 py-10 rounded-sm overflow-hidden"
@@ -135,7 +159,7 @@ function PullQuote({ text, attribution }) {
         <figcaption className="relative mt-6 flex items-center gap-3">
           <span aria-hidden="true" style={{ width: 40, height: 2, backgroundColor: GOLD }}/>
           <span className="font-sans text-[11px] uppercase tracking-[0.2em]" style={{ color: ACCENT }}>
-            {attribution}
+            {cite ? <Cited text={attribution} light /> : attribution}
           </span>
         </figcaption>
       )}
@@ -258,6 +282,93 @@ function SourcesCard({ sources }) {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+function Disclosure({ text }) {
+  if (!text) return null;
+  return (
+    <aside className="mt-8 rounded-sm px-5 py-4" style={{ backgroundColor: QUOTE_BG, borderLeft: `4px solid ${GOLD}`, border: `1px solid ${GOLD_SOFT}`, borderLeftWidth: 4 }}>
+      <p className="font-sans text-[13.5px] leading-relaxed" style={{ color: "#4B4F58" }}>
+        <span className="font-semibold" style={{ color: ACCENT_DEEP }}>Disclosure: </span>
+        {text}
+      </p>
+    </aside>
+  );
+}
+
+function LedgerPanel({ title, hint, items, color, headerBg }) {
+  if (!items || items.length === 0) return null;
+  return (
+    <section className="flex h-full flex-col rounded-md overflow-hidden" style={{ border: `1px solid ${RULE}`, backgroundColor: PAPER, boxShadow: "0 1px 2px rgba(22,24,29,0.04), 0 8px 24px rgba(22,24,29,0.05)" }}>
+      <div className="px-5 py-4" style={{ backgroundColor: headerBg }}>
+        <div className="flex items-center gap-3">
+          <span aria-hidden="true" className="inline-block" style={{ width: 24, height: 1, backgroundColor: GOLD_SOFT }} />
+          <h2 className="font-sans text-[11px] uppercase tracking-[0.22em] text-white">{title}</h2>
+        </div>
+        <p className="mt-1 font-serif italic text-[13px]" style={{ color: GOLD_SOFT }}>{hint}</p>
+      </div>
+      <ul className="flex-1 px-5">
+        {items.map((item, i) => (
+          <li key={i} className="flex gap-3 py-3.5" style={{ borderTop: i === 0 ? "none" : `1px solid ${RULE_SOFT}` }}>
+            <span aria-hidden="true" className="inline-block rotate-45 shrink-0 mt-[9px]" style={{ width: 6, height: 6, backgroundColor: color }} />
+            <span className="font-serif text-[15.5px] leading-snug text-[#16181D] break-words min-w-0">
+              <Cited text={item.text} />
+            </span>
+          </li>
+        ))}
+      </ul>
+      <span aria-hidden="true" className="block" style={{ height: 3, backgroundColor: color }} />
+    </section>
+  );
+}
+
+function Ledger({ ledger }) {
+  if (!ledger) return null;
+  const { established = [], contested = [] } = ledger;
+  if (established.length === 0 && contested.length === 0) return null;
+  return (
+    <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5" role="group" aria-label="What the record shows and what is claimed">
+      <LedgerPanel title="On the record" hint="Court and official documents" items={established} color={GOLD} headerBg="#2E3440" />
+      <LedgerPanel title="Claimed or disputed" hint="Statements, not findings" items={contested} color={ACCENT} headerBg={ACCENT_DEEP} />
+    </div>
+  );
+}
+
+function SourceNotes({ notes }) {
+  if (!notes || notes.length === 0) return null;
+  return (
+    <div className="mt-10 rounded-md p-5 sm:p-6" style={{ border: `1px solid ${RULE}`, backgroundColor: PAPER }}>
+      <Eyebrow>Source Notes</Eyebrow>
+      <p className="mt-3 font-serif italic text-[14px] leading-relaxed" style={{ color: MUTED }}>
+        A reported statement shows that someone made a claim. It does not show the claim is true.
+      </p>
+      <ol className="mt-4">
+        {notes.map((s, i) => (
+          <li key={s.n} id={`source-${s.n}`} className="flex gap-3 py-3 scroll-mt-6" style={{ borderTop: i === 0 ? "none" : `1px solid ${RULE_SOFT}` }}>
+            <span className="font-serif italic text-[13px] shrink-0 pt-[1px]" style={{ color: GOLD, minWidth: 22 }}>
+              {s.n}
+            </span>
+            <div className="min-w-0 font-sans text-[13px] leading-relaxed">
+              <p className="text-[#16181D]">
+                <span className="font-semibold">{s.outlet}</span>
+                {s.date && <span style={{ color: FAINT }}>, {s.date}</span>}
+              </p>
+              <p className="break-words" style={{ color: MUTED }}>
+                {s.url ? (
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline decoration-[#D8D8D8] underline-offset-2 hover:text-[#16181D]">
+                    {s.title}
+                  </a>
+                ) : (
+                  s.title
+                )}
+              </p>
+              {s.note && <p className="mt-1 break-words" style={{ color: FAINT }}>{s.note}</p>}
+            </div>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }
@@ -385,7 +496,8 @@ export default function FeatureLongform({
       ? formatDate(article.updatedAt)
       : null;
 
-  const kicker = article.source ? article.source : "Feature";
+  const kicker = article.kicker || article.source || "Feature";
+  const hasNotes = Array.isArray(article.sourceNotes) && article.sourceNotes.length > 0;
 
   const firstBlockIsParagraph =
     Array.isArray(article.body) &&
@@ -470,7 +582,7 @@ export default function FeatureLongform({
             {article.heroImage && (
               <figure className="mt-8">
                 <div className="overflow-hidden rounded-sm" style={{ boxShadow: "0 1px 2px rgba(22,24,29,0.06)" }}>
-                  <ArticleImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-full aspect-[16/9]" priority sizes="(min-width: 1100px) 760px, 100vw"/>
+                  <ArticleImage imageUrl={article.heroImage} alt={article.heroCaption || article.headline} className="w-full aspect-[4/3]" priority sizes="(min-width: 1100px) 760px, 100vw" objectPosition={article.heroPosition || undefined}/>
                 </div>
                 {(article.heroCaption || article.heroCredit) && (
                   <figcaption className="mt-3 font-sans text-[12px] leading-relaxed" style={{ color: FAINT }}>
@@ -523,6 +635,9 @@ export default function FeatureLongform({
               </div>
             </div>
 
+            <Disclosure text={article.disclosure} />
+            <Ledger ledger={article.ledger} />
+
             {/* Body */}
             <div className="mt-10">
               {article.body.map((block, i) => {
@@ -540,7 +655,7 @@ export default function FeatureLongform({
                 }
                 if (block.type === "quote") {
                   return (
-                    <PullQuote key={i} text={block.text} attribution={block.attribution}/>
+                    <PullQuote key={i} text={block.text} attribution={block.attribution} cite={hasNotes}/>
                   );
                 }
 
@@ -549,10 +664,10 @@ export default function FeatureLongform({
                 return (
                   <div key={i}>
                     {isFirstParagraph ? (
-                      <DropCapParagraph text={block.text} links={INTERNAL_LINKS[article.slug]} />
+                      <DropCapParagraph text={block.text} links={INTERNAL_LINKS[article.slug]} cite={hasNotes} />
                     ) : (
                       <p className="font-serif text-[19px] leading-[1.85] text-[#16181D] break-words mb-7">
-                        <RichText text={block.text} links={INTERNAL_LINKS[article.slug]} />
+                        <RichText text={block.text} links={INTERNAL_LINKS[article.slug]} cite={hasNotes} />
                       </p>
                     )}
                   </div>
@@ -562,7 +677,7 @@ export default function FeatureLongform({
               <EndMark />
             </div>
 
-            <SourcesCard sources={article.sourceLinks} />
+            {hasNotes ? <SourceNotes notes={article.sourceNotes} /> : <SourcesCard sources={article.sourceLinks} />}
             <FAQSection faq={article.faq} />
             <div className="mt-8"><ShareButtons url={absoluteUrl} title={article.headline} /></div>
 

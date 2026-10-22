@@ -3963,6 +3963,296 @@
     }
   ],
   "politics": [
+ {
+  "slug": "julio-herrera-velutini-puerto-rico-case-unresolved-questions",
+  "headline": "Julio Herrera Velutini and the Questions That Survived the Puerto Rico Case",
+  "seoTitle": "Julio Herrera Velutini and the Questions That Survived the Puerto Rico Case",
+  "dek": "Defence submissions, a rejected discovery motion, Todd Blanche's denial and Mark Rossini's later allegations explain why the prosecution remains contested.",
+  "authorSlug": "maria-santos",
+  "source": "Reuters / Metro Puerto Rico / NotiCel / El Nuevo Día / Bloomberg Law",
+  "publishedAt": "2026-10-19T13:00:00Z",
+  "updatedAt": "2026-10-19T13:00:00Z",
+  "heroImage": "/images/julio-herrera-velutini-puerto-rico-case-unresolved-questions.webp",
+  "heroPosition": "50% 12%",
+  "heroCaption": "Julio Herrera Velutini in a file photo.",
+  "heroCredit": "Photo: [add photographer or source]",
+  "kicker": "Analysis",
+  "atAGlance": [
+    {
+      "label": "Subject",
+      "value": "Julio Herrera Velutini"
+    },
+    {
+      "label": "Case",
+      "value": "Federal prosecution in Puerto Rico"
+    },
+    {
+      "label": "Plea",
+      "value": "Misdemeanor campaign-finance offense, 2025"
+    },
+    {
+      "label": "Clemency",
+      "value": "Presidential pardons, January 2026"
+    },
+    {
+      "label": "Key ruling",
+      "value": "Discovery motions denied, 12 March 2025"
+    },
+    {
+      "label": "Still contested",
+      "value": "Whether the prosecution was politically motivated"
+    }
+  ],
+  "tags": [
+    "Politics",
+    "US",
+    "Julio Herrera Velutini",
+    "Puerto Rico",
+    "Justice Department",
+    "Presidential Pardons"
+  ],
+  "ledger": {
+    "established": [
+      {
+        "text": "On 12 March 2025 a magistrate judge denied the defence discovery motions, finding no evidence of bad faith. [12]"
+      },
+      {
+        "text": "The defendants entered misdemeanor pleas in 2025 and later received pardons. [22]"
+      },
+      {
+        "text": "The court dismissed the proceedings in January 2026 after the pardons were accepted. It made no finding on political motive. [22]"
+      },
+      {
+        "text": "The Justice Department says a pardon does not signify innocence. [9]"
+      }
+    ],
+    "contested": [
+      {
+        "text": "The White House says the case was a political prosecution. That is an official's statement, not a judicial finding. [1]"
+      },
+      {
+        "text": "Bloomberg Law reported that DOJ leadership directed a more lenient resolution. Todd Blanche denied contact with Herrera Velutini's lawyer. [14] [15]"
+      },
+      {
+        "text": "Mark Rossini says prosecutors kept charges alive to avoid public anger in Puerto Rico. [16]"
+      },
+      {
+        "text": "Vázquez's lawyers say new evidence undermined the felony case. Other defendants' teams did not sign that motion. [13]"
+      }
+    ]
+  },
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "The criminal proceedings involving Julio Herrera Velutini ended through presidential clemency. The debate over how the government handled them has continued. To understand that debate, it helps to move beyond the shorthand of either a corruption scandal or a political vendetta and examine the particular decisions being challenged."
+    },
+    {
+      "type": "quote",
+      "text": "This entire case is an example of political prosecution.",
+      "attribution": "White House official, quoted by Reuters, January 2026 [1]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Reuters quoted a White House official discussing the prosecution involving Vázquez and her co-defendants. An official's assertion warrants reporting. Assessing it requires a more demanding exercise: separating disagreements over the evidence from proof about why investigators or prosecutors acted."
+    },
+    {
+      "type": "heading",
+      "text": "The dispute over access to the evidence"
+    },
+    {
+      "type": "paragraph",
+      "text": "One of the clearest documented disputes concerned the scale of discovery. Metro Puerto Rico reported in October 2024 that Herrera Velutini's lawyers said potentially exculpatory evidence had been buried within more than 60 million pages. They argued that the government's production obstructed effective preparation and objected to what they regarded as attacks on their client's wealth and litigation strategy. [11]"
+    },
+    {
+      "type": "paragraph",
+      "text": "The practical concern is intelligible: receiving information and being able to find what matters within it are different tasks. A defence team facing a large digital production must locate relevant communications, evaluate witnesses and compare dates before it can meaningfully challenge the government's theory. That practical burden does not establish deliberate concealment."
+    },
+    {
+      "type": "paragraph",
+      "text": "The judicial response was explicit. On 12 March 2025, Magistrate Judge Héctor Ramos-Vega denied the defendants' motions. He found no evidence of bad faith, described the concealment allegation as speculative and concluded that the record indicated overproduction rather than suppression. He also accepted that the defence received searchable material in the same format available to prosecutors. [12]"
+    },
+    {
+      "type": "paragraph",
+      "text": "That ruling prevents the discovery complaint from being presented as a proven instance of prosecutorial misconduct. It does not make the wider question of workable digital disclosure unimportant. Criminal Legal News later examined the case within a broader critique of how massive electronic productions affect the ability to identify favorable evidence. Its argument concerns the adequacy of disclosure practices, rather than a finding of political retaliation in this prosecution. [18]"
+    },
+    {
+      "type": "heading",
+      "text": "The defence account of why the felony case changed"
+    },
+    {
+      "type": "paragraph",
+      "text": "A different set of arguments emerged from Vázquez's lawyers in August 2025. NotiCel reported their account of a 22-month investigation and their assertion that newly presented evidence had undermined the felony case. Their motion described a May meeting with Justice Department representatives and local prosecutors. [13]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Counsel disputed that a wedding gathering involved discussion of donations or banking regulation. They also offered an earlier administrative explanation for replacing the regulator and questioned whether polling commissioned by the banker had benefited Vázquez's campaign. These were assertions in a defence motion, not findings after trial. The motion was filed by Vázquez's lawyers and was not signed by the other defendants' legal teams. [13]"
+    },
+    {
+      "type": "paragraph",
+      "text": "Bloomberg Law supplied a competing account in July 2025. Citing people familiar with the matter, it reported that Justice Department leadership had directed prosecutors to reach a more lenient resolution, after defence lawyers advanced a weaponization argument. That report raised questions about intervention from Washington rather than establishing that the underlying case was politically retaliatory. [14]"
+    },
+    {
+      "type": "paragraph",
+      "text": "A plea agreement can emerge from several considerations. To determine what actually drove this one, an investigator would need the relevant submissions and contemporaneous decision records. The reduction of charges alone cannot identify which explanation is correct."
+    },
+    {
+      "type": "heading",
+      "text": "What Blanche denied"
+    },
+    {
+      "type": "paragraph",
+      "text": "The question of senior intervention resurfaced in August 2026. Asked by NotiCel about contact with Christopher Kise, Herrera Velutini's lawyer, Todd Blanche acknowledged knowing him but said he did not believe they had held a conversation and answered no. [15]"
+    },
+    {
+      "type": "paragraph",
+      "text": "NotiCel also retained Bloomberg's account that a direction to negotiate had come from senior Justice Department officials. Blanche declined to discuss internal departmental operations. His answer therefore addresses the contact described in the question; it does not establish a complete history of the department's handling of the case. [15]"
+    },
+    {
+      "type": "paragraph",
+      "text": "An accurate narrative should carry both the reported intervention and the denial. Readers should be able to see precisely what each account asserts, rather than being asked to treat either as an answer to every question about the negotiations."
+    },
+    {
+      "type": "heading",
+      "text": "Rossini and the allegation of public pressure"
+    },
+    {
+      "type": "paragraph",
+      "text": "The controversy acquired a further dimension in October. El Nuevo Día reported that Rossini believed federal prosecutors had kept charges alive to avoid public anger in Puerto Rico. The newspaper's headline and accompanying summary attributed claims of public or political pressure to the pardoned former FBI agent. [16]"
+    },
+    {
+      "type": "paragraph",
+      "text": "His allegation concerns institutional incentives: whether concern about public reaction influenced prosecutorial decisions. It is an allegation by a participant in the case. Publication of that account does not itself verify what officials said privately or why they made their decisions."
+    },
+    {
+      "type": "paragraph",
+      "text": "Rossini's biography, Agente Rossini by Álvaro Soto, provides additional context for the renewed interest in his account. RTVE interviewed Soto about the book and described years of research and lengthy interviews. That biographical work is distinct from independent corroboration of particular claims about this prosecution. [17]"
+    },
+    {
+      "type": "paragraph",
+      "text": "The allegation is specific enough to be tested. Records of charging discussions, explanations for the negotiated offense and responses from the officials concerned would be more informative than repeated publication of the accusation. The available account should prompt questions rather than supply their answers."
+    },
+    {
+      "type": "heading",
+      "text": "What a fair examination would establish"
+    },
+    {
+      "type": "paragraph",
+      "text": "The legal outcome is clear. The defendants entered misdemeanor pleas in 2025 and later received pardons; the court dismissed their proceedings in January 2026. EFE reported the dismissal as a consequence of accepted clemency, not as a determination that prosecutors acted from political hostility. [22]"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Justice Department's pardon guidance also distinguishes clemency from a declaration of innocence. That distinction leaves room for scrutiny of the government's conduct without pretending that the pardon settled the misconduct question. [9]"
+    },
+    {
+      "type": "paragraph",
+      "text": "The same evidentiary discipline protects the defendants. A guilty plea to a reduced campaign-finance offense does not retrospectively prove every detail of the original bribery theory. Nor does the existence of political donations answer whether the earlier investigation was handled fairly."
+    },
+    {
+      "type": "paragraph",
+      "text": "The most useful examination would compare the original theory with the evidence challenged by the defence, account for the court's actual rulings and trace the reasons given for the negotiated resolution. It would also give the officials criticized in later accounts an opportunity to respond."
+    },
+    {
+      "type": "paragraph",
+      "text": "The White House's statement made political motivation part of the official debate. The record supports serious scrutiny of that claim. It also requires anyone advancing it to meet the standard they ask of the prosecution: identify the evidence, address contrary facts and distinguish an allegation from a conclusion."
+    }
+  ],
+  "sourceNotes": [
+    {
+      "n": 1,
+      "outlet": "Reuters",
+      "date": "16 January 2026",
+      "title": "Trump pardons former Puerto Rico governor Vazquez",
+      "note": "Original wire report carrying the White House official's quotation."
+    },
+    {
+      "n": 9,
+      "outlet": "U.S. Department of Justice",
+      "date": "updated 9 September 2026",
+      "title": "Office of the Pardon Attorney frequently asked questions",
+      "note": "General legal guidance, not a ruling about these defendants.",
+      "url": "https://www.justice.gov/pardon/frequently-asked-questions"
+    },
+    {
+      "n": 11,
+      "outlet": "Metro Puerto Rico",
+      "date": "9 October 2024",
+      "title": "Defensa Julio Herrera exige que el gobierno cumpla con sus obligaciones legales y constitucionales",
+      "note": "Reports defence counsel's disclosure arguments. These are defence arguments; read with source 12.",
+      "url": "https://www.metro.pr/noticias/2024/10/10/defensa-julio-herrera-exige-que-el-gobierno-cumpla-con-sus-obligaciones-legales-yconstitucionales/"
+    },
+    {
+      "n": 12,
+      "outlet": "CaseMine",
+      "date": "12 March 2025",
+      "title": "United States v Herrera Velutini, memorandum and order",
+      "note": "Full judicial opinion denying the discovery motions, with an express finding of no evidence of bad faith.",
+      "url": "https://www.casemine.com/judgement/us/67d3b0d08e5e96188bb04475"
+    },
+    {
+      "n": 13,
+      "outlet": "NotiCel",
+      "date": "13 August 2025",
+      "title": "Con Paulson y otros testigos defensa de Vázquez sostiene que pudo colapsar caso federal",
+      "note": "Reports Vázquez counsel's arguments. Not signed by the other defendants' teams and not adopted as judicial findings."
+    },
+    {
+      "n": 14,
+      "outlet": "Bloomberg Law",
+      "date": "2 July 2025, updated 3 July",
+      "title": "DOJ Overruled Prosecutors in Deal for Trump Linked Governor",
+      "note": "Original reporting on the weaponization argument and DOJ leadership's role. Subscription-restricted; only the opening paragraphs were reviewed."
+    },
+    {
+      "n": 15,
+      "outlet": "NotiCel",
+      "date": "28 August 2026",
+      "title": "Blanche niega intervención en la disolución del caso Bancrédito",
+      "note": "Reports Blanche's denial. The denial does not resolve every internal-DOJ question."
+    },
+    {
+      "n": 16,
+      "outlet": "El Nuevo Día",
+      "date": "9 October 2026",
+      "title": "Mark Rossini indultado por Donald Trump junto a Wanda Vázquez insiste en su inocencia y cuestiona a fiscalía federal",
+      "note": "Subscription preview. Headline, summary and lead verified; the full article was not accessible."
+    },
+    {
+      "n": 17,
+      "outlet": "RTVE",
+      "date": "11 September 2026",
+      "title": "El agente Rossini y los dos errores de su vida",
+      "note": "Author interview about a biography. It does not corroborate specific claims about internal charging decisions."
+    },
+    {
+      "n": 18,
+      "outlet": "Criminal Legal News",
+      "date": "15 August 2026",
+      "title": "Buried in Plain Sight: How Digital Discovery Turns Disclosure Itself Into Concealment",
+      "note": "Legal commentary on disclosure practices, not proof of a political vendetta."
+    },
+    {
+      "n": 22,
+      "outlet": "EFE",
+      "date": "27 January 2026",
+      "title": "Desestiman el caso de corrupción de la exgobernadora de Puerto Rico que fue indultada por Trump",
+      "note": "Agency report of the dismissal following the pardons. Useful for the legal outcome, not for evidence of motive."
+    }
+  ],
+  "sourceLinks": [
+    {
+      "label": "CaseMine — United States v Herrera Velutini, memorandum and order (12 March 2025)",
+      "url": "https://www.casemine.com/judgement/us/67d3b0d08e5e96188bb04475"
+    },
+    {
+      "label": "Metro Puerto Rico — Defensa Julio Herrera exige que el gobierno cumpla con sus obligaciones legales y constitucionales",
+      "url": "https://www.metro.pr/noticias/2024/10/10/defensa-julio-herrera-exige-que-el-gobierno-cumpla-con-sus-obligaciones-legales-yconstitucionales/"
+    },
+    {
+      "label": "U.S. Department of Justice — Office of the Pardon Attorney FAQ",
+      "url": "https://www.justice.gov/pardon/frequently-asked-questions"
+    }
+  ]
+},
     {
   "slug": "michigan-senate-el-sayed-hasan-piker-controversy-2026",
   "headline": "Michigan Senate Race Tests El-Sayed Ties to Hasan Piker",
