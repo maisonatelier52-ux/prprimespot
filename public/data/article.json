@@ -3218,6 +3218,63 @@
   ],
   "us": [
     {
+  "slug": "hurricane-isaias-gulf-coast-landfall-record-late-2026",
+  "headline": "Hurricane Isaias Slams Gulf Coast in Record-Late Season",
+  "dek": "Hurricane Isaias made landfall near Destin, Florida, as the latest-forming first hurricane in 121 years, cutting power to nearly 700,000 homes regionally.",
+  "authorSlug": "sarah-kim",
+  "source": "National Hurricane Center / NOAA / CBS News",
+  "publishedAt": "2026-10-23T11:00:00Z",
+  "updatedAt": "2026-10-23T11:00:00Z",
+  "heroImage": "/images/hurricane-isaias-gulf-coast-landfall-record-late-2026.webp",
+  "heroCaption": "Illustration of storm surge and wind battering a Gulf Coast beach town under a hurricane warning.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["US News", "Weather", "Florida", "Hurricane"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Hurricane Isaias made landfall near Destin, Florida, on the northern Gulf Coast Friday night as a Category 2 storm, becoming the first hurricane of an Atlantic season that waited longer to produce one than any year in more than a century. The storm had briefly strengthened to Category 3 earlier in the day before weakening, and it came ashore with maximum sustained winds of 90 mph, with a gust of 112 mph recorded at Santa Rosa Sound."
+    },
+    {
+      "type": "heading",
+      "text": "A historically late start to hurricane season"
+    },
+    {
+      "type": "paragraph",
+      "text": "Isaias became a hurricane on October 7, the latest date for an Atlantic season's first hurricane in 121 years of NOAA records, narrowly missing a mark set back in 1905. In a typical year, the season's first hurricane forms in early-to-mid August, meaning this year's wait stretched roughly two months beyond normal. Meteorologists have largely attributed the quiet stretch to a strong El Niño that developed over the summer, which tends to suppress Atlantic hurricane activity while fueling more storms in the Pacific."
+    },
+    {
+      "type": "heading",
+      "text": "Widespread impacts across three states"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hurricane-force winds extended up to 35 miles from Isaias's center, with tropical-storm-force winds reaching out as far as 160 miles, enough to bring significant weather to a wide stretch of the Southeast well beyond the immediate landfall zone. Forecasters warned of storm surge up to 9 feet between the Alabama-Florida border and Grayton Beach, rainfall totals as high as 15 inches in spots, and a tornado risk extending into Georgia and the Carolinas through the weekend. More than 697,000 customers lost power across Florida, Alabama, and Georgia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tens of thousands of people evacuated ahead of the storm. Florida ordered evacuations in parts of Okaloosa and Walton counties, while Alabama told non-residents and tourists in parts of Baldwin County, including Gulf Shores, Orange Beach, and Dauphin Island, to leave immediately. Shelters opened in Mobile County and in churches in Dothan. Florida Gov. Ron DeSantis declared a state of emergency for more than two dozen counties, Alabama Gov. Kay Ivey did the same for 40 counties, and Georgia Gov. Brian Kemp issued his own declaration as the storm's reach extended inland."
+    },
+    {
+      "type": "heading",
+      "text": "Officials urge residents not to underestimate the storm"
+    },
+    {
+      "type": "paragraph",
+      "text": "DeSantis dismissed any suggestion that the storm was being played down, calling it “a major hurricane” and warning that ignoring evacuation orders could threaten “a lot of people’s lives in jeopardy” given the forecasted storm surge. Mayor Jeff Collier of Dauphin Island said he worries some residents and visitors will not take the warnings seriously until it is too late. The Trump administration authorized federal emergency declarations for both Florida and Alabama, and the White House said it was monitoring the storm closely. As of the latest update, no deaths or injuries were reported and Isaias had weakened to a post-tropical cyclone as it continued to move north through Alabama toward Tennessee Valley."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "CBS News — Hurricane Isaias makes landfall on Gulf Coast", "url": "https://www.cbsnews.com/news/hurricane-isaias-first-storm-2026-atlantic-season-record/" }
+  ],
+  "takeaways": [
+    "Hurricane Isaias made landfall near Destin, Florida, as a Category 2 storm with 90 mph winds, becoming the latest-forming first hurricane of an Atlantic season in 121 years.",
+    "More than 697,000 customers lost power across Florida, Alabama, and Georgia, and tens of thousands of residents evacuated ahead of landfall.",
+    "Florida, Alabama, and Georgia all declared states of emergency, and the storm weakened to post-tropical as it moved inland with no reported deaths or injuries so far."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Storm details come from the National Hurricane Center and CBS News reporting; the storm's path and impacts may change as it moves further inland.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "spacex-crew-13-fastest-trip-iss-record-2026",
   "headline": "SpaceX Crew-13 Sets Record for Fastest-Ever Trip to ISS",
   "dek": "NASA and SpaceX launched four astronauts to the ISS aboard Crew-13, docking in just 8 hours, the fastest-ever U.S. spacecraft trip to the orbiting station.",
