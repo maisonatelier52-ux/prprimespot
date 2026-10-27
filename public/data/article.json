@@ -2461,6 +2461,60 @@
   ],
   "world": [
     {
+  "slug": "jordan-syria-airstrikes-karak-church-attack-2026",
+  "headline": "Jordan Strikes Syria After Deadly Karak Church Attack",
+  "dek": "Jordan launched air strikes on armed group hideouts in southern Syria on Oct. 26, days after gunmen killed nine people at a Karak church funeral this week.",
+  "authorSlug": "raj-patel",
+  "source": "Al Jazeera / Arab News / CNN",
+  "publishedAt": "2026-10-27T11:00:00Z",
+  "updatedAt": "2026-10-27T11:00:00Z",
+  "heroImage": "/images/jordan-syria-airstrikes-karak-church-attack-2026.webp",
+  "heroCaption": "A damaged building in southern Syria after Jordanian air strikes targeted armed group hideouts in Daraa and Suwayda provinces.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["World", "Jordan", "Syria", "Middle East"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Jordan carried out air strikes inside southern Syria on Monday evening, three days after gunmen opened fire on mourners at a funeral inside a Greek Orthodox church in Karak, killing at least nine people and wounding dozens more in one of the deadliest attacks on Jordan's Christian minority in decades."
+    },
+    {
+      "type": "heading",
+      "text": "Gunmen target a funeral in Karak"
+    },
+    {
+      "type": "paragraph",
+      "text": "Three gunmen opened fire Friday on worshippers gathered for a funeral at a church in Karak, a city about 90 kilometers south of Amman that is home to a sizable share of Jordan's roughly 300,000 Christians. King Abdullah II called the attack a direct assault on national unity, pledged the harshest penalties for those responsible, and ordered a review of security procedures at places of worship nationwide. Jordanian forces arrested two brothers and their brother-in-law in the village of Al-Jadeeda on Monday after a roughly three-hour shootout; a government source said the suspects were seriously wounded in the exchange."
+    },
+    {
+      "type": "heading",
+      "text": "Strikes hit targets across Daraa and Suwayda"
+    },
+    {
+      "type": "paragraph",
+      "text": "Jordan's armed forces said the strikes targeted hideouts used by armed groups it linked to the church attackers, describing the operation as retaliation carried out in coordination with Syrian authorities. Syria's Civil Defence reported at least seven deaths across the strikes, including five members of one family killed when a tent was hit in Al-Tai, in Daraa governorate, and elderly men killed in separate strikes in Al Shayyah and in Shahba, in neighboring Suwayda governorate. A strike on a residential building in Muzayrib caused no casualties."
+    },
+    {
+      "type": "heading",
+      "text": "Damascus disputes Jordan's account"
+    },
+    {
+      "type": "paragraph",
+      "text": "Syria's government pushed back on Jordan's description of coordination, saying the strikes happened without prior notice and announcing an investigation into the deaths. A Syrian Foreign Ministry official described the strikes as a betrayal of trust between the two governments and said Damascus would work to manage the fallout while protecting Syrian sovereignty. Syrian border authorities closed the Nassib crossing, the only passenger and commercial link between Jordan and Syria, suspending traffic in both directions as tensions between the neighbors escalated."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "Al Jazeera — Jordan strikes Syria after church attack, killing at least seven people", "url": "https://www.aljazeera.com/news/2026/10/26/jordan-launches-air-strikes-in-syria-in-response-to-a-fatal-church-shooting" },
+    { "label": "CNN — At least 9 people killed in unprecedented shooting at church in Jordan", "url": "https://www.cnn.com/2026/10/23/middleeast/church-shooting-jordan-intl" }
+  ],
+  "takeaways": [
+    "Jordan struck armed group hideouts in Syria's Daraa and Suwayda provinces on Oct. 26, days after a deadly shooting at a Karak church funeral killed nine people.",
+    "Syria's Civil Defence said at least seven people, including three children, died in the strikes, and Damascus disputed Jordan's claim the operation was coordinated.",
+    "Syria closed the Nassib border crossing, the only passenger and trade link with Jordan, as the two governments traded accusations over the strikes."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. Death tolls and the investigation into the church attack remain preliminary and may change as authorities release further details.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "2026-nobel-peace-prize-navi-pillay-literature-anne-carson",
   "headline": "Nobel Peace Prize Goes to Jurist Navi Pillay for 2026",
   "dek": "Navi Pillay won the 2026 Nobel Peace Prize for decades of work advancing international justice, while Canadian poet Anne Carson took the Literature prize.",
