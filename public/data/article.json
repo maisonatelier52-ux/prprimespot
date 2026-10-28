@@ -1709,6 +1709,64 @@
   ],
   "finance": [
     {
+  "slug": "stock-market-anthropic-ipo-fed-meeting-october-2026",
+  "headline": "Nasdaq Jumps as Anthropic IPO Filing Lifts Tech Stocks",
+  "dek": "Wall Street rallied Tuesday as Anthropic's IPO filing boosted tech stocks, with investors also bracing for the Fed decision and big earnings this week.",
+  "authorSlug": "elena-vasquez",
+  "source": "TheStreet / Yahoo Finance / CNBC",
+  "publishedAt": "2026-10-28T10:00:00Z",
+  "updatedAt": "2026-10-28T10:00:00Z",
+  "heroImage": "/images/stock-market-anthropic-ipo-fed-meeting-october-2026.webp",
+  "heroCaption": "Illustration of a stock ticker board showing tech stocks climbing as Wall Street awaits the Federal Reserve's rate decision.",
+  "heroCredit": "AI-assisted original illustration",
+  "tags": ["Finance", "Markets", "Stocks"],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Wall Street extended its rally Tuesday as news that AI company Anthropic had filed for an initial public offering helped drive a second straight day of tech-led gains, even as investors braced for a Federal Reserve rate decision and a wave of big tech earnings later in the week."
+    },
+    {
+      "type": "heading",
+      "text": "Tech stocks lead a broad advance"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Nasdaq Composite climbed 1.18% to close at 26,477.81, and the Russell 2000 added 1.16% to 2,818.87. The S&P 500 rose a more modest 0.60% to 7,722.60, while the Dow Jones Industrial Average was roughly flat, up just 0.03% to 52,377.57. Capital.com analyst Kyle Rodda said Anthropic's IPO filing, covering the maker of the Claude family of AI models, helped boost market sentiment and supported the tech-led rebound. Shares of SpaceX also ticked higher after Anthropic said it would pay the company up to $120.5 billion for AI computing infrastructure through 2029."
+    },
+    {
+      "type": "heading",
+      "text": "SoFi, Bloom Energy jump on earnings beats"
+    },
+    {
+      "type": "paragraph",
+      "text": "Individual earnings reports drove some of the session's biggest moves. SoFi surged more than 11% after revenue grew 44% year over year and adjusted earnings per share rose 64%, beating estimates, as the fintech raised its full-year revenue guidance and reported strong growth in members and products per customer. Bloom Energy gained almost 8% after beating forecasts and raising its 2026 revenue outlook, while industrial supplier Pentair jumped nearly 12% on a strong quarterly beat. General Motors rose close to 5% after saying it would shift its stock listing from the New York Stock Exchange to the Nasdaq."
+    },
+    {
+      "type": "paragraph",
+      "text": "Not every report landed well. Boeing shares dropped about 10% to their lowest level since late 2025 after the planemaker missed earnings expectations and cut its full-year delivery target. Cintas fell more than 7% on reports that federal regulators plan to sue to block its proposed acquisition of UniFirst, and Hilton slid after missing revenue estimates and warning that the upcoming midterm elections and Middle East tensions could weigh on fourth-quarter results."
+    },
+    {
+      "type": "heading",
+      "text": "Fed decision and tech earnings loom"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Federal Reserve's two-day policy meeting opened Tuesday, with its rate decision due Wednesday. Markets largely expect officials to hold steady, so attention has shifted to what policymakers signal about the path for rates into next year. Analysts said the Fed's tone could matter as much as the decision itself, especially with Microsoft, Alphabet, Amazon, and Apple all due to report quarterly results this week, giving investors a clearer read on whether heavy spending on artificial intelligence is translating into durable revenue growth."
+    }
+  ],
+  "sourceLinks": [
+    { "label": "TheStreet — Stock Market Today (Oct. 27, 2026): Nasdaq and Russell 2000 gain as Anthropic lifts tech sector", "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-27-2026" },
+    { "label": "Yahoo Finance / The Motley Fool — Stock Market Today, Oct. 27: SoFi Soars 13% After Beating Estimates and Raising Guidance", "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-27-210821792.html" }
+  ],
+  "takeaways": [
+    "The Nasdaq rose 1.18% and the S&P 500 added 0.60% on Oct. 27 as Anthropic's IPO filing boosted sentiment toward tech and AI-related stocks.",
+    "SoFi jumped more than 11% after a strong Q3 beat and raised guidance, while Boeing fell about 10% after missing estimates and cutting its delivery outlook.",
+    "The Federal Reserve's policy meeting began Tuesday with a decision due Wednesday, just as Microsoft, Alphabet, Amazon, and Apple prepare to report earnings this week."
+  ],
+  "reportingNote": "Information reflects the post's stated update time. The Federal Reserve's rate decision and this week's big tech earnings had not yet been released as of publication and may be covered separately.",
+  "contentType": "News Roundup"
+},
+    {
   "slug": "goldman-sachs-jpmorgan-wells-fargo-q3-2026-earnings",
   "headline": "Goldman Sachs Crushes Earnings as Bank Season Kicks Off",
   "dek": "Goldman Sachs beats Wall Street estimates with record equities trading revenue in Q3 2026, but JPMorgan was flat and Wells Fargo shares fell 3%.",
